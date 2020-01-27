@@ -18,5 +18,6 @@
          </font>
       </Text>
       <Text layoutX="723.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By: Rodrigo de Sousa" />
+      <Text layoutX="15.0" layoutY="638.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.0" />
    </children>
 </AnchorPane>
