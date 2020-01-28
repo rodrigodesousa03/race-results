@@ -17,7 +17,7 @@
          </font></Button>
       <TextArea fx:id="qualifyTextArea" layoutX="15.0" layoutY="143.0" prefHeight="463.0" prefWidth="425.0" />
       <TextArea fx:id="raceTextArea" layoutX="461.0" layoutY="143.0" prefHeight="463.0" prefWidth="425.0" />
-      <Text layoutX="721.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By: Rodrigo de Sousa">
+      <Text layoutX="721.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By Rodrigo de Sousa">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font></Text>
