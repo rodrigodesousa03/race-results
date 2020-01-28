@@ -1,12 +1,18 @@
 package application;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.stream.Stream;
 
@@ -21,6 +27,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
+import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
@@ -35,6 +42,57 @@ public class MainController implements Initializable {
 
 	@FXML
 	private TextArea qualifyTextArea;
+	
+	@FXML
+	private Text textDrivers;
+	
+	private Map<String, String> driverTeams = new HashMap<String, String>();
+	
+	@FXML
+	void readCsvFileChooser(ActionEvent event) {
+        BufferedReader br = null;
+        String line = "";
+        driverTeams = new HashMap<String, String>();
+        
+       	FileChooser fc = new FileChooser();
+    	fc.getExtensionFilters().add(new ExtensionFilter("CSV File", "*.csv"));
+
+    	File file = fc.showOpenDialog(null);
+    		
+    	if (file != null) {
+			try {
+	            br = new BufferedReader(new FileReader(file));
+	            while ((line = br.readLine()) != null) {
+	                String[] driver = line.split(";");
+	                
+	                if (!driver[0].contains("Piloto")) {
+	                	driverTeams.put(driver[0], driver[1]);
+	                }
+	            }
+	            
+	            textDrivers.setText(driverTeams.size() + " Drivers");
+	        } catch (FileNotFoundException e) {
+	            e.printStackTrace();
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        } finally {
+	            if (br != null) {
+	                try {
+	                    br.close();
+	                } catch (IOException e) {
+	                    e.printStackTrace();
+	                }
+	            }
+	        }
+		}
+	}
+	
+	@FXML
+	void clearDrivers(ActionEvent event) {
+		driverTeams = new HashMap<String, String>();
+		
+		textDrivers.setText(driverTeams.size() + " Drivers");
+	}
 
 	@FXML
 	void raceFileChooser(ActionEvent event) {
@@ -166,7 +224,9 @@ public class MainController implements Initializable {
 	}
 
 	private String resultLine(int position, Driver driver, String time) {
-		return position + " " + driver.getName() + " (" + driver.getTeamName().trim() + "), " + time;
+		String driverTeamName = driverTeams.containsKey(driver.getName()) ? driverTeams.get(driver.getName()) : driver.getTeamName().trim();
+		
+		return position + " " + driver.getName() + " (" + driverTeamName + "), " + time;
 	}
 	
 	private String formatSeconds(String time, String textIfNull) {
@@ -187,7 +247,7 @@ public class MainController implements Initializable {
 		String[] bestLapTime = time.split("\\.");
 
 		Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
-		Integer milliseconds = Integer.parseInt(bestLapTime[1].substring(0, 3));
+		String milliseconds = bestLapTime[1].substring(0, 3);
 
 		String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
 				+ milliseconds;
