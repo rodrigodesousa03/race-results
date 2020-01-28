@@ -1,5 +1,9 @@
 package application;
 
+import static application.RFactorTransformer.proccessXMLQualify;
+import static application.RFactorTransformer.proccessXMLRace;
+import static br.com.rsousa.enums.FileType.RACE;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -19,25 +23,28 @@ import java.util.stream.Stream;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 
+import org.controlsfx.control.PopOver;
+
 import static java.util.stream.Collectors.toList;
 
+import br.com.rsousa.enums.FileType;
 import br.com.rsousa.pojo.ams.Driver;
 import br.com.rsousa.pojo.ams.RFactorXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 
 public class MainController implements Initializable {
 
-	private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
-
-	private List<String> xmlTypes;
+	private List<String> fileTypes;
 
 	@FXML
 	private TextArea raceTextArea;
@@ -45,10 +52,14 @@ public class MainController implements Initializable {
 	@FXML
 	private TextArea qualifyTextArea;
 	
+	private PopOver popOver;
+	
 	@FXML
 	private Text textDrivers;
 	
 	private Map<String, String> driverTeams = new HashMap<String, String>();
+	
+	private Map<FileType, String> results = new HashMap<FileType, String>();
 	
 	@FXML
 	void readCsvFileChooser(ActionEvent event) {
@@ -59,10 +70,32 @@ public class MainController implements Initializable {
 
     	File file = fc.showOpenDialog(null);
     		
-    	proccessDrivers(file);
+    	processDrivers(file);
 	}
 
+	@FXML
+	void showDrivers() {
+		StringBuilder drivers = new StringBuilder();
+		
+		if (driverTeams.isEmpty()) {
+			drivers.append("No Drivers");
+		} else {
+			driverTeams.keySet().stream().sorted((k1, k2) -> k1.compareTo(k2)).forEach(k -> drivers.append("Driver: " + k + " - Team: " + driverTeams.get(k) + "\n"));
+		}
+		
+		Label label = new Label(drivers.toString());
+		
+		VBox vBox = new VBox(label);
+		
+		popOver = new PopOver(vBox);
+		
+		popOver.show(textDrivers);
+	}
 	
+	@FXML
+	void hideDrivers() {
+		popOver.hide();
+	}
 	
 	@FXML
 	void clearDrivers(ActionEvent event) {
@@ -72,22 +105,14 @@ public class MainController implements Initializable {
 	}
 
 	@FXML
-	void raceFileChooser(ActionEvent event) {
+	void processLogFileChooser(ActionEvent event) {
 		FileChooser fc = new FileChooser();
-		fc.getExtensionFilters().add(new ExtensionFilter("XML Files", xmlTypes()));
+		fc.getExtensionFilters().add(new ExtensionFilter("XML Files", fileTypes()));
 
 		File file = fc.showOpenDialog(null);
-		proccessRace(file);
-	}
-
-
-	@FXML
-	void qualifyFileChooser(ActionEvent event) {
-		FileChooser fc = new FileChooser();
-		fc.getExtensionFilters().add(new ExtensionFilter("XML Files", xmlTypes()));
-
-		File file = fc.showOpenDialog(null);
-		proccessQualify(file);
+		proccessXMLQualify(file, driverTeams, results);
+		
+		showResults();
 	}
 	
 	@FXML
@@ -99,13 +124,29 @@ public class MainController implements Initializable {
 	
 	@FXML
 	void logFileDrop(DragEvent event) {
+		results.clear();
+		
 		List<File> files = event.getDragboard().getFiles();
 		
-		files.stream().filter(f -> f.getName().contains("csv")).findFirst().ifPresent(f -> proccessDrivers(f));
+		files.stream().filter(f -> f.getName().contains("csv")).findFirst().ifPresent(f -> processDrivers(f));
 		
 		for (File file : files) {
 			if (file.getName().contains("xml") || file.getName().contains("XML")) {
-				proccessQualify(file);
+				proccessXMLQualify(file, driverTeams, results);
+			}
+		}
+		
+		showResults();
+	}
+
+
+
+	private void showResults() {
+		for (FileType type : results.keySet()) {
+			if (type == RACE) {
+				raceTextArea.setText(results.get(type));
+			} else {
+				qualifyTextArea.setText(results.get(type));
 			}
 		}
 	}
@@ -115,162 +156,21 @@ public class MainController implements Initializable {
 		// TODO Auto-generated method stub
 	}
 
-	private List<String> xmlTypes() {
-		if (xmlTypes == null) {
-			xmlTypes = new ArrayList<String>();
-			xmlTypes.add("*.xml");
-			xmlTypes.add("*.XML");
+	private List<String> fileTypes() {
+		if (fileTypes == null) {
+			fileTypes = new ArrayList<String>();
+			fileTypes.add("*.xml");
+			fileTypes.add("*.XML");
+			fileTypes.add("*.json");
+			fileTypes.add("*.JSON");
 		}
 
-		return xmlTypes;
+		return fileTypes;
 	}
 	
-	private boolean isDriver(Driver driver) {
-		return !driver.getName().contains("Diretor") && !driver.getName().contains("Comentarista") && !driver.getName().contains("Narrador");
-	}
-
-	private String resultLine(int position, Driver driver, String time) {
-		String driverTeamName = driverTeams.containsKey(driver.getName()) ? driverTeams.get(driver.getName()) : driver.getTeamName().trim();
-		
-		return position + " " + driver.getName() + " (" + driverTeamName + "), " + time;
-	}
 	
-	private String formatSeconds(String time, String textIfNull) {
-		String formattedSeconds = formatSeconds(time);
-		
-		if (formattedSeconds == null) {
-			return textIfNull;
-		}
-		
-		return formattedSeconds;
-	}
-
-	private String formatSeconds(String time) {
-		if (time == null) {
-			return null;
-		}
-		
-		String[] bestLapTime = time.split("\\.");
-
-		Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
-		String milliseconds = bestLapTime[1].substring(0, 3);
-
-		String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
-				+ milliseconds;
-		return bestLapTimeFormatted;
-	}
 	
-	private void proccessQualify(File file) {
-		if (file != null) {
-			JAXBContext jaxbContext;
-			try {
-				jaxbContext = JAXBContext.newInstance(RFactorXML.class);
-
-				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
-
-				if (raceResult.getRaceResults().getQualify() == null) {
-					proccessRace(file);
-					return;
-				}
-				
-				Driver[] drivers = raceResult.getRaceResults().getQualify().getDriver();
-
-				int position = 1;
-
-				String resultStr = "";
-
-				for (Driver driver : drivers) {
-					if (isDriver(driver)) {
-						String bestLapTimeFormatted = formatSeconds(driver.getBestLapTime(), "sem tempo");
-
-						resultStr += resultLine(position, driver, bestLapTimeFormatted) + "\n";
-
-						position++;
-					}
-				}
-
-				qualifyTextArea.setText(resultStr);
-			} catch (Exception e) {
-				qualifyTextArea.setText("Error transforming the XML file.");
-				e.printStackTrace();
-			}
-		}
-	}
-	
-	private void proccessRace(File file) {
-		if (file != null) {
-			JAXBContext jaxbContext;
-			try {
-				jaxbContext = JAXBContext.newInstance(RFactorXML.class);
-
-				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-
-				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
-				
-				if (raceResult.getRaceResults().getRace() == null) {
-					proccessQualify(file);
-					return;
-				}
-
-				List<Driver> drivers = Stream.of(raceResult.getRaceResults().getRace().getDriver())
-						.sorted(Comparator.comparing(Driver::getPosition))
-						.collect(toList());
-
-				int position = 1;
-				String resultStr = "";
-				Driver driverBestLap = null;
-				Integer totalLaps = 0;
-				Double leaderFinishTime = null;
-
-				for (Driver driver : drivers) {
-					if (isDriver(driver)) {
-						String raceTimeFormatted;
-
-						if (position == 1) {
-							driverBestLap = driver;
-							raceTimeFormatted = driver.getLaps() + " voltas";
-							totalLaps = driver.getLaps();
-							leaderFinishTime = Double.parseDouble(driver.getFinishTime());
-						} else {
-							if (driver.getBestLapTime() != null && driverBestLap.getBestLapTime().compareTo(driver.getBestLapTime()) > 0) {
-								driverBestLap = driver;
-							}
-							
-							if (totalLaps == driver.getLaps()) {
-								Double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
-								
-								raceTimeFormatted = formatSeconds(secondsBehindTheLeader.toString());
-								
-							} else {
-								int lapsBehindTheLeader = totalLaps - driver.getLaps();
-								
-								raceTimeFormatted = "+ " + lapsBehindTheLeader + " laps";
-							}
-						}
-						
-						if (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
-							raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
-						}
-
-						resultStr += resultLine(position, driver, raceTimeFormatted) + "\n";
-						position++;
-					}
-				}
-
-				resultStr += "Volta mais rápida: " + driverBestLap.getName() + ", "
-						+ formatSeconds(driverBestLap.getBestLapTime());
-
-				raceTextArea.setText(resultStr);
-			} catch (Exception e) {
-				raceTextArea.setText("Error transforming the XML file.");
-				e.printStackTrace();
-			}
-		}
-	}
-	
-	private void proccessDrivers(File file) {
+	private void processDrivers(File file) {
 		BufferedReader br = null;
         String line = "";
         

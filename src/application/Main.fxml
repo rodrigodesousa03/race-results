@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -9,41 +10,46 @@
 
 <AnchorPane maxHeight="699.0" maxWidth="900.0" minHeight="656.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="699.0" prefWidth="900.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
-      <Button layoutX="15.0" layoutY="613.0" mnemonicParsing="false" onAction="#qualifyFileChooser" prefHeight="43.0" prefWidth="417.0" style="-fx-background-color: #AAA;" text="Import Qualy" textFill="WHITE">
+      <Pane layoutY="50.0" prefHeight="617.0" prefWidth="900.0" style="-fx-background-color: #EEE;" />
+      <Button layoutX="291.0" layoutY="613.0" mnemonicParsing="false" onAction="#processLogFileChooser" prefHeight="43.0" prefWidth="320.0" style="-fx-background-color: #AAA;" text="Import Log" textFill="WHITE">
          <font>
             <Font name="SansSerif Regular" size="15.0" />
          </font></Button>
-      <TextArea fx:id="qualifyTextArea" layoutX="15.0" layoutY="109.0" prefHeight="497.0" prefWidth="417.0" />
-      <TextArea fx:id="raceTextArea" layoutX="469.0" layoutY="109.0" prefHeight="497.0" prefWidth="417.0" />
-      <Button layoutX="469.0" layoutY="613.0" mnemonicParsing="false" onAction="#raceFileChooser" prefHeight="43.0" prefWidth="417.0" style="-fx-background-color: #AAA;" text="Import Race" textFill="WHITE">
-         <font>
-            <Font name="SansSerif Regular" size="15.0" />
-         </font></Button>
-      <Text layoutX="721.0" layoutY="678.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By: Rodrigo de Sousa">
+      <TextArea fx:id="qualifyTextArea" layoutX="15.0" layoutY="143.0" prefHeight="463.0" prefWidth="425.0" />
+      <TextArea fx:id="raceTextArea" layoutX="461.0" layoutY="143.0" prefHeight="463.0" prefWidth="425.0" />
+      <Text layoutX="721.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By: Rodrigo de Sousa">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font></Text>
-      <Text layoutX="15.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.1">
+      <Text layoutX="15.0" layoutY="687.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1.2">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font></Text>
-      <Button layoutX="15.0" layoutY="66.0" mnemonicParsing="false" onAction="#readCsvFileChooser" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: #AAA;" text="Import Drivers (Optional)" textFill="WHITE">
+      <Button layoutX="15.0" layoutY="66.0" mnemonicParsing="false" onAction="#readCsvFileChooser" prefHeight="32.0" prefWidth="417.0" style="-fx-background-color: #AAA;" text="Import Drivers (Optional)" textFill="WHITE">
          <font>
             <Font name="SansSerif Regular" size="15.0" />
          </font></Button>
-      <Text fx:id="textDrivers" layoutX="320.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Drivers" textAlignment="CENTER" wrappingWidth="261.0">
+      <Text fx:id="textDrivers" layoutX="361.0" layoutY="130.0" onMouseEntered="#showDrivers" onMouseExited="#hideDrivers" strokeType="OUTSIDE" strokeWidth="0.0" text="0 Drivers" textAlignment="CENTER" wrappingWidth="181.0">
          <font>
             <Font name="SansSerif Regular" size="18.0" />
          </font></Text>
-      <Button layoutX="585.0" layoutY="66.0" mnemonicParsing="false" onAction="#clearDrivers" prefHeight="32.0" prefWidth="300.0" style="-fx-background-color: #AAA;" text="Clear Drivers" textFill="WHITE">
+      <Button layoutX="468.0" layoutY="66.0" mnemonicParsing="false" onAction="#clearDrivers" prefHeight="32.0" prefWidth="417.0" style="-fx-background-color: #AAA;" text="Clear Drivers" textFill="WHITE">
          <font>
             <Font name="SansSerif Regular" size="15.0" />
          </font></Button>
       <Pane prefHeight="50.0" prefWidth="900.0" style="-fx-background-color: #DDD;" />
-      <Text fontSmoothingType="LCD" layoutX="143.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RFACTOR/AUTOMOBILISTA RESULTS GENERATOR" textAlignment="CENTER" wrappingWidth="578.1900787353516">
+      <Text fontSmoothingType="LCD" layoutX="143.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RACE RESULTS GENERATOR" textAlignment="CENTER" wrappingWidth="578.1900787353516">
          <font>
             <Font name="SansSerif Bold" size="20.0" />
          </font>
       </Text>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="185.0" layoutY="108.0" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: #FF0808;" text="QUALIFY" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font></Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="639.0" layoutY="108.0" prefHeight="32.0" prefWidth="78.0" style="-fx-background-color: #FF0808;" text="RACE" textFill="WHITE">
+         <font>
+            <Font name="SansSerif Bold" size="14.0" />
+         </font></Label>
    </children>
 </AnchorPane>
