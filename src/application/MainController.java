@@ -72,7 +72,7 @@ public class MainController implements Initializable {
 			drivers.append("No Drivers");
 		} else {
 			driverTeams.stream().sorted((k1, k2) -> k1.getName().compareTo(k2.getName()))
-								.forEach(d -> drivers.append("Driver: " + d.getName() + " - Team: " + d.getTeam() + "\n"));
+								.forEach(d -> drivers.append(d.toString() + "\n"));
 		}
 		
 		Label label = new Label(drivers.toString());

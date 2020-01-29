@@ -37,6 +37,6 @@ public class Driver {
 
 	@Override
 	public String toString() {
-		return "Driver [name=" + name + ", team=" + team + ", id=" + id + "]";
+		return "Driver name=" + name + ", team=" + team + ", id=" + id;
 	}
 }
