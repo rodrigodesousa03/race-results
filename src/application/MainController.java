@@ -19,6 +19,7 @@ import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.enums.FileType;
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.transformers.AssettoTransformer;
 import br.com.rsousa.transformers.IRacingTransformer;
 import br.com.rsousa.transformers.RFactorTransformer;
 import javafx.event.ActionEvent;
@@ -107,6 +108,8 @@ public class MainController implements Initializable {
 			processQualify(file, driverTeams, results);
 		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
 			IRacingTransformer.processQualify(file, driverTeams, results);
+		} else {
+			AssettoTransformer.processQualify(file, driverTeams, results);
 		}
 		
 		showResults();
@@ -134,8 +137,10 @@ public class MainController implements Initializable {
 		for (File file : files) {
 			if (file.getName().contains("xml") || file.getName().contains("XML")) {
 				RFactorTransformer.processQualify(file, driverTeams, results);
-			} else if (file.getName().contains("csv") || file.getName().contains("csv")) {
+			} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
 				IRacingTransformer.processQualify(file, driverTeams, results);
+			} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
+				AssettoTransformer.processQualify(file, driverTeams, results);
 			}
 		}
 		
