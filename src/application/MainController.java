@@ -1,8 +1,7 @@
 package application;
 
-import static application.RFactorTransformer.proccessXMLQualify;
-import static application.RFactorTransformer.proccessXMLRace;
 import static br.com.rsousa.enums.FileType.RACE;
+import static br.com.rsousa.transformers.RFactorTransformer.processXMLQualify;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -10,26 +9,15 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
-import java.util.stream.Stream;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
 
 import org.controlsfx.control.PopOver;
 
-import static java.util.stream.Collectors.toList;
-
 import br.com.rsousa.enums.FileType;
-import br.com.rsousa.pojo.ams.Driver;
-import br.com.rsousa.pojo.ams.RFactorXML;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -110,7 +98,7 @@ public class MainController implements Initializable {
 		fc.getExtensionFilters().add(new ExtensionFilter("XML Files", fileTypes()));
 
 		File file = fc.showOpenDialog(null);
-		proccessXMLQualify(file, driverTeams, results);
+		processXMLQualify(file, driverTeams, results);
 		
 		showResults();
 	}
@@ -132,7 +120,7 @@ public class MainController implements Initializable {
 		
 		for (File file : files) {
 			if (file.getName().contains("xml") || file.getName().contains("XML")) {
-				proccessXMLQualify(file, driverTeams, results);
+				processXMLQualify(file, driverTeams, results);
 			}
 		}
 		

@@ -1,4 +1,4 @@
-package application;
+package br.com.rsousa.transformers;
 
 import static br.com.rsousa.enums.FileType.QUALIFY;
 import static br.com.rsousa.enums.FileType.RACE;
@@ -23,7 +23,7 @@ import br.com.rsousa.pojo.ams.RFactorXML;
 public class RFactorTransformer {
 	private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 	
-	static void proccessXMLQualify(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
+	public static void processXMLQualify(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
 		if (file != null) {
 			JAXBContext jaxbContext;
 			try {
@@ -34,7 +34,7 @@ public class RFactorTransformer {
 				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
 
 				if (raceResult.getRaceResults().getQualify() == null) {
-					proccessXMLRace(file, driverTeams, results);
+					processXMLRace(file, driverTeams, results);
 					
 					return;
 				}
@@ -64,7 +64,7 @@ public class RFactorTransformer {
 		}
 	}
 	
-	static void proccessXMLRace(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
+	public static void processXMLRace(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
 		if (file != null) {
 			JAXBContext jaxbContext;
 			try {
@@ -75,7 +75,7 @@ public class RFactorTransformer {
 				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
 				
 				if (raceResult.getRaceResults().getRace() == null) {
-					proccessXMLQualify(file, driverTeams, results);
+					processXMLQualify(file, driverTeams, results);
 					
 					return;
 				}
