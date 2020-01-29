@@ -23,7 +23,7 @@ import br.com.rsousa.pojo.ams.RFactorXML;
 public class RFactorTransformer {
 	private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 	
-	public static void processXMLQualify(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
+	public static void processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, Map<FileType, String> results) {
 		if (file != null) {
 			JAXBContext jaxbContext;
 			try {
@@ -34,7 +34,7 @@ public class RFactorTransformer {
 				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
 
 				if (raceResult.getRaceResults().getQualify() == null) {
-					processXMLRace(file, driverTeams, results);
+					processRace(file, driverTeams, results);
 					
 					return;
 				}
@@ -64,7 +64,7 @@ public class RFactorTransformer {
 		}
 	}
 	
-	public static void processXMLRace(File file, Map<String, String> driverTeams, Map<FileType, String> results) {
+	public static void processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams, Map<FileType, String> results) {
 		if (file != null) {
 			JAXBContext jaxbContext;
 			try {
@@ -75,7 +75,7 @@ public class RFactorTransformer {
 				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
 				
 				if (raceResult.getRaceResults().getRace() == null) {
-					processXMLQualify(file, driverTeams, results);
+					processQualify(file, driverTeams, results);
 					
 					return;
 				}
@@ -141,8 +141,11 @@ public class RFactorTransformer {
 		return !driver.getName().contains("Diretor") && !driver.getName().contains("Comentarista") && !driver.getName().contains("Narrador");
 	}
 
-	private static String resultLine(int position, Driver driver, String time, Map<String, String> driverTeams) {
-		String driverTeamName = driverTeams.containsKey(driver.getName()) ? driverTeams.get(driver.getName()) : driver.getTeamName().trim();
+	private static String resultLine(int position, Driver driver, String time, List<br.com.rsousa.pojo.Driver> driverTeams) {
+		String driverTeamName = driverTeams.stream().filter(d -> driver.getName().equals(d.getName()))
+													.map(d -> d.getTeam())
+													.findAny()
+													.orElse(driver.getTeamName());
 		
 		return position + " " + driver.getName() + " (" + driverTeamName + "), " + time;
 	}

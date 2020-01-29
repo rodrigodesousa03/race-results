@@ -1,7 +1,7 @@
 package application;
 
 import static br.com.rsousa.enums.FileType.RACE;
-import static br.com.rsousa.transformers.RFactorTransformer.processXMLQualify;
+import static br.com.rsousa.transformers.RFactorTransformer.processQualify;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -18,6 +18,9 @@ import java.util.ResourceBundle;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.enums.FileType;
+import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.transformers.IRacingTransformer;
+import br.com.rsousa.transformers.RFactorTransformer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -45,13 +48,13 @@ public class MainController implements Initializable {
 	@FXML
 	private Text textDrivers;
 	
-	private Map<String, String> driverTeams = new HashMap<String, String>();
+	private List<Driver> driverTeams = new ArrayList<>();
 	
 	private Map<FileType, String> results = new HashMap<FileType, String>();
 	
 	@FXML
 	void readCsvFileChooser(ActionEvent event) {
-        driverTeams = new HashMap<String, String>();
+        driverTeams.clear();
         
        	FileChooser fc = new FileChooser();
     	fc.getExtensionFilters().add(new ExtensionFilter("CSV File", "*.csv"));
@@ -68,7 +71,8 @@ public class MainController implements Initializable {
 		if (driverTeams.isEmpty()) {
 			drivers.append("No Drivers");
 		} else {
-			driverTeams.keySet().stream().sorted((k1, k2) -> k1.compareTo(k2)).forEach(k -> drivers.append("Driver: " + k + " - Team: " + driverTeams.get(k) + "\n"));
+			driverTeams.stream().sorted((k1, k2) -> k1.getName().compareTo(k2.getName()))
+								.forEach(d -> drivers.append("Driver: " + d.getName() + " - Team: " + d.getTeam() + "\n"));
 		}
 		
 		Label label = new Label(drivers.toString());
@@ -87,7 +91,7 @@ public class MainController implements Initializable {
 	
 	@FXML
 	void clearDrivers(ActionEvent event) {
-		driverTeams = new HashMap<String, String>();
+		driverTeams.clear();
 		
 		textDrivers.setText(driverTeams.size() + " Drivers");
 	}
@@ -95,10 +99,15 @@ public class MainController implements Initializable {
 	@FXML
 	void processLogFileChooser(ActionEvent event) {
 		FileChooser fc = new FileChooser();
-		fc.getExtensionFilters().add(new ExtensionFilter("XML Files", fileTypes()));
+		fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV Files", fileTypes()));
 
 		File file = fc.showOpenDialog(null);
-		processXMLQualify(file, driverTeams, results);
+		
+		if (file.getName().contains("xml") || file.getName().contains("XML")) {
+			processQualify(file, driverTeams, results);
+		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
+			IRacingTransformer.processQualify(file, driverTeams, results);
+		}
 		
 		showResults();
 	}
@@ -116,11 +125,17 @@ public class MainController implements Initializable {
 		
 		List<File> files = event.getDragboard().getFiles();
 		
-		files.stream().filter(f -> f.getName().contains("csv")).findFirst().ifPresent(f -> processDrivers(f));
+		files.stream().filter(f -> f.getName().contains("pilotos")).findFirst().ifPresent(f -> {
+			driverTeams.clear();
+			processDrivers(f);
+			files.remove(f);
+		});
 		
 		for (File file : files) {
 			if (file.getName().contains("xml") || file.getName().contains("XML")) {
-				processXMLQualify(file, driverTeams, results);
+				RFactorTransformer.processQualify(file, driverTeams, results);
+			} else if (file.getName().contains("csv") || file.getName().contains("csv")) {
+				IRacingTransformer.processQualify(file, driverTeams, results);
 			}
 		}
 		
@@ -151,6 +166,8 @@ public class MainController implements Initializable {
 			fileTypes.add("*.XML");
 			fileTypes.add("*.json");
 			fileTypes.add("*.JSON");
+			fileTypes.add("*.csv");
+			fileTypes.add("*.CSV");
 		}
 
 		return fileTypes;
@@ -169,7 +186,9 @@ public class MainController implements Initializable {
 	                String[] driver = line.split(";");
 	                
 	                if (!driver[0].contains("Piloto")) {
-	                	driverTeams.put(driver[0], driver[1]);
+	                	String id = driver.length > 2 ? driver[2] : null;
+	                			
+	                	driverTeams.add(new Driver(driver[0], driver[1], id));
 	                }
 	            }
 	            
