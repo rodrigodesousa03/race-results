@@ -147,7 +147,7 @@ public class RFactorTransformer {
 													.findAny()
 													.orElse(driver.getTeamName());
 		
-		return position + " " + driver.getName() + " (" + driverTeamName + "), " + time;
+		return position + " " + driver.getName() + " (" + driverTeamName.trim() + "), " + time;
 	}
 	
 	private static String formatSeconds(String time, String textIfNull) {
