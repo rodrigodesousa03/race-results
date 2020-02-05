@@ -142,12 +142,12 @@ public class RFactorTransformer {
 	}
 
 	private static String resultLine(int position, Driver driver, String time, List<br.com.rsousa.pojo.Driver> driverTeams) {
-		String driverTeamName = driverTeams.stream().filter(d -> driver.getName().equals(d.getName()))
+		String driverTeamName = driverTeams.stream().filter(d -> driver.getName().trim().equals(d.getName()))
 													.map(d -> d.getTeam())
 													.findAny()
 													.orElse(driver.getTeamName());
 		
-		return position + " " + driver.getName() + " (" + driverTeamName.trim() + "), " + time;
+		return position + " " + driver.getName().trim() + " (" + driverTeamName.trim() + "), " + time;
 	}
 	
 	private static String formatSeconds(String time, String textIfNull) {
