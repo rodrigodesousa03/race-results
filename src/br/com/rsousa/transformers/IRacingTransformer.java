@@ -15,6 +15,8 @@ import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.iracing.DriverSession;
 
 public class IRacingTransformer {
+	private static final int FIRST_LINE = 10;
+
 	public static void processQualify(File file, List<Driver> driverTeams, Map<FileType, String> results) {
 		BufferedReader br = null;
         String line = "";
@@ -24,12 +26,12 @@ public class IRacingTransformer {
         if (file != null) {
 			try {
 	            br = new BufferedReader(new FileReader(file));
-	            while ((line = br.readLine()) != null || lineNumber <= 5) {
+	            while ((line = br.readLine()) != null || lineNumber <= FIRST_LINE) {
 
-	            	if (lineNumber >= 5) {
+	            	if (lineNumber >= FIRST_LINE) {
 		                DriverSession driverSession = transformLineInDriverSession(file, driverTeams, results, line);
 	            		
-		                if (lineNumber == 5 && driverSession.getQualifyTime().isEmpty()) {
+		                if (lineNumber == FIRST_LINE && driverSession.getQualifyTime().isEmpty()) {
 		                		processRace(file, driverTeams, results);
 		                		
 		                		return;
@@ -72,11 +74,11 @@ public class IRacingTransformer {
         if (file != null) {
 			try {
 	            br = new BufferedReader(new FileReader(file));
-	            while ((line = br.readLine()) != null || lineNumber <= 5) {
-	            	if (lineNumber >= 5) {
+	            while ((line = br.readLine()) != null || lineNumber <= FIRST_LINE) {
+	            	if (lineNumber >= FIRST_LINE) {
 		                DriverSession driverSession = transformLineInDriverSession(file, driverTeams, results, line);
 	            		
-		                if (lineNumber == 5) {
+		                if (lineNumber == FIRST_LINE) {
 		                		result += resultLine(driverSession.getFinalPosition(), driverSession, driverSession.getCompletedLaps() + " Laps", driverTeams) + "\n";
 		                		
 		                		driverBestLap = driverSession;
