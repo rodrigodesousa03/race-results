@@ -135,7 +135,14 @@ public class AssettoTransformer {
 	private static String formatSeconds(int time) {
 		String bestLapTime = String.valueOf(time);
 
-		Integer totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));
+		Integer totalSeconds;
+		
+		if (bestLapTime.length() > 3) {
+			totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));
+		} else {
+			totalSeconds = 0;
+		}
+				
 		String milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
 
 		String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
