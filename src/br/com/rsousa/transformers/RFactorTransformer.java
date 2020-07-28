@@ -112,7 +112,7 @@ public class RFactorTransformer {
 							totalLaps = driver.getLaps();
 							leaderFinishTime = Double.parseDouble(driver.getFinishTime());
 						} else {
-							if (driver.getBestLapTime() != null && driverBestLap.getBestLapTime().compareTo(driver.getBestLapTime()) > 0) {
+							if (driver.getBestLapTime() != null && Double.parseDouble(driverBestLap.getBestLapTime()) > Double.parseDouble(driver.getBestLapTime())) {
 								driverBestLap = driver;
 							}
 							
