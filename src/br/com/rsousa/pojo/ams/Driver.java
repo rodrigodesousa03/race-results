@@ -2,6 +2,7 @@ package br.com.rsousa.pojo.ams;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
@@ -47,6 +48,7 @@ public class Driver {
 
 	private String VehFile;
 
+	@XmlElement(name="Lap")
 	private Lap[] Lap;
 
 	private Integer Laps;
@@ -56,6 +58,8 @@ public class Driver {
 	private String RaceRank;
 
 	private String Pitstops;
+	
+	private String GridPos;
 
 	public String getIsPlayer() {
 		return isPlayer;
@@ -257,6 +261,14 @@ public class Driver {
 		this.Pitstops = Pitstops;
 	}
 
+	public String getGridPos() {
+		return GridPos;
+	}
+
+	public void setGridPos(String gridPos) {
+		GridPos = gridPos;
+	}
+	
 	@Override
 	public String toString() {
 		return "ClassPojo [isPlayer = " + isPlayer + ", CarNumber = " + CarNumber + ", BestLapTime = " + BestLapTime

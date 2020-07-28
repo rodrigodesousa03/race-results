@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.Reader;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -96,9 +97,15 @@ public class RFactorTransformer {
 						.sorted(Comparator.comparing(Driver::getPosition))
 						.collect(toList());
 
+				Driver polePositionDriver = drivers.stream()
+						.filter(d -> "1".equals(d.getGridPos()))
+						.findFirst()
+						.orElse(null);
+				
 				int position = 1;
 				String resultStr = "";
 				Driver driverBestLap = null;
+				Driver driverWinner = null;
 				Integer totalLaps = 0;
 				Double leaderFinishTime = null;
 
@@ -111,6 +118,7 @@ public class RFactorTransformer {
 							raceTimeFormatted = driver.getLaps() + " voltas";
 							totalLaps = driver.getLaps();
 							leaderFinishTime = Double.parseDouble(driver.getFinishTime());
+							driverWinner = driver;
 						} else {
 							if (driver.getBestLapTime() != null && Double.parseDouble(driverBestLap.getBestLapTime()) > Double.parseDouble(driver.getBestLapTime())) {
 								driverBestLap = driver;
@@ -137,8 +145,18 @@ public class RFactorTransformer {
 					}
 				}
 
-				resultStr += "Volta mais rápida: " + driverBestLap.getName() + ", "
+				resultStr += "\nVolta mais rápida: " + driverBestLap.getName() + ", "
 						+ formatSeconds(driverBestLap.getBestLapTime());
+				
+				if (polePositionDriver.equals(driverBestLap) && driverWinner.equals(driverBestLap)) {
+					boolean ledAllTheLaps = Arrays.asList(driverWinner.getLap()).stream().allMatch(l -> "1".equals(l.getP()));
+					
+					if (ledAllTheLaps) {
+						resultStr += "\nHattrick & Grand Chelem para " + driverWinner.getName();
+					} else {
+						resultStr += "\nHattrick para " + driverWinner.getName();
+					}
+				}
 
 				results.put(RACE, resultStr);
 			} catch (Exception e) {

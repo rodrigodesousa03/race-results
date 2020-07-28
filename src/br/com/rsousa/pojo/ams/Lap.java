@@ -2,19 +2,24 @@ package br.com.rsousa.pojo.ams;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlValue;
 
-@XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Lap {
+	@XmlAttribute
 	private String p;
 
+	@XmlAttribute
 	private String fuel;
 
+	@XmlAttribute
 	private String num;
 
+	@XmlValue
 	private String content;
 
+	@XmlAttribute
 	private String et;
 
 	public String getP() {
