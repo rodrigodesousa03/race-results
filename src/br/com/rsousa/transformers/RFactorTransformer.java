@@ -4,6 +4,10 @@ import static br.com.rsousa.enums.FileType.QUALIFY;
 import static br.com.rsousa.enums.FileType.RACE;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Comparator;
@@ -30,8 +34,12 @@ public class RFactorTransformer {
 				jaxbContext = JAXBContext.newInstance(RFactorXML.class);
 
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+				
+				InputStream inputStream = new FileInputStream(file);
+				
+				Reader reader = new InputStreamReader(inputStream, "UTF-8");
 
-				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
+				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
 				if (raceResult.getRaceResults().getQualify() == null) {
 					processRace(file, driverTeams, results);
@@ -71,8 +79,12 @@ public class RFactorTransformer {
 				jaxbContext = JAXBContext.newInstance(RFactorXML.class);
 
 				Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+				
+				InputStream inputStream = new FileInputStream(file);
+				
+				Reader reader = new InputStreamReader(inputStream, "UTF-8");
 
-				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(file);
+				RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 				
 				if (raceResult.getRaceResults().getRace() == null) {
 					processQualify(file, driverTeams, results);
