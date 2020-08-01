@@ -4,14 +4,20 @@ public class Driver {
 	private String name;
 	private String team;
 	private String id;
-	private Double bestLap;
+	private String bestLap;
 	private Integer laps;
 	private Integer position;
 	private boolean isBestLap;
 	private boolean hattrick;
 	private boolean grandChelem;
 	private Integer licensePoints;
-	
+	private String raceTimeFormatted;
+	private Double finishTime;
+
+	public Driver() {
+		// Default Constructor
+	}
+
 	public Driver(String name, String team, String id) {
 		this.name = name;
 		this.team = team;
@@ -47,11 +53,11 @@ public class Driver {
 		return "Driver name=" + name + ", team=" + team + ", id=" + id;
 	}
 
-	public Double getBestLap() {
+	public String getBestLap() {
 		return bestLap;
 	}
 
-	public void setBestLap(Double bestLap) {
+	public void setBestLap(String bestLap) {
 		this.bestLap = bestLap;
 	}
 
@@ -101,5 +107,21 @@ public class Driver {
 
 	public void setPosition(Integer position) {
 		this.position = position;
+	}
+
+	public String getRaceTimeFormatted() {
+		return raceTimeFormatted;
+	}
+
+	public void setRaceTimeFormatted(String raceTimeFormatted) {
+		this.raceTimeFormatted = raceTimeFormatted;
+	}
+
+	public Double getFinishTime() {
+		return finishTime;
+	}
+
+	public void setFinishTime(Double finishTime) {
+		this.finishTime = finishTime;
 	}
 }
