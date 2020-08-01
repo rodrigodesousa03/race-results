@@ -8,6 +8,7 @@ public class Driver {
 	private Integer laps;
 	private Integer position;
 	private boolean isBestLap;
+	private boolean isPoleposition;
 	private boolean hattrick;
 	private boolean grandChelem;
 	private Integer licensePoints;
@@ -123,5 +124,13 @@ public class Driver {
 
 	public void setFinishTime(Double finishTime) {
 		this.finishTime = finishTime;
+	}
+
+	public boolean isPoleposition() {
+		return isPoleposition;
+	}
+
+	public void setPoleposition(boolean poleposition) {
+		isPoleposition = poleposition;
 	}
 }

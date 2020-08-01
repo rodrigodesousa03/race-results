@@ -12,14 +12,20 @@ public class DriverTransformer {
         driver.setLaps(amsDriver.getLaps());
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(amsDriver.getName(), amsDriver.getTeamName(), drivers));
 
-        String driverTeamName = drivers.stream().filter(d -> amsDriver.getName().trim().equals(d.getName()))
-                .map(d -> d.getTeam())
-                .findAny()
-                .orElse(amsDriver.getTeamName());
+        return driver;
+    }
 
         driver.setTeam(driverTeamName);
 
         return driver;
+    }
+
+    private static String getTeamName(String driverName, String teamName, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
+                .map(d -> d.getTeam())
+                .findAny()
+                .orElse(teamName);
     }
 }

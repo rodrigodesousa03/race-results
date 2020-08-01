@@ -100,15 +100,9 @@ public class RFactorTransformer {
                         .sorted(Comparator.comparing(Driver::getPosition))
                         .collect(toList());
 
-                Driver polePositionDriver = drivers.stream()
-                        .filter(d -> "1".equals(d.getGridPos()))
-                        .findFirst()
-                        .orElse(null);
-
                 Session session = new Session(SessionType.RACE);
 
                 Integer position = 1;
-                String resultStr = "";
                 Driver driverBestLap = null;
                 Driver driverWinner = null;
                 Integer totalLaps = 0;
@@ -141,11 +135,19 @@ public class RFactorTransformer {
                             }
                         }
 
+
+
                         if (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
                             raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
                         }
 
-                        session.addDriver(DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTeams));
+                        br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTeams);
+
+                        if ("1".equals(driver.getGridPos())) {
+                            sessionDriver.setPoleposition(true);
+                        }
+
+                        session.addDriver(sessionDriver);
 
                         position++;
                     }
@@ -159,10 +161,11 @@ public class RFactorTransformer {
                         .orElse(null);
                 sessionDriverBestLap.setBestLap(true);
                 
-                if (polePositionDriver.equals(driverBestLap) && driverWinner.equals(driverBestLap)) {
+                if (sessionDriverBestLap.isPoleposition() && driverWinner.equals(driverBestLap)) {
                     boolean ledAllTheLaps = Arrays.asList(driverWinner.getLap()).stream().allMatch(l -> "1".equals(l.getP()));
 
                     sessionDriverBestLap.setHattrick(true);
+                    sessionDriverBestLap.setPoleposition(true);
 
                     if (ledAllTheLaps) {
                         sessionDriverBestLap.setGrandChelem(true);
