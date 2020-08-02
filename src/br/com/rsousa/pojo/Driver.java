@@ -14,18 +14,17 @@ public class Driver {
 	private boolean grandChelem;
 	private Integer licensePoints;
 	private String raceTimeFormatted;
-	private Double finishTime;
-
-	public Driver() {
-		// Default Constructor
-	}
 
 	public Driver(String name, String team, String id) {
 		this.name = name;
 		this.team = team;
 		this.id = id;
 	}
-	
+
+	public Driver() {
+		// Do Nothing
+	}
+
 	public String getName() {
 		return name;
 	}
@@ -46,13 +45,9 @@ public class Driver {
 		return id;
 	}
 
-	public void setId(String id) {
-		this.id = id;
-	}
-
 	@Override
 	public String toString() {
-		return "Driver name=" + name + ", team=" + team + ", id=" + id;
+		return name + " (" + team + ")";
 	}
 
 	public String getBestLap() {
@@ -117,14 +112,6 @@ public class Driver {
 
 	public void setRaceTimeFormatted(String raceTimeFormatted) {
 		this.raceTimeFormatted = raceTimeFormatted;
-	}
-
-	public Double getFinishTime() {
-		return finishTime;
-	}
-
-	public void setFinishTime(Double finishTime) {
-		this.finishTime = finishTime;
 	}
 
 	public boolean isPoleposition() {
