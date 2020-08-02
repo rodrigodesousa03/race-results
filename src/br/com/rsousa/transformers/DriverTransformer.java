@@ -45,14 +45,14 @@ public class DriverTransformer {
 
     private static String getTeamName(String driverName, String teamName, List<Driver> drivers) {
         return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
-                .map(d -> d.getTeam())
+                .map(Driver::getTeam)
                 .findAny()
                 .orElse(teamName);
     }
 
     private static String getDriverName(DriverSession driver, List<Driver> drivers) {
         return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
-                .map(d -> d.getName())
+                .map(Driver::getName)
                 .findAny()
                 .orElse(driver.getName());
     }
