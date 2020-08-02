@@ -9,6 +9,8 @@ public class DriverSession {
 	private String id;
 	private int completedLaps;
 	private String out;
+	private int startPosition;
+	private int lapsLed;
 
 	public int getFinalPosition() {
 		return finalPosition;
@@ -79,5 +81,21 @@ public class DriverSession {
 		return "DriverSession [finalPosition=" + finalPosition + ", name=" + name + ", interval=" + interval
 				+ ", qualifyTime=" + qualifyTime + ", fastLap=" + fastLap + ", id=" + id + ", completedLaps="
 				+ completedLaps + ", out=" + out + "]";
+	}
+
+	public int getLapsLed() {
+		return lapsLed;
+	}
+
+	public void setLapsLed(int lapsLed) {
+		this.lapsLed = lapsLed;
+	}
+
+	public int getStartPosition() {
+		return startPosition;
+	}
+
+	public void setStartPosition(int startPosition) {
+		this.startPosition = startPosition;
 	}
 }

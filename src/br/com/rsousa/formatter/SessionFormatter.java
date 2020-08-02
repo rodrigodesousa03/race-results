@@ -42,6 +42,10 @@ public class SessionFormatter {
     }
 
     private static String formatSeconds(String time) {
+        if (time.contains(":")) {
+            return time;
+        }
+
         String[] bestLapTime = time.split("\\.");
 
         Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
@@ -53,7 +57,9 @@ public class SessionFormatter {
     }
 
     private static String resultLine(Driver driver) {
-        return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getRaceTimeFormatted();
+        String timeFormatted = !driver.getRaceTimeFormatted().trim().isEmpty() ? driver.getRaceTimeFormatted() : "sem tempo";
+
+        return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + timeFormatted;
     }
 
 }
