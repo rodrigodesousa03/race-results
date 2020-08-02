@@ -6,39 +6,35 @@ import br.com.rsousa.pojo.SessionType;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
 
 public class SessionFormatter {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
     public static String format(Session session) {
-        String resultStr = "";
+        StringBuilder resultStr = new StringBuilder();
 
         for (Driver driver : session.drivers()) {
-            resultStr += resultLine(driver) + "\n";
-        }
-
-        if (session.type() == SessionType.QUALIFY) {
-            return resultStr;
+            resultStr.append(resultLine(driver)).append("\n");
         }
 
         Driver driverBestLap = session.drivers().stream()
-                .filter(d -> d.isBestLap())
+                .filter(Driver::isBestLap)
                 .findFirst()
                 .orElse(null);
 
-        resultStr += "\nVolta mais rápida: " + driverBestLap.getName() + ", "
-                + formatSeconds(driverBestLap.getBestLap());
+        if (driverBestLap != null) {
+            resultStr.append("\nVolta mais rápida: ").append(driverBestLap.getName()).append(", ").append(formatSeconds(driverBestLap.getBestLap()));
 
-        if (driverBestLap.isHattrick()) {
-            if (driverBestLap.isGrandChelem()) {
-                resultStr += "\nHattrick & Grand Chelem para " + driverBestLap.getName();
-            } else {
-                resultStr += "\nHattrick para " + driverBestLap.getName();
+            if (driverBestLap.isHattrick()) {
+                if (driverBestLap.isGrandChelem()) {
+                    resultStr.append("\nHattrick & Grand Chelem para ").append(driverBestLap.getName());
+                } else {
+                    resultStr.append("\nHattrick para ").append(driverBestLap.getName());
+                }
             }
         }
 
-        return resultStr;
+        return resultStr.toString();
     }
 
     private static String formatSeconds(String time) {
@@ -48,12 +44,11 @@ public class SessionFormatter {
 
         String[] bestLapTime = time.split("\\.");
 
-        Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
+        int totalSeconds = Integer.parseInt(bestLapTime[0]);
         String milliseconds = bestLapTime[1].substring(0, 3);
 
-        String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
+        return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
-        return bestLapTimeFormatted;
     }
 
     private static String resultLine(Driver driver) {
