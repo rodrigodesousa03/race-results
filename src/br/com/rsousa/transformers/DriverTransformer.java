@@ -1,6 +1,7 @@
 package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.pojo.assetto.Result;
 import br.com.rsousa.pojo.iracing.DriverSession;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class DriverTransformer {
 
     public static Driver toDriver(DriverSession iRacingDriver, int position, String raceTimeFormatted, List<Driver> drivers) {
         Driver driver = new Driver();
-        driver.setName(iRacingDriver.getName());
+        driver.setName(getDriverName(iRacingDriver, drivers));
         driver.setBestLap(iRacingDriver.getFastLap());
         driver.setLaps(iRacingDriver.getCompletedLaps());
         driver.setPosition(position);
@@ -30,10 +31,29 @@ public class DriverTransformer {
         return driver;
     }
 
+    public static Driver toDriver(Result assettoDriver, int position, int laps, String raceTimeFormatted, List<Driver> drivers) {
+        Driver driver = new Driver();
+        driver.setName(assettoDriver.getDriverName());
+        driver.setBestLapSeconds(assettoDriver.getBestLap());
+        driver.setLaps(laps);
+        driver.setPosition(position);
+        driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(assettoDriver.getDriverName(), "Independente", drivers));
+
+        return driver;
+    }
+
     private static String getTeamName(String driverName, String teamName, List<Driver> drivers) {
         return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
                 .map(d -> d.getTeam())
                 .findAny()
                 .orElse(teamName);
+    }
+
+    private static String getDriverName(DriverSession driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
+                .map(d -> d.getName())
+                .findAny()
+                .orElse(driver.getName());
     }
 }

@@ -23,7 +23,13 @@ public class SessionFormatter {
                 .orElse(null);
 
         if (driverBestLap != null) {
-            resultStr.append("\nVolta mais rápida: ").append(driverBestLap.getName()).append(", ").append(formatSeconds(driverBestLap.getBestLap()));
+            resultStr.append("\nVolta mais rápida: ").append(driverBestLap.getName()).append(", ");
+
+            if (driverBestLap.getBestLap() != null) {
+                resultStr.append(formatSeconds(driverBestLap.getBestLap()));
+            } else {
+                resultStr.append(formatSeconds(driverBestLap.getBestLapSeconds()));
+            }
 
             if (driverBestLap.isHattrick()) {
                 if (driverBestLap.isGrandChelem()) {
@@ -49,6 +55,25 @@ public class SessionFormatter {
 
         return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
+    }
+
+    private static String formatSeconds(int time) {
+        String bestLapTime = String.valueOf(time);
+
+        Integer totalSeconds;
+
+        if (bestLapTime.length() > 3) {
+            totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));
+        } else {
+            totalSeconds = 0;
+        }
+
+        String milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
+
+        String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
+                + milliseconds;
+
+        return bestLapTimeFormatted;
     }
 
     private static String resultLine(Driver driver) {

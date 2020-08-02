@@ -1,34 +1,28 @@
 package br.com.rsousa.transformers;
 
-import static br.com.rsousa.enums.FileType.QUALIFY;
-import static br.com.rsousa.enums.FileType.RACE;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
-import br.com.rsousa.enums.FileType;
-import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.iracing.DriverSession;
 
 public class IRacingTransformer {
-    public static void processQualify(File file, List<Driver> driverTeams, Map<FileType, String> results) {
+    public static Session processQualify(File file, List<Driver> driverTeams) {
         BufferedReader br = null;
-        String line = "";
+        String line;
         boolean reachedFirstLine = false;
         int position = 1;
+        Session session = null;
 
         if (file != null) {
             try {
                 br = new BufferedReader(new FileReader(file));
-                Session session = new Session(SessionType.QUALIFY);
                 while ((line = br.readLine()) != null || !reachedFirstLine) {
 
                     if (line != null && !reachedFirstLine) {
@@ -40,13 +34,13 @@ public class IRacingTransformer {
                     }
 
                     if (reachedFirstLine) {
-                        DriverSession driverSession = transformLineInDriverSession(file, driverTeams, results, line);
+                        DriverSession driverSession = transformLineInDriverSession(line);
 
-                        if (position == 1 && driverSession.getQualifyTime().isEmpty()) {
-                            processRace(file, driverTeams, results);
-
-                            return;
+                        if (position == 1 && driverSession != null && driverSession.getQualifyTime().isEmpty()) {
+                            return processRace(file, driverTeams);
                         }
+
+                        session = new Session(SessionType.QUALIFY);
 
                         if (driverSession != null) {
                             Driver driver = DriverTransformer.toDriver(driverSession, driverSession.getFinalPosition(), driverSession.getFastLap(), driverTeams);
@@ -56,11 +50,7 @@ public class IRacingTransformer {
                         position++;
                     }
                 }
-
-                results.put(QUALIFY, SessionFormatter.format(session));
             } catch (Exception e) {
-                results.put(QUALIFY, "Error transforming the CSV file.");
-
                 e.printStackTrace();
             } finally {
                 if (br != null) {
@@ -73,20 +63,20 @@ public class IRacingTransformer {
             }
         }
 
-
+        return session;
     }
 
-    public static void processRace(File file, List<Driver> driverTeams, Map<FileType, String> results) {
+    public static Session processRace(File file, List<Driver> driverTeams) {
         BufferedReader br = null;
-        String line = "";
+        String line;
         int position = 1;
         DriverSession driverBestLap = null;
         boolean reachedFirstLine = false;
+        Session session = null;
 
         if (file != null) {
             try {
                 br = new BufferedReader(new FileReader(file));
-                Session session = new Session(SessionType.RACE);
                 DriverSession winner = null;
                 while ((line = br.readLine()) != null || !reachedFirstLine) {
                     if (line != null && !reachedFirstLine) {
@@ -98,8 +88,9 @@ public class IRacingTransformer {
                     }
 
                     if (reachedFirstLine) {
+                        session = new Session(SessionType.RACE);
 
-                        DriverSession driverSession = transformLineInDriverSession(file, driverTeams, results, line);
+                        DriverSession driverSession = transformLineInDriverSession(line);
                         Driver driver = null;
                         if (position == 1) {
                             driver = DriverTransformer.toDriver(driverSession, position, driverSession.getCompletedLaps() + " Laps", driverTeams);
@@ -131,26 +122,27 @@ public class IRacingTransformer {
 
                 String driverBestLapName = driverBestLap.getName();
 
-                br.com.rsousa.pojo.Driver sessionDriverBestLap = session.drivers().stream()
+                Optional<Driver> sessionDriverBestLapOpt = session.drivers().stream()
                         .filter(d -> d.getName().equals(driverBestLapName))
-                        .findFirst()
-                        .orElse(null);
-                sessionDriverBestLap.setBestLap(true);
+                        .findFirst();
 
-                if (sessionDriverBestLap.isPoleposition() && sessionDriverBestLap.getPosition() == 1) {
-                    sessionDriverBestLap.setHattrick(true);
+                if (sessionDriverBestLapOpt.isPresent()) {
+                    Driver sessionDriverBestLap = sessionDriverBestLapOpt.get();
 
-                    boolean ledAllTheLaps = winner.getCompletedLaps() == winner.getLapsLed();
+                    sessionDriverBestLap.setBestLap(true);
 
-                    if (ledAllTheLaps) {
-                        sessionDriverBestLap.setGrandChelem(true);
+                    if (sessionDriverBestLap.isPoleposition() && sessionDriverBestLap.getPosition() == 1) {
+                        sessionDriverBestLap.setHattrick(true);
+
+                        boolean ledAllTheLaps = winner.getCompletedLaps() == winner.getLapsLed();
+
+                        if (ledAllTheLaps) {
+                            sessionDriverBestLap.setGrandChelem(true);
+                        }
                     }
                 }
 
-                results.put(RACE, SessionFormatter.format(session));
             } catch (Exception e) {
-                results.put(RACE, "Error transforming the CSV file.");
-
                 e.printStackTrace();
             } finally {
                 if (br != null) {
@@ -162,10 +154,11 @@ public class IRacingTransformer {
                 }
             }
         }
+
+        return session;
     }
 
-    private static DriverSession transformLineInDriverSession(File file, List<Driver> driverTeams, Map<FileType, String> results,
-                                                              String line) {
+    private static DriverSession transformLineInDriverSession(String line) {
         String[] driverSessionArray = line.replaceAll("\"", "").split(",");
 
         if (driverSessionArray[0].equals("Fin Pos")) {
@@ -185,21 +178,5 @@ public class IRacingTransformer {
         driverSession.setCompletedLaps(Integer.parseInt(driverSessionArray[18]));
 
         return driverSession;
-    }
-
-    private static String resultLine(int position, DriverSession driver, String time, List<Driver> driverTeams) {
-        String driverTeamName = driverTeams.stream().filter(d -> driver.getId().equals(d.getId()))
-                .map(d -> d.getTeam())
-                .findAny()
-                .orElse("Independente");
-
-        String name = driverTeams.stream().filter(d -> driver.getId().equals(d.getId()))
-                .map(d -> d.getName())
-                .findAny()
-                .orElse(driver.getName());
-
-        time = !time.trim().isEmpty() ? time : "sem tempo";
-
-        return position + " " + name + " (" + driverTeamName + "), " + time;
     }
 }

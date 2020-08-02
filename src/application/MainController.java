@@ -9,12 +9,10 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
+import br.com.rsousa.formatter.SessionFormatter;
+import br.com.rsousa.pojo.Event;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.enums.FileType;
@@ -51,7 +49,7 @@ public class MainController implements Initializable {
 	
 	private List<Driver> driverTeams = new ArrayList<>();
 	
-	private Map<FileType, String> results = new HashMap<FileType, String>();
+	private Event raceEvent = new Event();
 	
 	@FXML
 	void readCsvFileChooser(ActionEvent event) {
@@ -72,7 +70,7 @@ public class MainController implements Initializable {
 		if (driverTeams.isEmpty()) {
 			drivers.append("No Drivers");
 		} else {
-			driverTeams.stream().sorted((k1, k2) -> k1.getName().compareTo(k2.getName()))
+			driverTeams.stream().sorted(Comparator.comparing(Driver::getName))
 								.forEach(d -> drivers.append(d.toString() + "\n"));
 		}
 		
@@ -105,11 +103,11 @@ public class MainController implements Initializable {
 		File file = fc.showOpenDialog(null);
 		
 		if (file.getName().contains("xml") || file.getName().contains("XML")) {
-			processQualify(file, driverTeams, results);
+			raceEvent.addSession(RFactorTransformer.processQualify(file, driverTeams));
 		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-			IRacingTransformer.processQualify(file, driverTeams, results);
+			raceEvent.addSession(IRacingTransformer.processQualify(file, driverTeams));
 		} else {
-			AssettoTransformer.processQualify(file, driverTeams, results);
+			raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
 		}
 		
 		showResults();
@@ -124,7 +122,7 @@ public class MainController implements Initializable {
 	
 	@FXML
 	void logFileDrop(DragEvent event) {
-		results.clear();
+		raceEvent.clear();
 		
 		List<File> files = event.getDragboard().getFiles();
 		
@@ -136,11 +134,11 @@ public class MainController implements Initializable {
 		
 		for (File file : files) {
 			if (file.getName().contains("xml") || file.getName().contains("XML")) {
-				RFactorTransformer.processQualify(file, driverTeams, results);
+				raceEvent.addSession(RFactorTransformer.processQualify(file, driverTeams));
 			} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-				IRacingTransformer.processQualify(file, driverTeams, results);
+				raceEvent.addSession(IRacingTransformer.processQualify(file, driverTeams));
 			} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-				AssettoTransformer.processQualify(file, driverTeams, results);
+				raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
 			}
 		}
 		
@@ -150,12 +148,12 @@ public class MainController implements Initializable {
 
 
 	private void showResults() {
-		for (FileType type : results.keySet()) {
-			if (type == RACE) {
-				raceTextArea.setText(results.get(type));
-			} else {
-				qualifyTextArea.setText(results.get(type));
-			}
+		if (raceEvent.getQualifySession() != null) {
+			qualifyTextArea.setText(SessionFormatter.format(raceEvent.getQualifySession()));
+		}
+
+		if (raceEvent.getRaceSession() != null) {
+			raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
 		}
 	}
 	

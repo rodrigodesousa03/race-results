@@ -11,8 +11,6 @@ public class Session {
 	
 	private SessionType type;
 	
-	private String circuit;
-	
 	private List<Driver> drivers;
 
 	public List<Driver> drivers() {
@@ -28,14 +26,6 @@ public class Session {
 
 	public void addDriver(Driver driver) {
 		drivers.add(driver);
-	}
-
-	public String circuit() {
-		return circuit;
-	}
-
-	public void setCircuit(String circuit) {
-		this.circuit = circuit;
 	}
 
 	public SessionType type() {

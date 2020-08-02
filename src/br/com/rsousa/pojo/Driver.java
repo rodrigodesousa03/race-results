@@ -5,6 +5,7 @@ public class Driver {
 	private String team;
 	private String id;
 	private String bestLap;
+	private Integer bestLapSeconds;
 	private Integer laps;
 	private Integer position;
 	private boolean isBestLap;
@@ -132,5 +133,13 @@ public class Driver {
 
 	public void setPoleposition(boolean poleposition) {
 		isPoleposition = poleposition;
+	}
+
+	public Integer getBestLapSeconds() {
+		return bestLapSeconds;
+	}
+
+	public void setBestLapSeconds(Integer bestLapSeconds) {
+		this.bestLapSeconds = bestLapSeconds;
 	}
 }

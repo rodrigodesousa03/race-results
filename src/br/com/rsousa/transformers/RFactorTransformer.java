@@ -31,7 +31,7 @@ import br.com.rsousa.pojo.ams.RFactorXML;
 public class RFactorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public static void processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, Map<FileType, String> results) {
+    public static Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -46,9 +46,7 @@ public class RFactorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getQualify() == null) {
-                    processRace(file, driverTeams, results);
-
-                    return;
+                    return processRace(file, driverTeams);
                 }
 
                 Driver[] drivers = raceResult.getRaceResults().getQualify().getDriver();
@@ -67,16 +65,16 @@ public class RFactorTransformer {
                     }
                 }
 
-                results.put(QUALIFY, SessionFormatter.format(session));
+                return session;
             } catch (Exception e) {
-                results.put(QUALIFY, "Error transforming the XML file.");
-
                 e.printStackTrace();
             }
         }
+
+        return null;
     }
 
-    public static void processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams, Map<FileType, String> results) {
+    public static Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -91,9 +89,7 @@ public class RFactorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getRace() == null) {
-                    processQualify(file, driverTeams, results);
-
-                    return;
+                    return processQualify(file, driverTeams);
                 }
 
                 List<Driver> drivers = Stream.of(raceResult.getRaceResults().getRace().getDriver())
@@ -172,13 +168,13 @@ public class RFactorTransformer {
                     }
                 }
 
-                results.put(RACE, SessionFormatter.format(session));
+                return session;
             } catch (Exception e) {
-                results.put(RACE, "Error transforming the XML file.");
-
                 e.printStackTrace();
             }
         }
+
+        return null;
     }
 
     private static boolean isDriver(Driver driver) {
