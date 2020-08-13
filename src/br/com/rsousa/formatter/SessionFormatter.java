@@ -43,6 +43,27 @@ public class SessionFormatter {
         return resultStr.toString();
     }
 
+    public static String toSheets(Session session, String category, String circuit) {
+        StringBuilder resultStr = new StringBuilder();
+
+        for (Driver driver: session.drivers()) {
+            resultStr.append(driver.getPosition()).append(";")
+            .append(category).append(";")
+            .append(circuit).append(";")
+            .append(driver.getName()).append(";")
+            .append(driver.getTeam()).append(";")
+            .append(0).append(";")
+            .append(driver.isPoleposition() ? "SIM" : "-").append(";")
+            .append(driver.isBestLap() ? "SIM" : "-").append(";")
+            .append(driver.isHattrick() ? "SIM" : "-").append(";")
+            .append(driver.isGrandChelem() ? "SIM" : "-").append(";")
+            .append("-").append(";")
+            .append("-").append("\n");
+        }
+
+        return resultStr.toString();
+    }
+
     private static String formatSeconds(String time) {
         if (time.contains(":")) {
             return time;

@@ -3,6 +3,7 @@ package br.com.rsousa.transformers;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.math.BigDecimal;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -91,6 +92,7 @@ public class AssettoTransformer {
                         }
 
                         Driver driver = DriverTransformer.toDriver(result, position, driverLaps.intValue(), raceTimeFormatted, driverTeams);
+                        driver.setRaceTime(formatSeconds(result.getTotalTime()));
                         session.addDriver(driver);
 
                         position++;

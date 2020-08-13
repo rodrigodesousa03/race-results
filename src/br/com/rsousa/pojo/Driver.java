@@ -1,5 +1,7 @@
 package br.com.rsousa.pojo;
 
+import java.math.BigDecimal;
+
 public class Driver {
 	private String name;
 	private String team;
@@ -13,6 +15,8 @@ public class Driver {
 	private boolean hattrick;
 	private boolean grandChelem;
 	private Integer licensePoints;
+
+	private String raceTime;
 	private String raceTimeFormatted;
 
 	public Driver(String name, String team, String id) {
@@ -128,5 +132,17 @@ public class Driver {
 
 	public void setBestLapSeconds(Integer bestLapSeconds) {
 		this.bestLapSeconds = bestLapSeconds;
+	}
+
+	public String getRaceTime() {
+		return raceTime;
+	}
+
+	public void setRaceTime(String raceTime) {
+		this.raceTime = raceTime;
+	}
+
+	public String text() {
+		return position + " " + toString() + " " + raceTimeFormatted;
 	}
 }

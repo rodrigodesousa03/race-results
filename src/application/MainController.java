@@ -1,8 +1,5 @@
 package application;
 
-import static br.com.rsousa.enums.FileType.RACE;
-import static br.com.rsousa.transformers.RFactorTransformer.processQualify;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,9 +10,10 @@ import java.util.*;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
+import javafx.beans.property.SimpleObjectProperty;
+import javafx.scene.control.*;
 import org.controlsfx.control.PopOver;
 
-import br.com.rsousa.enums.FileType;
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.transformers.AssettoTransformer;
 import br.com.rsousa.transformers.IRacingTransformer;
@@ -23,8 +21,6 @@ import br.com.rsousa.transformers.RFactorTransformer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 import javafx.scene.input.DragEvent;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.VBox;
@@ -40,12 +36,33 @@ public class MainController implements Initializable {
 	private TextArea raceTextArea;
 
 	@FXML
+	private TextArea sheetsTextArea;
+
+	@FXML
+	private TextField categoryTextField;
+
+	@FXML
+	private TextField circuitTextField;
+
+	@FXML
 	private TextArea qualifyTextArea;
 	
 	private PopOver popOver;
-	
+
 	@FXML
 	private Text textDrivers;
+
+	@FXML
+	private TableView<Driver> raceTableView;
+
+	@FXML
+	private TableColumn<Driver, Integer> positionColumn;
+
+	@FXML
+	private TableColumn<Driver, Integer> driverColumn;
+
+	@FXML
+	private TableColumn<Driver, Integer> textColumn;
 	
 	private List<Driver> driverTeams = new ArrayList<>();
 	
@@ -112,7 +129,7 @@ public class MainController implements Initializable {
 		
 		showResults();
 	}
-	
+
 	@FXML
 	void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
@@ -153,13 +170,17 @@ public class MainController implements Initializable {
 		}
 
 		if (raceEvent.getRaceSession() != null) {
+			raceTableView.getItems().addAll(raceEvent.getRaceSession().drivers());
 			raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
+			sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
 		}
 	}
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		// TODO Auto-generated method stub
+		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<Integer>(cellData.getValue().getPosition()));
+		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
+		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
 	}
 
 	private List<String> fileTypes() {
@@ -175,9 +196,7 @@ public class MainController implements Initializable {
 
 		return fileTypes;
 	}
-	
-	
-	
+
 	private void processDrivers(File file) {
 		BufferedReader br = null;
         String line = "";
