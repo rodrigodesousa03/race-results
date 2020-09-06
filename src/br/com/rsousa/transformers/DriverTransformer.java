@@ -1,6 +1,7 @@
 package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.pojo.acc.LeaderBoardLine;
 import br.com.rsousa.pojo.assetto.Result;
 import br.com.rsousa.pojo.iracing.DriverSession;
 
@@ -39,6 +40,21 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(assettoDriver.getDriverName(), "Independente", drivers));
+
+        return driver;
+    }
+
+    public static Driver toDriver(LeaderBoardLine assettoDriver, int position, int laps, String raceTimeFormatted, List<Driver> drivers) {
+        Driver driver = new Driver();
+
+        String driverName = assettoDriver.getCurrentDriver().getFirstName() + " " + assettoDriver.getCurrentDriver().getLastName();
+
+        driver.setName(driverName);
+        driver.setBestLapSeconds(assettoDriver.getTiming().getBestLap());
+        driver.setLaps(laps);
+        driver.setPosition(position);
+        driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(driverName, "Independente", drivers));
 
         return driver;
     }

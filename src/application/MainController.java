@@ -6,12 +6,20 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
+import br.com.rsousa.pojo.assetto.Session;
+import br.com.rsousa.transformers.AssettoCorsaCompetizioneTransformer;
 import br.com.rsousa.utils.SessionUtils;
+import com.google.gson.Gson;
+import com.google.gson.stream.MalformedJsonException;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -205,11 +213,31 @@ public class MainController implements Initializable {
 			} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
 				raceEvent.addSession(IRacingTransformer.processQualify(file, driverTeams));
 			} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-				raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
+				if (isAssettoCorsaLog(file)) {
+					raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
+				} else {
+					raceEvent.addSession(AssettoCorsaCompetizioneTransformer.processQualify(file, driverTeams));
+				}
 			}
 		}
 		
 		showResults();
+	}
+
+	private static boolean isAssettoCorsaLog(File file)
+	{
+		StringBuilder contentBuilder = new StringBuilder();
+
+		try (Stream<String> stream = Files.lines( Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8))
+		{
+			stream.forEach(s -> contentBuilder.append(s).append("\n"));
+		}
+		catch (IOException e)
+		{
+			e.printStackTrace();
+		}
+
+		return contentBuilder.toString().contains("TrackName");
 	}
 
 	private void selectDriver(Driver driver) {
