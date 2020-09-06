@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Optional;
 
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.iracing.DriverSession;
@@ -70,6 +71,7 @@ public class IRacingTransformer {
         BufferedReader br = null;
         String line;
         int position = 1;
+        int laps = 0;
         DriverSession driverBestLap = null;
         boolean reachedFirstLine = false;
         Session session = null;
@@ -96,6 +98,7 @@ public class IRacingTransformer {
                             driver = DriverTransformer.toDriver(driverSession, position, driverSession.getCompletedLaps() + " Laps", driverTeams);
                             driverBestLap = driverSession;
                             winner = driverSession;
+                            laps = driver.getLaps();
                         } else {
                             if (driverSession != null) {
                                 if (!driverSession.getFastLap().trim().isEmpty() && driverBestLap.getFastLap().compareTo(driverSession.getFastLap()) > 0) {
@@ -109,6 +112,10 @@ public class IRacingTransformer {
                         }
 
                         if (driver != null) {
+                            if (laps/2 > driver.getLaps()) {
+                                driver.setStatus(DriverStatus.DID_NOT_FINISH);
+                            }
+
                             session.addDriver(driver);
 
                             if (driverSession.getStartPosition() == 1) {

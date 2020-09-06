@@ -7,10 +7,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
+import br.com.rsousa.utils.SessionUtils;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import org.controlsfx.control.PopOver;
 
@@ -65,7 +69,9 @@ public class MainController implements Initializable {
 	private TableColumn<Driver, Integer> textColumn;
 	
 	private List<Driver> driverTeams = new ArrayList<>();
-	
+
+	private Driver driverSelected;
+
 	private Event raceEvent = new Event();
 	
 	@FXML
@@ -131,6 +137,50 @@ public class MainController implements Initializable {
 	}
 
 	@FXML
+	void moveUpButton(ActionEvent event) {
+		if (isDriverNotSelected()) {
+			return;
+		}
+
+		SessionUtils.moveUpPosition(raceEvent.getRaceSession(), driverSelected);
+
+		showResults();
+	}
+
+	@FXML
+	void moveDownButton(ActionEvent event) {
+		if (isDriverNotSelected()) {
+			return;
+		}
+
+		SessionUtils.moveDownPosition(raceEvent.getRaceSession(), driverSelected);
+
+		showResults();
+	}
+
+	@FXML
+	void lastPositionButton(ActionEvent event) {
+		if (isDriverNotSelected()) {
+			return;
+		}
+
+		SessionUtils.moveLastPosition(raceEvent.getRaceSession(), driverSelected);
+
+		showResults();
+	}
+
+	private boolean isDriverNotSelected() {
+		return raceEvent.getRaceSession() == null || driverSelected == null;
+	}
+
+	@FXML
+	void resetRace(ActionEvent event) {
+		raceEvent.resetRace();
+
+		showResults();
+	}
+
+	@FXML
 	void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
 			event.acceptTransferModes(TransferMode.ANY);
@@ -162,6 +212,12 @@ public class MainController implements Initializable {
 		showResults();
 	}
 
+	private void selectDriver(Driver driver) {
+		if (driver != null) {
+			driverSelected = driver;
+		}
+	}
+
 
 
 	private void showResults() {
@@ -170,6 +226,8 @@ public class MainController implements Initializable {
 		}
 
 		if (raceEvent.getRaceSession() != null) {
+			raceTableView.getItems().clear();
+			raceEvent.getRaceSession().sortDrivers();
 			raceTableView.getItems().addAll(raceEvent.getRaceSession().drivers());
 			raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
 			sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
@@ -181,6 +239,9 @@ public class MainController implements Initializable {
 		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<Integer>(cellData.getValue().getPosition()));
 		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
 		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
+
+		raceTableView.getSelectionModel().selectedItemProperty()
+				.addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 	}
 
 	private List<String> fileTypes() {

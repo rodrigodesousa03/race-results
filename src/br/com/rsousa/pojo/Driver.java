@@ -2,7 +2,7 @@ package br.com.rsousa.pojo;
 
 import java.math.BigDecimal;
 
-public class Driver {
+public class Driver implements Comparable<Driver> {
 	private String name;
 	private String team;
 	private String id;
@@ -15,6 +15,7 @@ public class Driver {
 	private boolean hattrick;
 	private boolean grandChelem;
 	private Integer licensePoints;
+	private DriverStatus status;
 
 	private String raceTime;
 	private String raceTimeFormatted;
@@ -23,10 +24,19 @@ public class Driver {
 		this.name = name;
 		this.team = team;
 		this.id = id;
+		this.status = DriverStatus.FINISHED;
 	}
 
 	public Driver() {
-		// Do Nothing
+		this.status = DriverStatus.FINISHED;
+	}
+
+	public DriverStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(DriverStatus status) {
+		this.status = status;
 	}
 
 	public String getName() {
@@ -144,5 +154,10 @@ public class Driver {
 
 	public String text() {
 		return position + " " + toString() + " " + raceTimeFormatted;
+	}
+
+	@Override
+	public int compareTo(Driver driver) {
+		return position - driver.getPosition();
 	}
 }

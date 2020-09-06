@@ -1,8 +1,11 @@
 package br.com.rsousa.pojo;
 
+import br.com.rsousa.utils.SessionUtils;
+
 public class Event {
     private Session qualifySession;
     private Session raceSession;
+    private Session originalRaceSession;
 
     public void addSession(Session session) {
         if (session == null) {
@@ -13,6 +16,7 @@ public class Event {
             setQualifySession(session);
         } else {
             setRaceSession(session);
+            setOriginalRaceSession(SessionUtils.duplicateRace(session));
         }
     }
 
@@ -32,8 +36,19 @@ public class Event {
         this.raceSession = raceSession;
     }
 
+    public void setOriginalRaceSession(Session originalRaceSession) {
+        this.originalRaceSession = originalRaceSession;
+    }
+
     public void clear() {
         setRaceSession(null);
+        setOriginalRaceSession(null);
         setQualifySession(null);
     }
+
+    public void resetRace() {
+        setRaceSession(SessionUtils.duplicateRace(originalRaceSession));
+    }
+
+
 }

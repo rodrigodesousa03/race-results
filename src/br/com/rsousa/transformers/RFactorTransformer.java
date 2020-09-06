@@ -23,6 +23,7 @@ import static java.util.stream.Collectors.toList;
 
 import br.com.rsousa.enums.FileType;
 import br.com.rsousa.formatter.SessionFormatter;
+import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.ams.Driver;
@@ -131,8 +132,6 @@ public class RFactorTransformer {
                             }
                         }
 
-
-
                         if (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
                             raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
                         }
@@ -141,6 +140,10 @@ public class RFactorTransformer {
 
                         if ("1".equals(driver.getGridPos())) {
                             sessionDriver.setPoleposition(true);
+                        }
+
+                        if (totalLaps/2 > driver.getLaps()) {
+                            sessionDriver.setStatus(DriverStatus.DID_NOT_FINISH);
                         }
 
                         session.addDriver(sessionDriver);

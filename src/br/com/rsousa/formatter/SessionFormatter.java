@@ -31,7 +31,7 @@ public class SessionFormatter {
                 resultStr.append(formatSeconds(driverBestLap.getBestLapSeconds()));
             }
 
-            if (driverBestLap.isHattrick()) {
+            if (driverBestLap.isHattrick() && driverBestLap.getPosition() == 1) {
                 if (driverBestLap.isGrandChelem()) {
                     resultStr.append("\nHattrick & Grand Chelem para ").append(driverBestLap.getName());
                 } else {

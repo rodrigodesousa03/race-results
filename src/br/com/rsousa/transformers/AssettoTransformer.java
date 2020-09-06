@@ -8,6 +8,7 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
+import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.SessionType;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
@@ -93,6 +94,11 @@ public class AssettoTransformer {
 
                         Driver driver = DriverTransformer.toDriver(result, position, driverLaps.intValue(), raceTimeFormatted, driverTeams);
                         driver.setRaceTime(formatSeconds(result.getTotalTime()));
+
+                        if (totalLaps/2 > driverLaps) {
+                            driver.setStatus(DriverStatus.DID_NOT_FINISH);
+                        }
+
                         session.addDriver(driver);
 
                         position++;

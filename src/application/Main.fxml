@@ -39,6 +39,7 @@
                                     <TableColumn fx:id="positionColumn" prefWidth="52.0" text="Posição" />
                                     <TableColumn fx:id="driverColumn" prefWidth="115.0" text="Piloto" />
                                     <TableColumn fx:id="textColumn" prefWidth="264.0" text="Texto" />
+                                    <TableColumn fx:id="textColumn1" prefWidth="264.0" text="Texto" />
                                  </columns>
                               </TableView>
                            </children>
@@ -88,6 +89,36 @@
                </font>
             </Label>
             <TextField fx:id="circuitTextField" layoutX="677.0" layoutY="17.0" prefHeight="25.0" prefWidth="320.0" />
+            <Button layoutX="462.0" layoutY="194.0" mnemonicParsing="false" onAction="#moveUpButton" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="Up" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="461.0" layoutY="249.0" mnemonicParsing="false" onAction="#moveDownButton" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="Down" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="461.0" layoutY="307.0" mnemonicParsing="false" onAction="#lastPositionButton" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="LP" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="461.0" layoutY="476.0" mnemonicParsing="false" onAction="#resetRace" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="Reset" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="461.0" layoutY="364.0" mnemonicParsing="false" onAction="#lastPositionButton" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="DNF" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="461.0" layoutY="419.0" mnemonicParsing="false" onAction="#lastPositionButton" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #AAA;" text="DQ" textFill="WHITE">
+               <font>
+                  <Font name="SansSerif Regular" size="15.0" />
+               </font>
+            </Button>
          </children></Pane>
       <Text layoutX="842.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By Rodrigo de Sousa">
          <font>
