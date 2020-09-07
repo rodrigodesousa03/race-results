@@ -132,17 +132,13 @@ public class RFactorTransformer {
                             }
                         }
 
-                        if (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
-                            raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
-                        }
-
                         br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTeams);
 
                         if ("1".equals(driver.getGridPos())) {
                             sessionDriver.setPoleposition(true);
                         }
 
-                        if (totalLaps/2 > driver.getLaps()) {
+                        if (totalLaps/2 > driver.getLaps() || !"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
                             sessionDriver.setStatus(DriverStatus.DID_NOT_FINISH);
                         }
 
@@ -182,15 +178,6 @@ public class RFactorTransformer {
 
     private static boolean isDriver(Driver driver) {
         return !driver.getName().contains("Diretor") && !driver.getName().contains("Comentarista") && !driver.getName().contains("Narrador");
-    }
-
-    private static String resultLine(int position, Driver driver, String time, List<br.com.rsousa.pojo.Driver> driverTeams) {
-        String driverTeamName = driverTeams.stream().filter(d -> driver.getName().trim().equals(d.getName()))
-                .map(d -> d.getTeam())
-                .findAny()
-                .orElse(driver.getTeamName());
-
-        return position + " " + driver.getName().trim() + " (" + driverTeamName.trim() + "), " + time;
     }
 
     private static String formatSeconds(String time, String textIfNull) {

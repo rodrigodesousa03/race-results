@@ -105,14 +105,12 @@ public class IRacingTransformer {
                                     driverBestLap = driverSession;
                                 }
 
-                                String formattedTime = driverSession.getOut().equals("Disqualified") ? driverSession.getInterval() + " (DNF)" : driverSession.getInterval();
-
-                                driver = DriverTransformer.toDriver(driverSession, position, formattedTime, driverTeams);
+                                driver = DriverTransformer.toDriver(driverSession, position, driverSession.getInterval(), driverTeams);
                             }
                         }
 
                         if (driver != null) {
-                            if (laps/2 > driver.getLaps()) {
+                            if (laps/2 > driver.getLaps() || driverSession.getOut().equals("Disqualified")) {
                                 driver.setStatus(DriverStatus.DID_NOT_FINISH);
                             }
 

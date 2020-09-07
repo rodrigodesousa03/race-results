@@ -101,7 +101,19 @@ public class SessionFormatter {
     private static String resultLine(Driver driver) {
         String timeFormatted = !driver.getRaceTimeFormatted().trim().isEmpty() ? driver.getRaceTimeFormatted() : "sem tempo";
 
-        return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + timeFormatted;
+        if (driver.getStatus() == DriverStatus.FINISHED) {
+            return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + timeFormatted + driver.getStatus().fullText();
+        }
+
+        if (driver.getStatus() == DriverStatus.DID_NOT_FINISH) {
+            return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText() + " ("+driver.getLaps()+")";
+        }
+
+        if (driver.getStatus() == DriverStatus.DISQUALIFIED) {
+            return "- " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText();
+        }
+
+        return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText();
     }
 
 }

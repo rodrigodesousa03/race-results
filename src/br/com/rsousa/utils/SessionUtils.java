@@ -38,10 +38,16 @@ public class SessionUtils {
     }
 
     public static void moveLastPosition(Session session, Driver driver) {
-        boolean moveDriver = true;
+        if (driver.getStatus() != DriverStatus.LAST_POSITION) {
+            driver.setStatus(DriverStatus.LAST_POSITION);
 
-        while (moveDriver) {
-            moveDriver = moveDownPosition(session, driver);
+            boolean moveDriver = true;
+
+            while (moveDriver) {
+                moveDriver = moveDownPosition(session, driver);
+            }
+        } else {
+            driver.setStatus(DriverStatus.FINISHED);
         }
     }
 
