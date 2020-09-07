@@ -160,4 +160,8 @@ public class Driver implements Comparable<Driver> {
 	public int compareTo(Driver driver) {
 		return position - driver.getPosition();
 	}
+
+	public String positionText() {
+		return getStatus() == DriverStatus.FINISHED ? getPosition().toString() : getStatus().text();
+	}
 }

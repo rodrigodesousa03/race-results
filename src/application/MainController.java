@@ -177,6 +177,28 @@ public class MainController implements Initializable {
 		showResults();
 	}
 
+	@FXML
+	void didNotFinishedButton(ActionEvent event) {
+		if (isDriverNotSelected()) {
+			return;
+		}
+
+		SessionUtils.didNotFinished(driverSelected);
+
+		showResults();
+	}
+
+	@FXML
+	void disqualifyButton(ActionEvent event) {
+		if (isDriverNotSelected()) {
+			return;
+		}
+
+		SessionUtils.disqualify(raceEvent.getRaceSession(), driverSelected);
+
+		showResults();
+	}
+
 	private boolean isDriverNotSelected() {
 		return raceEvent.getRaceSession() == null || driverSelected == null;
 	}
@@ -264,7 +286,7 @@ public class MainController implements Initializable {
 	
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty<Integer>(cellData.getValue().getPosition()));
+		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
 		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
 		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
 

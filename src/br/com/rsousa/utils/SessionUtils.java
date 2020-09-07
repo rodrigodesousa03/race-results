@@ -1,6 +1,7 @@
 package br.com.rsousa.utils;
 
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 
@@ -41,6 +42,24 @@ public class SessionUtils {
 
         while (moveDriver) {
             moveDriver = moveDownPosition(session, driver);
+        }
+    }
+
+    public static void disqualify(Session session, Driver driver) {
+        if (driver.getStatus() != DriverStatus.DISQUALIFIED) {
+            moveLastPosition(session, driver);
+
+            driver.setStatus(DriverStatus.DISQUALIFIED);
+        } else {
+            driver.setStatus(DriverStatus.FINISHED);
+        }
+    }
+
+    public static void didNotFinished(Driver driver) {
+        if (driver.getStatus() != DriverStatus.DID_NOT_FINISH) {
+            driver.setStatus(DriverStatus.DID_NOT_FINISH);
+        } else {
+            driver.setStatus(DriverStatus.FINISHED);
         }
     }
 

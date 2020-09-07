@@ -1,6 +1,7 @@
 package br.com.rsousa.formatter;
 
 import br.com.rsousa.pojo.Driver;
+import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 
@@ -47,7 +48,7 @@ public class SessionFormatter {
         StringBuilder resultStr = new StringBuilder();
 
         for (Driver driver: session.drivers()) {
-            resultStr.append(driver.getPosition()).append(";")
+            resultStr.append(driver.positionText()).append(";")
             .append(category).append(";")
             .append(circuit).append(";")
             .append(driver.getName()).append(";")

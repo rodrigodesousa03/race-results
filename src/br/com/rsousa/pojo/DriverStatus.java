@@ -8,4 +8,9 @@ public enum DriverStatus {
     DriverStatus(String text) {
         this.text = text;
     }
+
+    public String text() {
+        return text;
+    }
+
 }
