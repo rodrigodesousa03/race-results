@@ -11,10 +11,7 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.google.gson.stream.JsonReader;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -45,7 +42,7 @@ public class AssettoCorsaCompetizioneTransformer {
                         position++;
                     }
                 }
-            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
+            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException | UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
         }
@@ -113,7 +110,7 @@ public class AssettoCorsaCompetizioneTransformer {
                             .ifPresent(s -> s.setBestLap(true));
 
                 }
-            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
+            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException | UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
         }
@@ -121,16 +118,28 @@ public class AssettoCorsaCompetizioneTransformer {
         return session;
     }
 
-    private static Session createSession(File file) throws FileNotFoundException {
+    private static Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
         Gson gson = new Gson();
 
-        return gson.fromJson(new FileReader(file), Session.class);
+        String charset = "UTF-8";
+        try {
+            BufferedReader in = new BufferedReader(
+                    new InputStreamReader (new FileInputStream(file), charset));
+
+            return gson.fromJson(in, Session.class);
+        } catch (UnsupportedEncodingException e) {
+            throw e;
+        }
     }
 
     private static String formatSeconds(int time) {
         String bestLapTime = String.valueOf(time);
 
         int totalSeconds = 0;
+
+        if ("2147483647".equals(bestLapTime)) {
+            return "sem tempo";
+        }
 
         if (bestLapTime.length() > 3) {
             totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));

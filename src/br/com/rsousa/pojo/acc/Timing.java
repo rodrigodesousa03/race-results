@@ -27,7 +27,7 @@ public class Timing {
     private Integer lapCount;
     @SerializedName("lastSplitId")
     @Expose
-    private Integer lastSplitId;
+    private Long lastSplitId;
 
     public Integer getLastLap() {
         return lastLap;
@@ -77,11 +77,11 @@ public class Timing {
         this.lapCount = lapCount;
     }
 
-    public Integer getLastSplitId() {
+    public Long getLastSplitId() {
         return lastSplitId;
     }
 
-    public void setLastSplitId(Integer lastSplitId) {
+    public void setLastSplitId(Long lastSplitId) {
         this.lastSplitId = lastSplitId;
     }
 
