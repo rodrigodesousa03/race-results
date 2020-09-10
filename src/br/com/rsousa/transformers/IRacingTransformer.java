@@ -19,7 +19,7 @@ public class IRacingTransformer {
         String line;
         boolean reachedFirstLine = false;
         int position = 1;
-        Session session = null;
+        Session session = new Session(SessionType.QUALIFY);
 
         if (file != null) {
             try {
@@ -40,8 +40,6 @@ public class IRacingTransformer {
                         if (position == 1 && driverSession != null && driverSession.getQualifyTime().isEmpty()) {
                             return processRace(file, driverTeams);
                         }
-
-                        session = new Session(SessionType.QUALIFY);
 
                         if (driverSession != null) {
                             Driver driver = DriverTransformer.toDriver(driverSession, driverSession.getFinalPosition(), driverSession.getFastLap(), driverTeams);
@@ -74,7 +72,7 @@ public class IRacingTransformer {
         int laps = 0;
         DriverSession driverBestLap = null;
         boolean reachedFirstLine = false;
-        Session session = null;
+        Session session = new Session(SessionType.RACE);
 
         if (file != null) {
             try {
@@ -90,7 +88,6 @@ public class IRacingTransformer {
                     }
 
                     if (reachedFirstLine) {
-                        session = new Session(SessionType.RACE);
 
                         DriverSession driverSession = transformLineInDriverSession(line);
                         Driver driver = null;
