@@ -46,6 +46,15 @@
                         </AnchorPane>
                      </content>
                   </Tab>
+                  <Tab text="License">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextArea fx:id="licenseTextArea" onKeyReleased="#updateLicensePoints" prefHeight="431.0" prefWidth="432.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
                   <Tab text="Sheets">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -130,7 +139,7 @@
          </font></Text>
       <Pane prefHeight="43.0" prefWidth="1015.0" style="-fx-background-color: #DDD;">
          <children>
-            <Text fontSmoothingType="LCD" layoutX="266.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RACE RESULTS GENERATOR" textAlignment="CENTER" wrappingWidth="578.1900787353516">
+            <Text fontSmoothingType="LCD" layoutX="218.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RACE RESULTS GENERATOR" textAlignment="CENTER" wrappingWidth="578.1900787353516">
                <font>
                   <Font name="SansSerif Bold" size="20.0" />
                </font>

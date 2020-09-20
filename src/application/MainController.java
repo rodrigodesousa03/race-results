@@ -24,6 +24,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.pojo.Driver;
@@ -55,6 +56,9 @@ public class MainController implements Initializable {
 
 	@FXML
 	private TextField circuitTextField;
+
+	@FXML
+	private TextArea licenseTextArea;
 
 	@FXML
 	private TextArea qualifyTextArea;
@@ -211,6 +215,36 @@ public class MainController implements Initializable {
 	}
 
 	@FXML
+	void updateLicensePoints(KeyEvent event) {
+		if (raceEvent.getRaceSession() == null) {
+			return;
+		}
+
+		if (raceEvent.getRaceSession() != null) {
+			raceEvent.getRaceSession().drivers().stream().forEach(d -> d.setLicensePoints(0));
+		}
+
+		String[] licenseTextRows = licenseTextArea.getText().split("\n");
+
+		for (String licenseRow : licenseTextRows) {
+			if (licenseRow.contains("+")) {
+				String[] row = licenseRow.split("\\+");
+
+				String driverName = row[0].trim();
+				Integer licensePoints = Integer.parseInt(row[1]);
+
+				if (raceEvent.getRaceSession() != null) {
+					raceEvent.getRaceSession().drivers().stream().filter(d -> d.getName().equals(driverName))
+							.findFirst()
+							.ifPresent(d -> d.setLicensePoints(licensePoints));
+				}
+			}
+		}
+
+		showResults();
+	}
+
+	@FXML
 	void dragOver(DragEvent event) {
 		if (event.getDragboard().hasFiles()) {
 			event.acceptTransferModes(TransferMode.ANY);
@@ -267,8 +301,6 @@ public class MainController implements Initializable {
 			driverSelected = driver;
 		}
 	}
-
-
 
 	private void showResults() {
 		if (raceEvent.getQualifySession() != null) {

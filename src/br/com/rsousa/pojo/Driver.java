@@ -27,6 +27,7 @@ public class Driver implements Comparable<Driver> {
 
 	public Driver() {
 		this.status = DriverStatus.FINISHED;
+		this.licensePoints = 0;
 	}
 
 	public DriverStatus getStatus() {
