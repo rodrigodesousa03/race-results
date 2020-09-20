@@ -35,13 +35,15 @@ public class Session {
 	public void addDriver(Driver driver) {
 		drivers.add(driver);
 
-		drivers().forEach((d) -> d.setBestLap(false));
+		if (type == SessionType.RACE) {
+			drivers().forEach((d) -> d.setBestLap(false));
 
-		drivers().stream()
-				.filter(d -> d.getBestLapMilliseconds() != 0)
-				.sorted((d1, d2) -> d1.getBestLapMilliseconds().compareTo(d2.getBestLapMilliseconds()))
-				.findFirst()
-				.ifPresent(d -> d.setBestLap(true));
+			drivers().stream()
+					.filter(d -> d.getBestLapMilliseconds() != 0)
+					.sorted((d1, d2) -> d1.getBestLapMilliseconds().compareTo(d2.getBestLapMilliseconds()))
+					.findFirst()
+					.ifPresent(d -> d.setBestLap(true));
+		}
 	}
 
 	public SessionType type() {
