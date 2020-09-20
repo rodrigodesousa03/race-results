@@ -132,13 +132,17 @@ public class RFactorTransformer {
                             }
                         }
 
+                        if (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
+                            raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
+                        }
+
                         br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTeams);
 
                         if ("1".equals(driver.getGridPos())) {
                             sessionDriver.setPoleposition(true);
                         }
 
-                        if (totalLaps/2 > driver.getLaps() || !"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus())) {
+                        if (totalLaps/2 > driver.getLaps()) {
                             sessionDriver.setStatus(DriverStatus.DID_NOT_FINISH);
                         }
 
