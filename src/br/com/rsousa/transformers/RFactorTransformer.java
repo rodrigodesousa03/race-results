@@ -1,33 +1,22 @@
 package br.com.rsousa.transformers;
 
-import static br.com.rsousa.enums.FileType.QUALIFY;
-import static br.com.rsousa.enums.FileType.RACE;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Stream;
-
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
-
-import static java.util.stream.Collectors.toList;
-
-import br.com.rsousa.enums.FileType;
-import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.ams.Driver;
 import br.com.rsousa.pojo.ams.RFactorXML;
+
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Unmarshaller;
+import java.io.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public class RFactorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
@@ -100,7 +89,6 @@ public class RFactorTransformer {
                 Session session = new Session(SessionType.RACE);
 
                 Integer position = 1;
-                Driver driverBestLap = null;
                 Driver driverWinner = null;
                 Integer totalLaps = 0;
                 Double leaderFinishTime = null;
@@ -110,16 +98,11 @@ public class RFactorTransformer {
                         String raceTimeFormatted;
 
                         if (driver.getPosition() == 1) {
-                            driverBestLap = driver;
                             raceTimeFormatted = driver.getLaps() + " voltas";
                             totalLaps = driver.getLaps();
                             leaderFinishTime = Double.parseDouble(driver.getFinishTime());
                             driverWinner = driver;
                         } else {
-                            if (driver.getBestLapTime() != null && Double.parseDouble(driverBestLap.getBestLapTime()) > Double.parseDouble(driver.getBestLapTime())) {
-                                driverBestLap = driver;
-                            }
-
                             if (totalLaps == driver.getLaps()) {
                                 Double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
 
@@ -152,15 +135,9 @@ public class RFactorTransformer {
                     }
                 }
 
-                String driverBestLapName = driverBestLap.getName();
+                br.com.rsousa.pojo.Driver sessionDriverBestLap = session.bestLapDriver();
 
-                br.com.rsousa.pojo.Driver sessionDriverBestLap = session.drivers().stream()
-                        .filter(d -> d.getName().equals(driverBestLapName))
-                        .findFirst()
-                        .orElse(null);
-                sessionDriverBestLap.setBestLap(true);
-                
-                if (sessionDriverBestLap.isPoleposition() && driverWinner.equals(driverBestLap)) {
+                if (sessionDriverBestLap.isPoleposition() && driverWinner.getName().equals(sessionDriverBestLap.getName())) {
                     boolean ledAllTheLaps = Arrays.asList(driverWinner.getLap()).stream().allMatch(l -> "1".equals(l.getP()));
 
                     sessionDriverBestLap.setHattrick(true);

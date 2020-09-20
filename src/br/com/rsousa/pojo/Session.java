@@ -25,8 +25,23 @@ public class Session {
 				.collect(Collectors.toList());
 	}
 
+	public Driver bestLapDriver() {
+		return drivers().stream()
+				.filter(Driver::isBestLap)
+				.findFirst()
+				.orElse(null);
+	}
+
 	public void addDriver(Driver driver) {
 		drivers.add(driver);
+
+		drivers().forEach((d) -> d.setBestLap(false));
+
+		drivers().stream()
+				.filter(d -> d.getBestLapMilliseconds() != 0)
+				.sorted((d1, d2) -> d1.getBestLapMilliseconds().compareTo(d2.getBestLapMilliseconds()))
+				.findFirst()
+				.ifPresent(d -> d.setBestLap(true));
 	}
 
 	public SessionType type() {

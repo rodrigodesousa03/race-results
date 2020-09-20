@@ -1,18 +1,16 @@
 package br.com.rsousa.transformers;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.List;
-import java.util.Optional;
-
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.iracing.DriverSession;
-import br.com.rsousa.utils.TimeUtils;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
 
 public class IRacingTransformer {
     public static Session processQualify(File file, List<Driver> driverTeams) {
@@ -71,7 +69,6 @@ public class IRacingTransformer {
         String line;
         int position = 1;
         int laps = 0;
-        DriverSession driverBestLap = null;
         boolean reachedFirstLine = false;
         Session session = new Session(SessionType.RACE);
 
@@ -79,9 +76,14 @@ public class IRacingTransformer {
             try {
                 br = new BufferedReader(new FileReader(file));
                 DriverSession winner = null;
+                boolean isOval = false;
                 while ((line = br.readLine()) != null || !reachedFirstLine) {
                     if (line != null && !reachedFirstLine) {
                         String[] lineArray = line.replaceAll("\"", "").split(",");
+
+                        if (lineArray.length > 1 && lineArray[1].contains("Oval")) {
+                            isOval = true;
+                        }
 
                         if (lineArray[0].equals("1")) {
                             reachedFirstLine = true;
@@ -94,23 +96,24 @@ public class IRacingTransformer {
                         Driver driver = null;
                         if (position == 1) {
                             driver = DriverTransformer.toDriver(driverSession, position, driverSession.getCompletedLaps() + " Laps", driverTeams);
-                            driverBestLap = driverSession;
                             winner = driverSession;
                             laps = driver.getLaps();
                         } else {
                             if (driverSession != null) {
-                                if (!driverSession.getFastLap().trim().isEmpty() && TimeUtils.toMilliseconds(driverBestLap.getFastLap()).compareTo(TimeUtils.toMilliseconds(driverSession.getFastLap())) > 0) {
-                                    driverBestLap = driverSession;
-                                }
-
                                 driver = DriverTransformer.toDriver(driverSession, position, driverSession.getInterval(), driverTeams);
                             }
                         }
 
                         if (driver != null) {
-                            if (laps/2 > driver.getLaps() || driverSession.getOut().equals("Disqualified")) {
-                                driver.setStatus(DriverStatus.DID_NOT_FINISH);
+                            if (!isOval) {
+                                if (laps / 2 > driver.getLaps()) {
+                                    driver.setStatus(DriverStatus.DID_NOT_FINISH);
+                                }
                             }
+
+//                            if (driverSession.getOut().equals("Disqualified")) {
+//                                driver.setStatus(DriverStatus.DID_NOT_FINISH);
+//                            }
 
                             session.addDriver(driver);
 
@@ -123,24 +126,14 @@ public class IRacingTransformer {
                     }
                 }
 
-                String driverBestLapName = driverBestLap.getName();
-
-                Optional<Driver> sessionDriverBestLapOpt = session.drivers().stream()
-                        .filter(d -> d.getName().equals(driverBestLapName))
-                        .findFirst();
-
-                if (sessionDriverBestLapOpt.isPresent()) {
-                    Driver sessionDriverBestLap = sessionDriverBestLapOpt.get();
-
-                    sessionDriverBestLap.setBestLap(true);
-
-                    if (sessionDriverBestLap.isPoleposition() && sessionDriverBestLap.getPosition() == 1) {
-                        sessionDriverBestLap.setHattrick(true);
+                if (session.bestLapDriver() != null) {
+                    if (session.bestLapDriver().isPoleposition() && session.bestLapDriver().getPosition() == 1) {
+                        session.bestLapDriver().setHattrick(true);
 
                         boolean ledAllTheLaps = winner.getCompletedLaps() == winner.getLapsLed();
 
                         if (ledAllTheLaps) {
-                            sessionDriverBestLap.setGrandChelem(true);
+                            session.bestLapDriver().setGrandChelem(true);
                         }
                     }
                 }

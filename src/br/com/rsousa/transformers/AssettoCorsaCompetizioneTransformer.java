@@ -9,7 +9,6 @@ import br.com.rsousa.pojo.acc.Session;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
-import com.google.gson.stream.JsonReader;
 
 import java.io.*;
 import java.time.LocalTime;
@@ -58,7 +57,6 @@ public class AssettoCorsaCompetizioneTransformer {
                 Session assettoSession = createSession(file);
 
                 int position = 1;
-                LeaderBoardLine driverBestLap = null;
                 long totalLaps = 0;
                 Long leaderFinishTime = 0L;
                 String raceTimeFormatted;
@@ -68,15 +66,10 @@ public class AssettoCorsaCompetizioneTransformer {
                     if (isDriver(result.getCurrentDriver()) && result.getTiming().getBestLap() != 999999999) {
                         Integer driverLaps = result.getTiming().getLapCount();
                         if (position == 1) {
-                            driverBestLap = result;
                             raceTimeFormatted = driverLaps + " voltas";
                             totalLaps = driverLaps;
                             leaderFinishTime = result.getTiming().getTotalTime();
                         } else {
-                            if (driverBestLap.getTiming().getBestLap().compareTo(result.getTiming().getBestLap()) > 0) {
-                                driverBestLap = result;
-                            }
-
                             if (totalLaps == driverLaps) {
                                 Long secondsBehindTheLeader = result.getTiming().getTotalTime() - leaderFinishTime;
 
@@ -99,16 +92,6 @@ public class AssettoCorsaCompetizioneTransformer {
 
                         position++;
                     }
-                }
-
-                if (driverBestLap != null) {
-                    String driverBestLapName = driverBestLap.getCurrentDriver().getFirstName() + " " + driverBestLap.getCurrentDriver().getLastName();
-
-                    session.drivers().stream()
-                            .filter(d -> d.getName().equals(driverBestLapName))
-                            .findFirst()
-                            .ifPresent(s -> s.setBestLap(true));
-
                 }
             } catch (JsonSyntaxException | JsonIOException | FileNotFoundException | UnsupportedEncodingException e) {
                 e.printStackTrace();

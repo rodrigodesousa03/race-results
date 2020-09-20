@@ -1,23 +1,21 @@
 package br.com.rsousa.transformers;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.math.BigDecimal;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.util.List;
-
+import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.SessionType;
+import br.com.rsousa.pojo.assetto.Lap;
+import br.com.rsousa.pojo.assetto.Result;
+import br.com.rsousa.pojo.assetto.Session;
 import com.google.gson.Gson;
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
-import br.com.rsousa.pojo.Driver;
-import br.com.rsousa.pojo.assetto.Lap;
-import br.com.rsousa.pojo.assetto.Result;
-import br.com.rsousa.pojo.assetto.Session;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class AssettoTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
@@ -61,7 +59,6 @@ public class AssettoTransformer {
                 Session assettoSession = createSession(file);
 
                 int position = 1;
-                Result driverBestLap = null;
                 long totalLaps = 0;
                 List<Lap> laps = assettoSession.getLaps();
                 Long leaderFinishTime = 0L;
@@ -72,15 +69,10 @@ public class AssettoTransformer {
                     if (isDriver(result.getDriverName()) && result.getBestLap() != 999999999) {
                         Long driverLaps = lapsFor(result.getDriverName(), laps);
                         if (position == 1) {
-                            driverBestLap = result;
                             raceTimeFormatted = driverLaps + " voltas";
                             totalLaps = driverLaps;
                             leaderFinishTime = result.getTotalTime();
                         } else {
-                            if (driverBestLap.getBestLap().compareTo(result.getBestLap()) > 0) {
-                                driverBestLap = result;
-                            }
-
                             if (totalLaps == driverLaps) {
                                 Long secondsBehindTheLeader = result.getTotalTime() - leaderFinishTime;
 
@@ -103,16 +95,6 @@ public class AssettoTransformer {
 
                         position++;
                     }
-                }
-
-                if (driverBestLap != null) {
-                    String driverBestLapName = driverBestLap.getDriverName();
-
-                    session.drivers().stream()
-                            .filter(d -> d.getName().equals(driverBestLapName))
-                            .findFirst()
-                            .ifPresent(s -> s.setBestLap(true));
-
                 }
             } catch (JsonSyntaxException | JsonIOException | FileNotFoundException e) {
                 e.printStackTrace();
