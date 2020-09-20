@@ -60,7 +60,7 @@ public class AssettoCorsaCompetizioneTransformer {
                 int position = 1;
                 LeaderBoardLine driverBestLap = null;
                 long totalLaps = 0;
-                int leaderFinishTime = 0;
+                Long leaderFinishTime = 0L;
                 String raceTimeFormatted;
                 session = new br.com.rsousa.pojo.Session(SessionType.RACE);
 
@@ -78,7 +78,7 @@ public class AssettoCorsaCompetizioneTransformer {
                             }
 
                             if (totalLaps == driverLaps) {
-                                int secondsBehindTheLeader = result.getTiming().getTotalTime() - leaderFinishTime;
+                                Long secondsBehindTheLeader = result.getTiming().getTotalTime() - leaderFinishTime;
 
                                 raceTimeFormatted = formatSeconds(secondsBehindTheLeader);
                             } else {
@@ -132,7 +132,7 @@ public class AssettoCorsaCompetizioneTransformer {
         }
     }
 
-    private static String formatSeconds(int time) {
+    private static String formatSeconds(Long time) {
         String bestLapTime = String.valueOf(time);
 
         int totalSeconds = 0;

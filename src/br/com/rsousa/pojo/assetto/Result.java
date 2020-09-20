@@ -20,10 +20,10 @@ public class Result {
     private String carModel;
     @SerializedName("BestLap")
     @Expose
-    private Integer bestLap;
+    private Long bestLap;
     @SerializedName("TotalTime")
     @Expose
-    private Integer totalTime;
+    private Long totalTime;
     @SerializedName("BallastKG")
     @Expose
     private Integer ballastKG;
@@ -63,19 +63,19 @@ public class Result {
         this.carModel = carModel;
     }
 
-    public Integer getBestLap() {
+    public Long getBestLap() {
         return bestLap;
     }
 
-    public void setBestLap(Integer bestLap) {
+    public void setBestLap(Long bestLap) {
         this.bestLap = bestLap;
     }
 
-    public Integer getTotalTime() {
+    public Long getTotalTime() {
         return totalTime;
     }
 
-    public void setTotalTime(Integer totalTime) {
+    public void setTotalTime(Long totalTime) {
         this.totalTime = totalTime;
     }
 

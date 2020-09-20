@@ -12,6 +12,7 @@ import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.iracing.DriverSession;
+import br.com.rsousa.utils.TimeUtils;
 
 public class IRacingTransformer {
     public static Session processQualify(File file, List<Driver> driverTeams) {
@@ -98,7 +99,7 @@ public class IRacingTransformer {
                             laps = driver.getLaps();
                         } else {
                             if (driverSession != null) {
-                                if (!driverSession.getFastLap().trim().isEmpty() && driverBestLap.getFastLap().compareTo(driverSession.getFastLap()) > 0) {
+                                if (!driverSession.getFastLap().trim().isEmpty() && TimeUtils.toMilliseconds(driverBestLap.getFastLap()).compareTo(TimeUtils.toMilliseconds(driverSession.getFastLap())) > 0) {
                                     driverBestLap = driverSession;
                                 }
 

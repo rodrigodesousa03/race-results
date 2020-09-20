@@ -4,6 +4,7 @@ import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.acc.LeaderBoardLine;
 import br.com.rsousa.pojo.assetto.Result;
 import br.com.rsousa.pojo.iracing.DriverSession;
+import br.com.rsousa.utils.TimeUtils;
 
 import java.util.List;
 
@@ -12,6 +13,8 @@ public class DriverTransformer {
         Driver driver = new Driver();
         driver.setName(amsDriver.getName());
         driver.setBestLap(amsDriver.getBestLapTime());
+        driver.setBestLapMilliseconds(TimeUtils.toMilliseconds(amsDriver.getBestLapTime()));
+        driver.setRaceTimeMilliseconds(TimeUtils.toMilliseconds(amsDriver.getFinishTime()));
         driver.setLaps(amsDriver.getLaps());
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
@@ -27,6 +30,7 @@ public class DriverTransformer {
         driver.setLaps(iRacingDriver.getCompletedLaps());
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setBestLapMilliseconds(TimeUtils.toMilliseconds(iRacingDriver.getFastLap()));
         driver.setTeam(getTeamName(iRacingDriver.getName(), "Independente", drivers));
 
         return driver;
@@ -35,7 +39,8 @@ public class DriverTransformer {
     public static Driver toDriver(Result assettoDriver, int position, int laps, String raceTimeFormatted, List<Driver> drivers) {
         Driver driver = new Driver();
         driver.setName(assettoDriver.getDriverName());
-        driver.setBestLapSeconds(assettoDriver.getBestLap());
+        driver.setBestLapMilliseconds(assettoDriver.getBestLap());
+        driver.setRaceTimeMilliseconds(assettoDriver.getTotalTime());
         driver.setLaps(laps);
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
@@ -50,7 +55,8 @@ public class DriverTransformer {
         String driverName = assettoDriver.getCurrentDriver().getFirstName() + " " + assettoDriver.getCurrentDriver().getLastName();
 
         driver.setName(driverName);
-        driver.setBestLapSeconds(assettoDriver.getTiming().getBestLap());
+        driver.setBestLapMilliseconds(assettoDriver.getTiming().getBestLap());
+        driver.setRaceTimeMilliseconds(assettoDriver.getTiming().getTotalTime());
         driver.setLaps(laps);
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);

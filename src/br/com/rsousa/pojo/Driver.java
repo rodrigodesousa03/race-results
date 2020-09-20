@@ -1,13 +1,12 @@
 package br.com.rsousa.pojo;
 
-import java.math.BigDecimal;
-
 public class Driver implements Comparable<Driver> {
 	private String name;
 	private String team;
 	private String id;
 	private String bestLap;
-	private Integer bestLapSeconds;
+	private Long bestLapMilliseconds;
+	private Long raceTimeMilliseconds;
 	private Integer laps;
 	private Integer position;
 	private boolean isBestLap;
@@ -16,7 +15,6 @@ public class Driver implements Comparable<Driver> {
 	private boolean grandChelem;
 	private Integer licensePoints;
 	private DriverStatus status;
-
 	private String raceTime;
 	private String raceTimeFormatted;
 
@@ -136,24 +134,24 @@ public class Driver implements Comparable<Driver> {
 		isPoleposition = poleposition;
 	}
 
-	public Integer getBestLapSeconds() {
-		return bestLapSeconds;
-	}
-
-	public void setBestLapSeconds(Integer bestLapSeconds) {
-		this.bestLapSeconds = bestLapSeconds;
-	}
-
-	public String getRaceTime() {
-		return raceTime;
-	}
-
-	public void setRaceTime(String raceTime) {
-		this.raceTime = raceTime;
-	}
-
 	public String text() {
 		return position + " " + toString() + " " + raceTimeFormatted;
+	}
+
+	public Long getBestLapMilliseconds() {
+		return bestLapMilliseconds;
+	}
+
+	public void setBestLapMilliseconds(Long bestLapMilliseconds) {
+		this.bestLapMilliseconds = bestLapMilliseconds;
+	}
+
+	public Long getRaceTimeMilliseconds() {
+		return raceTimeMilliseconds;
+	}
+
+	public void setRaceTimeMilliseconds(Long raceTimeMilliseconds) {
+		this.raceTimeMilliseconds = raceTimeMilliseconds;
 	}
 
 	@Override
@@ -163,5 +161,13 @@ public class Driver implements Comparable<Driver> {
 
 	public String positionText() {
 		return getStatus() == DriverStatus.FINISHED ? getPosition().toString() : getStatus().text();
+	}
+
+	public String getRaceTime() {
+		return raceTime;
+	}
+
+	public void setRaceTime(String raceTime) {
+		this.raceTime = raceTime;
 	}
 }

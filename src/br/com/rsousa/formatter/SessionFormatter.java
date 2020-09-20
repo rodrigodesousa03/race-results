@@ -26,11 +26,7 @@ public class SessionFormatter {
         if (driverBestLap != null) {
             resultStr.append("\nVolta mais rápida: ").append(driverBestLap.getName()).append(", ");
 
-            if (driverBestLap.getBestLap() != null) {
-                resultStr.append(formatSeconds(driverBestLap.getBestLap()));
-            } else {
-                resultStr.append(formatSeconds(driverBestLap.getBestLapSeconds()));
-            }
+            resultStr.append(formatSeconds(driverBestLap.getBestLapMilliseconds()));
 
             if (driverBestLap.isHattrick() && driverBestLap.getPosition() == 1) {
                 if (driverBestLap.isGrandChelem()) {
@@ -65,37 +61,19 @@ public class SessionFormatter {
         return resultStr.toString();
     }
 
-    private static String formatSeconds(String time) {
-        if (time.contains(":")) {
-            return time;
-        }
-
-        String[] bestLapTime = time.split("\\.");
-
-        int totalSeconds = Integer.parseInt(bestLapTime[0]);
-        String milliseconds = bestLapTime[1].substring(0, 3);
-
-        return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
-                + milliseconds;
-    }
-
-    private static String formatSeconds(int time) {
+    private static String formatSeconds(Long time) {
         String bestLapTime = String.valueOf(time);
 
-        Integer totalSeconds;
+        int totalSeconds = 0;
 
         if (bestLapTime.length() > 3) {
             totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));
-        } else {
-            totalSeconds = 0;
         }
 
         String milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
 
-        String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
+        return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
-
-        return bestLapTimeFormatted;
     }
 
     private static String resultLine(Driver driver) {

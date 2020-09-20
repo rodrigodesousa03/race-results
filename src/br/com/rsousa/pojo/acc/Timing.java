@@ -15,13 +15,13 @@ public class Timing {
     private List<Integer> lastSplits = null;
     @SerializedName("bestLap")
     @Expose
-    private Integer bestLap;
+    private Long bestLap;
     @SerializedName("bestSplits")
     @Expose
     private List<Integer> bestSplits = null;
     @SerializedName("totalTime")
     @Expose
-    private Integer totalTime;
+    private Long totalTime;
     @SerializedName("lapCount")
     @Expose
     private Integer lapCount;
@@ -45,11 +45,11 @@ public class Timing {
         this.lastSplits = lastSplits;
     }
 
-    public Integer getBestLap() {
+    public Long getBestLap() {
         return bestLap;
     }
 
-    public void setBestLap(Integer bestLap) {
+    public void setBestLap(Long bestLap) {
         this.bestLap = bestLap;
     }
 
@@ -61,11 +61,11 @@ public class Timing {
         this.bestSplits = bestSplits;
     }
 
-    public Integer getTotalTime() {
+    public Long getTotalTime() {
         return totalTime;
     }
 
-    public void setTotalTime(Integer totalTime) {
+    public void setTotalTime(Long totalTime) {
         this.totalTime = totalTime;
     }
 

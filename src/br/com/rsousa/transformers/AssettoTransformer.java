@@ -64,7 +64,7 @@ public class AssettoTransformer {
                 Result driverBestLap = null;
                 long totalLaps = 0;
                 List<Lap> laps = assettoSession.getLaps();
-                int leaderFinishTime = 0;
+                Long leaderFinishTime = 0L;
                 String raceTimeFormatted;
                 session = new br.com.rsousa.pojo.Session(SessionType.RACE);
 
@@ -82,7 +82,7 @@ public class AssettoTransformer {
                             }
 
                             if (totalLaps == driverLaps) {
-                                int secondsBehindTheLeader = result.getTotalTime() - leaderFinishTime;
+                                Long secondsBehindTheLeader = result.getTotalTime() - leaderFinishTime;
 
                                 raceTimeFormatted = formatSeconds(secondsBehindTheLeader);
                             } else {
@@ -132,7 +132,7 @@ public class AssettoTransformer {
         return gson.fromJson(new FileReader(file), Session.class);
     }
 
-    private static String formatSeconds(int time) {
+    private static String formatSeconds(Long time) {
         String bestLapTime = String.valueOf(time);
 
         int totalSeconds = 0;

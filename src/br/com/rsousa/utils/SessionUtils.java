@@ -98,7 +98,7 @@ public class SessionUtils {
         duplicatedDriver.setRaceTimeFormatted(driver.getRaceTimeFormatted());
         duplicatedDriver.setTeam(driver.getTeam());
         duplicatedDriver.setGrandChelem(driver.isGrandChelem());
-        duplicatedDriver.setBestLapSeconds(driver.getBestLapSeconds());
+        duplicatedDriver.setBestLapMilliseconds(driver.getBestLapMilliseconds());
         duplicatedDriver.setHattrick(driver.isHattrick());
         duplicatedDriver.setLicensePoints(driver.getLicensePoints());
         duplicatedDriver.setStatus(driver.getStatus());
