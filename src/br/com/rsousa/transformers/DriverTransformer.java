@@ -31,7 +31,7 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setBestLapMilliseconds(TimeUtils.toMilliseconds(iRacingDriver.getFastLap()));
-        driver.setTeam(getTeamName(iRacingDriver.getName(), "Independente", drivers));
+        driver.setTeam(getTeamName(iRacingDriver, drivers));
 
         return driver;
     }
@@ -77,5 +77,12 @@ public class DriverTransformer {
                 .map(Driver::getName)
                 .findAny()
                 .orElse(driver.getName());
+    }
+
+    private static String getTeamName(DriverSession driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
+                .map(Driver::getTeam)
+                .findAny()
+                .orElse("Independente");
     }
 }
