@@ -111,10 +111,6 @@ public class IRacingTransformer {
                                 }
                             }
 
-//                            if (driverSession.getOut().equals("Disqualified")) {
-//                                driver.setStatus(DriverStatus.DID_NOT_FINISH);
-//                            }
-
                             session.addDriver(driver);
 
                             if (driverSession.getStartPosition() == 1) {
