@@ -3,6 +3,7 @@ package br.com.rsousa.pojo;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Session {
@@ -43,10 +44,19 @@ public class Session {
 					.sorted((d1, d2) -> d1.getBestLapMilliseconds().compareTo(d2.getBestLapMilliseconds()))
 					.findFirst()
 					.ifPresent(d -> d.setBestLap(true));
+		} else {
+			if (driver.getPosition() == 1) {
+				driver.setPoleposition(true);
+			}
 		}
 	}
 
 	public SessionType type() {
 		return type;
+	}
+
+	public Optional<Driver> polepositionDriver() {
+		return drivers.stream().filter(Driver::isPoleposition)
+				.findFirst();
 	}
 }

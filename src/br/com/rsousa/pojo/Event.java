@@ -2,6 +2,8 @@ package br.com.rsousa.pojo;
 
 import br.com.rsousa.utils.SessionUtils;
 
+import java.util.Optional;
+
 public class Event {
     private Session qualifySession;
     private Session raceSession;
@@ -17,6 +19,14 @@ public class Event {
         } else {
             setRaceSession(session);
             setOriginalRaceSession(SessionUtils.duplicateRace(session));
+
+            Optional<Driver> polepositionDriver = qualifySession.polepositionDriver();
+
+            if (qualifySession != null && polepositionDriver.isPresent()) {
+                session.drivers().stream()
+                        .filter(d -> d.getName().equals(polepositionDriver.get().getName()))
+                        .forEach(d -> d.setPoleposition(true));
+            }
         }
     }
 
