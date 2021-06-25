@@ -104,10 +104,13 @@ public class RFactorTransformer {
                             driverWinner = driver;
                         } else {
                             if (totalLaps == driver.getLaps()) {
-                                Double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
+                                if (driver.getFinishTime() != null) {
+                                    Double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
 
-                                raceTimeFormatted = formatSeconds(secondsBehindTheLeader.toString());
-
+                                    raceTimeFormatted = formatSeconds(secondsBehindTheLeader.toString());
+                                } else {
+                                    raceTimeFormatted = "Disqualificado";
+                                }
                             } else {
                                 int lapsBehindTheLeader = totalLaps - driver.getLaps();
 
@@ -182,7 +185,14 @@ public class RFactorTransformer {
         String[] bestLapTime = time.split("\\.");
 
         Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
-        String milliseconds = bestLapTime[1].substring(0, 3);
+
+        String milliseconds;
+
+        if (bestLapTime[1].length() >= 3) {
+            milliseconds = bestLapTime[1].substring(0, 3);
+        } else {
+            milliseconds = bestLapTime[1].substring(0, 2)+"0";
+        }
 
         String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
