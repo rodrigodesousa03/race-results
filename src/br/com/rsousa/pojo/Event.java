@@ -20,12 +20,14 @@ public class Event {
             setRaceSession(session);
             setOriginalRaceSession(SessionUtils.duplicateRace(session));
 
-            Optional<Driver> polepositionDriver = qualifySession.polepositionDriver();
+            if (qualifySession != null) {
+                Optional<Driver> polepositionDriver = qualifySession.polepositionDriver();
 
-            if (qualifySession != null && polepositionDriver.isPresent()) {
-                session.drivers().stream()
-                        .filter(d -> d.getName().equals(polepositionDriver.get().getName()))
-                        .forEach(d -> d.setPoleposition(true));
+                if (polepositionDriver.isPresent()) {
+                    session.drivers().stream()
+                            .filter(d -> d.getName().equals(polepositionDriver.get().getName()))
+                            .forEach(d -> d.setPoleposition(true));
+                }
             }
         }
     }

@@ -10,19 +10,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
-import br.com.rsousa.pojo.assetto.Session;
 import br.com.rsousa.transformers.AssettoCorsaCompetizioneTransformer;
 import br.com.rsousa.utils.SessionUtils;
-import com.google.gson.Gson;
-import com.google.gson.stream.MalformedJsonException;
 import javafx.beans.property.SimpleObjectProperty;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import org.controlsfx.control.PopOver;
@@ -352,7 +346,7 @@ public class MainController implements Initializable {
 	                
 	                if (!driver[0].contains("Piloto")) {
 	                	String id = driver.length > 2 ? driver[2] : null;
-	                			
+
 	                	driverTeams.add(new Driver(driver[0], driver[1], id));
 	                }
 	            }
