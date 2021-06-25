@@ -158,7 +158,10 @@ public class RFactorTransformer {
     }
 
     private static boolean isDriver(Driver driver) {
-        return !driver.getName().contains("Diretor") && !driver.getName().contains("Comentarista") && !driver.getName().contains("Narrador");
+        return !driver.getName().contains("Diretor")
+                && !driver.getName().contains("Comentarista")
+                && !driver.getName().contains("Narrador")
+                && !driver.getName().contains("ellevenTV");
     }
 
     private static String formatSeconds(String time, String textIfNull) {
