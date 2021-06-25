@@ -16,6 +16,8 @@ public class Main extends Application {
 		
 		Scene scene = new Scene(root, 1010, 745);
 		primaryStage.setScene(scene);
+		primaryStage.setResizable(false);
+		primaryStage.setTitle("Race Results");
 		primaryStage.show();
 	}
 	
