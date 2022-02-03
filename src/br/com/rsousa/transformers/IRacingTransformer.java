@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class IRacingTransformer implements SimulatorTransformer {
-    public Session processQualify(File file, List<Driver> driverTeams) {
+    public Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido) {
         BufferedReader br = null;
         String line;
         boolean reachedFirstLine = false;
@@ -37,7 +37,7 @@ public class IRacingTransformer implements SimulatorTransformer {
                         DriverSession driverSession = transformLineInDriverSession(line);
 
                         if (position == 1 && driverSession != null && driverSession.getQualifyTime().isEmpty()) {
-                            return processRace(file, driverTeams);
+                            return processRace(file, driverTeams, dnfRigido);
                         }
 
                         if (driverSession != null) {
@@ -64,7 +64,7 @@ public class IRacingTransformer implements SimulatorTransformer {
         return session;
     }
 
-    public Session processRace(File file, List<Driver> driverTeams) {
+    public Session processRace(File file, List<Driver> driverTeams, boolean dnfRigido) {
         BufferedReader br = null;
         String line;
         int position = 1;

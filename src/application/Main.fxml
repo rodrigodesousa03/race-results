@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="656.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="747.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="656.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="747.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Pane layoutY="43.0" prefHeight="676.0" prefWidth="1015.0" style="-fx-background-color: #EEE;">
          <children>
@@ -128,6 +128,7 @@
                   <Font name="SansSerif Regular" size="15.0" />
                </font>
             </Button>
+            <CheckBox fx:id="dnfRigidoCheckBox" layoutX="461.0" layoutY="18.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="93.0" text="DNF Rígido" />
          </children></Pane>
       <Text layoutX="842.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By Rodrigo de Sousa">
          <font>

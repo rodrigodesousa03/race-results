@@ -9,9 +9,9 @@ import java.io.UnsupportedEncodingException;
 import java.util.List;
 
 public interface SimulatorTransformer {
-    Session processQualify(File file, List<Driver> driverTeams) throws FileNotFoundException, UnsupportedEncodingException;
+    Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido) throws FileNotFoundException, UnsupportedEncodingException;
 
-    Session processRace(File file, List<Driver> driverTeams) throws FileNotFoundException;
+    Session processRace(File file, List<Driver> driverTeams, boolean dnfRigido) throws FileNotFoundException;
 
     default boolean isDriver(String driver) {
         return !driver.isEmpty()

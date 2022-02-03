@@ -22,7 +22,7 @@ import static java.util.stream.Collectors.toList;
 public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
+    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -37,7 +37,7 @@ public class RFactorTransformer implements SimulatorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getQualify() == null) {
-                    return processRace(file, driverTeams);
+                    return processRace(file, driverTeams, dnfRigido);
                 }
 
                 Driver[] drivers = raceResult.getRaceResults().getQualify().getDriver();
@@ -65,7 +65,7 @@ public class RFactorTransformer implements SimulatorTransformer {
         return null;
     }
 
-    public Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
+    public Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -80,7 +80,7 @@ public class RFactorTransformer implements SimulatorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getRace() == null) {
-                    return processQualify(file, driverTeams);
+                    return processQualify(file, driverTeams, dnfRigido);
                 }
 
                 List<Driver> drivers = Stream.of(raceResult.getRaceResults().getRace().getDriver())
@@ -135,6 +135,10 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                         if ("1".equals(driver.getGridPos())) {
                             sessionDriver.setPoleposition(true);
+                        }
+
+                        if (dnfRigido && (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus()))) {
+                            sessionDriver.setStatus(DriverStatus.DID_NOT_FINISH);
                         }
 
                         if (totalLaps/2 > driver.getLaps()) {

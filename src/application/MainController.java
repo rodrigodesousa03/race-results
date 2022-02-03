@@ -53,6 +53,9 @@ public class MainController implements Initializable {
 
 	@FXML
 	private TextArea qualifyTextArea;
+
+	@FXML
+	private CheckBox dnfRigidoCheckBox;
 	
 	private PopOver popOver;
 
@@ -271,12 +274,16 @@ public class MainController implements Initializable {
 		}
 
 		try {
-			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams));
+			boolean dnfRigido = dnfRigidoCheckBox.isSelected();
+
+			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, dnfRigido));
 		} catch (Exception e) {
 			Alert a = new Alert(Alert.AlertType.ERROR);
 			a.setTitle("Erro ao importar o log");
 			a.setContentText(e.getMessage());
 			a.show();
+
+			e.printStackTrace();
 		}
 	}
 
