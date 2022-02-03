@@ -9,7 +9,7 @@ import br.com.rsousa.utils.TimeUtils;
 import java.util.List;
 
 public class DriverTransformer {
-    public static Driver toDriver(br.com.rsousa.pojo.ams.Driver amsDriver, int position, String raceTimeFormatted, List<Driver> drivers) {
+    public static Driver toDriver(br.com.rsousa.pojo.ams.Driver amsDriver, int position, String raceTimeFormatted, Double driverTotalTime, List<Driver> drivers) {
         Driver driver = new Driver();
         driver.setName(amsDriver.getName());
         driver.setBestLap(amsDriver.getBestLapTime());
@@ -19,6 +19,7 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(amsDriver.getName(), amsDriver.getTeamName(), drivers));
+        driver.setDriverTotalTime(driverTotalTime);
 
         return driver;
     }

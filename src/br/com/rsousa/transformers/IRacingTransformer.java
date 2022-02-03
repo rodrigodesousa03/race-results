@@ -12,8 +12,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
-public class IRacingTransformer {
-    public static Session processQualify(File file, List<Driver> driverTeams) {
+public class IRacingTransformer implements SimulatorTransformer {
+    public Session processQualify(File file, List<Driver> driverTeams) {
         BufferedReader br = null;
         String line;
         boolean reachedFirstLine = false;
@@ -64,7 +64,7 @@ public class IRacingTransformer {
         return session;
     }
 
-    public static Session processRace(File file, List<Driver> driverTeams) {
+    public Session processRace(File file, List<Driver> driverTeams) {
         BufferedReader br = null;
         String line;
         int position = 1;
@@ -150,7 +150,7 @@ public class IRacingTransformer {
         return session;
     }
 
-    private static DriverSession transformLineInDriverSession(String line) {
+    private DriverSession transformLineInDriverSession(String line) {
         String[] driverSessionArray = line.replaceAll("\"", "").split(",");
 
         if (driverSessionArray[0].equals("Fin Pos")) {

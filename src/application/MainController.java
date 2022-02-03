@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
-import br.com.rsousa.transformers.AssettoCorsaCompetizioneTransformer;
+import br.com.rsousa.transformers.*;
 import br.com.rsousa.utils.SessionUtils;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.*;
@@ -22,9 +22,6 @@ import javafx.scene.input.KeyEvent;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.pojo.Driver;
-import br.com.rsousa.transformers.AssettoTransformer;
-import br.com.rsousa.transformers.IRacingTransformer;
-import br.com.rsousa.transformers.RFactorTransformer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -130,14 +127,8 @@ public class MainController implements Initializable {
 		fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV Files", fileTypes()));
 
 		File file = fc.showOpenDialog(null);
-		
-		if (file.getName().contains("xml") || file.getName().contains("XML")) {
-			raceEvent.addSession(RFactorTransformer.processQualify(file, driverTeams));
-		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-			raceEvent.addSession(IRacingTransformer.processQualify(file, driverTeams));
-		} else {
-			raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
-		}
+
+		processLog(file);
 		
 		showResults();
 	}
@@ -258,20 +249,35 @@ public class MainController implements Initializable {
 		});
 		
 		for (File file : files) {
-			if (file.getName().contains("xml") || file.getName().contains("XML")) {
-				raceEvent.addSession(RFactorTransformer.processQualify(file, driverTeams));
-			} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-				raceEvent.addSession(IRacingTransformer.processQualify(file, driverTeams));
-			} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-				if (isAssettoCorsaLog(file)) {
-					raceEvent.addSession(AssettoTransformer.processQualify(file, driverTeams));
-				} else {
-					raceEvent.addSession(AssettoCorsaCompetizioneTransformer.processQualify(file, driverTeams));
-				}
-			}
+			processLog(file);
 		}
 		
 		showResults();
+	}
+
+	private void processLog(File file) {
+		SimulatorTransformer simulatorTransformer = new EmptyTransformer();
+
+		if (file.getName().contains("xml") || file.getName().contains("XML")) {
+			simulatorTransformer = new RFactorTransformer();
+		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
+			simulatorTransformer = new IRacingTransformer();
+		} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
+			if (isAssettoCorsaLog(file)) {
+				simulatorTransformer = new AssettoTransformer();
+			} else {
+				simulatorTransformer = new AssettoCorsaCompetizioneTransformer();
+			}
+		}
+
+		try {
+			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams));
+		} catch (Exception e) {
+			Alert a = new Alert(Alert.AlertType.ERROR);
+			a.setTitle("Erro ao importar o log");
+			a.setContentText(e.getMessage());
+			a.show();
+		}
 	}
 
 	private static boolean isAssettoCorsaLog(File file)

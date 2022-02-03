@@ -17,6 +17,7 @@ public class Driver implements Comparable<Driver> {
 	private DriverStatus status;
 	private String raceTime;
 	private String raceTimeFormatted;
+	private Double driverTotalTime;
 
 	public Driver(String name, String team, String id) {
 		this.name = name;
@@ -170,5 +171,13 @@ public class Driver implements Comparable<Driver> {
 
 	public void setRaceTime(String raceTime) {
 		this.raceTime = raceTime;
+	}
+
+	public Double getDriverTotalTime() {
+		return driverTotalTime;
+	}
+
+	public void setDriverTotalTime(Double driverTotalTime) {
+		this.driverTotalTime = driverTotalTime;
 	}
 }

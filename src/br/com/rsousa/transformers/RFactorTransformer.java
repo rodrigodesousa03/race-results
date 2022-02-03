@@ -4,6 +4,7 @@ import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.ams.Driver;
+import br.com.rsousa.pojo.ams.Lap;
 import br.com.rsousa.pojo.ams.RFactorXML;
 
 import javax.xml.bind.JAXBContext;
@@ -18,10 +19,10 @@ import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;
 
-public class RFactorTransformer {
+public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public static Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
+    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -46,10 +47,10 @@ public class RFactorTransformer {
                 Session session = new Session(SessionType.QUALIFY);
 
                 for (Driver driver : drivers) {
-                    if (isDriver(driver)) {
+                    if (isDriver(driver.getName())) {
                         String bestLapTimeFormatted = formatSeconds(driver.getBestLapTime(), "sem tempo");
 
-                        session.addDriver(DriverTransformer.toDriver(driver, position, bestLapTimeFormatted, driverTeams));
+                        session.addDriver(DriverTransformer.toDriver(driver, position, bestLapTimeFormatted, 0D, driverTeams));
 
                         position++;
                     }
@@ -64,7 +65,7 @@ public class RFactorTransformer {
         return null;
     }
 
-    public static Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
+    public Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -94,8 +95,16 @@ public class RFactorTransformer {
                 Double leaderFinishTime = null;
 
                 for (Driver driver : drivers) {
-                    if (isDriver(driver)) {
+                    if (isDriver(driver.getName())) {
                         String raceTimeFormatted;
+
+                        Double driverTotalTime = 0D;
+
+                        if (driver.getLap() != null) {
+                            for (Lap lap: driver.getLap()) {
+                                driverTotalTime += Double.parseDouble(lap.getEt());
+                            }
+                        }
 
                         if (driver.getPosition() == 1) {
                             raceTimeFormatted = driver.getLaps() + " voltas";
@@ -122,7 +131,7 @@ public class RFactorTransformer {
                             raceTimeFormatted += " (" + driver.getFinishStatus() + ")";
                         }
 
-                        br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTeams);
+                        br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTotalTime, driverTeams);
 
                         if ("1".equals(driver.getGridPos())) {
                             sessionDriver.setPoleposition(true);
@@ -160,14 +169,7 @@ public class RFactorTransformer {
         return null;
     }
 
-    private static boolean isDriver(Driver driver) {
-        return !driver.getName().contains("Diretor")
-                && !driver.getName().contains("Comentarista")
-                && !driver.getName().contains("Narrador")
-                && !driver.getName().contains("ellevenTV");
-    }
-
-    private static String formatSeconds(String time, String textIfNull) {
+    private String formatSeconds(String time, String textIfNull) {
         String formattedSeconds = formatSeconds(time);
 
         if (formattedSeconds == null) {
@@ -177,7 +179,7 @@ public class RFactorTransformer {
         return formattedSeconds;
     }
 
-    private static String formatSeconds(String time) {
+    private String formatSeconds(String time) {
         if (time == null) {
             return null;
         }

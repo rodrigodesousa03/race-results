@@ -15,41 +15,38 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class AssettoCorsaCompetizioneTransformer {
-    private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
+public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer {
+    public static final String UTF_8 = "UTF-8";
+    private final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public static br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams) {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams) throws FileNotFoundException, UnsupportedEncodingException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
-            try {
-                Session assettoSession = createSession(file);
+            Session assettoSession = createSession(file);
 
-                if ("R".equals(assettoSession.getSessionType())) {
-                    return processRace(file, driverTeams);
+            if ("R".equals(assettoSession.getSessionType())) {
+                return processRace(file, driverTeams);
+            }
+
+            session = new br.com.rsousa.pojo.Session(SessionType.QUALIFY);
+
+            int position = 1;
+
+            for (LeaderBoardLine result : assettoSession.getSessionResult().getLeaderBoardLines()) {
+                if (isDriver(result.getCurrentDriver()) && result.getTiming().getBestLap() != 999999999) {
+                    Driver driver = DriverTransformer.toDriver(result, position, result.getTiming().getLapCount(), formatSeconds(result.getTiming().getBestLap()), driverTeams);
+                    session.addDriver(driver);
+
+                    position++;
                 }
-
-                session = new br.com.rsousa.pojo.Session(SessionType.QUALIFY);
-
-                int position = 1;
-
-                for (LeaderBoardLine result : assettoSession.getSessionResult().getLeaderBoardLines()) {
-                    if (isDriver(result.getCurrentDriver()) && result.getTiming().getBestLap() != 999999999) {
-                        Driver driver = DriverTransformer.toDriver(result, position, result.getTiming().getLapCount(), formatSeconds(result.getTiming().getBestLap()), driverTeams);
-                        session.addDriver(driver);
-
-                        position++;
-                    }
-                }
-            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException | UnsupportedEncodingException e) {
-                e.printStackTrace();
             }
         }
 
         return session;
     }
 
-    public static br.com.rsousa.pojo.Session processRace(File file, List<Driver> driverTeams) {
+    public br.com.rsousa.pojo.Session processRace(File file, List<Driver> driverTeams) {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
@@ -101,21 +98,15 @@ public class AssettoCorsaCompetizioneTransformer {
         return session;
     }
 
-    private static Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
+    private Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
+        BufferedReader in = new BufferedReader(new InputStreamReader (new FileInputStream(file), UTF_8));
+
         Gson gson = new Gson();
 
-        String charset = "UTF-8";
-        try {
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader (new FileInputStream(file), charset));
-
-            return gson.fromJson(in, Session.class);
-        } catch (UnsupportedEncodingException e) {
-            throw e;
-        }
+        return gson.fromJson(in, Session.class);
     }
 
-    private static String formatSeconds(Long time) {
+    private String formatSeconds(Long time) {
         String bestLapTime = String.valueOf(time);
 
         int totalSeconds = 0;
@@ -134,9 +125,9 @@ public class AssettoCorsaCompetizioneTransformer {
                 + milliseconds;
     }
 
-    private static boolean isDriver(CurrentDriver driver) {
+    private boolean isDriver(CurrentDriver driver) {
         String name = driver.getFirstName() + " " + driver.getLastName();
 
-        return !name.isEmpty() && !name.contains("Diretor") && !name.contains("Comentarista") && !name.contains("Narrador");
+        return isDriver(name);
     }
 }
