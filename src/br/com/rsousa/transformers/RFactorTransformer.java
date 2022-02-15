@@ -102,7 +102,11 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                         if (driver.getLap() != null) {
                             for (Lap lap: driver.getLap()) {
-                                driverTotalTime += Double.parseDouble(lap.getEt());
+                                try {
+                                    driverTotalTime += Double.parseDouble(lap.getEt());
+                                } catch (NumberFormatException exception) {
+                                    // Do Nothing
+                                }
                             }
                         }
 
