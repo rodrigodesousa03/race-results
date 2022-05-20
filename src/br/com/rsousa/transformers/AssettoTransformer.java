@@ -116,7 +116,14 @@ public class AssettoTransformer implements SimulatorTransformer {
             totalSeconds = Integer.parseInt(bestLapTime.substring(0, bestLapTime.length() - 3));
         }
 
-        String milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
+        String milliseconds;
+
+        if (bestLapTime.length() >= 3) {
+            milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
+        } else {
+            milliseconds = bestLapTime;
+        }
+
 
         return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
