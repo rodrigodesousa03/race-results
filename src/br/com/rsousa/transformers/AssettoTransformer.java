@@ -120,10 +120,11 @@ public class AssettoTransformer implements SimulatorTransformer {
 
         if (bestLapTime.length() >= 3) {
             milliseconds = bestLapTime.substring(bestLapTime.length() - 3);
+        } else if (bestLapTime.length() == 2) {
+            milliseconds = "0" + bestLapTime;
         } else {
-            milliseconds = bestLapTime;
+            milliseconds = "00" + bestLapTime;
         }
-
 
         return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
