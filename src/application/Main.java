@@ -14,7 +14,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) throws IOException {
 		Pane root = FXMLLoader.load(getClass().getResource("Main.fxml"));
 		
-		Scene scene = new Scene(root, 1010, 745);
+		Scene scene = new Scene(root, 1010, 635);
 		primaryStage.setScene(scene);
 		primaryStage.setResizable(false);
 		primaryStage.setTitle("Race Results");
