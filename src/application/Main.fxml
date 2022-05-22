@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="656.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="747.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="656.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="747.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Pane layoutY="43.0" prefHeight="676.0" prefWidth="1015.0" style="-fx-background-color: #EEE;">
          <children>
@@ -134,7 +134,7 @@
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font></Text>
-      <Text layoutX="15.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.4.1">
+      <Text layoutX="15.0" layoutY="736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2.4.2">
          <font>
             <Font name="SansSerif Regular" size="13.0" />
          </font></Text>
