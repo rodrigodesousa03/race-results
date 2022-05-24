@@ -73,12 +73,27 @@ public class MainController implements Initializable {
 
 	@FXML
 	private TableColumn<Driver, Integer> textColumn;
+
+	@FXML
+	private Text versaoLabel;
 	
 	private List<Driver> driverTeams = new ArrayList<>();
 
 	private Driver driverSelected;
 
 	private Event raceEvent = new Event();
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
+		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
+		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
+
+		raceTableView.getSelectionModel().selectedItemProperty()
+				.addListener((observable, oldValue, newValue) -> selectDriver(newValue));
+
+		versaoLabel.setText("3.1");
+	}
 	
 	@FXML
 	void readCsvFileChooser(ActionEvent event) {
@@ -321,16 +336,6 @@ public class MainController implements Initializable {
 			raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
 			sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
 		}
-	}
-	
-	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
-		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
-		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
-
-		raceTableView.getSelectionModel().selectedItemProperty()
-				.addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 	}
 
 	private List<String> fileTypes() {
