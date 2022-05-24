@@ -100,7 +100,14 @@ public class IRacingTransformer implements SimulatorTransformer {
                             laps = driver.getLaps();
                         } else {
                             if (driverSession != null) {
-                                driver = DriverTransformer.toDriver(driverSession, position, driverSession.getInterval(), driverTeams);
+                                if (driverSession.getCompletedLaps() == laps) {
+                                    driver = DriverTransformer.toDriver(driverSession, position, driverSession.getInterval(), driverTeams);
+                                } else {
+                                    int lapsDifference = laps - driverSession.getCompletedLaps();
+
+                                    driver = DriverTransformer.toDriver(driverSession, position, "+" + lapsDifference + " laps", driverTeams);
+                                }
+
                             }
                         }
 
