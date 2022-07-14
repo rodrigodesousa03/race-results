@@ -8,7 +8,7 @@
    <children>
       <Pane layoutY="-1.0" prefHeight="610.0" prefWidth="1015.0" style="-fx-background-color: #EEE;">
          <children>
-            <Button layoutX="461.0" layoutY="525.0" mnemonicParsing="false" onAction="#processLogFileChooser" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #FF0808;" text="Import" textFill="WHITE">
+            <Button layoutX="460.0" layoutY="535.0" mnemonicParsing="false" onAction="#processLogFileChooser" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #FF0808;" text="Import" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>
@@ -128,10 +128,19 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </Button>
-            <CheckBox fx:id="dnfRigidoCheckBox" layoutX="461.0" layoutY="18.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="105.0" text="DNF Rígido">
+            <CheckBox fx:id="dnfRigidoCheckBox" layoutX="458.0" layoutY="18.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="93.0" text="DNF Rígido">
                <font>
                   <Font name="Arial" size="12.0" />
                </font></CheckBox>
+            <CheckBox fx:id="seletivaCheckBox" layoutX="458.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="93.0" text="Seletiva">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font></CheckBox>
+            <Button layoutX="460.0" layoutY="477.0" mnemonicParsing="false" onAction="#clear" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #FF0808;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
          </children></Pane>
       <Text layoutX="842.0" layoutY="627.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By Rodrigo de Sousa">
          <font>

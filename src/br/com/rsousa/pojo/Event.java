@@ -9,12 +9,18 @@ public class Event {
     private Session raceSession;
     private Session originalRaceSession;
 
-    public void addSession(Session session) {
+    public void addSession(Session session, boolean isSeletiva) {
         if (session == null) {
             return;
         }
 
-        if (session.type() == SessionType.QUALIFY) {
+        if (isSeletiva) {
+            if (qualifySession != null) {
+                joinSession(session);
+            } else {
+                setQualifySession(session);
+            }
+        } else if (session.type() == SessionType.QUALIFY) {
             setQualifySession(session);
         } else {
             setRaceSession(session);
@@ -30,6 +36,10 @@ public class Event {
                 }
             }
         }
+    }
+
+    private void joinSession(Session session) {
+        qualifySession.addDrivers(session.drivers());
     }
 
     public Session getQualifySession() {
@@ -52,10 +62,12 @@ public class Event {
         this.originalRaceSession = originalRaceSession;
     }
 
-    public void clear() {
+    public void clear(boolean isSeletiva) {
         setRaceSession(null);
         setOriginalRaceSession(null);
-        setQualifySession(null);
+        if (!isSeletiva) {
+            setQualifySession(null);
+        }
     }
 
     public void resetRace() {

@@ -22,7 +22,7 @@ import static java.util.stream.Collectors.toList;
 public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido) {
+    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -80,7 +80,7 @@ public class RFactorTransformer implements SimulatorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getRace() == null) {
-                    return processQualify(file, driverTeams, dnfRigido);
+                    return processQualify(file, driverTeams, dnfRigido, false);
                 }
 
                 List<Driver> drivers = Stream.of(raceResult.getRaceResults().getRace().getDriver())

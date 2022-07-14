@@ -59,4 +59,34 @@ public class Session {
 		return drivers.stream().filter(Driver::isPoleposition)
 				.findFirst();
 	}
+
+	public void addDrivers(List<Driver> drivers) {
+		for (Driver driver : drivers) {
+			Driver driverSession = drivers().stream().filter(d -> d.getName().equals(driver.getName())).findFirst().orElse(null);
+
+			if (driverSession == null) {
+				drivers().add(driver);
+			} else {
+				if (driver.getBestLapMilliseconds() < driverSession.getBestLapMilliseconds()) {
+					drivers().remove(driverSession);
+					drivers().add(driver);
+				}
+			}
+		}
+
+		sortDriversByBestLap();
+	}
+
+	private void sortDriversByBestLap() {
+		drivers = drivers.stream()
+				.filter(d -> d.getBestLapMilliseconds() > 0)
+				.sorted(Comparator.comparingLong(Driver::getBestLapMilliseconds))
+				.collect(Collectors.toList());
+
+		for (int i=0;i<drivers.size();i++) {
+			Driver driver = drivers.get(i);
+			driver.setPosition(i+1);
+		}
+	}
+
 }

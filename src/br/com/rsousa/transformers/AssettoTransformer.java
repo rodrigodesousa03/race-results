@@ -20,13 +20,13 @@ import java.util.List;
 public class AssettoTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido) throws FileNotFoundException {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) throws FileNotFoundException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
             Session assettoSession = createSession(file);
 
-            if ("RACE".equals(assettoSession.getType())) {
+            if ("RACE".equals(assettoSession.getType()) && !isSeletiva) {
                 return processRace(file, driverTeams, dnfRigido);
             }
 

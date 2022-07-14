@@ -56,6 +56,9 @@ public class MainController implements Initializable {
 
 	@FXML
 	private CheckBox dnfRigidoCheckBox;
+
+	@FXML
+	private CheckBox seletivaCheckBox;
 	
 	private PopOver popOver;
 
@@ -137,6 +140,14 @@ public class MainController implements Initializable {
 		driverTeams.clear();
 		
 		textDrivers.setText(driverTeams.size() + " Drivers");
+	}
+
+	@FXML
+	void clear(ActionEvent event) {
+		raceEvent.clear(false);
+
+		raceTextArea.setText(null);
+		qualifyTextArea.setText(null);
 	}
 
 	@FXML
@@ -256,7 +267,7 @@ public class MainController implements Initializable {
 	
 	@FXML
 	void logFileDrop(DragEvent event) {
-		raceEvent.clear();
+		raceEvent.clear(seletivaCheckBox.isSelected());
 		
 		List<File> files = event.getDragboard().getFiles();
 		
@@ -290,8 +301,9 @@ public class MainController implements Initializable {
 
 		try {
 			boolean dnfRigido = dnfRigidoCheckBox.isSelected();
+			boolean isSeletiva = seletivaCheckBox.isSelected();
 
-			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, dnfRigido));
+			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, dnfRigido, isSeletiva), isSeletiva);
 		} catch (Exception e) {
 			Alert a = new Alert(Alert.AlertType.ERROR);
 			a.setTitle("Erro ao importar o log");

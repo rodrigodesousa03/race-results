@@ -19,13 +19,13 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
     public static final String UTF_8 = "UTF-8";
     private final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido) throws FileNotFoundException, UnsupportedEncodingException {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) throws FileNotFoundException, UnsupportedEncodingException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
             Session assettoSession = createSession(file);
 
-            if ("R".equals(assettoSession.getSessionType())) {
+            if ("R".equals(assettoSession.getSessionType()) && !isSeletiva) {
                 return processRace(file, driverTeams, dnfRigido);
             }
 
