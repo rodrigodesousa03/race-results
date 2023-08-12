@@ -1,18 +1,17 @@
 package br.com.rsousa.transformers;
 
-import br.com.rsousa.pojo.Driver;
-import br.com.rsousa.pojo.DriverStatus;
-import br.com.rsousa.pojo.Session;
-import br.com.rsousa.pojo.SessionType;
+import br.com.rsousa.pojo.*;
 import br.com.rsousa.pojo.iracing.DriverSession;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.List;
 
 public class IRacingTransformer implements SimulatorTransformer {
+
+    @Override
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+        return null;
+    }
     public Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         BufferedReader br = null;
         String line;

@@ -1,6 +1,7 @@
 package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.DriverStatus;
+import br.com.rsousa.pojo.Event;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.ams.Driver;
@@ -21,6 +22,11 @@ import static java.util.stream.Collectors.toList;
 
 public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
+
+    @Override
+    public Event processEvent(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+        return null;
+    }
 
     public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         if (file != null) {

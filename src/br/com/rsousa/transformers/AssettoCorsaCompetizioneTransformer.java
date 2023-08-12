@@ -2,6 +2,7 @@ package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
+import br.com.rsousa.pojo.Event;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.acc.CurrentDriver;
 import br.com.rsousa.pojo.acc.LeaderBoardLine;
@@ -18,6 +19,11 @@ import java.util.List;
 public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer {
     public static final String UTF_8 = "UTF-8";
     private final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
+
+    @Override
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+        return null;
+    }
 
     public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
         br.com.rsousa.pojo.Session session = null;

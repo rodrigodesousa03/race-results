@@ -34,367 +34,381 @@ import javafx.stage.FileChooser.ExtensionFilter;
 
 public class MainController implements Initializable {
 
-	private List<String> fileTypes;
+    private List<String> fileTypes;
 
-	@FXML
-	private TextArea raceTextArea;
+    @FXML
+    private TextArea raceTextArea;
 
-	@FXML
-	private TextArea sheetsTextArea;
+    @FXML
+    private TextArea sheetsTextArea;
 
-	@FXML
-	private TextField categoryTextField;
+    @FXML
+    private TextField categoryTextField;
 
-	@FXML
-	private TextField circuitTextField;
+    @FXML
+    private TextField circuitTextField;
 
-	@FXML
-	private TextArea licenseTextArea;
+    @FXML
+    private TextArea licenseTextArea;
 
-	@FXML
-	private TextArea qualifyTextArea;
+    @FXML
+    private TextArea qualifyTextArea;
 
-	@FXML
-	private CheckBox hardDnfCheckBox;
+    @FXML
+    private CheckBox hardDnfCheckBox;
 
-	@FXML
-	private CheckBox selectiveCheckBox;
-	
-	private PopOver popOver;
+    @FXML
+    private CheckBox selectiveCheckBox;
 
-	@FXML
-	private Text textDrivers;
+    private PopOver popOver;
 
-	@FXML
-	private TableView<Driver> raceTableView;
+    @FXML
+    private Text textDrivers;
 
-	@FXML
-	private TableColumn<Driver, Integer> positionColumn;
+    @FXML
+    private TableView<Driver> raceTableView;
 
-	@FXML
-	private TableColumn<Driver, Integer> driverColumn;
+    @FXML
+    private TableColumn<Driver, Integer> positionColumn;
 
-	@FXML
-	private TableColumn<Driver, Integer> textColumn;
+    @FXML
+    private TableColumn<Driver, Integer> driverColumn;
 
-	@FXML
-	private Text versaoLabel;
-	
-	private List<Driver> driverTeams = new ArrayList<>();
+    @FXML
+    private TableColumn<Driver, Integer> textColumn;
 
-	private Driver driverSelected;
+    @FXML
+    private Text versaoLabel;
 
-	private Event raceEvent = new Event();
+    private List<Driver> driverTeams = new ArrayList<>();
 
-	@Override
-	public void initialize(URL url, ResourceBundle rb) {
-		positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
-		driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
-		textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
+    private Driver driverSelected;
 
-		raceTableView.getSelectionModel().selectedItemProperty()
-				.addListener((observable, oldValue, newValue) -> selectDriver(newValue));
+    private Event raceEvent = new Event();
 
-		versaoLabel.setText("3.3");
-	}
-	
-	@FXML
-	void readCsvFileChooser(ActionEvent event) {
+    @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
+        driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
+        textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
+
+        raceTableView.getSelectionModel().selectedItemProperty()
+                .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
+
+        versaoLabel.setText("3.3");
+    }
+
+    @FXML
+    void readCsvFileChooser(ActionEvent event) {
         driverTeams.clear();
-        
-       	FileChooser fc = new FileChooser();
-    	fc.getExtensionFilters().add(new ExtensionFilter("CSV File", "*.csv"));
 
-    	File file = fc.showOpenDialog(null);
-    		
-    	processDrivers(file);
-	}
+        FileChooser fc = new FileChooser();
+        fc.getExtensionFilters().add(new ExtensionFilter("CSV File", "*.csv"));
 
-	@FXML
-	void showDrivers() {
-		StringBuilder drivers = new StringBuilder();
-		
-		if (driverTeams.isEmpty()) {
-			drivers.append("No Drivers");
-		} else {
-			driverTeams.stream().sorted(Comparator.comparing(Driver::getName))
-								.forEach(d -> drivers.append(d.toString() + "\n"));
-		}
-		
-		Label label = new Label(drivers.toString());
-		
-		VBox vBox = new VBox(label);
-		
-		popOver = new PopOver(vBox);
-		
-		popOver.show(textDrivers);
-	}
-	
-	@FXML
-	void hideDrivers() {
-		popOver.hide();
-	}
-	
-	@FXML
-	void clearDrivers(ActionEvent event) {
-		driverTeams.clear();
-		
-		textDrivers.setText(driverTeams.size() + " Drivers");
-	}
+        File file = fc.showOpenDialog(null);
 
-	@FXML
-	void clear(ActionEvent event) {
-		raceEvent.clear(false);
+        processDrivers(file);
+    }
 
-		raceTextArea.setText(null);
-		qualifyTextArea.setText(null);
-	}
+    @FXML
+    void showDrivers() {
+        StringBuilder drivers = new StringBuilder();
 
-	@FXML
-	void processLogFileChooser(ActionEvent event) {
-		FileChooser fc = new FileChooser();
-		fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV Files", fileTypes()));
+        if (driverTeams.isEmpty()) {
+            drivers.append("No Drivers");
+        } else {
+            driverTeams.stream().sorted(Comparator.comparing(Driver::getName))
+                    .forEach(d -> drivers.append(d.toString() + "\n"));
+        }
 
-		File file = fc.showOpenDialog(null);
+        Label label = new Label(drivers.toString());
 
-		processLog(file);
-		
-		showResults();
-	}
+        VBox vBox = new VBox(label);
 
-	@FXML
-	void moveUpButton(ActionEvent event) {
-		if (isDriverNotSelected()) {
-			return;
-		}
+        popOver = new PopOver(vBox);
 
-		SessionUtils.moveUpPosition(raceEvent.getRaceSession(), driverSelected);
+        popOver.show(textDrivers);
+    }
 
-		showResults();
-	}
+    @FXML
+    void hideDrivers() {
+        popOver.hide();
+    }
 
-	@FXML
-	void moveDownButton(ActionEvent event) {
-		if (isDriverNotSelected()) {
-			return;
-		}
+    @FXML
+    void clearDrivers(ActionEvent event) {
+        driverTeams.clear();
 
-		SessionUtils.moveDownPosition(raceEvent.getRaceSession(), driverSelected);
+        textDrivers.setText(driverTeams.size() + " Drivers");
+    }
 
-		showResults();
-	}
+    @FXML
+    void clear(ActionEvent event) {
+        raceEvent.clear(false);
 
-	@FXML
-	void lastPositionButton(ActionEvent event) {
-		if (isDriverNotSelected()) {
-			return;
-		}
+        raceTextArea.setText(null);
+        qualifyTextArea.setText(null);
+    }
 
-		SessionUtils.moveLastPosition(raceEvent.getRaceSession(), driverSelected);
+    @FXML
+    void processLogFileChooser(ActionEvent event) {
+        FileChooser fc = new FileChooser();
+        fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV Files", fileTypes()));
 
-		showResults();
-	}
+        File file = fc.showOpenDialog(null);
 
-	@FXML
-	void didNotFinishedButton(ActionEvent event) {
-		if (isDriverNotSelected()) {
-			return;
-		}
+        processLog(file);
 
-		SessionUtils.didNotFinished(driverSelected);
+        showResults();
+    }
 
-		showResults();
-	}
+    @FXML
+    void moveUpButton(ActionEvent event) {
+        if (isDriverNotSelected()) {
+            return;
+        }
 
-	@FXML
-	void disqualifyButton(ActionEvent event) {
-		if (isDriverNotSelected()) {
-			return;
-		}
+        SessionUtils.moveUpPosition(raceEvent.getRaceSession(), driverSelected);
 
-		SessionUtils.disqualify(raceEvent.getRaceSession(), driverSelected);
+        showResults();
+    }
 
-		showResults();
-	}
+    @FXML
+    void moveDownButton(ActionEvent event) {
+        if (isDriverNotSelected()) {
+            return;
+        }
 
-	private boolean isDriverNotSelected() {
-		return raceEvent.getRaceSession() == null || driverSelected == null;
-	}
+        SessionUtils.moveDownPosition(raceEvent.getRaceSession(), driverSelected);
 
-	@FXML
-	void resetRace(ActionEvent event) {
-		raceEvent.resetRace();
+        showResults();
+    }
 
-		showResults();
-	}
+    @FXML
+    void lastPositionButton(ActionEvent event) {
+        if (isDriverNotSelected()) {
+            return;
+        }
 
-	@FXML
-	void updateLicensePoints(KeyEvent event) {
-		if (raceEvent.getRaceSession() == null) {
-			return;
-		}
+        SessionUtils.moveLastPosition(raceEvent.getRaceSession(), driverSelected);
 
-		if (raceEvent.getRaceSession() != null) {
-			raceEvent.getRaceSession().drivers().stream().forEach(d -> d.setLicensePoints(0));
-		}
+        showResults();
+    }
 
-		String[] licenseTextRows = licenseTextArea.getText().split("\n");
+    @FXML
+    void didNotFinishedButton(ActionEvent event) {
+        if (isDriverNotSelected()) {
+            return;
+        }
 
-		for (String licenseRow : licenseTextRows) {
-			if (licenseRow.contains("+")) {
-				String[] row = licenseRow.split("\\+");
+        SessionUtils.didNotFinished(driverSelected);
 
-				String driverName = row[0].trim();
-				Integer licensePoints = Integer.parseInt(row[1]);
+        showResults();
+    }
 
-				if (raceEvent.getRaceSession() != null) {
-					raceEvent.getRaceSession().drivers().stream().filter(d -> d.getName().equals(driverName))
-							.findFirst()
-							.ifPresent(d -> d.setLicensePoints(licensePoints));
-				}
-			}
-		}
+    @FXML
+    void disqualifyButton(ActionEvent event) {
+        if (isDriverNotSelected()) {
+            return;
+        }
 
-		showResults();
-	}
+        SessionUtils.disqualify(raceEvent.getRaceSession(), driverSelected);
 
-	@FXML
-	void dragOver(DragEvent event) {
-		if (event.getDragboard().hasFiles()) {
-			event.acceptTransferModes(TransferMode.ANY);
-		}
-	}
-	
-	@FXML
-	void logFileDrop(DragEvent event) {
-		raceEvent.clear(selectiveCheckBox.isSelected());
-		
-		List<File> files = event.getDragboard().getFiles();
-		
-		files.stream().filter(f -> f.getName().contains("Cadastros")).findFirst().ifPresent(f -> {
-			driverTeams.clear();
-			processDrivers(f);
-			files.remove(f);
-		});
-		
-		for (File file : files) {
-			processLog(file);
-		}
-		
-		showResults();
-	}
+        showResults();
+    }
 
-	private void processLog(File file) {
-		SimulatorTransformer simulatorTransformer = new EmptyTransformer();
+    private boolean isDriverNotSelected() {
+        return raceEvent.getRaceSession() == null || driverSelected == null;
+    }
 
-		if (file.getName().contains("xml") || file.getName().contains("XML")) {
-			simulatorTransformer = new RFactorTransformer();
-		} else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-			simulatorTransformer = new IRacingTransformer();
-		} else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-			if (isAssettoCorsaLog(file)) {
-				simulatorTransformer = new AssettoTransformer();
-			} else {
+    @FXML
+    void resetRace(ActionEvent event) {
+        raceEvent.resetRace();
+
+        showResults();
+    }
+
+    @FXML
+    void updateLicensePoints(KeyEvent event) {
+        if (raceEvent.getRaceSession() == null) {
+            return;
+        }
+
+        if (raceEvent.getRaceSession() != null) {
+            raceEvent.getRaceSession().drivers().stream().forEach(d -> d.setLicensePoints(0));
+        }
+
+        String[] licenseTextRows = licenseTextArea.getText().split("\n");
+
+        for (String licenseRow : licenseTextRows) {
+            if (licenseRow.contains("+")) {
+                String[] row = licenseRow.split("\\+");
+
+                String driverName = row[0].trim();
+                Integer licensePoints = Integer.parseInt(row[1]);
+
+                if (raceEvent.getRaceSession() != null) {
+                    raceEvent.getRaceSession().drivers().stream().filter(d -> d.getName().equals(driverName))
+                            .findFirst()
+                            .ifPresent(d -> d.setLicensePoints(licensePoints));
+                }
+            }
+        }
+
+        showResults();
+    }
+
+    @FXML
+    void dragOver(DragEvent event) {
+        if (event.getDragboard().hasFiles()) {
+            event.acceptTransferModes(TransferMode.ANY);
+        }
+    }
+
+    @FXML
+    void logFileDrop(DragEvent event) {
+        raceEvent.clear(selectiveCheckBox.isSelected());
+
+        List<File> files = event.getDragboard().getFiles();
+
+        files.stream().filter(f -> f.getName().contains("Cadastros")).findFirst().ifPresent(f -> {
+            driverTeams.clear();
+            processDrivers(f);
+            files.remove(f);
+        });
+
+        for (File file : files) {
+            processLog(file);
+        }
+
+        showResults();
+    }
+
+    private void processLog(File file) {
+        SimulatorTransformer simulatorTransformer = new EmptyTransformer();
+
+        if (file.getName().contains("xml") || file.getName().contains("XML")) {
+            simulatorTransformer = new RFactorTransformer();
+        } else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
+            simulatorTransformer = new IRacingTransformer();
+        } else if (file.getName().contains("json") || file.getName().contains("JSON")) {
+            if (isAssettoCorsaLog(file)) {
+                simulatorTransformer = new AssettoTransformer();
+            } else if (isAutomobilista2Log(file)) {
+                simulatorTransformer = new Automobilista2Transformer();
+            } else {
 				simulatorTransformer = new AssettoCorsaCompetizioneTransformer();
 			}
-		}
+        }
 
-		try {
-			boolean hardDnf = hardDnfCheckBox.isSelected();
-			boolean isSelective = selectiveCheckBox.isSelected();
+        try {
+            boolean hardDnf = hardDnfCheckBox.isSelected();
+            boolean isSelective = selectiveCheckBox.isSelected();
 
-			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
-		} catch (Exception e) {
-			Alert a = new Alert(Alert.AlertType.ERROR);
-			a.setTitle("Erro ao importar o log");
-			a.setContentText(e.getMessage());
-			a.show();
+            if (simulatorTransformer instanceof Automobilista2Transformer) {
+                raceEvent = simulatorTransformer.processEvent(file, driverTeams, hardDnf, isSelective);
+            } else {
+                raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
+            }
+        } catch (Exception e) {
+            Alert a = new Alert(Alert.AlertType.ERROR);
+            a.setTitle("Erro ao importar o log");
+            a.setContentText(e.getMessage());
+            a.show();
 
-			e.printStackTrace();
-		}
-	}
+            e.printStackTrace();
+        }
+    }
 
-	private static boolean isAssettoCorsaLog(File file)
-	{
+    private static boolean isAssettoCorsaLog(File file) {
+        StringBuilder contentBuilder = new StringBuilder();
+
+        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return contentBuilder.toString().contains("TrackName");
+    }
+
+	private static boolean isAutomobilista2Log(File file) {
 		StringBuilder contentBuilder = new StringBuilder();
 
-		try (Stream<String> stream = Files.lines( Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8))
-		{
+		try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
 			stream.forEach(s -> contentBuilder.append(s).append("\n"));
-		}
-		catch (IOException e)
-		{
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 
-		return contentBuilder.toString().contains("TrackName");
+		return contentBuilder.toString().contains("participants");
 	}
 
-	private void selectDriver(Driver driver) {
-		if (driver != null) {
-			driverSelected = driver;
-		}
-	}
+    private void selectDriver(Driver driver) {
+        if (driver != null) {
+            driverSelected = driver;
+        }
+    }
 
-	private void showResults() {
-		if (raceEvent.getQualifySession() != null) {
-			qualifyTextArea.setText(SessionFormatter.format(raceEvent.getQualifySession()));
-		}
+    private void showResults() {
+        if (raceEvent.getQualifySession() != null) {
+            qualifyTextArea.setText(SessionFormatter.format(raceEvent.getQualifySession()));
+        }
 
-		if (raceEvent.getRaceSession() != null) {
-			raceTableView.getItems().clear();
-			raceEvent.getRaceSession().sortDrivers();
-			raceTableView.getItems().addAll(raceEvent.getRaceSession().drivers());
-			raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
-			sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
-		}
-	}
+        if (raceEvent.getRaceSession() != null) {
+            raceTableView.getItems().clear();
+            raceEvent.getRaceSession().sortDrivers();
+            raceTableView.getItems().addAll(raceEvent.getRaceSession().drivers());
+            raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
+            sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
+        }
+    }
 
-	private List<String> fileTypes() {
-		if (fileTypes == null) {
-			fileTypes = new ArrayList<String>();
-			fileTypes.add("*.xml");
-			fileTypes.add("*.XML");
-			fileTypes.add("*.json");
-			fileTypes.add("*.JSON");
-			fileTypes.add("*.csv");
-			fileTypes.add("*.CSV");
-		}
+    private List<String> fileTypes() {
+        if (fileTypes == null) {
+            fileTypes = new ArrayList<String>();
+            fileTypes.add("*.xml");
+            fileTypes.add("*.XML");
+            fileTypes.add("*.json");
+            fileTypes.add("*.JSON");
+            fileTypes.add("*.csv");
+            fileTypes.add("*.CSV");
+        }
 
-		return fileTypes;
-	}
+        return fileTypes;
+    }
 
-	private void processDrivers(File file) {
-		BufferedReader br = null;
+    private void processDrivers(File file) {
+        BufferedReader br = null;
         String line = "";
-        
-        if (file != null) {
-			try {
-	            br = new BufferedReader(new FileReader(file));
-	            while ((line = br.readLine()) != null) {
-	                String[] driver = line.split(",");
-	                
-	                if (!driver[0].contains("Piloto")) {
-	                	String id = driver.length > 2 ? driver[2] : null;
 
-	                	driverTeams.add(new Driver(driver[0], driver[1], id, driver[3]));
-	                }
-	            }
-	            
-	            textDrivers.setText(driverTeams.size() + " Drivers");
-	        } catch (FileNotFoundException e) {
-	            e.printStackTrace();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        } finally {
-	            if (br != null) {
-	                try {
-	                    br.close();
-	                } catch (IOException e) {
-	                    e.printStackTrace();
-	                }
-	            }
-	        }
-		}
-	}
+        if (file != null) {
+            try {
+                br = new BufferedReader(new FileReader(file));
+                while ((line = br.readLine()) != null) {
+                    String[] driver = line.split(",");
+
+                    if (!driver[0].contains("Piloto")) {
+                        String id = driver.length > 2 ? driver[2] : null;
+
+                        driverTeams.add(new Driver(driver[0], driver[1], id, driver[3]));
+                    }
+                }
+
+                textDrivers.setText(driverTeams.size() + " Drivers");
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            } finally {
+                if (br != null) {
+                    try {
+                        br.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }
+    }
 }

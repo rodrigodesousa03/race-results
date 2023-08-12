@@ -70,6 +70,20 @@ public class DriverTransformer {
         return driver;
     }
 
+    public static Driver toDriver(br.com.rsousa.pojo.ams2.Result result, int position, String raceTimeFormatted, List<Driver> drivers) {
+        Driver driver = new Driver();
+        driver.setName(result.getName());
+        driver.setBestLapMilliseconds(Long.valueOf(result.getAttributes().getFastestLapTime()));
+        driver.setRaceTimeMilliseconds(Long.valueOf(result.getAttributes().getTotalTime()));
+        driver.setLaps(result.getAttributes().getLap());
+        driver.setPosition(position);
+        driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(result.getName(), "Independente", drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(result.getName(), "Independente", drivers));
+
+        return driver;
+    }
+
     private static String getTeamName(String driverName, String teamName, List<Driver> drivers) {
         return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
                 .map(Driver::getTeam)

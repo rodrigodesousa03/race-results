@@ -2,6 +2,7 @@ package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
+import br.com.rsousa.pojo.Event;
 import br.com.rsousa.pojo.SessionType;
 import br.com.rsousa.pojo.assetto.Lap;
 import br.com.rsousa.pojo.assetto.Result;
@@ -13,12 +14,18 @@ import com.google.gson.JsonSyntaxException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class AssettoTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
+
+    @Override
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+        return null;
+    }
 
     public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException {
         br.com.rsousa.pojo.Session session = null;
