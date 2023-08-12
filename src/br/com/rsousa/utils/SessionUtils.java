@@ -81,7 +81,7 @@ public class SessionUtils {
             return null;
         }
 
-        Session duplicatedSession = new Session(SessionType.RACE);
+        Session duplicatedSession = new Session(SessionType.RACE, false);
         session.drivers().forEach(d -> duplicatedSession.addDriver(duplicate(d)));
 
         return duplicatedSession;
@@ -94,9 +94,10 @@ public class SessionUtils {
         duplicatedDriver.setBestLap(driver.isBestLap());
         duplicatedDriver.setLaps(driver.getLaps());
         duplicatedDriver.setName(driver.getName());
-        duplicatedDriver.setPoleposition(driver.isPoleposition());
+        duplicatedDriver.setPolePosition(driver.isPolePosition());
         duplicatedDriver.setRaceTimeFormatted(driver.getRaceTimeFormatted());
         duplicatedDriver.setTeam(driver.getTeam());
+        duplicatedDriver.setTeamStatistics(driver.getTeamStatistics());
         duplicatedDriver.setGrandChelem(driver.isGrandChelem());
         duplicatedDriver.setBestLapMilliseconds(driver.getBestLapMilliseconds());
         duplicatedDriver.setHattrick(driver.isHattrick());

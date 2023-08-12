@@ -1,6 +1,7 @@
 package application;
 	
 import java.io.IOException;
+import java.util.Objects;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws IOException {
-		Pane root = FXMLLoader.load(getClass().getResource("Main.fxml"));
+		Pane root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main.fxml")));
 		
 		Scene scene = new Scene(root, 1010, 635);
 		primaryStage.setScene(scene);

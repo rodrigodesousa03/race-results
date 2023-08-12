@@ -22,7 +22,7 @@ import static java.util.stream.Collectors.toList;
 public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) {
+    public Session processQualify(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -37,14 +37,14 @@ public class RFactorTransformer implements SimulatorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getQualify() == null) {
-                    return processRace(file, driverTeams, dnfRigido);
+                    return processRace(file, driverTeams, hardDnf);
                 }
 
                 Driver[] drivers = raceResult.getRaceResults().getQualify().getDriver();
 
                 int position = 1;
 
-                Session session = new Session(SessionType.QUALIFY);
+                Session session = new Session(SessionType.QUALIFY, isSelective);
 
                 for (Driver driver : drivers) {
                     if (isDriver(driver.getName())) {
@@ -65,7 +65,7 @@ public class RFactorTransformer implements SimulatorTransformer {
         return null;
     }
 
-    public Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean dnfRigido) {
+    public Session processRace(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf) {
         if (file != null) {
             JAXBContext jaxbContext;
             try {
@@ -80,14 +80,14 @@ public class RFactorTransformer implements SimulatorTransformer {
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
                 if (raceResult.getRaceResults().getRace() == null) {
-                    return processQualify(file, driverTeams, dnfRigido, false);
+                    return processQualify(file, driverTeams, hardDnf, false);
                 }
 
                 List<Driver> drivers = Stream.of(raceResult.getRaceResults().getRace().getDriver())
                         .sorted(Comparator.comparing(Driver::getPosition))
                         .collect(toList());
 
-                Session session = new Session(SessionType.RACE);
+                Session session = new Session(SessionType.RACE, false);
 
                 Integer position = 1;
                 Driver driverWinner = null;
@@ -138,10 +138,10 @@ public class RFactorTransformer implements SimulatorTransformer {
                         br.com.rsousa.pojo.Driver sessionDriver = DriverTransformer.toDriver(driver, position, raceTimeFormatted, driverTotalTime, driverTeams);
 
                         if ("1".equals(driver.getGridPos())) {
-                            sessionDriver.setPoleposition(true);
+                            sessionDriver.setPolePosition(true);
                         }
 
-                        if (dnfRigido && (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus()))) {
+                        if (hardDnf && (!"Finished Normally".equals(driver.getFinishStatus()) && !"None".equals(driver.getFinishStatus()))) {
                             sessionDriver.setStatus(DriverStatus.DID_NOT_FINISH);
                         }
 
@@ -157,11 +157,11 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 br.com.rsousa.pojo.Driver sessionDriverBestLap = session.bestLapDriver();
 
-                if (sessionDriverBestLap.isPoleposition() && driverWinner.getName().equals(sessionDriverBestLap.getName())) {
+                if (sessionDriverBestLap.isPolePosition() && driverWinner.getName().equals(sessionDriverBestLap.getName())) {
                     boolean ledAllTheLaps = Arrays.asList(driverWinner.getLap()).stream().allMatch(l -> "1".equals(l.getP()));
 
                     sessionDriverBestLap.setHattrick(true);
-                    sessionDriverBestLap.setPoleposition(true);
+                    sessionDriverBestLap.setPolePosition(true);
 
                     if (ledAllTheLaps) {
                         sessionDriverBestLap.setGrandChelem(true);

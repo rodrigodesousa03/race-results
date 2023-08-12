@@ -20,17 +20,17 @@ import java.util.List;
 public class AssettoTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
-    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) throws FileNotFoundException {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
             Session assettoSession = createSession(file);
 
-            if ("RACE".equals(assettoSession.getType()) && !isSeletiva) {
-                return processRace(file, driverTeams, dnfRigido);
+            if ("RACE".equals(assettoSession.getType()) && !isSelective) {
+                return processRace(file, driverTeams, hardDnf);
             }
 
-            session = new br.com.rsousa.pojo.Session(SessionType.QUALIFY);
+            session = new br.com.rsousa.pojo.Session(SessionType.QUALIFY, isSelective);
 
             int position = 1;
 
@@ -47,7 +47,7 @@ public class AssettoTransformer implements SimulatorTransformer {
         return session;
     }
 
-    public br.com.rsousa.pojo.Session processRace(File file, List<Driver> driverTeams, boolean dnfRigido) throws FileNotFoundException {
+    public br.com.rsousa.pojo.Session processRace(File file, List<Driver> driverTeams, boolean hardDnf) throws FileNotFoundException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
@@ -58,7 +58,7 @@ public class AssettoTransformer implements SimulatorTransformer {
             List<Lap> laps = assettoSession.getLaps();
             Long leaderFinishTime = 0L;
             String raceTimeFormatted;
-            session = new br.com.rsousa.pojo.Session(SessionType.RACE);
+            session = new br.com.rsousa.pojo.Session(SessionType.RACE, false);
 
             for (Result result : assettoSession.getResult()) {
                 if (isDriver(result.getDriverName()) && result.getBestLap() != 999999999) {

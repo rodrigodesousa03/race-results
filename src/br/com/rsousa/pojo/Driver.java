@@ -4,13 +4,14 @@ public class Driver implements Comparable<Driver> {
 	private String name;
 	private String team;
 	private String id;
+	private String teamStatistics;
 	private String bestLap;
 	private Long bestLapMilliseconds;
 	private Long raceTimeMilliseconds;
 	private Integer laps;
 	private Integer position;
 	private boolean isBestLap;
-	private boolean isPoleposition;
+	private boolean isPolePosition;
 	private boolean hattrick;
 	private boolean grandChelem;
 	private Integer licensePoints;
@@ -19,10 +20,11 @@ public class Driver implements Comparable<Driver> {
 	private String raceTimeFormatted;
 	private Double driverTotalTime;
 
-	public Driver(String name, String team, String id) {
+	public Driver(String name, String team, String id, String teamStatistics) {
 		this.name = name;
 		this.team = team;
 		this.id = id;
+		this.teamStatistics = teamStatistics;
 		this.status = DriverStatus.FINISHED;
 	}
 
@@ -53,6 +55,14 @@ public class Driver implements Comparable<Driver> {
 
 	public void setTeam(String team) {
 		this.team = team;
+	}
+
+	public String getTeamStatistics() {
+		return teamStatistics;
+	}
+
+	public void setTeamStatistics(String teamStatistics) {
+		this.teamStatistics = teamStatistics;
 	}
 
 	public String getId() {
@@ -128,12 +138,12 @@ public class Driver implements Comparable<Driver> {
 		this.raceTimeFormatted = raceTimeFormatted;
 	}
 
-	public boolean isPoleposition() {
-		return isPoleposition;
+	public boolean isPolePosition() {
+		return isPolePosition;
 	}
 
-	public void setPoleposition(boolean poleposition) {
-		isPoleposition = poleposition;
+	public void setPolePosition(boolean polePosition) {
+		isPolePosition = polePosition;
 	}
 
 	public String text() {

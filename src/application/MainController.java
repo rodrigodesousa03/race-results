@@ -55,10 +55,10 @@ public class MainController implements Initializable {
 	private TextArea qualifyTextArea;
 
 	@FXML
-	private CheckBox dnfRigidoCheckBox;
+	private CheckBox hardDnfCheckBox;
 
 	@FXML
-	private CheckBox seletivaCheckBox;
+	private CheckBox selectiveCheckBox;
 	
 	private PopOver popOver;
 
@@ -95,7 +95,7 @@ public class MainController implements Initializable {
 		raceTableView.getSelectionModel().selectedItemProperty()
 				.addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 
-		versaoLabel.setText("3.2");
+		versaoLabel.setText("3.3");
 	}
 	
 	@FXML
@@ -267,11 +267,11 @@ public class MainController implements Initializable {
 	
 	@FXML
 	void logFileDrop(DragEvent event) {
-		raceEvent.clear(seletivaCheckBox.isSelected());
+		raceEvent.clear(selectiveCheckBox.isSelected());
 		
 		List<File> files = event.getDragboard().getFiles();
 		
-		files.stream().filter(f -> f.getName().contains("pilotos")).findFirst().ifPresent(f -> {
+		files.stream().filter(f -> f.getName().contains("Cadastros")).findFirst().ifPresent(f -> {
 			driverTeams.clear();
 			processDrivers(f);
 			files.remove(f);
@@ -300,10 +300,10 @@ public class MainController implements Initializable {
 		}
 
 		try {
-			boolean dnfRigido = dnfRigidoCheckBox.isSelected();
-			boolean isSeletiva = seletivaCheckBox.isSelected();
+			boolean hardDnf = hardDnfCheckBox.isSelected();
+			boolean isSelective = selectiveCheckBox.isSelected();
 
-			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, dnfRigido, isSeletiva), isSeletiva);
+			raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
 		} catch (Exception e) {
 			Alert a = new Alert(Alert.AlertType.ERROR);
 			a.setTitle("Erro ao importar o log");
@@ -372,12 +372,12 @@ public class MainController implements Initializable {
 			try {
 	            br = new BufferedReader(new FileReader(file));
 	            while ((line = br.readLine()) != null) {
-	                String[] driver = line.split(";");
+	                String[] driver = line.split(",");
 	                
 	                if (!driver[0].contains("Piloto")) {
 	                	String id = driver.length > 2 ? driver[2] : null;
 
-	                	driverTeams.add(new Driver(driver[0], driver[1], id));
+	                	driverTeams.add(new Driver(driver[0], driver[1], id, driver[3]));
 	                }
 	            }
 	            

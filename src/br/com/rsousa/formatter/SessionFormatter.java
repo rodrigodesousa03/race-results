@@ -3,7 +3,6 @@ package br.com.rsousa.formatter;
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
 import br.com.rsousa.pojo.Session;
-import br.com.rsousa.pojo.SessionType;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -15,7 +14,7 @@ public class SessionFormatter {
         StringBuilder resultStr = new StringBuilder();
 
         for (Driver driver : session.drivers()) {
-            resultStr.append(resultLine(driver)).append("\n");
+            resultStr.append(resultLine(driver, session.isSelective())).append("\n");
         }
 
         Driver driverBestLap = session.drivers().stream()
@@ -48,9 +47,9 @@ public class SessionFormatter {
             .append(category).append(";")
             .append(circuit).append(";")
             .append(driver.getName()).append(";")
-            .append(driver.getTeam().trim()).append(";")
+            .append(driver.getTeamStatistics().trim()).append(";")
             .append(driver.getLicensePoints()).append(";")
-            .append(driver.isPoleposition() ? "SIM" : "-").append(";")
+            .append(driver.isPolePosition() ? "SIM" : "-").append(";")
             .append(driver.isBestLap() ? "SIM" : "-").append(";")
             .append(driver.isHattrick() ? "SIM" : "-").append(";")
             .append(driver.isGrandChelem() ? "SIM" : "-").append(";")
@@ -76,22 +75,24 @@ public class SessionFormatter {
                 + milliseconds;
     }
 
-    private static String resultLine(Driver driver) {
+    private static String resultLine(Driver driver, boolean isSelective) {
+        String team = isSelective ? " " : " (" + driver.getTeam().trim() + "), ";
+
         String timeFormatted = !driver.getRaceTimeFormatted().trim().isEmpty() ? driver.getRaceTimeFormatted() : "sem tempo";
 
         if (driver.getStatus() == DriverStatus.FINISHED) {
-            return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + timeFormatted + driver.getStatus().fullText();
+            return driver.getPosition() + " " + driver.getName().trim() + team + timeFormatted + driver.getStatus().fullText();
         }
 
         if (driver.getStatus() == DriverStatus.DID_NOT_FINISH) {
-            return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText() + " ("+driver.getLaps()+")";
+            return driver.getPosition() + " " + driver.getName().trim() + team + driver.getStatus().fullText() + " ("+driver.getLaps()+")";
         }
 
         if (driver.getStatus() == DriverStatus.DISQUALIFIED) {
-            return "- " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText();
+            return "- " + driver.getName().trim() + team + driver.getStatus().fullText();
         }
 
-        return driver.getPosition() + " " + driver.getName().trim() + " (" + driver.getTeam().trim() + "), " + driver.getStatus().fullText();
+        return driver.getPosition() + " " + driver.getName().trim() + team + driver.getStatus().fullText();
     }
 
 }

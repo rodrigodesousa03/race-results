@@ -9,12 +9,12 @@ public class Event {
     private Session raceSession;
     private Session originalRaceSession;
 
-    public void addSession(Session session, boolean isSeletiva) {
+    public void addSession(Session session, boolean isSelective) {
         if (session == null) {
             return;
         }
 
-        if (isSeletiva) {
+        if (isSelective) {
             if (qualifySession != null) {
                 joinSession(session);
             } else {
@@ -27,13 +27,11 @@ public class Event {
             setOriginalRaceSession(SessionUtils.duplicateRace(session));
 
             if (qualifySession != null) {
-                Optional<Driver> polepositionDriver = qualifySession.polepositionDriver();
+                Optional<Driver> polePositionDriver = qualifySession.polePositionDriver();
 
-                if (polepositionDriver.isPresent()) {
-                    session.drivers().stream()
-                            .filter(d -> d.getName().equals(polepositionDriver.get().getName()))
-                            .forEach(d -> d.setPoleposition(true));
-                }
+                polePositionDriver.ifPresent(driver -> session.drivers().stream()
+                        .filter(d -> d.getName().equals(driver.getName()))
+                        .forEach(d -> d.setPolePosition(true)));
             }
         }
     }
@@ -62,10 +60,10 @@ public class Event {
         this.originalRaceSession = originalRaceSession;
     }
 
-    public void clear(boolean isSeletiva) {
+    public void clear(boolean isSelective) {
         setRaceSession(null);
         setOriginalRaceSession(null);
-        if (!isSeletiva) {
+        if (!isSelective) {
             setQualifySession(null);
         }
     }

@@ -7,17 +7,23 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class Session {
-	public Session(SessionType type) {
+	public Session(SessionType type, boolean isSelective) {
 		this.drivers = new ArrayList<>();
 		this.type = type;
+		this.isSelective = isSelective;
 	}
 	
-	private SessionType type;
+	private final SessionType type;
+	private final boolean isSelective;
 	
 	private List<Driver> drivers;
 
 	public List<Driver> drivers() {
 		return drivers;
+	}
+
+	public boolean isSelective() {
+		return isSelective;
 	}
 
 	public void sortDrivers() {
@@ -46,7 +52,7 @@ public class Session {
 					.ifPresent(d -> d.setBestLap(true));
 		} else {
 			if (driver.getPosition() == 1) {
-				driver.setPoleposition(true);
+				driver.setPolePosition(true);
 			}
 		}
 	}
@@ -55,8 +61,8 @@ public class Session {
 		return type;
 	}
 
-	public Optional<Driver> polepositionDriver() {
-		return drivers.stream().filter(Driver::isPoleposition)
+	public Optional<Driver> polePositionDriver() {
+		return drivers.stream().filter(Driver::isPolePosition)
 				.findFirst();
 	}
 
@@ -67,7 +73,7 @@ public class Session {
 			if (driverSession == null) {
 				drivers().add(driver);
 			} else {
-				if (driver.getBestLapMilliseconds() < driverSession.getBestLapMilliseconds()) {
+				if (driver.getBestLapMilliseconds() != 0 && driver.getBestLapMilliseconds() < driverSession.getBestLapMilliseconds()) {
 					drivers().remove(driverSession);
 					drivers().add(driver);
 				}

@@ -19,6 +19,7 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(amsDriver.getName(), amsDriver.getTeamName(), drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(amsDriver.getName(), amsDriver.getTeamName(), drivers));
         driver.setDriverTotalTime(driverTotalTime);
 
         return driver;
@@ -33,6 +34,7 @@ public class DriverTransformer {
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setBestLapMilliseconds(TimeUtils.toMilliseconds(iRacingDriver.getFastLap()));
         driver.setTeam(getTeamName(iRacingDriver, drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(iRacingDriver, drivers));
 
         return driver;
     }
@@ -46,6 +48,7 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(assettoDriver.getDriverName(), "Independente", drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(assettoDriver.getDriverName(), "Independente", drivers));
 
         return driver;
     }
@@ -62,6 +65,7 @@ public class DriverTransformer {
         driver.setPosition(position);
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(driverName, "Independente", drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(driverName, "Independente", drivers));
 
         return driver;
     }
@@ -69,6 +73,13 @@ public class DriverTransformer {
     private static String getTeamName(String driverName, String teamName, List<Driver> drivers) {
         return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
                 .map(Driver::getTeam)
+                .findAny()
+                .orElse(teamName);
+    }
+
+    private static String getTeamStatisticsName(String driverName, String teamName, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driverName.trim().equals(d.getName()))
+                .map(Driver::getTeamStatistics)
                 .findAny()
                 .orElse(teamName);
     }
@@ -83,6 +94,13 @@ public class DriverTransformer {
     private static String getTeamName(DriverSession driver, List<Driver> drivers) {
         return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
                 .map(Driver::getTeam)
+                .findAny()
+                .orElse("Independente");
+    }
+
+    private static String getTeamStatisticsName(DriverSession driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
+                .map(Driver::getTeamStatistics)
                 .findAny()
                 .orElse("Independente");
     }

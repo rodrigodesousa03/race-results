@@ -13,12 +13,12 @@ import java.io.IOException;
 import java.util.List;
 
 public class IRacingTransformer implements SimulatorTransformer {
-    public Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) {
+    public Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         BufferedReader br = null;
         String line;
         boolean reachedFirstLine = false;
         int position = 1;
-        Session session = new Session(SessionType.QUALIFY);
+        Session session = new Session(SessionType.QUALIFY, isSelective);
 
         if (file != null) {
             try {
@@ -36,8 +36,8 @@ public class IRacingTransformer implements SimulatorTransformer {
                     if (reachedFirstLine) {
                         DriverSession driverSession = transformLineInDriverSession(line);
 
-                        if (position == 1 && driverSession != null && driverSession.getQualifyTime().isEmpty() && !isSeletiva) {
-                            return processRace(file, driverTeams, dnfRigido);
+                        if (position == 1 && driverSession != null && driverSession.getQualifyTime().isEmpty() && !isSelective) {
+                            return processRace(file, driverTeams, hardDnf);
                         }
 
                         if (driverSession != null) {
@@ -64,13 +64,13 @@ public class IRacingTransformer implements SimulatorTransformer {
         return session;
     }
 
-    public Session processRace(File file, List<Driver> driverTeams, boolean dnfRigido) {
+    public Session processRace(File file, List<Driver> driverTeams, boolean hardDnf) {
         BufferedReader br = null;
         String line;
         int position = 1;
         int laps = 0;
         boolean reachedFirstLine = false;
-        Session session = new Session(SessionType.RACE);
+        Session session = new Session(SessionType.RACE, false);
 
         if (file != null) {
             try {
@@ -121,7 +121,7 @@ public class IRacingTransformer implements SimulatorTransformer {
                             session.addDriver(driver);
 
                             if (driverSession.getStartPosition() == 1) {
-                                driver.setPoleposition(true);
+                                driver.setPolePosition(true);
                             }
                         }
 
@@ -130,7 +130,7 @@ public class IRacingTransformer implements SimulatorTransformer {
                 }
 
                 if (session.bestLapDriver() != null) {
-                    if (session.bestLapDriver().isPoleposition() && session.bestLapDriver().getPosition() == 1) {
+                    if (session.bestLapDriver().isPolePosition() && session.bestLapDriver().getPosition() == 1) {
                         session.bestLapDriver().setHattrick(true);
 
                         boolean ledAllTheLaps = winner.getCompletedLaps() == winner.getLapsLed();

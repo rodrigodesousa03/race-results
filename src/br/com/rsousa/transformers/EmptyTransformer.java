@@ -9,12 +9,12 @@ import java.util.List;
 
 public class EmptyTransformer implements SimulatorTransformer {
     @Override
-    public Session processQualify(File file, List<Driver> driverTeams, boolean dnfRigido, boolean isSeletiva) {
-        return new Session(SessionType.QUALIFY);
+    public Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
+        return new Session(SessionType.QUALIFY, isSelective);
     }
 
     @Override
-    public Session processRace(File file, List<Driver> driverTeams, boolean dnfRigido) {
-        return new Session(SessionType.RACE);
+    public Session processRace(File file, List<Driver> driverTeams, boolean hardDnf) {
+        return new Session(SessionType.RACE, false);
     }
 }

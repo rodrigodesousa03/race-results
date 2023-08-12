@@ -128,11 +128,11 @@
                   <Font name="Arial Black" size="15.0" />
                </font>
             </Button>
-            <CheckBox fx:id="dnfRigidoCheckBox" layoutX="458.0" layoutY="18.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="93.0" text="DNF Rígido">
+            <CheckBox fx:id="hardDnfCheckBox" layoutX="458.0" layoutY="18.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="93.0" text="DNF Rígido">
                <font>
                   <Font name="Arial" size="12.0" />
                </font></CheckBox>
-            <CheckBox fx:id="seletivaCheckBox" layoutX="458.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="93.0" text="Seletiva">
+            <CheckBox fx:id="selectiveCheckBox" layoutX="458.0" layoutY="40.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="93.0" text="Seletiva">
                <font>
                   <Font name="Arial" size="12.0" />
                </font></CheckBox>
