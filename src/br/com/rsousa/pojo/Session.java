@@ -46,9 +46,8 @@ public class Session {
 			drivers().forEach((d) -> d.setBestLap(false));
 
 			drivers().stream()
-					.filter(d -> d.getBestLapMilliseconds() != 0)
-					.sorted((d1, d2) -> d1.getBestLapMilliseconds().compareTo(d2.getBestLapMilliseconds()))
-					.findFirst()
+                    .filter(d -> d.getBestLapMilliseconds() != null && d.getBestLapMilliseconds() != 0)
+					.min(Comparator.comparing(Driver::getBestLapMilliseconds))
 					.ifPresent(d -> d.setBestLap(true));
 		} else {
 			if (driver.getPosition() == 1) {
@@ -68,7 +67,10 @@ public class Session {
 
 	public void addDrivers(List<Driver> drivers) {
 		for (Driver driver : drivers) {
-			Driver driverSession = drivers().stream().filter(d -> d.getName().equals(driver.getName())).findFirst().orElse(null);
+			Driver driverSession = drivers().stream()
+					.filter(d -> d.getName().equals(driver.getName()))
+					.findFirst()
+					.orElse(null);
 
 			if (driverSession == null) {
 				drivers().add(driver);
@@ -87,6 +89,17 @@ public class Session {
 		drivers = drivers.stream()
 				.filter(d -> d.getBestLapMilliseconds() > 0)
 				.sorted(Comparator.comparingLong(Driver::getBestLapMilliseconds))
+				.collect(Collectors.toList());
+
+		for (int i=0;i<drivers.size();i++) {
+			Driver driver = drivers.get(i);
+			driver.setPosition(i+1);
+		}
+	}
+
+	public void sortDriversByLapsAndTotalTime() {
+		drivers = drivers.stream()
+				.sorted(Comparator.comparingLong(Driver::getLaps).reversed().thenComparing(Driver::getRaceTimeMilliseconds))
 				.collect(Collectors.toList());
 
 		for (int i=0;i<drivers.size();i++) {

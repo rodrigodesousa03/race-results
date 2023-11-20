@@ -1,12 +1,12 @@
 package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.ams2.Attributes;
+import br.com.rsousa.pojo.ams2.Event;
 import br.com.rsousa.pojo.ams2.Result;
 import com.google.gson.*;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Automobilista2StageDeserializer implements JsonDeserializer<Object> {
@@ -27,6 +27,17 @@ public class Automobilista2StageDeserializer implements JsonDeserializer<Object>
                 List<Result> resultList = getResults(eventsElement, context);
 
                 stage.setResults(resultList);
+            }
+        }
+
+        if (jsonObject.has("events")) {
+            JsonElement eventsElement = jsonObject.get("events");
+            if (eventsElement.isJsonObject()) {
+                stage.setEvents(new ArrayList<br.com.rsousa.pojo.ams2.Event>());
+            } else if (eventsElement.isJsonArray()) {
+                List<br.com.rsousa.pojo.ams2.Event> eventList = getEvents(eventsElement, context);
+
+                stage.setEvents(eventList);
             }
         }
 
@@ -54,5 +65,29 @@ public class Automobilista2StageDeserializer implements JsonDeserializer<Object>
             }
         }
         return resultList;
+    }
+
+    private List<Event> getEvents(JsonElement eventsElement, JsonDeserializationContext context) {
+        JsonArray eventArray = eventsElement.getAsJsonArray();
+        List<Event> eventList = new ArrayList<>();
+
+        for (JsonElement eventElement : eventArray) {
+            if (eventElement.isJsonObject()) {
+                JsonObject eventObject = eventElement.getAsJsonObject();
+
+                // Extract and process eventObject fields
+                Event event = new Event();
+                event.setAttributes(context.deserialize(eventObject.get("attributes"), Attributes.class));
+                event.setEventName(eventObject.get("event_name").getAsString());
+                event.setIsPlayer(eventObject.get("is_player").getAsBoolean());
+                event.setName(eventObject.get("name").getAsString());
+                event.setParticipantid(eventObject.get("participantid").getAsInt());
+                event.setRefid(eventObject.get("refid").getAsInt());
+                event.setTime(eventObject.get("time").getAsInt());
+
+                eventList.add(event);
+            }
+        }
+        return eventList;
     }
 }

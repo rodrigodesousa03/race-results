@@ -13,7 +13,7 @@ public class Stage {
     private Integer endTime;
     @SerializedName("events")
     @Expose
-    private Events events;
+    private List<Event> events;
     @SerializedName("results")
     @Expose
     private List<Result> results;
@@ -29,11 +29,11 @@ public class Stage {
         this.endTime = endTime;
     }
 
-    public Events getEvents() {
+    public List<Event> getEvents() {
         return events;
     }
 
-    public void setEvents(Events events) {
+    public void setEvents(List<Event> events) {
         this.events = events;
     }
 

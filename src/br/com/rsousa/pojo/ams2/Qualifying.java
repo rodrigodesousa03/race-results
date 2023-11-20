@@ -12,7 +12,7 @@ public class Qualifying {
     private Integer endTime;
     @SerializedName("events")
     @Expose
-    private Events events;
+    private Event events;
     @SerializedName("results")
     @Expose
     private List<Result> results;
@@ -28,11 +28,11 @@ public class Qualifying {
         this.endTime = endTime;
     }
 
-    public Events getEvents() {
+    public Event getEvents() {
         return events;
     }
 
-    public void setEvents(Events events) {
+    public void setEvents(Event events) {
         this.events = events;
     }
 

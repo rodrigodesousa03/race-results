@@ -12,6 +12,11 @@ public class Attributes {
     @SerializedName("Lap")
     @Expose
     private Integer lap;
+
+    @SerializedName("LapTime")
+    @Expose
+    private Integer lapTime;
+
     @SerializedName("RacePosition")
     @Expose
     private Integer racePosition;
@@ -24,6 +29,10 @@ public class Attributes {
     @SerializedName("VehicleId")
     @Expose
     private Integer vehicleId;
+
+    @SerializedName("NewState")
+    @Expose
+    private String newState;
 
     public Integer getFastestLapTime() {
         return fastestLapTime;
@@ -73,4 +82,19 @@ public class Attributes {
         this.vehicleId = vehicleId;
     }
 
+    public Integer getLapTime() {
+        return lapTime;
+    }
+
+    public void setLapTime(Integer lapTime) {
+        this.lapTime = lapTime;
+    }
+
+    public String getNewState() {
+        return newState;
+    }
+
+    public void setNewState(String newState) {
+        this.newState = newState;
+    }
 }

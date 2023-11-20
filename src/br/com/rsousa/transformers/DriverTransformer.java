@@ -72,7 +72,7 @@ public class DriverTransformer {
 
     public static Driver toDriver(br.com.rsousa.pojo.ams2.Result result, int position, String raceTimeFormatted, List<Driver> drivers) {
         Driver driver = new Driver();
-        driver.setName(result.getName());
+        driver.setName(result.getName().replaceAll("\\[.*?\\]", "").trim());
         driver.setBestLapMilliseconds(Long.valueOf(result.getAttributes().getFastestLapTime()));
         driver.setRaceTimeMilliseconds(Long.valueOf(result.getAttributes().getTotalTime()));
         driver.setLaps(result.getAttributes().getLap());
@@ -80,6 +80,18 @@ public class DriverTransformer {
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(result.getName(), "Independente", drivers));
         driver.setTeamStatistics(getTeamStatisticsName(result.getName(), "Independente", drivers));
+
+        return driver;
+    }
+
+    public static Driver toDriver(br.com.rsousa.pojo.ams2.Event event, String driverName, String raceTimeFormatted, List<Driver> drivers) {
+        Driver driver = new Driver();
+        driver.setName(driverName.replaceAll("\\[.*?\\]", "").trim());
+        driver.setRaceTimeMilliseconds(Long.valueOf(event.getTime()));
+        driver.setPosition(0);
+        driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(driverName, "Independente", drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(driverName, "Independente", drivers));
 
         return driver;
     }
