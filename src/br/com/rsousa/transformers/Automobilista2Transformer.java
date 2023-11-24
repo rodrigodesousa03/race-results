@@ -89,6 +89,8 @@ public class Automobilista2Transformer implements SimulatorTransformer {
                     String driverName = !Objects.equals(driverEventsMap.get(driverRefId).get(0).getName(), "") ? driverEventsMap.get(driverRefId).get(0).getName() : membersMap.get(String.valueOf(driverRefId)).getName();
 
                     if (isDriver(driverName)) {
+                        System.out.println("Driver: " + driverName);
+
                         int driverLaps = 0;
                         Driver driver = new Driver();
                         Long driverBestLap = null;
@@ -103,6 +105,8 @@ public class Automobilista2Transformer implements SimulatorTransformer {
                                 if (driverBestLap == null || event.getAttributes().getLapTime().compareTo(Math.toIntExact(driverBestLap)) < 0) {
                                     driverBestLap = Long.valueOf(event.getAttributes().getLapTime());
                                 }
+
+                                System.out.println("Lap: " + driverLaps + " - " + event.getAttributes().getLapTime());
                             }
 
                             driver = DriverTransformer.toDriver(event, driverName, "", driverTeams);
@@ -126,6 +130,14 @@ public class Automobilista2Transformer implements SimulatorTransformer {
 
                         driver.setBestLapMilliseconds(driverBestLap);
                         session.addDriver(driver);
+                    }
+                }
+
+                for (Driver driver : session.drivers()) {
+                    for (Result result : stage.getResults()) {
+                        if (driver.getName().equals(result.getName())) {
+                            driver.setRaceTimeMilliseconds(result.getAttributes().getTotalTime().longValue());
+                        }
                     }
                 }
 
