@@ -104,6 +104,11 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
         return session;
     }
 
+    @Override
+    public Boolean processEvent() {
+        return false;
+    }
+
     private Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
         BufferedReader in = new BufferedReader(new InputStreamReader (new FileInputStream(file), UTF_8));
 

@@ -26,7 +26,7 @@ public class Automobilista2Transformer implements SimulatorTransformer {
             event.setQualifySession(qualifySession);
 
             br.com.rsousa.pojo.Session raceSession = processRace(file, driverTeams, hardDnf);
-            event.setRaceSession(raceSession);
+            event.setRaceSessions(raceSession);
         }
 
         return event;
@@ -217,5 +217,10 @@ public class Automobilista2Transformer implements SimulatorTransformer {
 
         return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
+    }
+
+    @Override
+    public Boolean processEvent() {
+        return true;
     }
 }

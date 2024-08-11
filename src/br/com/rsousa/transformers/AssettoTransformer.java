@@ -136,4 +136,9 @@ public class AssettoTransformer implements SimulatorTransformer {
         return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
                 + milliseconds;
     }
+
+    @Override
+    public Boolean processEvent() {
+        return false;
+    }
 }

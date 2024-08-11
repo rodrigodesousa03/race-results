@@ -26,4 +26,9 @@ public class EmptyTransformer implements SimulatorTransformer {
     public Session processRace(File file, List<Driver> driverTeams, boolean hardDnf) {
         return new Session(SessionType.RACE, false);
     }
+
+    @Override
+    public Boolean processEvent() {
+        return false;
+    }
 }

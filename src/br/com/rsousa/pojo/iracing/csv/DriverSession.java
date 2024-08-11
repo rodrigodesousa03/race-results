@@ -1,4 +1,4 @@
-package br.com.rsousa.pojo.iracing;
+package br.com.rsousa.pojo.iracing.csv;
 
 public class DriverSession {
 	private int finalPosition;

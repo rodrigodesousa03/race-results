@@ -14,6 +14,7 @@ import java.util.stream.Stream;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
+import br.com.rsousa.pojo.Session;
 import br.com.rsousa.transformers.*;
 import br.com.rsousa.utils.SessionUtils;
 import javafx.beans.property.SimpleObjectProperty;
@@ -95,7 +96,7 @@ public class MainController implements Initializable {
         raceTableView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 
-        versaoLabel.setText("4.2");
+        versaoLabel.setText("5.0");
     }
 
     @FXML
@@ -153,7 +154,7 @@ public class MainController implements Initializable {
     @FXML
     void processLogFileChooser(ActionEvent event) {
         FileChooser fc = new FileChooser();
-        fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV Files", fileTypes()));
+        fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV, JSON Files", fileTypes()));
 
         File file = fc.showOpenDialog(null);
 
@@ -168,7 +169,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveUpPosition(raceEvent.getRaceSession(), driverSelected);
+        SessionUtils.moveUpPosition(raceEvent.getRaceSessions().get(0), driverSelected);
 
         showResults();
     }
@@ -179,7 +180,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveDownPosition(raceEvent.getRaceSession(), driverSelected);
+        SessionUtils.moveDownPosition(raceEvent.getRaceSessions().get(0), driverSelected);
 
         showResults();
     }
@@ -190,7 +191,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveLastPosition(raceEvent.getRaceSession(), driverSelected);
+        SessionUtils.moveLastPosition(raceEvent.getRaceSessions().get(0), driverSelected);
 
         showResults();
     }
@@ -212,13 +213,13 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.disqualify(raceEvent.getRaceSession(), driverSelected);
+        SessionUtils.disqualify(raceEvent.getRaceSessions().get(0), driverSelected);
 
         showResults();
     }
 
     private boolean isDriverNotSelected() {
-        return raceEvent.getRaceSession() == null || driverSelected == null;
+        return raceEvent.getRaceSessions().isEmpty() || driverSelected == null;
     }
 
     @FXML
@@ -230,13 +231,13 @@ public class MainController implements Initializable {
 
     @FXML
     void updateLicensePoints(KeyEvent event) {
-        if (raceEvent.getRaceSession() == null) {
+        if (raceEvent.getRaceSessions().isEmpty()) {
             return;
         }
 
-        if (raceEvent.getRaceSession() != null) {
-            raceEvent.getRaceSession().drivers().stream().forEach(d -> d.setLicensePoints(0));
-        }
+
+            raceEvent.getRaceSessions().get(0).drivers().forEach(d -> d.setLicensePoints(0));
+
 
         String[] licenseTextRows = licenseTextArea.getText().split("\n");
 
@@ -247,8 +248,8 @@ public class MainController implements Initializable {
                 String driverName = row[0].trim();
                 Integer licensePoints = Integer.parseInt(row[1]);
 
-                if (raceEvent.getRaceSession() != null) {
-                    raceEvent.getRaceSession().drivers().stream().filter(d -> d.getName().equals(driverName))
+                if (!raceEvent.getRaceSessions().isEmpty()) {
+                    raceEvent.getRaceSessions().get(0).drivers().stream().filter(d -> d.getName().equals(driverName))
                             .findFirst()
                             .ifPresent(d -> d.setLicensePoints(licensePoints));
                 }
@@ -290,9 +291,11 @@ public class MainController implements Initializable {
         if (file.getName().contains("xml") || file.getName().contains("XML")) {
             simulatorTransformer = new RFactorTransformer();
         } else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
-            simulatorTransformer = new IRacingTransformer();
+            simulatorTransformer = new IRacingCsvTransformer();
         } else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-            if (isAssettoCorsaLog(file)) {
+            if (isIracingLog(file)) {
+                simulatorTransformer = new IRacingJsonTransformer();
+            } else if (isAssettoCorsaLog(file)) {
                 simulatorTransformer = new AssettoTransformer();
             } else if (isAutomobilista2Log(file)) {
                 simulatorTransformer = new Automobilista2Transformer();
@@ -305,7 +308,7 @@ public class MainController implements Initializable {
             boolean hardDnf = hardDnfCheckBox.isSelected();
             boolean isSelective = selectiveCheckBox.isSelected();
 
-            if (simulatorTransformer instanceof Automobilista2Transformer) {
+            if (simulatorTransformer.processEvent()) {
                 raceEvent = simulatorTransformer.processEvent(file, driverTeams, hardDnf, isSelective);
             } else {
                 raceEvent.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
@@ -318,6 +321,18 @@ public class MainController implements Initializable {
 
             e.printStackTrace();
         }
+    }
+
+    private static boolean isIracingLog(File file) {
+        StringBuilder contentBuilder = new StringBuilder();
+
+        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return contentBuilder.toString().contains("i_rating");
     }
 
     private static boolean isAssettoCorsaLog(File file) {
@@ -355,12 +370,12 @@ public class MainController implements Initializable {
             qualifyTextArea.setText(SessionFormatter.format(raceEvent.getQualifySession()));
         }
 
-        if (raceEvent.getRaceSession() != null) {
+        if (!raceEvent.getRaceSessions().isEmpty()) {
             raceTableView.getItems().clear();
-            raceEvent.getRaceSession().sortDrivers();
-            raceTableView.getItems().addAll(raceEvent.getRaceSession().drivers());
-            raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSession()));
-            sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSession(), categoryTextField.getText(), circuitTextField.getText()));
+            raceEvent.getRaceSessions().forEach(Session::sortDrivers);
+            raceTableView.getItems().addAll(raceEvent.getRaceSessions().get(0).drivers());
+            raceTextArea.setText(SessionFormatter.format(raceEvent.getRaceSessions()));
+            sheetsTextArea.setText(SessionFormatter.toSheets(raceEvent.getRaceSessions(), categoryTextField.getText(), circuitTextField.getText()));
         }
     }
 

@@ -17,6 +17,8 @@ public interface SimulatorTransformer {
 
     Session processRace(File file, List<Driver> driverTeams, boolean hardDnf) throws FileNotFoundException;
 
+    Boolean processEvent();
+
     default boolean isDriver(String driver) {
         return !driver.isEmpty()
                 && !driver.contains("Diretor")

@@ -6,6 +6,7 @@ import br.com.rsousa.pojo.Session;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
 
 public class SessionFormatter {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
@@ -39,6 +40,16 @@ public class SessionFormatter {
         return resultStr.toString();
     }
 
+    public static String format(List<Session> sessions) {
+        StringBuilder resultStr = new StringBuilder();
+
+        for (Session session : sessions) {
+            resultStr.append(format(session)).append("\n\n");
+        }
+
+        return resultStr.toString();
+    }
+
     public static String toSheets(Session session, String category, String circuit) {
         StringBuilder resultStr = new StringBuilder();
 
@@ -55,6 +66,16 @@ public class SessionFormatter {
             .append(driver.isGrandChelem() ? "SIM" : "-").append(";")
             .append("-").append(";")
             .append("-").append("\n");
+        }
+
+        return resultStr.toString();
+    }
+
+    public static String toSheets(List<Session> sessions, String category, String circuit) {
+        StringBuilder resultStr = new StringBuilder();
+
+        for (Session session : sessions) {
+            resultStr.append(toSheets(session, category, circuit));
         }
 
         return resultStr.toString();

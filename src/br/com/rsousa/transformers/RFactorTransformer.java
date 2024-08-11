@@ -214,4 +214,9 @@ public class RFactorTransformer implements SimulatorTransformer {
                 + milliseconds;
         return bestLapTimeFormatted;
     }
+
+    @Override
+    public Boolean processEvent() {
+        return false;
+    }
 }

@@ -1,12 +1,12 @@
 package br.com.rsousa.transformers;
 
 import br.com.rsousa.pojo.*;
-import br.com.rsousa.pojo.iracing.DriverSession;
+import br.com.rsousa.pojo.iracing.csv.DriverSession;
 
 import java.io.*;
 import java.util.List;
 
-public class IRacingTransformer implements SimulatorTransformer {
+public class IRacingCsvTransformer implements SimulatorTransformer {
 
     @Override
     public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
@@ -176,5 +176,10 @@ public class IRacingTransformer implements SimulatorTransformer {
         driverSession.setCompletedLaps(Integer.parseInt(driverSessionArray[18]));
 
         return driverSession;
+    }
+
+    @Override
+    public Boolean processEvent() {
+        return false;
     }
 }

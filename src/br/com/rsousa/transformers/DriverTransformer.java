@@ -3,7 +3,7 @@ package br.com.rsousa.transformers;
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.acc.LeaderBoardLine;
 import br.com.rsousa.pojo.assetto.Result;
-import br.com.rsousa.pojo.iracing.DriverSession;
+import br.com.rsousa.pojo.iracing.csv.DriverSession;
 import br.com.rsousa.utils.TimeUtils;
 
 import java.util.List;
@@ -92,6 +92,20 @@ public class DriverTransformer {
         driver.setRaceTimeFormatted(raceTimeFormatted);
         driver.setTeam(getTeamName(driverName, "Independente", drivers));
         driver.setTeamStatistics(getTeamStatisticsName(driverName, "Independente", drivers));
+
+        return driver;
+    }
+
+    public static Driver toDriver(br.com.rsousa.pojo.iracing.json.Result iracingDriver, Long laps, String raceTimeFormatted, List<Driver> drivers) {
+        Driver driver = new Driver();
+        driver.setName(iracingDriver.getDisplayName());
+        driver.setBestLapMilliseconds(iracingDriver.getBestLapTime()/10);
+        driver.setRaceTimeMilliseconds(iracingDriver.getLapsComplete() * iracingDriver.getAverageLap());
+        driver.setLaps(laps.intValue());
+        driver.setPosition(iracingDriver.getFinishPositionInClass()+1);
+        driver.setRaceTimeFormatted(raceTimeFormatted);
+        driver.setTeam(getTeamName(iracingDriver.getDisplayName(), "Independente", drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(iracingDriver.getDisplayName(), "Independente", drivers));
 
         return driver;
     }

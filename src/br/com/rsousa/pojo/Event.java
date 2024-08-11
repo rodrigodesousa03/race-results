@@ -2,11 +2,13 @@ package br.com.rsousa.pojo;
 
 import br.com.rsousa.utils.SessionUtils;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Event {
     private Session qualifySession;
-    private Session raceSession;
+    private List<Session> raceSessions;
     private Session originalRaceSession;
 
     public void addSession(Session session, boolean isSelective) {
@@ -23,7 +25,7 @@ public class Event {
         } else if (session.type() == SessionType.QUALIFY) {
             setQualifySession(session);
         } else {
-            setRaceSession(session);
+            raceSessions.add(session);
             setOriginalRaceSession(SessionUtils.duplicateRace(session));
 
             if (qualifySession != null) {
@@ -48,12 +50,19 @@ public class Event {
         this.qualifySession = qualifySession;
     }
 
-    public Session getRaceSession() {
-        return raceSession;
+    public List<Session> getRaceSessions() {
+        return raceSessions;
     }
 
-    public void setRaceSession(Session raceSession) {
-        this.raceSession = raceSession;
+    public void setRaceSessions(List<Session> raceSessions) {
+        this.raceSessions = raceSessions;
+    }
+
+    public void setRaceSessions(Session raceSession) {
+        List<Session> raceSessionsList = new ArrayList<>();
+        raceSessionsList.add(raceSession);
+
+        this.raceSessions = raceSessionsList;
     }
 
     public void setOriginalRaceSession(Session originalRaceSession) {
@@ -61,7 +70,7 @@ public class Event {
     }
 
     public void clear(boolean isSelective) {
-        setRaceSession(null);
+        setRaceSessions(new ArrayList<>());
         setOriginalRaceSession(null);
         if (!isSelective) {
             setQualifySession(null);
@@ -69,7 +78,10 @@ public class Event {
     }
 
     public void resetRace() {
-        setRaceSession(SessionUtils.duplicateRace(originalRaceSession));
+        List<Session> raceSessions = new ArrayList<>();
+        raceSessions.add(SessionUtils.duplicateRace(originalRaceSession));
+
+        setRaceSessions(raceSessions);
     }
 
 
