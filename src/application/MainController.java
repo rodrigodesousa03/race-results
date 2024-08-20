@@ -96,7 +96,7 @@ public class MainController implements Initializable {
         raceTableView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 
-        versaoLabel.setText("5.0");
+        versaoLabel.setText("5.1");
     }
 
     @FXML
