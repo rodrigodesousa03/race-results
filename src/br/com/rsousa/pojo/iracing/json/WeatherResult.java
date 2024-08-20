@@ -50,13 +50,13 @@ public class WeatherResult {
     private Integer avgWindDir;
     @SerializedName("max_fog")
     @Expose
-    private Integer maxFog;
+    private Float maxFog;
     @SerializedName("fog_time_pct")
     @Expose
-    private Integer fogTimePct;
+    private Float fogTimePct;
     @SerializedName("precip_time_pct")
     @Expose
-    private Integer precipTimePct;
+    private Float precipTimePct;
     @SerializedName("precip_mm")
     @Expose
     private Integer precipMm;
@@ -179,27 +179,27 @@ public class WeatherResult {
         this.avgWindDir = avgWindDir;
     }
 
-    public Integer getMaxFog() {
+    public Float getMaxFog() {
         return maxFog;
     }
 
-    public void setMaxFog(Integer maxFog) {
+    public void setMaxFog(Float maxFog) {
         this.maxFog = maxFog;
     }
 
-    public Integer getFogTimePct() {
+    public Float getFogTimePct() {
         return fogTimePct;
     }
 
-    public void setFogTimePct(Integer fogTimePct) {
+    public void setFogTimePct(Float fogTimePct) {
         this.fogTimePct = fogTimePct;
     }
 
-    public Integer getPrecipTimePct() {
+    public Float getPrecipTimePct() {
         return precipTimePct;
     }
 
-    public void setPrecipTimePct(Integer precipTimePct) {
+    public void setPrecipTimePct(Float precipTimePct) {
         this.precipTimePct = precipTimePct;
     }
 
