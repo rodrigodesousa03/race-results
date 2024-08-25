@@ -11,6 +11,8 @@ import br.com.rsousa.pojo.ams.RFactorXML;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Unmarshaller;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
@@ -24,7 +26,7 @@ public class RFactorTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
     @Override
-    public Event processEvent(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public Event processEvent(File file, List<br.com.rsousa.pojo.Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         return null;
     }
 
@@ -36,9 +38,9 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-                InputStream inputStream = new FileInputStream(file);
+                InputStream inputStream = Files.newInputStream(file.toPath());
 
-                Reader reader = new InputStreamReader(inputStream, "UTF-8");
+                Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
@@ -54,7 +56,7 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 for (Driver driver : drivers) {
                     if (isDriver(driver.getName())) {
-                        String bestLapTimeFormatted = formatSeconds(driver.getBestLapTime(), "sem tempo");
+                        String bestLapTimeFormatted = formatSecondsWithTextIfNull(driver.getBestLapTime());
 
                         session.addDriver(DriverTransformer.toDriver(driver, position, bestLapTimeFormatted, 0D, driverTeams));
 
@@ -64,7 +66,7 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 return session;
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
 
@@ -79,9 +81,9 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 
-                InputStream inputStream = new FileInputStream(file);
+                InputStream inputStream = Files.newInputStream(file.toPath());
 
-                Reader reader = new InputStreamReader(inputStream, "UTF-8");
+                Reader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
 
                 RFactorXML raceResult = (RFactorXML) jaxbUnmarshaller.unmarshal(reader);
 
@@ -95,7 +97,7 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 Session session = new Session(SessionType.RACE, false);
 
-                Integer position = 1;
+                int position = 1;
                 Driver driverWinner = null;
                 Integer totalLaps = 0;
                 Double leaderFinishTime = null;
@@ -104,7 +106,7 @@ public class RFactorTransformer implements SimulatorTransformer {
                     if (isDriver(driver.getName())) {
                         String raceTimeFormatted;
 
-                        Double driverTotalTime = 0D;
+                        double driverTotalTime = 0D;
 
                         if (driver.getLap() != null) {
                             for (Lap lap: driver.getLap()) {
@@ -122,11 +124,11 @@ public class RFactorTransformer implements SimulatorTransformer {
                             leaderFinishTime = Double.parseDouble(driver.getFinishTime());
                             driverWinner = driver;
                         } else {
-                            if (totalLaps == driver.getLaps()) {
-                                if (driver.getFinishTime() != null) {
-                                    Double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
+                            if (totalLaps.equals(driver.getLaps())) {
+                                if (driver.getFinishTime() != null && leaderFinishTime != null) {
+                                    double secondsBehindTheLeader = Double.parseDouble(driver.getFinishTime()) - leaderFinishTime;
 
-                                    raceTimeFormatted = formatSeconds(secondsBehindTheLeader.toString());
+                                    raceTimeFormatted = formatSeconds(Double.toString(secondsBehindTheLeader));
                                 } else {
                                     raceTimeFormatted = "Disqualificado";
                                 }
@@ -163,8 +165,8 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 br.com.rsousa.pojo.Driver sessionDriverBestLap = session.bestLapDriver();
 
-                if (sessionDriverBestLap.isPolePosition() && driverWinner.getName().equals(sessionDriverBestLap.getName())) {
-                    boolean ledAllTheLaps = Arrays.asList(driverWinner.getLap()).stream().allMatch(l -> "1".equals(l.getP()));
+                if (sessionDriverBestLap.isPolePosition() && driverWinner != null && driverWinner.getName().equals(sessionDriverBestLap.getName())) {
+                    boolean ledAllTheLaps = Arrays.stream(driverWinner.getLap()).allMatch(l -> "1".equals(l.getP()));
 
                     sessionDriverBestLap.setHattrick(true);
                     sessionDriverBestLap.setPolePosition(true);
@@ -176,18 +178,18 @@ public class RFactorTransformer implements SimulatorTransformer {
 
                 return session;
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
 
         return null;
     }
 
-    private String formatSeconds(String time, String textIfNull) {
+    private String formatSecondsWithTextIfNull(String time) {
         String formattedSeconds = formatSeconds(time);
 
         if (formattedSeconds == null) {
-            return textIfNull;
+            return "sem tempo";
         }
 
         return formattedSeconds;
@@ -200,7 +202,7 @@ public class RFactorTransformer implements SimulatorTransformer {
 
         String[] bestLapTime = time.split("\\.");
 
-        Integer totalSeconds = Integer.parseInt(bestLapTime[0]);
+        int totalSeconds = Integer.parseInt(bestLapTime[0]);
 
         String milliseconds;
 
@@ -210,9 +212,7 @@ public class RFactorTransformer implements SimulatorTransformer {
             milliseconds = bestLapTime[1].substring(0, 2)+"0";
         }
 
-        String bestLapTimeFormatted = LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
-                + milliseconds;
-        return bestLapTimeFormatted;
+        return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "." + milliseconds;
     }
 
     @Override

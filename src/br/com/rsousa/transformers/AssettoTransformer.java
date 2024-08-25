@@ -8,13 +8,10 @@ import br.com.rsousa.pojo.assetto.Lap;
 import br.com.rsousa.pojo.assetto.Result;
 import br.com.rsousa.pojo.assetto.Session;
 import com.google.gson.Gson;
-import com.google.gson.JsonIOException;
-import com.google.gson.JsonSyntaxException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.UnsupportedEncodingException;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -23,7 +20,7 @@ public class AssettoTransformer implements SimulatorTransformer {
     private static final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
     @Override
-    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         return null;
     }
 
@@ -69,7 +66,7 @@ public class AssettoTransformer implements SimulatorTransformer {
 
             for (Result result : assettoSession.getResult()) {
                 if (isDriver(result.getDriverName()) && result.getBestLap() != 999999999) {
-                    Long driverLaps = lapsFor(result.getDriverName(), laps);
+                    long driverLaps = lapsFor(result.getDriverName(), laps);
                     if (position == 1) {
                         raceTimeFormatted = driverLaps + " voltas";
                         totalLaps = driverLaps;
@@ -86,7 +83,7 @@ public class AssettoTransformer implements SimulatorTransformer {
                         }
                     }
 
-                    Driver driver = DriverTransformer.toDriver(result, position, driverLaps.intValue(), raceTimeFormatted, driverTeams);
+                    Driver driver = DriverTransformer.toDriver(result, position, (int) driverLaps, raceTimeFormatted, driverTeams);
                     driver.setRaceTime(formatSeconds(result.getTotalTime()));
 
                     if (totalLaps/2 > driverLaps) {

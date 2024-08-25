@@ -12,20 +12,21 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer {
-    public static final String UTF_8 = "UTF-8";
     private final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
     @Override
-    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         return null;
     }
 
-    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws IOException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
@@ -84,7 +85,7 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
                             }
                         }
 
-                        Driver driver = DriverTransformer.toDriver(result, position, driverLaps.intValue(), raceTimeFormatted, driverTeams);
+                        Driver driver = DriverTransformer.toDriver(result, position, driverLaps, raceTimeFormatted, driverTeams);
                         driver.setRaceTime(formatSeconds(result.getTiming().getTotalTime()));
 
                         if (totalLaps/2 > driverLaps) {
@@ -96,8 +97,8 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
                         position++;
                     }
                 }
-            } catch (JsonSyntaxException | JsonIOException | FileNotFoundException | UnsupportedEncodingException e) {
-                e.printStackTrace();
+            } catch (JsonSyntaxException | JsonIOException | IOException e) {
+                System.out.println(e.getMessage());
             }
         }
 
@@ -109,8 +110,8 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
         return false;
     }
 
-    private Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
-        BufferedReader in = new BufferedReader(new InputStreamReader (new FileInputStream(file), UTF_8));
+    private Session createSession(File file) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader (Files.newInputStream(file.toPath()), StandardCharsets.UTF_8));
 
         Gson gson = new Gson();
 

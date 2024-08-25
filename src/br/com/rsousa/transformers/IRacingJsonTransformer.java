@@ -13,16 +13,16 @@ import com.google.gson.JsonSyntaxException;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 public class IRacingJsonTransformer implements SimulatorTransformer {
-    private final DateTimeFormatter MINUTE_FORMATTER = DateTimeFormatter.ofPattern("m:ss");
 
     @Override
-    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws IOException {
         Event event = new Event();
 
         if (file != null) {
@@ -36,7 +36,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
         return event;
     }
 
-    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public br.com.rsousa.pojo.Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws IOException {
         br.com.rsousa.pojo.Session session = null;
 
         if (file != null) {
@@ -103,7 +103,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
                                 leaderFinishTime = driverTotalTime;
                             } else {
                                 if (totalLaps.equals(driverLaps)) {
-                                    Long secondsBehindTheLeader = driverTotalTime - leaderFinishTime;
+                                    long secondsBehindTheLeader = driverTotalTime - leaderFinishTime;
 
                                     raceTimeFormatted = formatMilliseconds(secondsBehindTheLeader);
                                 } else {
@@ -116,7 +116,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
                             Driver driver = DriverTransformer.toDriver(result, driverLaps, raceTimeFormatted, driverTeams);
                             driver.setRaceTime(formatMilliseconds(driverTotalTime));
 
-                            if (totalLaps / 2 > driverLaps) {
+                            if ((totalLaps / 2 > driverLaps) || (hardDnf && !"Running".equalsIgnoreCase(result.getReasonOut()))) {
                                 driver.setStatus(DriverStatus.DID_NOT_FINISH);
                             }
 
@@ -127,38 +127,19 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
                     sessions.add(session);
                 }
             } catch (JsonSyntaxException | JsonIOException | IOException e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             }
         }
 
         return sessions;
     }
 
-    private br.com.rsousa.pojo.iracing.json.Session createSession(File file) throws FileNotFoundException, UnsupportedEncodingException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
+    private br.com.rsousa.pojo.iracing.json.Session createSession(File file) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(Files.newInputStream(file.toPath()), StandardCharsets.UTF_8));
 
         Gson gson = new Gson();
 
         return gson.fromJson(in, Session.class);
-    }
-
-    private String formatSeconds(Long time) {
-        String formattedTime = String.valueOf(time);
-
-        int totalSeconds = 0;
-
-        if ("-1".equals(formattedTime)) {
-            return "sem tempo";
-        }
-
-        if (formattedTime.length() > 3) {
-            totalSeconds = Integer.parseInt(formattedTime.substring(0, formattedTime.length() - 3));
-        }
-
-        String milliseconds = formattedTime.substring(formattedTime.length());
-
-        return LocalTime.MIN.plusSeconds(totalSeconds).format(MINUTE_FORMATTER) + "."
-                + milliseconds;
     }
 
     private static final DateTimeFormatter MINUTE_FORMATTER_2 = DateTimeFormatter.ofPattern("m:ss.SSS");

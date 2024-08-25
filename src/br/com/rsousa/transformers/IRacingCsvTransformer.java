@@ -9,7 +9,7 @@ import java.util.List;
 public class IRacingCsvTransformer implements SimulatorTransformer {
 
     @Override
-    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) throws FileNotFoundException, UnsupportedEncodingException {
+    public Event processEvent(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
         return null;
     }
     public Session processQualify(File file, List<Driver> driverTeams, boolean hardDnf, boolean isSelective) {
@@ -48,13 +48,13 @@ public class IRacingCsvTransformer implements SimulatorTransformer {
                     }
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             } finally {
                 if (br != null) {
                     try {
                         br.close();
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        System.out.println(e.getMessage());
                     }
                 }
             }
@@ -93,7 +93,7 @@ public class IRacingCsvTransformer implements SimulatorTransformer {
 
                         DriverSession driverSession = transformLineInDriverSession(line);
                         Driver driver = null;
-                        if (position == 1) {
+                        if (position == 1 && driverSession != null) {
                             driver = DriverTransformer.toDriver(driverSession, position, driverSession.getCompletedLaps() + " Laps", driverTeams);
                             winner = driverSession;
                             laps = driver.getLaps();
@@ -129,7 +129,7 @@ public class IRacingCsvTransformer implements SimulatorTransformer {
                 }
 
                 if (session.bestLapDriver() != null) {
-                    if (session.bestLapDriver().isPolePosition() && session.bestLapDriver().getPosition() == 1) {
+                    if (session.bestLapDriver().isPolePosition() && session.bestLapDriver().getPosition() == 1 && winner != null) {
                         session.bestLapDriver().setHattrick(true);
 
                         boolean ledAllTheLaps = winner.getCompletedLaps() == winner.getLapsLed();
@@ -141,13 +141,13 @@ public class IRacingCsvTransformer implements SimulatorTransformer {
                 }
 
             } catch (Exception e) {
-                e.printStackTrace();
+                System.out.println(e.getMessage());
             } finally {
                 if (br != null) {
                     try {
                         br.close();
                     } catch (IOException e) {
-                        e.printStackTrace();
+                        System.out.println(e.getMessage());
                     }
                 }
             }

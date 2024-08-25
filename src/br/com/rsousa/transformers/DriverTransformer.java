@@ -98,7 +98,7 @@ public class DriverTransformer {
 
     public static Driver toDriver(br.com.rsousa.pojo.iracing.json.Result iracingDriver, Long laps, String raceTimeFormatted, List<Driver> drivers) {
         Driver driver = new Driver();
-        driver.setName(iracingDriver.getDisplayName());
+        driver.setName(getDriverName(iracingDriver, drivers));
         driver.setBestLapMilliseconds(iracingDriver.getBestLapTime()/10);
         driver.setRaceTimeMilliseconds(iracingDriver.getLapsComplete() * iracingDriver.getAverageLap());
         driver.setLaps(laps.intValue());
@@ -124,12 +124,20 @@ public class DriverTransformer {
                 .orElse(teamName);
     }
 
+    private static String getDriverName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
+                .map(Driver::getName)
+                .findAny()
+                .orElse(driver.getDisplayName());
+    }
+
     private static String getDriverName(DriverSession driver, List<Driver> drivers) {
         return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
                 .map(Driver::getName)
                 .findAny()
                 .orElse(driver.getName());
     }
+
 
     private static String getTeamName(DriverSession driver, List<Driver> drivers) {
         return drivers.stream().filter(d -> driver.getId().equals(d.getId()))
