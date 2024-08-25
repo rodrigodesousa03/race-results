@@ -96,7 +96,7 @@ public class MainController implements Initializable {
         raceTableView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
 
-        versaoLabel.setText("5.1");
+        versaoLabel.setText("5.2");
     }
 
     @FXML
@@ -119,7 +119,7 @@ public class MainController implements Initializable {
             drivers.append("No Drivers");
         } else {
             driverTeams.stream().sorted(Comparator.comparing(Driver::getName))
-                    .forEach(d -> drivers.append(d.toString() + "\n"));
+                    .forEach(d -> drivers.append(d).append("\n"));
         }
 
         Label label = new Label(drivers.toString());
@@ -140,7 +140,7 @@ public class MainController implements Initializable {
     void clearDrivers(ActionEvent event) {
         driverTeams.clear();
 
-        textDrivers.setText(driverTeams.size() + " Drivers");
+        textDrivers.setText(0 + " Drivers");
     }
 
     @FXML
@@ -235,9 +235,7 @@ public class MainController implements Initializable {
             return;
         }
 
-
-            raceEvent.getRaceSessions().get(0).drivers().forEach(d -> d.setLicensePoints(0));
-
+        raceEvent.getRaceSessions().get(0).drivers().forEach(d -> d.setLicensePoints(0));
 
         String[] licenseTextRows = licenseTextArea.getText().split("\n");
 
@@ -293,15 +291,15 @@ public class MainController implements Initializable {
         } else if (file.getName().contains("csv") || file.getName().contains("CSV")) {
             simulatorTransformer = new IRacingCsvTransformer();
         } else if (file.getName().contains("json") || file.getName().contains("JSON")) {
-            if (isIracingLog(file)) {
+            if (isIRacingLog(file)) {
                 simulatorTransformer = new IRacingJsonTransformer();
             } else if (isAssettoCorsaLog(file)) {
                 simulatorTransformer = new AssettoTransformer();
             } else if (isAutomobilista2Log(file)) {
                 simulatorTransformer = new Automobilista2Transformer();
             } else {
-				simulatorTransformer = new AssettoCorsaCompetizioneTransformer();
-			}
+                simulatorTransformer = new AssettoCorsaCompetizioneTransformer();
+            }
         }
 
         try {
@@ -323,7 +321,7 @@ public class MainController implements Initializable {
         }
     }
 
-    private static boolean isIracingLog(File file) {
+    private static boolean isIRacingLog(File file) {
         StringBuilder contentBuilder = new StringBuilder();
 
         try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
@@ -347,17 +345,17 @@ public class MainController implements Initializable {
         return contentBuilder.toString().contains("TrackName");
     }
 
-	private static boolean isAutomobilista2Log(File file) {
-		StringBuilder contentBuilder = new StringBuilder();
+    private static boolean isAutomobilista2Log(File file) {
+        StringBuilder contentBuilder = new StringBuilder();
 
-		try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
-			stream.forEach(s -> contentBuilder.append(s).append("\n"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
+            stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-		return contentBuilder.toString().contains("participants");
-	}
+        return contentBuilder.toString().contains("participants");
+    }
 
     private void selectDriver(Driver driver) {
         if (driver != null) {
@@ -381,7 +379,7 @@ public class MainController implements Initializable {
 
     private List<String> fileTypes() {
         if (fileTypes == null) {
-            fileTypes = new ArrayList<String>();
+            fileTypes = new ArrayList<>();
             fileTypes.add("*.xml");
             fileTypes.add("*.XML");
             fileTypes.add("*.json");
@@ -395,7 +393,7 @@ public class MainController implements Initializable {
 
     private void processDrivers(File file) {
         BufferedReader br = null;
-        String line = "";
+        String line;
 
         if (file != null) {
             try {
@@ -411,8 +409,6 @@ public class MainController implements Initializable {
                 }
 
                 textDrivers.setText(driverTeams.size() + " Drivers");
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             } finally {
