@@ -2,10 +2,12 @@ package br.com.rsousa.formatter;
 
 import br.com.rsousa.pojo.Driver;
 import br.com.rsousa.pojo.DriverStatus;
+import br.com.rsousa.pojo.Event;
 import br.com.rsousa.pojo.Session;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.List;
 
 public class SessionFormatter {
@@ -76,6 +78,49 @@ public class SessionFormatter {
 
         for (Session session : sessions) {
             resultStr.append(toSheets(session, category, circuit));
+        }
+
+        return resultStr.toString();
+    }
+
+    public static String toSheetsResults(Event event) {
+        StringBuilder resultStr = new StringBuilder();
+
+        List<Session> sessions = new ArrayList<>();
+        sessions.add(event.getQualifySession());
+        sessions.addAll(event.getRaceSessions());
+
+        var sessionCount = 1;
+
+        for (Session session : sessions) {
+            for (int i = 0; i < 51; i++) {
+                Driver driver = null;
+
+                if (i < session.drivers().size()) {
+                    driver = session.drivers().get(i);
+                } else {
+                    resultStr.append("\n");
+                    continue;
+                }
+
+                resultStr.append(driver.getCarNumber()).append(";");
+                resultStr.append(driver.getName()).append(";");
+                resultStr.append(driver.getTeam().trim()).append(";");
+                resultStr.append(driver.getRaceTimeFormatted()).append(";");
+                resultStr.append(driver.getLicensePoints()).append(";");
+                resultStr.append(driver.getAverageLap()).append(";");
+                resultStr.append(driver.getBestLap()).append(";");
+                resultStr.append(driver.getLaps()).append(";");
+                resultStr.append(driver.getIncidents()).append("\n");
+            }
+
+            // Adicionar linha em branco entre as sessões. Não adicionar na ultima sessão.
+            if (event.getRaceSessions().indexOf(session) < event.getRaceSessions().size() - 1) {
+                resultStr.append(";;").append("RACE ").append(sessionCount).append("\n");
+                resultStr.append("#;DRIVER;TEAM;INTERVAL;PEN;AV TIME;BEST LAP;LAPS;INC;PTS").append("\n");
+            }
+
+            sessionCount++;
         }
 
         return resultStr.toString();

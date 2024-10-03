@@ -19,6 +19,10 @@ public class Driver implements Comparable<Driver> {
 	private String raceTime;
 	private String raceTimeFormatted;
 	private Double driverTotalTime;
+	private Integer carNumber;
+	private String averageLap;
+	private Integer incidents;
+
 
 	public Driver(String name, String team, String id, String teamStatistics) {
 		this.name = name;
@@ -190,4 +194,28 @@ public class Driver implements Comparable<Driver> {
 	public void setDriverTotalTime(Double driverTotalTime) {
 		this.driverTotalTime = driverTotalTime;
 	}
+
+    public Integer getCarNumber() {
+        return carNumber;
+    }
+
+    public void setCarNumber(Integer carNumber) {
+        this.carNumber = carNumber;
+    }
+
+    public String getAverageLap() {
+        return averageLap;
+    }
+
+    public void setAverageLap(String averageLap) {
+        this.averageLap = averageLap;
+    }
+
+    public Integer getIncidents() {
+        return incidents;
+    }
+
+    public void setIncidents(Integer incidents) {
+        this.incidents = incidents;
+    }
 }

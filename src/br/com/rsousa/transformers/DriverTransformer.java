@@ -6,6 +6,8 @@ import br.com.rsousa.pojo.assetto.Result;
 import br.com.rsousa.pojo.iracing.csv.DriverSession;
 import br.com.rsousa.utils.TimeUtils;
 
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class DriverTransformer {
@@ -104,8 +106,20 @@ public class DriverTransformer {
         driver.setLaps(laps.intValue());
         driver.setPosition(iracingDriver.getFinishPositionInClass()+1);
         driver.setRaceTimeFormatted(raceTimeFormatted);
-        driver.setTeam(getTeamName(iracingDriver.getDisplayName(), "Independente", drivers));
-        driver.setTeamStatistics(getTeamStatisticsName(iracingDriver.getDisplayName(), "Independente", drivers));
+        driver.setTeam(getTeamName(iracingDriver, drivers));
+        driver.setTeamStatistics(getTeamStatisticsName(iracingDriver, drivers));
+        driver.setCarNumber(Integer.parseInt(iracingDriver.getLivery().getCarNumber()));
+        driver.setIncidents(iracingDriver.getIncidents());
+        driver.setAverageLap("-");
+        driver.setBestLap("-");
+
+        if (iracingDriver.getAverageLap() > 0) {
+            driver.setAverageLap(formatMilliseconds(iracingDriver.getAverageLap()));
+        }
+
+        if (iracingDriver.getBestLapTime() > 0) {
+            driver.setBestLap(formatMilliseconds(iracingDriver.getBestLapTime()));
+        }
 
         return driver;
     }
@@ -151,5 +165,30 @@ public class DriverTransformer {
                 .map(Driver::getTeamStatistics)
                 .findAny()
                 .orElse("Independente");
+    }
+
+    private static String getTeamName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
+                .map(Driver::getTeam)
+                .findAny()
+                .orElse("Independente");
+    }
+
+    private static String getTeamStatisticsName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
+                .map(Driver::getTeamStatistics)
+                .findAny()
+                .orElse("Independente");
+    }
+
+    private static String formatMilliseconds(long milliseconds) {
+        milliseconds = milliseconds/10;
+
+        int totalSeconds = (int) (milliseconds / 1000);
+        int millis = (int) (milliseconds % 1000);
+
+        LocalTime time = LocalTime.MIN.plusSeconds(totalSeconds).plusNanos(millis * 1_000_000);
+
+        return time.format(DateTimeFormatter.ofPattern("m:ss.SSS"));
     }
 }
