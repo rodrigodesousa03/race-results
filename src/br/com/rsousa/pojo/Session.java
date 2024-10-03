@@ -28,7 +28,8 @@ public class Session {
 
 	public void sortDrivers() {
 		drivers = drivers.stream()
-				.sorted(Comparator.comparingInt(Driver::getPosition))
+				.sorted(Comparator.comparing(Driver::getCarClassId, Comparator.nullsFirst(Comparator.naturalOrder()))
+						.thenComparing(Driver::getPosition))
 				.collect(Collectors.toList());
 	}
 

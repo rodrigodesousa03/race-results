@@ -22,6 +22,7 @@ public class Driver implements Comparable<Driver> {
 	private Integer carNumber;
 	private String averageLap;
 	private Integer incidents;
+	private Integer carClassId;
 
 
 	public Driver(String name, String team, String id, String teamStatistics) {
@@ -217,5 +218,13 @@ public class Driver implements Comparable<Driver> {
 
     public void setIncidents(Integer incidents) {
         this.incidents = incidents;
+    }
+
+    public Integer getCarClassId() {
+        return carClassId;
+    }
+
+    public void setCarClassId(Integer carClassId) {
+        this.carClassId = carClassId;
     }
 }

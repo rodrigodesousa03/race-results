@@ -112,6 +112,7 @@ public class DriverTransformer {
         driver.setIncidents(iracingDriver.getIncidents());
         driver.setAverageLap("-");
         driver.setBestLap("-");
+        driver.setCarClassId(iracingDriver.getCarClassId());
 
         if (iracingDriver.getAverageLap() > 0) {
             driver.setAverageLap(formatMilliseconds(iracingDriver.getAverageLap()));

@@ -140,6 +140,10 @@ public class Automobilista2Transformer implements SimulatorTransformer {
 
                 session.sortDriversByLapsAndTotalTime();
 
+                if (session.drivers().isEmpty()) {
+                    return null;
+                }
+
                 Driver leader = session.drivers().get(0);
 
                 String raceTimeFormatted;
