@@ -93,7 +93,9 @@ public class SessionFormatter {
         var sessionCount = 1;
 
         for (Session session : sessions) {
-            for (int i = 0; i < 51; i++) {
+            var totalLines = sessionCount != 2 ? 51 : 60;
+
+            for (int i = 0; i < totalLines; i++) {
                 Driver driver = null;
 
                 if (i < session.drivers().size()) {
@@ -114,7 +116,6 @@ public class SessionFormatter {
                 resultStr.append(driver.getIncidents()).append("\n");
             }
 
-            // Adicionar linha em branco entre as sessões. Não adicionar na ultima sessão.
             if (event.getRaceSessions().indexOf(session) < event.getRaceSessions().size() - 1) {
                 resultStr.append(";;").append("RACE ").append(sessionCount).append("\n");
                 resultStr.append("#;DRIVER;TEAM;INTERVAL;PEN;AV TIME;BEST LAP;LAPS;INC;PTS").append("\n");
