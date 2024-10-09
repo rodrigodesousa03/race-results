@@ -104,7 +104,7 @@ public class MainController implements Initializable {
         batteryComboBox.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> showResults());
 
-        versaoLabel.setText("6.2");
+        versaoLabel.setText("6.3");
     }
 
     @FXML
