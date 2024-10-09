@@ -81,6 +81,9 @@ public class MainController implements Initializable {
     private TableColumn<Driver, Integer> textColumn;
 
     @FXML
+    private ComboBox<Integer> batteryComboBox;
+
+    @FXML
     private Text versaoLabel;
 
     private List<Driver> driverTeams = new ArrayList<>();
@@ -97,6 +100,9 @@ public class MainController implements Initializable {
 
         raceTableView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
+
+        batteryComboBox.getSelectionModel().selectedItemProperty()
+                .addListener((observable, oldValue, newValue) -> showResults());
 
         versaoLabel.setText("6.1");
     }
@@ -171,7 +177,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveUpPosition(this.event.getRaceSessions().get(0), driverSelected);
+        SessionUtils.moveUpPosition(this.event.getRaceSessions().get(batteryComboBox.getValue()-1), driverSelected);
 
         showResults();
     }
@@ -182,7 +188,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveDownPosition(this.event.getRaceSessions().get(0), driverSelected);
+        SessionUtils.moveDownPosition(this.event.getRaceSessions().get(batteryComboBox.getValue()-1), driverSelected);
 
         showResults();
     }
@@ -193,7 +199,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.moveLastPosition(this.event.getRaceSessions().get(0), driverSelected);
+        SessionUtils.moveLastPosition(this.event.getRaceSessions().get(batteryComboBox.getValue()-1), driverSelected);
 
         showResults();
     }
@@ -215,7 +221,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        SessionUtils.disqualify(this.event.getRaceSessions().get(0), driverSelected);
+        SessionUtils.disqualify(this.event.getRaceSessions().get(batteryComboBox.getValue()-1), driverSelected);
 
         showResults();
     }
@@ -237,7 +243,7 @@ public class MainController implements Initializable {
             return;
         }
 
-        this.event.getRaceSessions().get(0).drivers().forEach(d -> d.setLicensePoints(0));
+        this.event.getRaceSessions().stream().map(Session::drivers).forEach(drivers -> drivers.forEach(d -> d.setLicensePoints(0)));
 
         String[] licenseTextRows = licenseTextArea.getText().split("\n");
 
@@ -249,9 +255,9 @@ public class MainController implements Initializable {
                 Integer licensePoints = Integer.parseInt(row[1]);
 
                 if (!this.event.getRaceSessions().isEmpty()) {
-                    this.event.getRaceSessions().get(0).drivers().stream().filter(d -> d.getName().equals(driverName))
+                    this.event.getRaceSessions().forEach(s -> s.drivers().stream().filter(d -> d.getName().equals(driverName))
                             .findFirst()
-                            .ifPresent(d -> d.setLicensePoints(licensePoints));
+                            .ifPresent(d -> d.setLicensePoints(licensePoints)));
                 }
             }
         }
@@ -312,6 +318,13 @@ public class MainController implements Initializable {
             } else {
                 event.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
             }
+
+            batteryComboBox.getItems().clear();
+            for (int i = 1; i <= event.getRaceSessions().size(); i++) {
+                batteryComboBox.getItems().add(i);
+            }
+
+            batteryComboBox.getSelectionModel().selectFirst();
         } catch (Exception e) {
             Alert a = new Alert(Alert.AlertType.ERROR);
             a.setTitle("Erro ao importar o log");
@@ -381,7 +394,7 @@ public class MainController implements Initializable {
         if (!event.getRaceSessions().isEmpty()) {
             raceTableView.getItems().clear();
             event.getRaceSessions().forEach(Session::sortDrivers);
-            raceTableView.getItems().addAll(event.getRaceSessions().get(0).drivers());
+            raceTableView.getItems().addAll(event.getRaceSessions().get(batteryComboBox.getValue()-1).drivers());
             raceTextArea.setText(SessionFormatter.format(event.getRaceSessions()));
             sheetsTextArea.setText(SessionFormatter.toSheets(event.getRaceSessions(), categoryTextField.getText(), circuitTextField.getText()));
         }

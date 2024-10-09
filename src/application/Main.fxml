@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="638.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="638.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+<AnchorPane maxHeight="753.0" maxWidth="1015.0" minHeight="638.0" minWidth="900.0" onDragDropped="#logFileDrop" onDragOver="#dragOver" prefHeight="638.0" prefWidth="1015.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
    <children>
       <Pane layoutY="-1.0" prefHeight="610.0" prefWidth="1015.0" style="-fx-background-color: #EEE;">
          <children>
@@ -34,7 +34,7 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <TableView fx:id="raceTableView" prefHeight="437.0" prefWidth="417.0">
+                              <TableView fx:id="raceTableView" layoutY="37.0" prefHeight="400.0" prefWidth="417.0">
                                  <columns>
                                     <TableColumn fx:id="positionColumn" prefWidth="52.0" text="Posição" />
                                     <TableColumn fx:id="driverColumn" prefWidth="115.0" text="Piloto" />
@@ -42,6 +42,8 @@
                                     <TableColumn fx:id="textColumn1" prefWidth="264.0" text="Texto" />
                                  </columns>
                               </TableView>
+                              <ComboBox fx:id="batteryComboBox" layoutX="56.0" layoutY="8.0" prefHeight="25.0" prefWidth="129.0" />
+                              <Label layoutX="14.0" layoutY="12.0" prefHeight="17.0" prefWidth="42.0" text="Bateria" />
                            </children>
                         </AnchorPane>
                      </content>

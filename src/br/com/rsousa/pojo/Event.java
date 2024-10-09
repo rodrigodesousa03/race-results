@@ -9,7 +9,7 @@ import java.util.Optional;
 public class Event {
     private Session qualifySession;
     private List<Session> raceSessions;
-    private Session originalRaceSession;
+    private List<Session> originalRaceSessions;
 
     public void addSession(Session session, boolean isSelective) {
         if (session == null) {
@@ -26,7 +26,7 @@ public class Event {
             setQualifySession(session);
         } else {
             raceSessions.add(session);
-            setOriginalRaceSession(SessionUtils.duplicateRace(session));
+            originalRaceSessions.add(SessionUtils.duplicateRace(session));
 
             if (qualifySession != null) {
                 Optional<Driver> polePositionDriver = qualifySession.polePositionDriver();
@@ -65,23 +65,22 @@ public class Event {
         this.raceSessions = raceSessionsList;
     }
 
-    public void setOriginalRaceSession(Session originalRaceSession) {
-        this.originalRaceSession = originalRaceSession;
+    public void setOriginalRaceSessions(List<Session> originalRaceSessions) {
+        this.originalRaceSessions = originalRaceSessions;
     }
 
     public void clear(boolean isSelective) {
         setRaceSessions(new ArrayList<>());
-        setOriginalRaceSession(null);
+        setOriginalRaceSessions(null);
         if (!isSelective) {
             setQualifySession(null);
         }
     }
 
     public void resetRace() {
-        List<Session> raceSessions = new ArrayList<>();
-        raceSessions.add(SessionUtils.duplicateRace(originalRaceSession));
-
-        setRaceSessions(raceSessions);
+        originalRaceSessions.stream()
+                .map(SessionUtils::duplicateRace)
+                .forEach(raceSessions::add);
     }
 
 

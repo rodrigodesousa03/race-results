@@ -17,6 +17,7 @@ import java.nio.file.Files;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public class IRacingJsonTransformer implements SimulatorTransformer {
@@ -80,6 +81,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
                 List<SessionResult> raceResults = iracingSession.getSessionResults()
                         .stream()
                         .filter(sr -> sr.getSimsessionTypeName().contains("Race"))
+                        .sorted(Comparator.comparing(SessionResult::getSimsessionNumber))
                         .collect(java.util.stream.Collectors.toList());
 
                 if (raceResults.isEmpty()) {
