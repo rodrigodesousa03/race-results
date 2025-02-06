@@ -1,65 +1,59 @@
-
 package br.com.rsousa.pojo.iracing.json;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+   
 public class Track {
 
-    @SerializedName("category")
-    @Expose
-    private String category;
-    @SerializedName("category_id")
-    @Expose
-    private Integer categoryId;
-    @SerializedName("config_name")
-    @Expose
-    private String configName;
-    @SerializedName("track_id")
-    @Expose
-    private Integer trackId;
-    @SerializedName("track_name")
-    @Expose
-    private String trackName;
+   @SerializedName("category")
+   String category;
 
-    public String getCategory() {
-        return category;
-    }
+   @SerializedName("category_id")
+   Integer categoryId;
+
+   @SerializedName("config_name")
+   String configName;
+
+   @SerializedName("track_id")
+   Integer trackId;
+
+   @SerializedName("track_name")
+   String trackName;
+
 
     public void setCategory(String category) {
         this.category = category;
     }
-
-    public Integer getCategoryId() {
-        return categoryId;
+    public String getCategory() {
+        return category;
     }
-
+    
     public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
-
-    public String getConfigName() {
-        return configName;
+    public Integer getCategoryId() {
+        return categoryId;
     }
-
+    
     public void setConfigName(String configName) {
         this.configName = configName;
     }
-
-    public Integer getTrackId() {
-        return trackId;
+    public String getConfigName() {
+        return configName;
     }
-
+    
     public void setTrackId(Integer trackId) {
         this.trackId = trackId;
     }
-
-    public String getTrackName() {
-        return trackName;
+    public Integer getTrackId() {
+        return trackId;
     }
-
+    
     public void setTrackName(String trackName) {
         this.trackName = trackName;
     }
-
+    public String getTrackName() {
+        return trackName;
+    }
+    
 }

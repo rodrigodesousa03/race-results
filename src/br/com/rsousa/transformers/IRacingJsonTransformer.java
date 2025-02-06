@@ -43,7 +43,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
         if (file != null) {
             Session iracingSession = createSession(file);
 
-            SessionResult sessionResult = iracingSession.getSessionResults()
+            SessionResult sessionResult = iracingSession.getData().getSessionResults()
                     .stream()
                     .filter(sr -> sr.getSimsessionTypeName().contains("Qualifying"))
                     .findFirst()
@@ -78,7 +78,7 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
             try {
                 Session iracingSession = createSession(file);
 
-                List<SessionResult> raceResults = iracingSession.getSessionResults()
+                List<SessionResult> raceResults = iracingSession.getData().getSessionResults()
                         .stream()
                         .filter(sr -> sr.getSimsessionTypeName().contains("Race"))
                         .sorted(Comparator.comparing(SessionResult::getSimsessionNumber))

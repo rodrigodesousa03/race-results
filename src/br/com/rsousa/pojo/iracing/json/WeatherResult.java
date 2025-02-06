@@ -1,230 +1,211 @@
-
 package br.com.rsousa.pojo.iracing.json;
+import java.time.LocalDateTime;
+import java.util.Date;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+   
 public class WeatherResult {
 
-    @SerializedName("avg_skies")
-    @Expose
-    private Integer avgSkies;
-    @SerializedName("avg_cloud_cover_pct")
-    @Expose
-    private Double avgCloudCoverPct;
-    @SerializedName("min_cloud_cover_pct")
-    @Expose
-    private Double minCloudCoverPct;
-    @SerializedName("max_cloud_cover_pct")
-    @Expose
-    private Double maxCloudCoverPct;
-    @SerializedName("temp_units")
-    @Expose
-    private Integer tempUnits;
-    @SerializedName("avg_temp")
-    @Expose
-    private Double avgTemp;
-    @SerializedName("min_temp")
-    @Expose
-    private Double minTemp;
-    @SerializedName("max_temp")
-    @Expose
-    private Double maxTemp;
-    @SerializedName("avg_rel_humidity")
-    @Expose
-    private Double avgRelHumidity;
-    @SerializedName("wind_units")
-    @Expose
-    private Integer windUnits;
-    @SerializedName("avg_wind_speed")
-    @Expose
-    private Double avgWindSpeed;
-    @SerializedName("min_wind_speed")
-    @Expose
-    private Double minWindSpeed;
-    @SerializedName("max_wind_speed")
-    @Expose
-    private Double maxWindSpeed;
-    @SerializedName("avg_wind_dir")
-    @Expose
-    private Integer avgWindDir;
-    @SerializedName("max_fog")
-    @Expose
-    private Float maxFog;
-    @SerializedName("fog_time_pct")
-    @Expose
-    private Float fogTimePct;
-    @SerializedName("precip_time_pct")
-    @Expose
-    private Float precipTimePct;
-    @SerializedName("precip_mm")
-    @Expose
-    private Integer precipMm;
-    @SerializedName("precip_mm2hr_before_session")
-    @Expose
-    private Integer precipMm2hrBeforeSession;
-    @SerializedName("simulated_start_time")
-    @Expose
-    private String simulatedStartTime;
+   @SerializedName("avg_skies")
+   Integer avgSkies;
 
-    public Integer getAvgSkies() {
-        return avgSkies;
-    }
+   @SerializedName("avg_cloud_cover_pct")
+   double avgCloudCoverPct;
+
+   @SerializedName("min_cloud_cover_pct")
+   double minCloudCoverPct;
+
+   @SerializedName("max_cloud_cover_pct")
+   double maxCloudCoverPct;
+
+   @SerializedName("temp_units")
+   Integer tempUnits;
+
+   @SerializedName("avg_temp")
+   double avgTemp;
+
+   @SerializedName("min_temp")
+   double minTemp;
+
+   @SerializedName("max_temp")
+   double maxTemp;
+
+   @SerializedName("avg_rel_humidity")
+   double avgRelHumidity;
+
+   @SerializedName("wind_units")
+   Integer windUnits;
+
+   @SerializedName("avg_wind_speed")
+   double avgWindSpeed;
+
+   @SerializedName("min_wind_speed")
+   double minWindSpeed;
+
+   @SerializedName("max_wind_speed")
+   double maxWindSpeed;
+
+   @SerializedName("avg_wind_dir")
+   Integer avgWindDir;
+
+   @SerializedName("max_fog")
+   Integer maxFog;
+
+   @SerializedName("fog_time_pct")
+   Integer fogTimePct;
+
+   @SerializedName("precip_time_pct")
+   Integer precipTimePct;
+
+   @SerializedName("precip_mm")
+   Integer precipMm;
+
+   @SerializedName("precip_mm2hr_before_session")
+   Integer precipMm2hrBeforeSession;
+
+   @SerializedName("simulated_start_time")
+   String simulatedStartTime;
+
 
     public void setAvgSkies(Integer avgSkies) {
         this.avgSkies = avgSkies;
     }
-
-    public Double getAvgCloudCoverPct() {
-        return avgCloudCoverPct;
+    public Integer getAvgSkies() {
+        return avgSkies;
     }
-
-    public void setAvgCloudCoverPct(Double avgCloudCoverPct) {
+    
+    public void setAvgCloudCoverPct(double avgCloudCoverPct) {
         this.avgCloudCoverPct = avgCloudCoverPct;
     }
-
-    public Double getMinCloudCoverPct() {
-        return minCloudCoverPct;
+    public double getAvgCloudCoverPct() {
+        return avgCloudCoverPct;
     }
-
-    public void setMinCloudCoverPct(Double minCloudCoverPct) {
+    
+    public void setMinCloudCoverPct(double minCloudCoverPct) {
         this.minCloudCoverPct = minCloudCoverPct;
     }
-
-    public Double getMaxCloudCoverPct() {
-        return maxCloudCoverPct;
+    public double getMinCloudCoverPct() {
+        return minCloudCoverPct;
     }
-
-    public void setMaxCloudCoverPct(Double maxCloudCoverPct) {
+    
+    public void setMaxCloudCoverPct(double maxCloudCoverPct) {
         this.maxCloudCoverPct = maxCloudCoverPct;
     }
-
-    public Integer getTempUnits() {
-        return tempUnits;
+    public double getMaxCloudCoverPct() {
+        return maxCloudCoverPct;
     }
-
+    
     public void setTempUnits(Integer tempUnits) {
         this.tempUnits = tempUnits;
     }
-
-    public Double getAvgTemp() {
-        return avgTemp;
+    public Integer getTempUnits() {
+        return tempUnits;
     }
-
-    public void setAvgTemp(Double avgTemp) {
+    
+    public void setAvgTemp(double avgTemp) {
         this.avgTemp = avgTemp;
     }
-
-    public Double getMinTemp() {
-        return minTemp;
+    public double getAvgTemp() {
+        return avgTemp;
     }
-
-    public void setMinTemp(Double minTemp) {
+    
+    public void setMinTemp(double minTemp) {
         this.minTemp = minTemp;
     }
-
-    public Double getMaxTemp() {
-        return maxTemp;
+    public double getMinTemp() {
+        return minTemp;
     }
-
-    public void setMaxTemp(Double maxTemp) {
+    
+    public void setMaxTemp(double maxTemp) {
         this.maxTemp = maxTemp;
     }
-
-    public Double getAvgRelHumidity() {
-        return avgRelHumidity;
+    public double getMaxTemp() {
+        return maxTemp;
     }
-
-    public void setAvgRelHumidity(Double avgRelHumidity) {
+    
+    public void setAvgRelHumidity(double avgRelHumidity) {
         this.avgRelHumidity = avgRelHumidity;
     }
-
-    public Integer getWindUnits() {
-        return windUnits;
+    public double getAvgRelHumidity() {
+        return avgRelHumidity;
     }
-
+    
     public void setWindUnits(Integer windUnits) {
         this.windUnits = windUnits;
     }
-
-    public Double getAvgWindSpeed() {
-        return avgWindSpeed;
+    public Integer getWindUnits() {
+        return windUnits;
     }
-
-    public void setAvgWindSpeed(Double avgWindSpeed) {
+    
+    public void setAvgWindSpeed(double avgWindSpeed) {
         this.avgWindSpeed = avgWindSpeed;
     }
-
-    public Double getMinWindSpeed() {
-        return minWindSpeed;
+    public double getAvgWindSpeed() {
+        return avgWindSpeed;
     }
-
-    public void setMinWindSpeed(Double minWindSpeed) {
+    
+    public void setMinWindSpeed(double minWindSpeed) {
         this.minWindSpeed = minWindSpeed;
     }
-
-    public Double getMaxWindSpeed() {
-        return maxWindSpeed;
+    public double getMinWindSpeed() {
+        return minWindSpeed;
     }
-
-    public void setMaxWindSpeed(Double maxWindSpeed) {
+    
+    public void setMaxWindSpeed(double maxWindSpeed) {
         this.maxWindSpeed = maxWindSpeed;
     }
-
-    public Integer getAvgWindDir() {
-        return avgWindDir;
+    public double getMaxWindSpeed() {
+        return maxWindSpeed;
     }
-
+    
     public void setAvgWindDir(Integer avgWindDir) {
         this.avgWindDir = avgWindDir;
     }
-
-    public Float getMaxFog() {
-        return maxFog;
+    public Integer getAvgWindDir() {
+        return avgWindDir;
     }
-
-    public void setMaxFog(Float maxFog) {
+    
+    public void setMaxFog(Integer maxFog) {
         this.maxFog = maxFog;
     }
-
-    public Float getFogTimePct() {
-        return fogTimePct;
+    public Integer getMaxFog() {
+        return maxFog;
     }
-
-    public void setFogTimePct(Float fogTimePct) {
+    
+    public void setFogTimePct(Integer fogTimePct) {
         this.fogTimePct = fogTimePct;
     }
-
-    public Float getPrecipTimePct() {
-        return precipTimePct;
+    public Integer getFogTimePct() {
+        return fogTimePct;
     }
-
-    public void setPrecipTimePct(Float precipTimePct) {
+    
+    public void setPrecipTimePct(Integer precipTimePct) {
         this.precipTimePct = precipTimePct;
     }
-
-    public Integer getPrecipMm() {
-        return precipMm;
+    public Integer getPrecipTimePct() {
+        return precipTimePct;
     }
-
+    
     public void setPrecipMm(Integer precipMm) {
         this.precipMm = precipMm;
     }
-
-    public Integer getPrecipMm2hrBeforeSession() {
-        return precipMm2hrBeforeSession;
+    public Integer getPrecipMm() {
+        return precipMm;
     }
-
+    
     public void setPrecipMm2hrBeforeSession(Integer precipMm2hrBeforeSession) {
         this.precipMm2hrBeforeSession = precipMm2hrBeforeSession;
     }
-
-    public String getSimulatedStartTime() {
-        return simulatedStartTime;
+    public Integer getPrecipMm2hrBeforeSession() {
+        return precipMm2hrBeforeSession;
     }
-
+    
     public void setSimulatedStartTime(String simulatedStartTime) {
         this.simulatedStartTime = simulatedStartTime;
     }
-
+    public String getSimulatedStartTime() {
+        return simulatedStartTime;
+    }
+    
 }

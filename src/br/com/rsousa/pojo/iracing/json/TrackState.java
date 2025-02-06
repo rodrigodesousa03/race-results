@@ -1,109 +1,99 @@
-
 package br.com.rsousa.pojo.iracing.json;
 
-import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+   
 public class TrackState {
 
-    @SerializedName("leave_marbles")
-    @Expose
-    private Boolean leaveMarbles;
-    @SerializedName("practice_grip_compound")
-    @Expose
-    private Integer practiceGripCompound;
-    @SerializedName("practice_rubber")
-    @Expose
-    private Integer practiceRubber;
-    @SerializedName("qualify_grip_compound")
-    @Expose
-    private Integer qualifyGripCompound;
-    @SerializedName("qualify_rubber")
-    @Expose
-    private Integer qualifyRubber;
-    @SerializedName("race_grip_compound")
-    @Expose
-    private Integer raceGripCompound;
-    @SerializedName("race_rubber")
-    @Expose
-    private Integer raceRubber;
-    @SerializedName("warmup_grip_compound")
-    @Expose
-    private Integer warmupGripCompound;
-    @SerializedName("warmup_rubber")
-    @Expose
-    private Integer warmupRubber;
+   @SerializedName("leave_marbles")
+   boolean leaveMarbles;
 
-    public Boolean getLeaveMarbles() {
-        return leaveMarbles;
-    }
+   @SerializedName("practice_grip_compound")
+   Integer practiceGripCompound;
 
-    public void setLeaveMarbles(Boolean leaveMarbles) {
+   @SerializedName("practice_rubber")
+   Integer practiceRubber;
+
+   @SerializedName("qualify_grip_compound")
+   Integer qualifyGripCompound;
+
+   @SerializedName("qualify_rubber")
+   Integer qualifyRubber;
+
+   @SerializedName("race_grip_compound")
+   Integer raceGripCompound;
+
+   @SerializedName("race_rubber")
+   Integer raceRubber;
+
+   @SerializedName("warmup_grip_compound")
+   Integer warmupGripCompound;
+
+   @SerializedName("warmup_rubber")
+   Integer warmupRubber;
+
+
+    public void setLeaveMarbles(boolean leaveMarbles) {
         this.leaveMarbles = leaveMarbles;
     }
-
-    public Integer getPracticeGripCompound() {
-        return practiceGripCompound;
+    public boolean getLeaveMarbles() {
+        return leaveMarbles;
     }
-
+    
     public void setPracticeGripCompound(Integer practiceGripCompound) {
         this.practiceGripCompound = practiceGripCompound;
     }
-
-    public Integer getPracticeRubber() {
-        return practiceRubber;
+    public Integer getPracticeGripCompound() {
+        return practiceGripCompound;
     }
-
+    
     public void setPracticeRubber(Integer practiceRubber) {
         this.practiceRubber = practiceRubber;
     }
-
-    public Integer getQualifyGripCompound() {
-        return qualifyGripCompound;
+    public Integer getPracticeRubber() {
+        return practiceRubber;
     }
-
+    
     public void setQualifyGripCompound(Integer qualifyGripCompound) {
         this.qualifyGripCompound = qualifyGripCompound;
     }
-
-    public Integer getQualifyRubber() {
-        return qualifyRubber;
+    public Integer getQualifyGripCompound() {
+        return qualifyGripCompound;
     }
-
+    
     public void setQualifyRubber(Integer qualifyRubber) {
         this.qualifyRubber = qualifyRubber;
     }
-
-    public Integer getRaceGripCompound() {
-        return raceGripCompound;
+    public Integer getQualifyRubber() {
+        return qualifyRubber;
     }
-
+    
     public void setRaceGripCompound(Integer raceGripCompound) {
         this.raceGripCompound = raceGripCompound;
     }
-
-    public Integer getRaceRubber() {
-        return raceRubber;
+    public Integer getRaceGripCompound() {
+        return raceGripCompound;
     }
-
+    
     public void setRaceRubber(Integer raceRubber) {
         this.raceRubber = raceRubber;
     }
-
-    public Integer getWarmupGripCompound() {
-        return warmupGripCompound;
+    public Integer getRaceRubber() {
+        return raceRubber;
     }
-
+    
     public void setWarmupGripCompound(Integer warmupGripCompound) {
         this.warmupGripCompound = warmupGripCompound;
     }
-
-    public Integer getWarmupRubber() {
-        return warmupRubber;
+    public Integer getWarmupGripCompound() {
+        return warmupGripCompound;
     }
-
+    
     public void setWarmupRubber(Integer warmupRubber) {
         this.warmupRubber = warmupRubber;
     }
-
+    public Integer getWarmupRubber() {
+        return warmupRubber;
+    }
+    
 }
