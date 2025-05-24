@@ -25,11 +25,12 @@ public class Driver implements Comparable<Driver> {
 	private Integer carClassId;
 
 
-	public Driver(String name, String team, String id, String teamStatistics) {
+	public Driver(String name, String team, String id, String teamStatistics, Integer carNumber) {
 		this.name = name;
 		this.team = team;
 		this.id = id;
 		this.teamStatistics = teamStatistics;
+		this.carNumber = carNumber;
 		this.status = DriverStatus.FINISHED;
 	}
 

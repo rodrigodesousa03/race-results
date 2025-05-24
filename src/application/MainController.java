@@ -432,7 +432,9 @@ public class MainController implements Initializable {
                 if (!driver[0].contains("Piloto")) {
                     String id = driver.length > 2 ? driver[2] : null;
 
-                    driverTeams.add(new Driver(driver[0], driver[1], id, driver[3]));
+                    Integer carNumber = driver.length > 4 ? Integer.parseInt(driver[4]) : null;
+
+                    driverTeams.add(new Driver(driver[0], driver[1], id, driver[3], carNumber));
                 }
             }
 

@@ -140,6 +140,13 @@ public class DriverTransformer {
     }
 
     private static String getDriverName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        if (driver.getCustId() == null) {
+            return drivers.stream().filter(d -> driver.getLivery().getCarNumber().equals(d.getCarNumber().toString()))
+                    .map(d -> d.getCarNumber().toString())
+                    .findAny()
+                    .orElse(driver.getDisplayName());
+        }
+
         return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
                 .map(Driver::getName)
                 .findAny()
@@ -169,6 +176,13 @@ public class DriverTransformer {
     }
 
     private static String getTeamName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        if (driver.getCustId() == null) {
+            return drivers.stream().filter(d -> driver.getLivery().getCarNumber().equals(d.getCarNumber().toString()))
+                    .map(Driver::getTeam)
+                    .findAny()
+                    .orElse(driver.getDisplayName());
+        }
+
         return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
                 .map(Driver::getTeam)
                 .findAny()
@@ -176,6 +190,13 @@ public class DriverTransformer {
     }
 
     private static String getTeamStatisticsName(br.com.rsousa.pojo.iracing.json.Result driver, List<Driver> drivers) {
+        if (driver.getCustId() == null) {
+            return drivers.stream().filter(d -> driver.getLivery().getCarNumber().equals(d.getCarNumber().toString()))
+                    .map(Driver::getTeamStatistics)
+                    .findAny()
+                    .orElse(driver.getDisplayName());
+        }
+
         return drivers.stream().filter(d -> driver.getCustId().toString().equals(d.getId()))
                 .map(Driver::getTeamStatistics)
                 .findAny()

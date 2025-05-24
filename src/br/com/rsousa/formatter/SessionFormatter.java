@@ -84,6 +84,10 @@ public class SessionFormatter {
     }
 
     public static String toSheetsResults(Event event) {
+        if (event.getQualifySession() == null && event.getRaceSessions().isEmpty()) {
+            return "";
+        }
+
         StringBuilder resultStr = new StringBuilder();
 
         List<Session> sessions = new ArrayList<>();
