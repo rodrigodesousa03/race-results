@@ -122,6 +122,10 @@ public class IRacingJsonTransformer implements SimulatorTransformer {
                                 driver.setStatus(DriverStatus.DID_NOT_FINISH);
                             }
 
+                            if ("Disqualified".equalsIgnoreCase(result.getReasonOut())) {
+                                driver.setStatus(DriverStatus.DISQUALIFIED);
+                            }
+
                             session.addDriver(driver);
                         }
                     }

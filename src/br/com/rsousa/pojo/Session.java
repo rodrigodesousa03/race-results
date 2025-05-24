@@ -1,5 +1,7 @@
 package br.com.rsousa.pojo;
 
+import br.com.rsousa.utils.SessionUtils;
+
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -27,10 +29,18 @@ public class Session {
 	}
 
 	public void sortDrivers() {
+
 		drivers = drivers.stream()
 				.sorted(Comparator.comparing(Driver::getCarClassId, Comparator.nullsFirst(Comparator.naturalOrder()))
 						.thenComparing(Driver::getPosition))
 				.collect(Collectors.toList());
+
+		for (Driver driver : drivers) {
+			if (driver.getStatus() == DriverStatus.DISQUALIFIED) {
+				SessionUtils.moveLastPosition(this, driver);
+				driver.setStatus(DriverStatus.DISQUALIFIED);
+			}
+		}
 	}
 
 	public Driver bestLapDriver() {
