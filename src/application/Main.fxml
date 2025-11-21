@@ -173,7 +173,7 @@
    <!-- Bottom Footer -->
    <bottom>
       <HBox alignment="CENTER" spacing="20" styleClass="footer">
-         <Text fx:id="versaoLabel" text="v6.5" styleClass="version-text" />
+         <Text fx:id="versaoLabel" text="v7.0" styleClass="version-text" />
          <Region HBox.hgrow="ALWAYS" />
          <Text text="Made by Rodrigo de Sousa" styleClass="footer-text" />
       </HBox>
