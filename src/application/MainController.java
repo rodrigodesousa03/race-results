@@ -19,7 +19,7 @@ import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.pojo.Driver;
@@ -87,6 +87,12 @@ public class MainController implements Initializable {
     @FXML
     private Text versaoLabel;
 
+    @FXML
+    private VBox welcomeScreen;
+
+    @FXML
+    private HBox resultsPanel;
+
     private List<Driver> driverTeams = new ArrayList<>();
 
     private Driver driverSelected;
@@ -98,6 +104,9 @@ public class MainController implements Initializable {
         positionColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().positionText()));
         driverColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().getName()));
         textColumn.setCellValueFactory(cellData -> new SimpleObjectProperty(cellData.getValue().text()));
+
+        // Set column resize policy programmatically for JavaFX 11 compatibility
+        raceTableView.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 
         raceTableView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> selectDriver(newValue));
@@ -141,20 +150,44 @@ public class MainController implements Initializable {
 
     @FXML
     void showDrivers() {
-        StringBuilder drivers = new StringBuilder();
+        VBox vBox = new VBox(10);
+        vBox.setStyle("-fx-padding: 15; -fx-background-color: white; -fx-background-radius: 8;");
+
+        // Header
+        Label header = new Label("Pilotos Carregados");
+        header.setStyle("-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #2C3E50; -fx-padding: 0 0 10 0;");
 
         if (driverTeams.isEmpty()) {
-            drivers.append("No Drivers");
+            Label emptyLabel = new Label("Nenhum piloto carregado");
+            emptyLabel.setStyle("-fx-font-size: 12px; -fx-text-fill: #95A5A6; -fx-padding: 20 0;");
+            vBox.getChildren().addAll(header, emptyLabel);
         } else {
-            driverTeams.stream().sorted(Comparator.comparing(Driver::getName))
-                    .forEach(d -> drivers.append(d).append("\n"));
+            // Separator
+            javafx.scene.control.Separator separator = new javafx.scene.control.Separator();
+            separator.setStyle("-fx-background-color: #E0E0E0;");
+
+            // Lista de pilotos com scroll
+            javafx.scene.control.ListView<String> listView = new javafx.scene.control.ListView<>();
+            listView.setPrefWidth(280);
+            listView.setPrefHeight(Math.min(driverTeams.size() * 28 + 10, 400));
+            listView.setStyle("-fx-background-color: #FAFAFA; -fx-border-color: transparent; -fx-font-size: 12px;");
+
+            // Adiciona pilotos ordenados
+            driverTeams.stream()
+                    .sorted(Comparator.comparing(Driver::getName))
+                    .forEach(d -> listView.getItems().add(d.getName()));
+
+            // Footer com contagem
+            Label footer = new Label(driverTeams.size() + " piloto(s) no total");
+            footer.setStyle("-fx-font-size: 11px; -fx-text-fill: #7F8C8D; -fx-padding: 10 0 0 0;");
+
+            vBox.getChildren().addAll(header, separator, listView, footer);
         }
 
-        Label label = new Label(drivers.toString());
-
-        VBox vBox = new VBox(label);
-
         popOver = new PopOver(vBox);
+        popOver.setArrowLocation(PopOver.ArrowLocation.TOP_RIGHT);
+        popOver.setCornerRadius(8);
+        popOver.setDetachable(false);
 
         popOver.show(textDrivers);
     }
@@ -168,7 +201,7 @@ public class MainController implements Initializable {
     void clearDrivers(ActionEvent event) {
         driverTeams.clear();
 
-        textDrivers.setText(0 + " Drivers");
+        textDrivers.setText(0 + " Pilotos");
     }
 
     @FXML
@@ -177,6 +210,23 @@ public class MainController implements Initializable {
 
         raceTextArea.setText(null);
         qualifyTextArea.setText(null);
+
+        // Show welcome screen again
+        showWelcomeScreen();
+    }
+
+    private void showWelcomeScreen() {
+        welcomeScreen.setVisible(true);
+        welcomeScreen.setManaged(true);
+        resultsPanel.setVisible(false);
+        resultsPanel.setManaged(false);
+    }
+
+    private void showResultsPanel() {
+        welcomeScreen.setVisible(false);
+        welcomeScreen.setManaged(false);
+        resultsPanel.setVisible(true);
+        resultsPanel.setManaged(true);
     }
 
     @FXML
@@ -368,6 +418,9 @@ public class MainController implements Initializable {
             }
 
             batteryComboBox.getSelectionModel().selectFirst();
+
+            // Show results panel after loading data
+            showResultsPanel();
         } catch (Exception e) {
             String fileName = file != null ? file.getName() : "arquivo desconhecido";
             Platform.runLater(() -> {
@@ -511,9 +564,26 @@ public class MainController implements Initializable {
         }
 
         if (!event.getRaceSessions().isEmpty()) {
+            // Salva o índice do driver selecionado antes de limpar
+            int selectedIndex = raceTableView.getSelectionModel().getSelectedIndex();
+
             raceTableView.getItems().clear();
             event.getRaceSessions().forEach(Session::sortDrivers);
             raceTableView.getItems().addAll(event.getRaceSessions().get(batteryComboBox.getValue()-1).drivers());
+
+            // Restaura a seleção se havia um driver selecionado
+            if (driverSelected != null && selectedIndex >= 0 && selectedIndex < raceTableView.getItems().size()) {
+                // Procura o driver na nova lista (a posição pode ter mudado)
+                for (int i = 0; i < raceTableView.getItems().size(); i++) {
+                    Driver driver = raceTableView.getItems().get(i);
+                    if (driver.getName().equals(driverSelected.getName())) {
+                        raceTableView.getSelectionModel().select(i);
+                        driverSelected = driver; // Atualiza a referência
+                        break;
+                    }
+                }
+            }
+
             raceTextArea.setText(SessionFormatter.format(event.getRaceSessions()));
             sheetsTextArea.setText(SessionFormatter.toSheets(event.getRaceSessions(), categoryTextField.getText(), circuitTextField.getText()));
         }
@@ -557,7 +627,7 @@ public class MainController implements Initializable {
                 }
             }
 
-            textDrivers.setText(driverTeams.size() + " Drivers");
+            textDrivers.setText(driverTeams.size() + " Pilotos");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {

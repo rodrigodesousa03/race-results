@@ -1,1 +1,513 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* Modern Race Results Application Styles - JavaFX 11 Compatible */
+
+/* Root */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 13px;
+    -fx-background-color: #F5F5F5;
+}
+
+/* Header */
+.header {
+    -fx-background-color: linear-gradient(to bottom, #2C3E50, #34495E);
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+.header-label {
+    -fx-text-fill: #ECF0F1;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+.header-checkbox {
+    -fx-text-fill: #ECF0F1;
+    -fx-font-size: 13px;
+}
+
+.driver-counter {
+    -fx-fill: #3498DB;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Modern Text Field */
+.modern-text-field {
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 5;
+    -fx-padding: 8;
+    -fx-font-size: 13px;
+}
+
+.modern-text-field:focused {
+    -fx-border-color: #3498DB;
+    -fx-border-width: 2;
+    -fx-background-insets: 0;
+}
+
+/* Button Styles */
+.button {
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 3, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 5, 0, 0, 2);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.button:pressed {
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+/* Primary Large Button - Main action */
+.btn-primary-large {
+    -fx-background-color: #E74C3C;
+    -fx-font-size: 14px;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+}
+
+.btn-primary-large:hover {
+    -fx-background-color: #C0392B;
+}
+
+/* Secondary Action Button - Less prominent */
+.btn-secondary-action {
+    -fx-background-color: #95A5A6;
+    -fx-font-size: 13px;
+    -fx-padding: 9 18;
+    -fx-font-weight: normal;
+}
+
+.btn-secondary-action:hover {
+    -fx-background-color: #7F8C8D;
+}
+
+/* Minimal Buttons - Very subtle */
+.btn-minimal {
+    -fx-background-color: transparent;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: #7F8C8D;
+    -fx-font-size: 11px;
+    -fx-padding: 6 12;
+    -fx-font-weight: normal;
+    -fx-effect: none;
+}
+
+.btn-minimal:hover {
+    -fx-background-color: #ECF0F1;
+    -fx-border-color: #95A5A6;
+    -fx-text-fill: #34495E;
+    -fx-effect: none;
+}
+
+.btn-minimal:pressed {
+    -fx-background-color: #BDC3C7;
+}
+
+/* Minimal Warning Button */
+.btn-minimal-warning {
+    -fx-background-color: transparent;
+    -fx-border-color: #E67E22;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-text-fill: #E67E22;
+    -fx-font-size: 11px;
+    -fx-padding: 6 12;
+    -fx-font-weight: normal;
+    -fx-effect: none;
+}
+
+.btn-minimal-warning:hover {
+    -fx-background-color: #E67E22;
+    -fx-text-fill: white;
+    -fx-effect: none;
+}
+
+.btn-minimal-warning:pressed {
+    -fx-background-color: #D35400;
+}
+
+.btn-success {
+    -fx-background-color: #27AE60;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-success:hover {
+    -fx-background-color: #229954;
+}
+
+.btn-orange {
+    -fx-background-color: #F39C12;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-orange:hover {
+    -fx-background-color: #D68910;
+}
+
+.btn-deep-orange {
+    -fx-background-color: #E67E22;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-deep-orange:hover {
+    -fx-background-color: #CA6F1E;
+}
+
+.btn-dark-red {
+    -fx-background-color: #C0392B;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-dark-red:hover {
+    -fx-background-color: #A93226;
+}
+
+.btn-danger {
+    -fx-background-color: #E74C3C;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #C0392B;
+}
+
+.btn-primary {
+    -fx-background-color: #3498DB;
+    -fx-padding: 10;
+    -fx-font-size: 12px;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #2980B9;
+}
+
+/* Panel */
+.panel {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 8, 0, 0, 2);
+    -fx-padding: 15;
+}
+
+.panel-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.panel-title-small {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.panel-controls {
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 8;
+}
+
+.label-bold {
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* Code Area (Text Area for logs) */
+.code-area {
+    -fx-control-inner-background: #FAFAFA;
+    -fx-font-family: 'Courier New', 'Consolas', 'Monaco', monospace;
+    -fx-font-size: 11px;
+    -fx-background-radius: 5;
+    -fx-text-fill: #2C3E50;
+}
+
+.code-area .content {
+    -fx-background-color: #FAFAFA;
+    -fx-padding: 5;
+}
+
+/* Modern Combo */
+.modern-combo {
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 5;
+}
+
+/* Modern Table */
+.modern-table {
+    -fx-background-color: #FAFAFA;
+    -fx-background-radius: 5;
+    -fx-border-color: #E0E0E0;
+    -fx-border-width: 1;
+    -fx-border-radius: 5;
+}
+
+.modern-table .column-header {
+    -fx-background-color: #34495E;
+}
+
+.modern-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10;
+    -fx-font-size: 13px;
+}
+
+.modern-table .column-header-background {
+    -fx-background-color: #34495E;
+}
+
+.modern-table .column-header-background .filler {
+    -fx-background-color: #34495E;
+}
+
+.modern-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+}
+
+.modern-table .table-row-cell:odd {
+    -fx-background-color: #F8F9FA;
+}
+
+.modern-table .table-row-cell:selected {
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+
+.modern-table .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+.modern-table .table-row-cell:hover {
+    -fx-background-color: #E3F2FD;
+    -fx-cursor: hand;
+}
+
+/* Hover em linha selecionada - mantém fundo azul escuro para legibilidade */
+.modern-table .table-row-cell:selected:hover {
+    -fx-background-color: #2E86C1;
+    -fx-text-fill: white;
+}
+
+.modern-table .table-row-cell:selected:hover .table-cell {
+    -fx-text-fill: white;
+}
+
+.modern-table .table-cell {
+    -fx-padding: 10 8;
+    -fx-alignment: CENTER_LEFT;
+    -fx-font-size: 13px;
+}
+
+.modern-table .table-column {
+    -fx-alignment: CENTER_LEFT;
+}
+
+/* Make table fill all available space */
+.modern-table .virtual-flow .scroll-bar:vertical,
+.modern-table .virtual-flow .scroll-bar:horizontal {
+    -fx-background-color: #F5F5F5;
+}
+
+/* Modern Tabs */
+.modern-tabs .tab-header-area {
+    -fx-padding: 0 0 5 0;
+}
+
+.modern-tabs .tab {
+    -fx-background-color: #ECF0F1;
+    -fx-background-radius: 5 5 0 0;
+    -fx-padding: 10 20;
+}
+
+.modern-tabs .tab:selected {
+    -fx-background-color: white;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 0 0 3 0;
+}
+
+.modern-tabs .tab:hover {
+    -fx-background-color: #D5DBDB;
+}
+
+.modern-tabs .tab .tab-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+.modern-tabs .tab-content-area {
+    -fx-background-color: white;
+    -fx-padding: 0;
+}
+
+/* Separator */
+.separator {
+    -fx-background-color: #E0E0E0;
+}
+
+.separator:vertical {
+    -fx-padding: 0 5;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 0 1 0 0;
+}
+
+/* ScrollBar */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #BDC3C7;
+    -fx-background-radius: 5;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #95A5A6;
+}
+
+/* Footer */
+.footer {
+    -fx-background-color: #ECF0F1;
+    -fx-padding: 10;
+    -fx-border-color: #BDC3C7;
+    -fx-border-width: 1 0 0 0;
+}
+
+.version-text {
+    -fx-font-size: 12px;
+    -fx-fill: #7F8C8D;
+    -fx-font-weight: bold;
+}
+
+.footer-text {
+    -fx-font-size: 12px;
+    -fx-fill: #7F8C8D;
+}
+
+/* Welcome Screen */
+.welcome-screen {
+    -fx-background-color: linear-gradient(to bottom, #ECF0F1, #D5DBDB);
+}
+
+.welcome-title-simple {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* Unified Drop Zone */
+.drop-zone-unified {
+    -fx-background-color: white;
+    -fx-border-color: #E74C3C;
+    -fx-border-width: 4;
+    -fx-border-style: dashed;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 30;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.2), 20, 0, 0, 5);
+}
+
+.drop-zone-unified:hover {
+    -fx-border-color: #C0392B;
+    -fx-background-color: #FFF5F5;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.4), 25, 0, 0, 8);
+    -fx-cursor: hand;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.drop-zone-main-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2C3E50;
+}
+
+/* Drop Instructions */
+.drop-instruction {
+    -fx-padding: 12 18;
+    -fx-background-color: #F8F9FA;
+    -fx-background-radius: 8;
+}
+
+.drop-instruction-primary {
+    -fx-padding: 12 18;
+    -fx-background-color: #FFEBEE;
+    -fx-background-radius: 8;
+}
+
+.drop-number {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #95A5A6;
+    -fx-min-width: 40;
+}
+
+.drop-number-primary {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E74C3C;
+    -fx-min-width: 40;
+}
+
+.drop-instruction-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495E;
+}
+
+.drop-instruction-title-primary {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #C0392B;
+}
+
+.drop-instruction-hint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #7F8C8D;
+}
+
+.drop-instruction-hint-primary {
+    -fx-font-size: 12px;
+    -fx-text-fill: #E74C3C;
+}
+
+/* Drop Arrow and CTA */
+.drop-zone-arrow-unified {
+    -fx-font-size: 42px;
+    -fx-text-fill: #E74C3C;
+}
+
+.drop-zone-cta {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E74C3C;
+}
+
+.welcome-footer-hint {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7F8C8D;
+}
+

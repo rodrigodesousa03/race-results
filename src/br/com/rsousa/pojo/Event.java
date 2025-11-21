@@ -11,6 +11,11 @@ public class Event {
     private List<Session> raceSessions;
     private List<Session> originalRaceSessions;
 
+    public Event() {
+        this.raceSessions = new ArrayList<>();
+        this.originalRaceSessions = new ArrayList<>();
+    }
+
     public void addSession(Session session, boolean isSelective) {
         if (session == null) {
             return;
@@ -71,13 +76,18 @@ public class Event {
 
     public void clear(boolean isSelective) {
         setRaceSessions(new ArrayList<>());
-        setOriginalRaceSessions(null);
+        setOriginalRaceSessions(new ArrayList<>());
         if (!isSelective) {
             setQualifySession(null);
         }
     }
 
     public void resetRace() {
+        if (originalRaceSessions == null || raceSessions == null) {
+            return;
+        }
+
+        raceSessions.clear();
         originalRaceSessions.stream()
                 .map(SessionUtils::duplicateRace)
                 .forEach(raceSessions::add);
