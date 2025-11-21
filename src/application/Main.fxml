@@ -87,7 +87,7 @@
                   <Font name="SansSerif Regular" size="18.0" />
                </font>
             </Text>
-            <Button layoutX="13.0" layoutY="51.0" mnemonicParsing="false" onAction="#readCsvFileChooser" prefHeight="32.0" prefWidth="425.0" style="-fx-background-color: #AAA;" text="Import Drivers (Optional)" textFill="WHITE">
+            <Button layoutX="14.0" layoutY="51.0" mnemonicParsing="false" onAction="#readCsvFileChooser" prefHeight="33.0" prefWidth="213.0" style="-fx-background-color: #AAA;" text="Import Drivers" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>
@@ -148,6 +148,11 @@
                   <Font name="Arial" size="12.0" />
                </font></CheckBox>
             <Button layoutX="460.0" layoutY="477.0" mnemonicParsing="false" onAction="#clear" prefHeight="43.0" prefWidth="93.0" style="-fx-background-color: #FF0808;" text="Clear" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="238.0" layoutY="51.0" mnemonicParsing="false" onAction="#readEventFileChooser" prefHeight="33.0" prefWidth="201.0" style="-fx-background-color: #AAA;" text="Import Event" textFill="WHITE">
                <font>
                   <Font name="Arial Black" size="15.0" />
                </font>

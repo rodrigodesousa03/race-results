@@ -9,13 +9,13 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Stream;
 
 import br.com.rsousa.formatter.SessionFormatter;
 import br.com.rsousa.pojo.Event;
 import br.com.rsousa.pojo.Session;
 import br.com.rsousa.transformers.*;
 import br.com.rsousa.utils.SessionUtils;
+import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -117,6 +117,25 @@ public class MainController implements Initializable {
         File file = fc.showOpenDialog(null);
 
         processDrivers(file);
+    }
+
+    @FXML
+    void readEventFileChooser(ActionEvent event) {
+        this.event.clear(selectiveCheckBox.isSelected());
+
+        FileChooser fc = new FileChooser();
+        fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV, JSON Files", fileTypes()));
+
+        File file = fc.showOpenDialog(null);
+
+        if (file.getName().contains("Cadastros")) {
+            driverTeams.clear();
+            processDrivers(file);
+        } else {
+            processLog(file);
+        }
+
+        showResults();
     }
 
     @FXML
@@ -326,10 +345,25 @@ public class MainController implements Initializable {
 
             batteryComboBox.getSelectionModel().selectFirst();
         } catch (Exception e) {
-            Alert a = new Alert(Alert.AlertType.ERROR);
-            a.setTitle("Erro ao importar o log");
-            a.setContentText(e.getMessage());
-            a.show();
+            String fileName = file != null ? file.getName() : "arquivo desconhecido";
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Erro ao importar o log");
+                alert.setHeaderText("Ocorreu um erro ao processar o arquivo: " + fileName);
+
+                String errorMessage = e.getMessage() != null ? e.getMessage() : "Erro desconhecido";
+                alert.setContentText(errorMessage);
+
+                // Adiciona detalhes expandíveis com o stack trace
+                TextArea textArea = new TextArea(getStackTraceAsString(e));
+                textArea.setEditable(false);
+                textArea.setWrapText(true);
+                textArea.setMaxWidth(Double.MAX_VALUE);
+                textArea.setMaxHeight(Double.MAX_VALUE);
+
+                alert.getDialogPane().setExpandableContent(textArea);
+                alert.showAndWait();
+            });
 
             e.printStackTrace();
         }
@@ -344,40 +378,70 @@ public class MainController implements Initializable {
         return fileName.substring(lastIndexOfDot + 1);
     }
 
-    private static boolean isIRacingLog(File file) {
-        StringBuilder contentBuilder = new StringBuilder();
-
-        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            e.printStackTrace();
+    private String getStackTraceAsString(Exception e) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(e.toString()).append("\n");
+        for (StackTraceElement element : e.getStackTrace()) {
+            sb.append("\tat ").append(element.toString()).append("\n");
         }
+        if (e.getCause() != null) {
+            sb.append("\nCaused by: ").append(e.getCause().toString()).append("\n");
+            for (StackTraceElement element : e.getCause().getStackTrace()) {
+                sb.append("\tat ").append(element.toString()).append("\n");
+            }
+        }
+        return sb.toString();
+    }
 
-        return contentBuilder.toString().contains("i_rating");
+    private static boolean isIRacingLog(File file) {
+        try {
+            // Tenta primeiro com UTF-8
+            String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.UTF_8);
+            return content.contains("i_rating");
+        } catch (Exception e) {
+            try {
+                // Se falhar, tenta com ISO-8859-1 (Latin1)
+                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.ISO_8859_1);
+                return content.contains("i_rating");
+            } catch (IOException ex) {
+                // Se ainda assim falhar, retorna false
+                return false;
+            }
+        }
     }
 
     private static boolean isAssettoCorsaLog(File file) {
-        StringBuilder contentBuilder = new StringBuilder();
-
-        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            e.printStackTrace();
+        try {
+            // Tenta primeiro com UTF-8
+            String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.UTF_8);
+            return content.contains("TrackName");
+        } catch (Exception e) {
+            try {
+                // Se falhar, tenta com ISO-8859-1 (Latin1)
+                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.ISO_8859_1);
+                return content.contains("TrackName");
+            } catch (IOException ex) {
+                // Se ainda assim falhar, retorna false
+                return false;
+            }
         }
-
-        return contentBuilder.toString().contains("TrackName");
     }
 
     private static boolean isAutomobilista2Log(File file) {
-        StringBuilder contentBuilder = new StringBuilder();
-
-        try (Stream<String> stream = Files.lines(Paths.get(file.getAbsolutePath()), StandardCharsets.UTF_8)) {
-            stream.forEach(s -> contentBuilder.append(s).append("\n"));
-        } catch (IOException e) {
-            e.printStackTrace();
+        try {
+            // Tenta primeiro com UTF-8
+            String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.UTF_8);
+            return content.contains("participants");
+        } catch (Exception e) {
+            try {
+                // Se falhar, tenta com ISO-8859-1 (Latin1)
+                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.ISO_8859_1);
+                return content.contains("participants");
+            } catch (IOException ex) {
+                // Se ainda assim falhar, retorna false
+                return false;
+            }
         }
-
-        return contentBuilder.toString().contains("participants");
     }
 
     private void selectDriver(Driver driver) {
