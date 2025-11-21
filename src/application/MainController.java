@@ -19,6 +19,7 @@ import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.KeyEvent;
 import org.controlsfx.control.PopOver;
 
 import br.com.rsousa.pojo.Driver;
@@ -315,18 +316,41 @@ public class MainController implements Initializable {
             case "xml", "XML" -> new RFactorTransformer();
             case "csv", "CSV" -> new IRacingCsvTransformer();
             case "json", "JSON" -> {
-                if (isIRacingLog(file)) {
+                // Verifica ACC primeiro para evitar confusão com Assetto Corsa normal
+                if (isAssettoCorsaCompetizioneLog(file)) {
+                    yield new AssettoCorsaCompetizioneTransformer();
+                } else if (isIRacingLog(file)) {
                     yield new IRacingJsonTransformer();
                 } else if (isAssettoCorsaLog(file)) {
                     yield new AssettoTransformer();
                 } else if (isAutomobilista2Log(file)) {
                     yield new Automobilista2Transformer();
                 } else {
-                    yield new AssettoCorsaCompetizioneTransformer();
+                    // Se nenhum tipo foi detectado, retorna EmptyTransformer
+                    yield new EmptyTransformer();
                 }
             }
             default -> new EmptyTransformer();
         };
+
+        // Verifica se o formato foi reconhecido
+        if (simulatorTransformer instanceof EmptyTransformer) {
+            String fileName = file != null ? file.getName() : "arquivo desconhecido";
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Formato não reconhecido");
+                alert.setHeaderText("Não foi possível identificar o formato do arquivo: " + fileName);
+                alert.setContentText("O arquivo não corresponde a nenhum formato conhecido:\n" +
+                        "- iRacing (JSON/CSV)\n" +
+                        "- Assetto Corsa (JSON)\n" +
+                        "- Automobilista 2 (JSON)\n" +
+                        "- Assetto Corsa Competizione (JSON)\n" +
+                        "- rFactor (XML)\n\n" +
+                        "Verifique se o arquivo é um log válido de corrida.");
+                alert.showAndWait();
+            });
+            return;
+        }
 
         try {
             boolean hardDnf = hardDnfCheckBox.isSelected();
@@ -414,12 +438,14 @@ public class MainController implements Initializable {
         try {
             // Tenta primeiro com UTF-8
             String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.UTF_8);
-            return content.contains("TrackName");
+            // Assetto Corsa (não Competizione) tem "TrackName" com T maiúsculo
+            // E não tem os campos específicos do ACC
+            return content.contains("\"TrackName\"") && !content.contains("\"sessionType\"");
         } catch (Exception e) {
             try {
                 // Se falhar, tenta com ISO-8859-1 (Latin1)
                 String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.ISO_8859_1);
-                return content.contains("TrackName");
+                return content.contains("\"TrackName\"") && !content.contains("\"sessionType\"");
             } catch (IOException ex) {
                 // Se ainda assim falhar, retorna false
                 return false;
@@ -428,20 +454,49 @@ public class MainController implements Initializable {
     }
 
     private static boolean isAutomobilista2Log(File file) {
-        try {
-            // Tenta primeiro com UTF-8
-            String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.UTF_8);
-            return content.contains("participants");
-        } catch (Exception e) {
+        String[] encodings = {"UTF-8", "UTF-16LE", "UTF-16BE", "UTF-16", "ISO-8859-1"};
+
+        for (String encoding : encodings) {
             try {
-                // Se falhar, tenta com ISO-8859-1 (Latin1)
-                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), StandardCharsets.ISO_8859_1);
-                return content.contains("participants");
-            } catch (IOException ex) {
-                // Se ainda assim falhar, retorna false
-                return false;
+                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), encoding);
+                if (content.trim().contains("participants")) {
+                    return true;
+                }
+            } catch (Exception e) {
+                // Continua tentando outros encodings
             }
         }
+        return false;
+    }
+
+    private static boolean isAssettoCorsaCompetizioneLog(File file) {
+        // Tenta múltiplos encodings
+        String[] encodings = {"UTF-8", "UTF-16LE", "UTF-16BE", "UTF-16", "ISO-8859-1"};
+
+        for (String encoding : encodings) {
+            try {
+                String content = new String(Files.readAllBytes(Paths.get(file.getAbsolutePath())), encoding);
+                String cleanContent = content.trim();
+
+                // Se começar com BOM ou caracteres inválidos, pula
+                if (cleanContent.isEmpty() || cleanContent.charAt(0) == '\uFFFD') {
+                    continue;
+                }
+
+                // ACC logs contêm "sessionType", "trackName" (minúsculo) e "leaderBoardLines"
+                boolean hasSessionType = cleanContent.contains("\"sessionType\"");
+                boolean hasTrackName = cleanContent.contains("\"trackName\"");
+                boolean hasLeaderBoardLines = cleanContent.contains("\"leaderBoardLines\"");
+
+                if (hasSessionType && hasTrackName && hasLeaderBoardLines) {
+                    return true;
+                }
+            } catch (Exception e) {
+                // Continua tentando outros encodings
+            }
+        }
+
+        return false;
     }
 
     private void selectDriver(Driver driver) {

@@ -111,11 +111,34 @@ public class AssettoCorsaCompetizioneTransformer implements SimulatorTransformer
     }
 
     private Session createSession(File file) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader (Files.newInputStream(file.toPath()), StandardCharsets.UTF_8));
+        String[] encodings = {"UTF-8", "UTF-16LE", "UTF-16BE", "UTF-16"};
+        IOException lastException = null;
 
-        Gson gson = new Gson();
+        for (String encoding : encodings) {
+            try (BufferedReader in = new BufferedReader(new InputStreamReader(Files.newInputStream(file.toPath()), encoding))) {
+                Gson gson = new Gson();
+                Session session = gson.fromJson(in, Session.class);
 
-        return gson.fromJson(in, Session.class);
+                if (session == null) {
+                    continue; // Tenta próximo encoding
+                }
+
+                return session;
+            } catch (JsonSyntaxException | JsonIOException e) {
+                lastException = new IOException("Erro ao processar o arquivo JSON com encoding " + encoding + ". Detalhes: " + e.getMessage(), e);
+                // Continua tentando outros encodings
+            } catch (IOException e) {
+                lastException = e;
+                // Continua tentando outros encodings
+            }
+        }
+
+        // Se chegou aqui, nenhum encoding funcionou
+        if (lastException != null) {
+            throw lastException;
+        } else {
+            throw new IOException("Arquivo JSON inválido ou vazio. O arquivo não está no formato esperado para Assetto Corsa Competizione.");
+        }
     }
 
     private String formatSeconds(Long time) {
