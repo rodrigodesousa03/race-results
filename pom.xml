@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>br.com.rsousa</groupId>
+    <artifactId>race-results</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Race Results</name>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <javafx.version>17.0.10</javafx.version>
+    </properties>
+
+    <dependencies>
+        <!-- JavaFX 17 do Maven Central (compativel com JDK 17) -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- Bibliotecas da pasta lib/ -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.6</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/gson-2.8.6.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.xml.bind</groupId>
+            <artifactId>jakarta.xml.bind-api</artifactId>
+            <version>2.3.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jakarta.xml.bind-api-2.3.3.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jaxb</groupId>
+            <artifactId>jaxb-runtime</artifactId>
+            <version>2.3.3</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/jaxb-runtime-2.3.3.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.istack</groupId>
+            <artifactId>istack-commons-runtime</artifactId>
+            <version>3.0.11</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/istack-commons-runtime-3.0.11.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.activation</groupId>
+            <artifactId>activation</artifactId>
+            <version>1.1.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/activation-1.1.1.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.controlsfx</groupId>
+            <artifactId>controlsfx</artifactId>
+            <version>8.40.14</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/controlsfx-8.40.14.jar</systemPath>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <!-- Compilador com JDK 17 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                    <fork>true</fork>
+                    <executable>C:/Users/rdsou/.jdks/azul-17.0.10/bin/javac.exe</executable>
+                </configuration>
+            </plugin>
+
+            <!-- Desempacota tudo em target/classes + copia JARs para dist/javafx/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>unpack-system-deps</id>
+                        <phase>prepare-package</phase>
+                        <goals><goal>unpack-dependencies</goal></goals>
+                        <configuration>
+                            <includeScope>system</includeScope>
+                            <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                            <excludes>META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA</excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>unpack-javafx</id>
+                        <phase>prepare-package</phase>
+                        <goals><goal>unpack</goal></goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-base</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <excludes>META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-controls</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <excludes>META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-fxml</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <excludes>META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA</excludes>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-graphics</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+                                    <excludes>META-INF/*.SF,META-INF/*.DSA,META-INF/*.RSA</excludes>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy-javafx-to-dist</id>
+                        <phase>package</phase>
+                        <goals><goal>copy</goal></goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-base</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.directory}/dist/javafx</outputDirectory>
+                                    <destFileName>javafx-base.jar</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-controls</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.directory}/dist/javafx</outputDirectory>
+                                    <destFileName>javafx-controls.jar</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-fxml</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.directory}/dist/javafx</outputDirectory>
+                                    <destFileName>javafx-fxml.jar</destFileName>
+                                </artifactItem>
+                                <artifactItem>
+                                    <groupId>org.openjfx</groupId>
+                                    <artifactId>javafx-graphics</artifactId>
+                                    <version>${javafx.version}</version>
+                                    <classifier>win</classifier>
+                                    <outputDirectory>${project.build.directory}/dist/javafx</outputDirectory>
+                                    <destFileName>javafx-graphics.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Gera RaceResults.jar com tudo dentro -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals><goal>single</goal></goals>
+                        <configuration>
+                            <archive>
+                                <manifest>
+                                    <mainClass>application.Main</mainClass>
+                                </manifest>
+                            </archive>
+                            <descriptors>
+                                <descriptor>src/assembly/jar-with-deps.xml</descriptor>
+                            </descriptors>
+                            <finalName>RaceResults</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Copia o JAR e cria o script bat portavel em dist/ -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>3.1.0</version>
+                <executions>
+                    <execution>
+                        <id>create-dist</id>
+                        <phase>package</phase>
+                        <goals><goal>run</goal></goals>
+                        <configuration>
+                            <target>
+                                <copy file="${project.build.directory}/RaceResults.jar"
+                                      todir="${project.build.directory}/dist"/>
+                                <echo file="${project.build.directory}/dist/RaceResults.bat">@echo off
+SET DIR=%~dp0
+SET DIR=%DIR:~0,-1%
+java --module-path "%DIR%\javafx" --add-modules javafx.controls,javafx.fxml,javafx.graphics -jar "%DIR%\RaceResults.jar"
+if errorlevel 1 (
+    echo.
+    echo ERRO: Java nao encontrado ou versao incompativel.
+    echo Instale o Java 17 LTS em:
+    echo https://www.azul.com/downloads/?version=java-17-lts^&amp;os=windows^&amp;package=jdk#zulu
+    pause
+)
+</echo>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+
+

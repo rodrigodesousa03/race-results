@@ -11,3 +11,13 @@ Support for the following simulators:
 - iRacing
 - RFactor
 - RFactor 2
+
+## Build
+
+Para gerar o build do projeto, execute o seguinte comando na raiz do projeto:
+
+```bash
+mvn clean package
+```
+
+O arquivo JAR será gerado na pasta `target/`.
