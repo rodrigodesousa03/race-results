@@ -1,0 +1,1982 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE rF [
+<!ENTITY rFEnt "rFactor Entity">
+]>
+<rFactorXML version="1.0">
+<RaceResults>
+<Setting>Multiplayer</Setting>
+<ServerName>F1BC Etapa Oficial</ServerName>
+<PlayerFile>DedicatedServer</PlayerFile>
+<DateTime>1575499981</DateTime>
+<TimeString>2019/12/04 17:53:01</TimeString>
+<Mod>reiza500.srs</Mod>
+<Season></Season>
+<TrackVenue>F1BC Tracks</TrackVenue>
+<TrackCourse>Monza</TrackCourse>
+<TrackEvent>Monza</TrackEvent>
+<TrackLength>5788.8</TrackLength>
+<Game>Automobilista</Game>
+<GameVersion>v1.5.3</GameVersion>
+<Dedicated>1</Dedicated>
+<ConnectionType upload="8042" download="8042">Custom</ConnectionType>
+<MOTD>f1bc.com</MOTD>
+<RaceLaps>0</RaceLaps>
+<RaceTime>50</RaceTime>
+<MechFailRate>1</MechFailRate>
+<DamageMult>100</DamageMult>
+<FuelMult>1</FuelMult>
+<TireMult>1</TireMult>
+<VehiclesAllowed>|CopaMarcas</VehiclesAllowed>
+<ParcFerme>1</ParcFerme>
+<FixedSetups>1</FixedSetups>
+<FreeSettings>255</FreeSettings>
+<FixedUpgrades>0</FixedUpgrades>
+<Race>
+<DateTime>1575502650</DateTime>
+<TimeString>2019/12/04 18:37:30</TimeString>
+<Laps>2147483647</Laps>
+<Minutes>50</Minutes>
+<Stream>
+<Chat et="7.2">Jaime Boueri left the game.</Chat>
+<Chat et="65.8">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="73.3">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="76.4">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="80.7">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="87.7">Luiz Brambila: Leaving pits</Chat>
+<Incident et="88.0">Raul Malaguty(17) reported contact (0.03) with another vehicle Bidu Fiel(1)</Incident>
+<Incident et="89.6">Andre Retek(7) reported contact (0.10) with another vehicle Robson Radaell(10)</Incident>
+<Incident et="89.6">Andre Retek(7) reported contact (0.03) with another vehicle Robson Radaell(10)</Incident>
+<Incident et="89.7">Robson Radaell(10) reported contact (0.10) with another vehicle Andre Retek(7)</Incident>
+<Incident et="91.2">Matheus Saliba(0) reported contact (0.26) with another vehicle Andre Retek(7)</Incident>
+<Incident et="91.2">Matheus Saliba(0) reported contact (0.10) with another vehicle Andre Retek(7)</Incident>
+<Incident et="91.2">Andre Retek(7) reported contact (0.06) with another vehicle Matheus Saliba(0)</Incident>
+<Incident et="91.3">Andre Retek(7) reported contact (0.03) with another vehicle Matheus Saliba(0)</Incident>
+<Incident et="91.7">Marcelo Eduardo(8) reported contact (0.03) with another vehicle Joao Junior(20)</Incident>
+<Incident et="91.8">Marcelo Eduardo(8) reported contact (0.26) with another vehicle Matheus Saliba(0)</Incident>
+<Incident et="91.9">Philipe Coutinho(6) reported contact (0.03) with another vehicle Pedro Sodre(23)</Incident>
+<Chat et="91.9">Luiz Brambila: Leaving pits</Chat>
+<Incident et="91.9">Matheus Saliba(0) reported contact (0.39) with another vehicle Marcelo Eduardo(8)</Incident>
+<Incident et="91.9">Matheus Saliba(0) reported contact (0.06) with another vehicle Marcelo Eduardo(8)</Incident>
+<Incident et="92.2">Philipe Coutinho(6) reported contact (0.16) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="92.2">Philipe Coutinho(6) reported contact (0.03) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="92.2">Marcelo Eduardo(8) reported contact (0.19) with another vehicle Fred Quintao(5)</Incident>
+<Incident et="92.5">Fred Quintao(5) reported contact (0.03) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="92.5">Marcelo Eduardo(8) reported contact (0.19) with another vehicle Fred Quintao(5)</Incident>
+<Incident et="92.6">Fred Quintao(5) reported contact (0.13) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="92.6">Marilson Muniz(13) reported contact (0.23) with another vehicle Fred Quintao(5)</Incident>
+<Incident et="92.8">Henrique Galleazzi(18) reported contact (0.10) with another vehicle Fred Quintao(5)</Incident>
+<Incident et="93.0">Philipe Coutinho(6) reported contact (0.13) with another vehicle Pedro Sodre(23)</Incident>
+<Incident et="93.0">Philipe Coutinho(6) reported contact (0.00) with another vehicle Luiz Brambila(24)</Incident>
+<Incident et="93.0">Pedro Sodre(23) reported contact (0.13) with another vehicle Philipe Coutinho(6)</Incident>
+<Incident et="93.1">Pedro Sodre(23) reported contact (0.13) with another vehicle Philipe Coutinho(6)</Incident>
+<Incident et="95.6">Pedro Sodre(23) reported contact (0.26) with another vehicle Luiz Brambila(24)</Incident>
+<Incident et="95.6">Pedro Sodre(23) reported contact (0.10) with another vehicle Luiz Brambila(24)</Incident>
+<Incident et="95.7">Luiz Brambila(24) reported contact (0.16) with another vehicle Pedro Sodre(23)</Incident>
+<Incident et="95.8">Luiz Brambila(24) reported contact (0.00) with another vehicle Pedro Sodre(23)</Incident>
+<Chat et="96.1">Luiz Brambila: Slowing to pit</Chat>
+<Incident et="96.3">Luiz Brambila(24) reported contact (0.10) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="96.3">Marilson Muniz(13) reported contact (0.10) with another vehicle Luiz Brambila(24)</Incident>
+<Chat et="99.8">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="104.2">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="110.6">Luiz Brambila: Slowing to pit</Chat>
+<Incident et="114.1">Augusto Zimmer(4) reported contact (0.10) with another vehicle Raul Malaguty(17)</Incident>
+<Incident et="114.2">Augusto Zimmer(4) reported contact (0.00) with another vehicle Raul Malaguty(17)</Incident>
+<Incident et="114.2">Raul Malaguty(17) reported contact (0.03) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="115.5">Augusto Zimmer(4) reported contact (1.00) with Immovable</Incident>
+<Incident et="115.8">Augusto Zimmer(4) reported contact (0.65) with Sign</Incident>
+<Incident et="116.0">Raul Malaguty(17) reported contact (1.00) with Sign</Incident>
+<Incident et="116.0">Raul Malaguty(17) reported contact (0.39) with Sign</Incident>
+<Incident et="116.2">Raul Malaguty(17) reported contact (0.77) with Immovable</Incident>
+<Incident et="116.4">Raul Malaguty(17) reported contact (0.74) with Immovable</Incident>
+<Incident et="116.4">Raul Malaguty(17) reported contact (0.03) with Immovable</Incident>
+<Chat et="119.4">Luiz Brambila: Leaving pits</Chat>
+<Score et="120.6">Augusto Zimmer(4) lap=0 point=1 t=-1.000 et=120.489</Score>
+<Incident et="120.6">Marilson Muniz(13) reported contact (0.13) with another vehicle Fred Quintao(5)</Incident>
+<Score et="120.7">Bidu Fiel(1) lap=0 point=1 t=51.927 et=120.551</Score>
+<Incident et="120.9">Luiz Brambila(24) reported contact (0.06) with another vehicle Marilson Muniz(13)</Incident>
+<Incident et="121.0">Hernani Klehm(11) reported contact (0.10) with another vehicle Pedro Sodre(23)</Incident>
+<Incident et="121.0">Pedro Sodre(23) reported contact (0.10) with another vehicle Hernani Klehm(11)</Incident>
+<Chat et="121.1">Diretor Principal: /callvotekick luiz brambila</Chat>
+<Score et="121.4">Raul Malaguty(17) lap=0 point=1 t=-1.000 et=121.311</Score>
+<Score et="121.5">Robson Radaell(10) lap=0 point=1 t=-1.000 et=121.395</Score>
+<Chat et="122.2">Luiz Brambila: Leaving pits</Chat>
+<Score et="122.5">Andre Retek(7) lap=0 point=1 t=53.723 et=122.347</Score>
+<Score et="123.0">Emerson Bracisievicz(12) lap=0 point=1 t=54.201 et=122.826</Score>
+<Score et="123.1">Joao Junior(20) lap=0 point=1 t=54.391 et=123.016</Score>
+<Incident et="123.4">Fred Quintao(5) reported contact (1.00) with Immovable</Incident>
+<Score et="123.6">Matheus Saliba(0) lap=0 point=1 t=54.891 et=123.516</Score>
+<Score et="124.2">Marcelo Eduardo(8) lap=0 point=1 t=55.446 et=124.070</Score>
+<Chat et="124.7">Luiz Brambila: Slowing to pit</Chat>
+<Incident et="125.0">Luiz Brambila(24) reported contact (0.03) with another vehicle Hernani Klehm(11)</Incident>
+<Score et="125.9">Henrique Galleazzi(18) lap=0 point=1 t=57.175 et=125.800</Score>
+<Score et="126.3">Hernani Klehm(11) lap=0 point=1 t=57.584 et=126.208</Score>
+<Score et="126.4">Luiz Brambila(24) lap=0 point=1 t=57.628 et=126.253</Score>
+<Score et="126.8">Pedro Sodre(23) lap=0 point=1 t=58.025 et=126.650</Score>
+<Score et="127.1">Marilson Muniz(13) lap=0 point=1 t=58.345 et=126.969</Score>
+<Score et="127.6">Alexandre Reys(15) lap=0 point=1 t=58.809 et=127.433</Score>
+<Score et="129.0">Philipe Coutinho(6) lap=0 point=1 t=60.303 et=128.928</Score>
+<Chat et="129.2">Luiz Brambila: Slowing to pit</Chat>
+<Chat et="129.9">Diretor Principal: /callvotekick luiz brambila</Chat>
+<Vote et="138.1">Diretor Principal: /callvote kick luiz brambila</Vote>
+<Sent et="138.1">&quot;kick Luiz Brambila&quot; proposed by Diretor Principal (ADMIN): vote PASSED</Sent>
+<Chat et="138.4">Luiz Brambila was removed from the game: </Chat>
+<Chat et="138.6">Luiz Brambila left the game.</Chat>
+<Score et="145.0">Fred Quintao(5) lap=0 point=1 t=76.203 et=144.828</Score>
+<Score et="164.0">Bidu Fiel(1) lap=0 point=2 t=95.228 et=163.853</Score>
+<Score et="165.9">Raul Malaguty(17) lap=0 point=2 t=-1.000 et=165.789</Score>
+<Score et="166.4">Augusto Zimmer(4) lap=0 point=2 t=-1.000 et=166.254</Score>
+<Score et="167.1">Robson Radaell(10) lap=0 point=2 t=-1.000 et=166.942</Score>
+<Score et="167.4">Andre Retek(7) lap=0 point=2 t=98.703 et=167.327</Score>
+<Score et="167.7">Emerson Bracisievicz(12) lap=0 point=2 t=98.983 et=167.608</Score>
+<Score et="167.9">Joao Junior(20) lap=0 point=2 t=99.141 et=167.765</Score>
+<Score et="168.2">Matheus Saliba(0) lap=0 point=2 t=99.504 et=168.129</Score>
+<Score et="168.7">Marcelo Eduardo(8) lap=0 point=2 t=99.992 et=168.617</Score>
+<Score et="169.6">Henrique Galleazzi(18) lap=0 point=2 t=100.865 et=169.489</Score>
+<Score et="170.0">Hernani Klehm(11) lap=0 point=2 t=101.279 et=169.904</Score>
+<Score et="171.1">Pedro Sodre(23) lap=0 point=2 t=102.364 et=170.988</Score>
+<Score et="171.8">Marilson Muniz(13) lap=0 point=2 t=103.007 et=171.632</Score>
+<Score et="173.3">Alexandre Reys(15) lap=0 point=2 t=104.591 et=173.216</Score>
+<Score et="174.0">Philipe Coutinho(6) lap=0 point=2 t=105.257 et=173.881</Score>
+<Incident et="190.7">Emerson Bracisievicz(12) reported contact (1.00) with Immovable</Incident>
+<Incident et="190.7">Emerson Bracisievicz(12) reported contact (0.06) with Immovable</Incident>
+<Incident et="191.0">Emerson Bracisievicz(12) reported contact (0.03) with Immovable</Incident>
+<Incident et="191.0">Emerson Bracisievicz(12) reported contact (0.10) with Immovable</Incident>
+<Vote et="199.9">Diretor Principal: /addpenalty -1 pedro sodre</Vote>
+<Penalty et="199.9">Pedro Sodre received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Chat et="199.9">Drive Thru penalty assigned by live steward to: Pedro Sodre</Chat>
+<Score et="201.8">Bidu Fiel(1) lap=1 point=0 t=133.115 et=201.740</Score>
+<Sent et="202.0">Pedro Sodre has left the game but vehicle has been stored in the garage</Sent>
+<Score et="203.9">Raul Malaguty(17) lap=1 point=0 t=-1.000 et=203.823</Score>
+<Score et="204.2">Augusto Zimmer(4) lap=1 point=0 t=-1.000 et=204.144</Score>
+<Score et="204.9">Robson Radaell(10) lap=1 point=0 t=-1.000 et=204.797</Score>
+<Score et="205.2">Andre Retek(7) lap=1 point=0 t=136.514 et=205.139</Score>
+<Score et="206.0">Matheus Saliba(0) lap=1 point=0 t=137.297 et=205.921</Score>
+<Score et="206.1">Joao Junior(20) lap=1 point=0 t=137.420 et=206.045</Score>
+<Score et="206.5">Marcelo Eduardo(8) lap=1 point=0 t=137.748 et=206.373</Score>
+<Score et="207.8">Hernani Klehm(11) lap=1 point=0 t=139.075 et=207.700</Score>
+<Score et="207.9">Henrique Galleazzi(18) lap=1 point=0 t=139.175 et=207.800</Score>
+<Score et="210.0">Marilson Muniz(13) lap=1 point=0 t=141.266 et=209.890</Score>
+<Score et="211.9">Philipe Coutinho(6) lap=1 point=0 t=143.153 et=211.778</Score>
+<Score et="212.4">Alexandre Reys(15) lap=1 point=0 t=143.642 et=212.267</Score>
+<Vote et="239.2">Diretor Principal: /addpenalty -1 raul malaguty</Vote>
+<Penalty et="239.2">Raul Malaguty received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Chat et="239.2">Drive Thru penalty assigned by live steward to: Raul Malaguty</Chat>
+<Score et="244.8">Bidu Fiel(1) lap=1 point=1 t=42.898 et=244.637</Score>
+<Score et="247.6">Raul Malaguty(17) lap=1 point=1 t=43.663 et=247.486</Score>
+<Score et="247.8">Augusto Zimmer(4) lap=1 point=1 t=43.491 et=247.635</Score>
+<Score et="248.3">Robson Radaell(10) lap=1 point=1 t=43.375 et=248.172</Score>
+<Score et="248.6">Andre Retek(7) lap=1 point=1 t=-1.000 et=248.552</Score>
+<Score et="249.5">Joao Junior(20) lap=1 point=1 t=43.400 et=249.445</Score>
+<Score et="250.0">Matheus Saliba(0) lap=1 point=1 t=43.936 et=249.858</Score>
+<Score et="250.6">Marcelo Eduardo(8) lap=1 point=1 t=44.069 et=250.442</Score>
+<Score et="251.6">Hernani Klehm(11) lap=1 point=1 t=43.800 et=251.500</Score>
+<Score et="252.0">Henrique Galleazzi(18) lap=1 point=1 t=-1.000 et=251.875</Score>
+<Score et="254.7">Marilson Muniz(13) lap=1 point=1 t=44.631 et=254.521</Score>
+<Score et="256.0">Philipe Coutinho(6) lap=1 point=1 t=44.101 et=255.879</Score>
+<Score et="257.8">Alexandre Reys(15) lap=1 point=1 t=45.419 et=257.686</Score>
+<Incident et="262.9">Augusto Zimmer(4) reported contact (0.16) with another vehicle Robson Radaell(10)</Incident>
+<Incident et="262.9">Augusto Zimmer(4) reported contact (0.03) with another vehicle Robson Radaell(10)</Incident>
+<Incident et="263.0">Robson Radaell(10) reported contact (0.19) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="263.0">Robson Radaell(10) reported contact (0.00) with another vehicle Augusto Zimmer(4)</Incident>
+<Vote et="272.5">Diretor Principal: /addpenalty -1 marilson muniz</Vote>
+<Penalty et="272.6">Marilson Muniz received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Chat et="272.6">Drive Thru penalty assigned by live steward to: Marilson Muniz</Chat>
+<Score et="275.8">Emerson Bracisievicz(12) lap=1 point=0 t=207.020 et=275.644</Score>
+<Score et="288.0">Bidu Fiel(1) lap=1 point=2 t=86.137 et=287.876</Score>
+<Score et="291.4">Raul Malaguty(17) lap=1 point=2 t=87.463 et=291.286</Score>
+<Score et="291.7">Augusto Zimmer(4) lap=1 point=2 t=87.382 et=291.526</Score>
+<Score et="292.1">Robson Radaell(10) lap=1 point=2 t=87.220 et=292.017</Score>
+<Score et="292.9">Andre Retek(7) lap=1 point=2 t=-1.000 et=292.747</Score>
+<Score et="293.2">Joao Junior(20) lap=1 point=2 t=87.073 et=293.117</Score>
+<Score et="293.6">Matheus Saliba(0) lap=1 point=2 t=87.575 et=293.496</Score>
+<Score et="294.3">Marcelo Eduardo(8) lap=1 point=2 t=87.772 et=294.145</Score>
+<Score et="296.5">Henrique Galleazzi(18) lap=1 point=2 t=-1.000 et=296.379</Score>
+<Score et="296.6">Hernani Klehm(11) lap=1 point=2 t=88.757 et=296.457</Score>
+<Score et="298.2">Marilson Muniz(13) lap=1 point=2 t=88.131 et=298.022</Score>
+<Score et="300.2">Philipe Coutinho(6) lap=1 point=2 t=88.411 et=300.189</Score>
+<Score et="302.6">Alexandre Reys(15) lap=1 point=2 t=90.175 et=302.443</Score>
+<Score et="324.7">Emerson Bracisievicz(12) lap=1 point=1 t=48.951 et=324.595</Score>
+<Score et="326.0">Bidu Fiel(1) lap=2 point=0 t=124.100 et=325.840</Score>
+<Score et="329.6">Raul Malaguty(17) lap=2 point=0 t=125.643 et=329.466</Score>
+<Score et="329.6">Augusto Zimmer(4) lap=2 point=0 t=125.401 et=329.545</Score>
+<Score et="329.8">Robson Radaell(10) lap=2 point=0 t=124.870 et=329.667</Score>
+<Score et="330.9">Joao Junior(20) lap=2 point=0 t=124.742 et=330.787</Score>
+<Score et="331.0">Andre Retek(7) lap=2 point=0 t=-1.000 et=330.875</Score>
+<Score et="331.1">Matheus Saliba(0) lap=2 point=0 t=125.061 et=330.982</Score>
+<Score et="332.4">Marcelo Eduardo(8) lap=2 point=0 t=125.964 et=332.336</Score>
+<Score et="334.8">Hernani Klehm(11) lap=2 point=0 t=127.038 et=334.738</Score>
+<Score et="335.0">Henrique Galleazzi(18) lap=2 point=0 t=-1.000 et=334.932</Score>
+<Score et="336.5">Marilson Muniz(13) lap=2 point=0 t=126.500 et=336.390</Score>
+<Score et="338.5">Philipe Coutinho(6) lap=2 point=0 t=126.611 et=338.389</Score>
+<Score et="342.5">Alexandre Reys(15) lap=2 point=0 t=130.098 et=342.366</Score>
+<Score et="368.2">Emerson Bracisievicz(12) lap=1 point=2 t=92.479 et=368.123</Score>
+<Score et="369.0">Bidu Fiel(1) lap=2 point=1 t=43.062 et=368.901</Score>
+<Vote et="370.4">Diretor Principal: /addpenalty  -1 matheus saliba</Vote>
+<Score et="373.2">Raul Malaguty(17) lap=2 point=1 t=43.624 et=373.090</Score>
+<Score et="374.0">Robson Radaell(10) lap=2 point=1 t=44.183 et=373.849</Score>
+<Score et="374.5">Joao Junior(20) lap=2 point=1 t=43.623 et=374.410</Score>
+<Score et="374.7">Andre Retek(7) lap=2 point=1 t=43.685 et=374.561</Score>
+<Score et="375.2">Matheus Saliba(0) lap=2 point=1 t=44.162 et=375.144</Score>
+<Score et="376.0">Marcelo Eduardo(8) lap=2 point=1 t=43.530 et=375.867</Score>
+<Score et="378.3">Hernani Klehm(11) lap=2 point=1 t=43.447 et=378.184</Score>
+<Score et="378.6">Henrique Galleazzi(18) lap=2 point=1 t=43.570 et=378.502</Score>
+<Score et="380.6">Marilson Muniz(13) lap=2 point=1 t=44.050 et=380.440</Score>
+<Score et="382.3">Philipe Coutinho(6) lap=2 point=1 t=43.802 et=382.190</Score>
+<Vote et="385.3">Diretor Principal: /addpenalty -1 matheus saliba</Vote>
+<Penalty et="385.4">Matheus Saliba received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Chat et="385.4">Drive Thru penalty assigned by live steward to: Matheus Saliba</Chat>
+<Score et="386.8">Alexandre Reys(15) lap=2 point=1 t=44.354 et=386.719</Score>
+<Score et="406.4">Emerson Bracisievicz(12) lap=2 point=0 t=130.667 et=406.312</Score>
+<Score et="412.0">Bidu Fiel(1) lap=2 point=2 t=86.016 et=411.855</Score>
+<Score et="417.2">Augusto Zimmer(4) lap=2 point=2 t=87.565 et=417.110</Score>
+<Score et="417.6">Raul Malaguty(17) lap=2 point=2 t=88.006 et=417.472</Score>
+<Score et="418.2">Robson Radaell(10) lap=2 point=2 t=88.388 et=418.054</Score>
+<Score et="418.3">Joao Junior(20) lap=2 point=2 t=87.412 et=418.199</Score>
+<Score et="418.5">Andre Retek(7) lap=2 point=2 t=87.552 et=418.428</Score>
+<Score et="418.8">Matheus Saliba(0) lap=2 point=2 t=87.726 et=418.709</Score>
+<Score et="419.2">Marcelo Eduardo(8) lap=2 point=2 t=86.736 et=419.072</Score>
+<Score et="421.8">Hernani Klehm(11) lap=2 point=2 t=86.920 et=421.658</Score>
+<Score et="422.1">Henrique Galleazzi(18) lap=2 point=2 t=87.093 et=422.025</Score>
+<Score et="425.1">Marilson Muniz(13) lap=2 point=2 t=88.615 et=425.006</Score>
+<Score et="426.8">Philipe Coutinho(6) lap=2 point=2 t=88.344 et=426.733</Score>
+<Score et="431.3">Alexandre Reys(15) lap=2 point=2 t=88.793 et=431.158</Score>
+<Score et="449.7">Bidu Fiel(1) lap=3 point=0 t=123.712 et=449.552</Score>
+<Score et="450.3">Emerson Bracisievicz(12) lap=2 point=1 t=43.872 et=450.183</Score>
+<Score et="455.6">Augusto Zimmer(4) lap=3 point=0 t=125.918 et=455.463</Score>
+<Score et="455.6">Raul Malaguty(17) lap=3 point=0 t=126.034 et=455.500</Score>
+<Score et="456.3">Joao Junior(20) lap=3 point=0 t=125.373 et=456.160</Score>
+<Score et="456.4">Robson Radaell(10) lap=3 point=0 t=126.625 et=456.292</Score>
+<Score et="456.5">Matheus Saliba(0) lap=3 point=0 t=125.449 et=456.431</Score>
+<Score et="456.6">Andre Retek(7) lap=3 point=0 t=125.647 et=456.522</Score>
+<Score et="457.0">Marcelo Eduardo(8) lap=3 point=0 t=124.606 et=456.942</Score>
+<Score et="459.5">Hernani Klehm(11) lap=3 point=0 t=124.670 et=459.408</Score>
+<Score et="460.2">Henrique Galleazzi(18) lap=3 point=0 t=125.138 et=460.070</Score>
+<Score et="463.3">Marilson Muniz(13) lap=3 point=0 t=126.800 et=463.190</Score>
+<Score et="464.7">Philipe Coutinho(6) lap=3 point=0 t=126.273 et=464.662</Score>
+<Incident et="469.4">Raul Malaguty(17) reported contact (0.35) with another vehicle Joao Junior(20)</Incident>
+<Incident et="469.5">Raul Malaguty(17) reported contact (0.10) with another vehicle Joao Junior(20)</Incident>
+<Incident et="469.5">Joao Junior(20) reported contact (0.26) with another vehicle Raul Malaguty(17)</Incident>
+<Incident et="469.5">Joao Junior(20) reported contact (0.03) with another vehicle Raul Malaguty(17)</Incident>
+<Incident et="469.9">Matheus Saliba(0) reported contact (0.45) with another vehicle Joao Junior(20)</Incident>
+<Incident et="469.9">Matheus Saliba(0) reported contact (0.19) with another vehicle Joao Junior(20)</Incident>
+<Incident et="469.9">Joao Junior(20) reported contact (0.32) with another vehicle Matheus Saliba(0)</Incident>
+<Score et="470.1">Alexandre Reys(15) lap=3 point=0 t=127.643 et=470.009</Score>
+<Incident et="471.0">Matheus Saliba(0) reported contact (0.10) with another vehicle Andre Retek(7)</Incident>
+<Incident et="472.0">Augusto Zimmer(4) reported contact (0.23) with another vehicle Joao Junior(20)</Incident>
+<Incident et="472.1">Augusto Zimmer(4) reported contact (0.06) with another vehicle Joao Junior(20)</Incident>
+<Incident et="472.1">Joao Junior(20) reported contact (0.00) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="472.1">Joao Junior(20) reported contact (0.13) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="472.2">Joao Junior(20) reported contact (0.16) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="472.2">Joao Junior(20) reported contact (0.06) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="474.2">Robson Radaell(10) reported contact (0.23) with another vehicle Matheus Saliba(0)</Incident>
+<Incident et="474.2">Robson Radaell(10) reported contact (0.10) with another vehicle Matheus Saliba(0)</Incident>
+<Incident et="474.2">Matheus Saliba(0) reported contact (0.10) with another vehicle Robson Radaell(10)</Incident>
+<Incident et="475.6">Matheus Saliba(0) reported contact (1.00) with Immovable</Incident>
+<Incident et="475.8">Matheus Saliba(0) reported contact (1.00) with Immovable</Incident>
+<Score et="492.9">Bidu Fiel(1) lap=3 point=1 t=43.249 et=492.801</Score>
+<Score et="494.0">Emerson Bracisievicz(12) lap=2 point=2 t=87.522 et=493.833</Score>
+<Score et="500.2">Raul Malaguty(17) lap=3 point=1 t=44.611 et=500.111</Score>
+<Score et="500.8">Joao Junior(20) lap=3 point=1 t=44.514 et=500.674</Score>
+<Score et="501.3">Robson Radaell(10) lap=3 point=1 t=-1.000 et=501.167</Score>
+<Score et="501.5">Andre Retek(7) lap=3 point=1 t=44.900 et=501.422</Score>
+<Score et="501.9">Marcelo Eduardo(8) lap=3 point=1 t=44.807 et=501.750</Score>
+<Score et="503.0">Hernani Klehm(11) lap=3 point=1 t=-1.000 et=502.876</Score>
+<Score et="503.5">Augusto Zimmer(4) lap=3 point=1 t=47.963 et=503.426</Score>
+<Score et="503.9">Henrique Galleazzi(18) lap=3 point=1 t=43.705 et=503.775</Score>
+<Sent et="505.0">Matheus Saliba has left the game but vehicle has been stored in the garage</Sent>
+<Score et="507.1">Marilson Muniz(13) lap=3 point=1 t=43.775 et=506.965</Score>
+<Score et="508.8">Philipe Coutinho(6) lap=3 point=1 t=44.017 et=508.679</Score>
+<Score et="514.5">Alexandre Reys(15) lap=3 point=1 t=44.364 et=514.372</Score>
+<Score et="532.2">Emerson Bracisievicz(12) lap=3 point=0 t=125.784 et=532.096</Score>
+<Score et="536.2">Bidu Fiel(1) lap=3 point=2 t=86.491 et=536.043</Score>
+<Score et="543.6">Raul Malaguty(17) lap=3 point=2 t=87.998 et=543.498</Score>
+<Score et="544.2">Joao Junior(20) lap=3 point=2 t=87.903 et=544.063</Score>
+<Score et="545.1">Andre Retek(7) lap=3 point=2 t=88.525 et=545.047</Score>
+<Score et="545.3">Marcelo Eduardo(8) lap=3 point=2 t=88.291 et=545.233</Score>
+<Score et="545.7">Robson Radaell(10) lap=3 point=2 t=-1.000 et=545.592</Score>
+<Score et="546.8">Hernani Klehm(11) lap=3 point=2 t=-1.000 et=546.700</Score>
+<Score et="547.0">Augusto Zimmer(4) lap=3 point=2 t=-1.000 et=546.876</Score>
+<Score et="547.5">Henrique Galleazzi(18) lap=3 point=2 t=87.308 et=547.378</Score>
+<Score et="550.9">Marilson Muniz(13) lap=3 point=2 t=87.552 et=550.742</Score>
+<Score et="552.3">Philipe Coutinho(6) lap=3 point=2 t=87.591 et=552.253</Score>
+<Score et="559.0">Alexandre Reys(15) lap=3 point=2 t=88.855 et=558.864</Score>
+<Score et="573.9">Bidu Fiel(1) lap=4 point=0 t=124.285 et=573.837</Score>
+<Score et="576.4">Emerson Bracisievicz(12) lap=3 point=1 t=44.149 et=576.244</Score>
+<Score et="582.5">Joao Junior(20) lap=4 point=0 t=126.275 et=582.435</Score>
+<Score et="582.9">Andre Retek(7) lap=4 point=0 t=126.251 et=582.773</Score>
+<Score et="583.1">Marcelo Eduardo(8) lap=4 point=0 t=126.008 et=582.950</Score>
+<Score et="583.8">Robson Radaell(10) lap=4 point=0 t=-1.000 et=583.761</Score>
+<Score et="584.8">Hernani Klehm(11) lap=4 point=0 t=-1.000 et=584.650</Score>
+<Score et="584.8">Augusto Zimmer(4) lap=4 point=0 t=-1.000 et=584.721</Score>
+<Score et="585.1">Henrique Galleazzi(18) lap=4 point=0 t=124.909 et=584.978</Score>
+<Score et="591.4">Philipe Coutinho(6) lap=4 point=0 t=126.675 et=591.336</Score>
+<Penalty et="594.0">Raul Malaguty served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Score et="595.9">Raul Malaguty(17) lap=4 point=0 t=140.290 et=595.790</Score>
+<Score et="597.8">Alexandre Reys(15) lap=4 point=0 t=127.679 et=597.688</Score>
+<Penalty et="600.8">Marilson Muniz served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Score et="602.6">Marilson Muniz(13) lap=4 point=0 t=139.250 et=602.440</Score>
+<Score et="617.1">Bidu Fiel(1) lap=4 point=1 t=43.139 et=616.976</Score>
+<Score et="620.0">Emerson Bracisievicz(12) lap=3 point=2 t=87.799 et=619.894</Score>
+<Score et="625.9">Joao Junior(20) lap=4 point=1 t=43.375 et=625.810</Score>
+<Score et="626.2">Andre Retek(7) lap=4 point=1 t=43.301 et=626.073</Score>
+<Score et="626.8">Marcelo Eduardo(8) lap=4 point=1 t=43.697 et=626.648</Score>
+<Score et="627.5">Robson Radaell(10) lap=4 point=1 t=43.430 et=627.192</Score>
+<Score et="628.3">Hernani Klehm(11) lap=4 point=1 t=43.531 et=628.181</Score>
+<Score et="628.6">Augusto Zimmer(4) lap=4 point=1 t=43.789 et=628.510</Score>
+<Score et="628.8">Henrique Galleazzi(18) lap=4 point=1 t=43.753 et=628.731</Score>
+<Score et="634.9">Philipe Coutinho(6) lap=4 point=1 t=43.502 et=634.838</Score>
+<Score et="642.2">Alexandre Reys(15) lap=4 point=1 t=44.329 et=642.017</Score>
+<Score et="644.1">Raul Malaguty(17) lap=4 point=1 t=-1.000 et=644.018</Score>
+<Score et="650.7">Marilson Muniz(13) lap=4 point=1 t=48.107 et=650.547</Score>
+<Score et="658.2">Emerson Bracisievicz(12) lap=4 point=0 t=125.958 et=658.054</Score>
+<Score et="660.2">Bidu Fiel(1) lap=4 point=2 t=86.246 et=660.083</Score>
+<Score et="670.0">Andre Retek(7) lap=4 point=2 t=87.109 et=669.882</Score>
+<Score et="670.3">Joao Junior(20) lap=4 point=2 t=87.738 et=670.173</Score>
+<Score et="670.4">Marcelo Eduardo(8) lap=4 point=2 t=87.384 et=670.335</Score>
+<Score et="670.6">Robson Radaell(10) lap=4 point=2 t=86.730 et=670.492</Score>
+<Score et="671.7">Hernani Klehm(11) lap=4 point=2 t=86.982 et=671.632</Score>
+<Score et="672.0">Henrique Galleazzi(18) lap=4 point=2 t=86.906 et=671.884</Score>
+<Score et="672.5">Augusto Zimmer(4) lap=4 point=2 t=87.671 et=672.392</Score>
+<Score et="678.9">Philipe Coutinho(6) lap=4 point=2 t=87.516 et=678.853</Score>
+<Penalty et="682.8">Raul Malaguty received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="686.8">Alexandre Reys(15) lap=4 point=2 t=88.929 et=686.617</Score>
+<Score et="694.5">Marilson Muniz(13) lap=4 point=2 t=91.875 et=694.315</Score>
+<Score et="698.0">Bidu Fiel(1) lap=5 point=0 t=123.996 et=697.833</Score>
+<Sent et="700.7">Raul Malaguty has left the game but vehicle has been stored in the garage</Sent>
+<Score et="702.2">Emerson Bracisievicz(12) lap=4 point=1 t=44.029 et=702.083</Score>
+<Score et="707.9">Andre Retek(7) lap=5 point=0 t=125.014 et=707.787</Score>
+<Score et="708.0">Joao Junior(20) lap=5 point=0 t=125.439 et=707.874</Score>
+<Score et="708.9">Marcelo Eduardo(8) lap=5 point=0 t=125.845 et=708.795</Score>
+<Score et="709.1">Robson Radaell(10) lap=5 point=0 t=125.240 et=709.001</Score>
+<Score et="709.4">Hernani Klehm(11) lap=5 point=0 t=124.683 et=709.333</Score>
+<Score et="709.7">Henrique Galleazzi(18) lap=5 point=0 t=124.572 et=709.550</Score>
+<Score et="710.5">Augusto Zimmer(4) lap=5 point=0 t=125.692 et=710.412</Score>
+<Score et="716.9">Philipe Coutinho(6) lap=5 point=0 t=125.434 et=716.770</Score>
+<Score et="725.4">Alexandre Reys(15) lap=5 point=0 t=127.570 et=725.258</Score>
+<Score et="732.8">Marilson Muniz(13) lap=5 point=0 t=130.182 et=732.623</Score>
+<Score et="741.2">Bidu Fiel(1) lap=5 point=1 t=43.219 et=741.052</Score>
+<Score et="745.6">Emerson Bracisievicz(12) lap=4 point=2 t=87.472 et=745.526</Score>
+<Score et="751.1">Andre Retek(7) lap=5 point=1 t=43.187 et=750.974</Score>
+<Score et="753.4">Marcelo Eduardo(8) lap=5 point=1 t=44.522 et=753.317</Score>
+<Score et="753.7">Robson Radaell(10) lap=5 point=1 t=44.551 et=753.552</Score>
+<Score et="754.0">Henrique Galleazzi(18) lap=5 point=1 t=44.300 et=753.850</Score>
+<Score et="754.3">Joao Junior(20) lap=5 point=1 t=46.311 et=754.185</Score>
+<Score et="754.3">Augusto Zimmer(4) lap=5 point=1 t=43.789 et=754.201</Score>
+<Score et="754.8">Hernani Klehm(11) lap=5 point=1 t=-1.000 et=754.686</Score>
+<Score et="760.4">Philipe Coutinho(6) lap=5 point=1 t=43.557 et=760.328</Score>
+<Score et="770.2">Alexandre Reys(15) lap=5 point=1 t=44.875 et=770.133</Score>
+<Score et="776.7">Marilson Muniz(13) lap=5 point=1 t=43.951 et=776.573</Score>
+<Score et="783.7">Emerson Bracisievicz(12) lap=5 point=0 t=125.540 et=783.594</Score>
+<Score et="784.1">Bidu Fiel(1) lap=5 point=2 t=86.181 et=784.014</Score>
+<Score et="794.6">Andre Retek(7) lap=5 point=2 t=86.776 et=794.563</Score>
+<Score et="797.3">Robson Radaell(10) lap=5 point=2 t=88.229 et=797.230</Score>
+<Score et="797.7">Henrique Galleazzi(18) lap=5 point=2 t=88.105 et=797.655</Score>
+<Score et="798.0">Augusto Zimmer(4) lap=5 point=2 t=87.507 et=797.919</Score>
+<Score et="798.4">Hernani Klehm(11) lap=5 point=2 t=-1.000 et=798.327</Score>
+<Score et="798.7">Marcelo Eduardo(8) lap=5 point=2 t=89.802 et=798.597</Score>
+<Score et="799.8">Joao Junior(20) lap=5 point=2 t=91.798 et=799.671</Score>
+<Score et="804.2">Philipe Coutinho(6) lap=5 point=2 t=87.319 et=804.089</Score>
+<Score et="816.2">Alexandre Reys(15) lap=5 point=2 t=90.725 et=815.983</Score>
+<Score et="820.9">Marilson Muniz(13) lap=5 point=2 t=88.159 et=820.782</Score>
+<Score et="822.0">Bidu Fiel(1) lap=6 point=0 t=124.063 et=821.896</Score>
+<Score et="827.8">Emerson Bracisievicz(12) lap=5 point=1 t=44.114 et=827.708</Score>
+<Score et="832.6">Andre Retek(7) lap=6 point=0 t=124.712 et=832.499</Score>
+<Score et="835.1">Robson Radaell(10) lap=6 point=0 t=126.000 et=835.001</Score>
+<Score et="835.4">Henrique Galleazzi(18) lap=6 point=0 t=125.777 et=835.327</Score>
+<Score et="835.8">Augusto Zimmer(4) lap=6 point=0 t=125.301 et=835.714</Score>
+<Score et="835.9">Hernani Klehm(11) lap=6 point=0 t=-1.000 et=835.757</Score>
+<Score et="836.1">Marcelo Eduardo(8) lap=6 point=0 t=127.223 et=836.018</Score>
+<Score et="837.7">Joao Junior(20) lap=6 point=0 t=129.711 et=837.585</Score>
+<Score et="842.6">Philipe Coutinho(6) lap=6 point=0 t=125.766 et=842.537</Score>
+<Incident et="849.3">Hernani Klehm(11) reported contact (0.06) with another vehicle Marcelo Eduardo(8)</Incident>
+<Incident et="849.4">Hernani Klehm(11) reported contact (0.03) with another vehicle Marcelo Eduardo(8)</Incident>
+<Score et="859.3">Marilson Muniz(13) lap=6 point=0 t=126.550 et=859.173</Score>
+<Score et="860.6">Alexandre Reys(15) lap=6 point=0 t=135.242 et=860.500</Score>
+<Score et="865.1">Bidu Fiel(1) lap=6 point=1 t=43.111 et=865.007</Score>
+<Score et="871.6">Emerson Bracisievicz(12) lap=5 point=2 t=87.825 et=871.419</Score>
+<Score et="876.3">Andre Retek(7) lap=6 point=1 t=43.680 et=876.179</Score>
+<Score et="878.7">Robson Radaell(10) lap=6 point=1 t=43.616 et=878.617</Score>
+<Score et="879.1">Henrique Galleazzi(18) lap=6 point=1 t=43.659 et=878.987</Score>
+<Score et="879.3">Augusto Zimmer(4) lap=6 point=1 t=43.438 et=879.151</Score>
+<Score et="881.5">Joao Junior(20) lap=6 point=1 t=43.780 et=881.365</Score>
+<Score et="881.6">Hernani Klehm(11) lap=6 point=1 t=45.768 et=881.525</Score>
+<Score et="882.1">Marcelo Eduardo(8) lap=6 point=1 t=45.928 et=881.946</Score>
+<Score et="886.5">Philipe Coutinho(6) lap=6 point=1 t=43.821 et=886.358</Score>
+<Score et="903.4">Marilson Muniz(13) lap=6 point=1 t=44.050 et=903.223</Score>
+<Score et="905.3">Alexandre Reys(15) lap=6 point=1 t=44.648 et=905.149</Score>
+<Score et="908.4">Bidu Fiel(1) lap=6 point=2 t=86.394 et=908.289</Score>
+<Score et="909.6">Emerson Bracisievicz(12) lap=6 point=0 t=125.851 et=909.446</Score>
+<Score et="920.5">Andre Retek(7) lap=6 point=2 t=87.890 et=920.389</Score>
+<Score et="922.0">Robson Radaell(10) lap=6 point=2 t=86.898 et=921.899</Score>
+<Score et="922.5">Henrique Galleazzi(18) lap=6 point=2 t=87.037 et=922.364</Score>
+<Score et="922.7">Augusto Zimmer(4) lap=6 point=2 t=86.888 et=922.601</Score>
+<Score et="925.3">Marcelo Eduardo(8) lap=6 point=2 t=89.199 et=925.217</Score>
+<Score et="925.7">Hernani Klehm(11) lap=6 point=2 t=89.799 et=925.556</Score>
+<Score et="926.4">Joao Junior(20) lap=6 point=2 t=88.685 et=926.269</Score>
+<Score et="929.7">Philipe Coutinho(6) lap=6 point=2 t=87.118 et=929.655</Score>
+<Score et="946.2">Bidu Fiel(1) lap=7 point=0 t=124.212 et=946.108</Score>
+<Score et="947.4">Marilson Muniz(13) lap=6 point=2 t=88.058 et=947.231</Score>
+<Score et="949.6">Alexandre Reys(15) lap=6 point=2 t=88.920 et=949.420</Score>
+<Score et="952.1">Emerson Bracisievicz(12) lap=6 point=1 t=-1.000 et=951.969</Score>
+<Score et="958.3">Andre Retek(7) lap=7 point=0 t=125.748 et=958.247</Score>
+<Score et="960.0">Robson Radaell(10) lap=7 point=0 t=124.916 et=959.917</Score>
+<Score et="960.3">Henrique Galleazzi(18) lap=7 point=0 t=124.800 et=960.127</Score>
+<Score et="960.4">Augusto Zimmer(4) lap=7 point=0 t=124.603 et=960.317</Score>
+<Score et="963.2">Marcelo Eduardo(8) lap=7 point=0 t=127.024 et=963.042</Score>
+<Score et="963.2">Hernani Klehm(11) lap=7 point=0 t=127.293 et=963.050</Score>
+<Score et="964.1">Joao Junior(20) lap=7 point=0 t=126.385 et=963.970</Score>
+<Score et="967.9">Philipe Coutinho(6) lap=7 point=0 t=125.308 et=967.845</Score>
+<Score et="985.2">Marilson Muniz(13) lap=7 point=0 t=125.852 et=985.025</Score>
+<Score et="988.4">Alexandre Reys(15) lap=7 point=0 t=127.753 et=988.253</Score>
+<Score et="989.5">Bidu Fiel(1) lap=7 point=1 t=43.244 et=989.351</Score>
+<Score et="995.4">Emerson Bracisievicz(12) lap=6 point=2 t=-1.000 et=995.324</Score>
+<Score et="1001.7">Andre Retek(7) lap=7 point=1 t=43.350 et=1001.597</Score>
+<Score et="1004.1">Augusto Zimmer(4) lap=7 point=1 t=43.684 et=1004.001</Score>
+<Score et="1004.6">Henrique Galleazzi(18) lap=7 point=1 t=-1.000 et=1004.490</Score>
+<Score et="1006.6">Hernani Klehm(11) lap=7 point=1 t=43.401 et=1006.451</Score>
+<Score et="1007.2">Marcelo Eduardo(8) lap=7 point=1 t=44.025 et=1007.067</Score>
+<Score et="1007.4">Joao Junior(20) lap=7 point=1 t=43.315 et=1007.285</Score>
+<Score et="1011.8">Philipe Coutinho(6) lap=7 point=1 t=43.883 et=1011.728</Score>
+<Score et="1028.7">Marilson Muniz(13) lap=7 point=1 t=43.566 et=1028.590</Score>
+<Score et="1032.4">Alexandre Reys(15) lap=7 point=1 t=44.045 et=1032.297</Score>
+<Score et="1032.7">Bidu Fiel(1) lap=7 point=2 t=86.473 et=1032.580</Score>
+<Score et="1033.3">Emerson Bracisievicz(12) lap=7 point=0 t=-1.000 et=1033.238</Score>
+<Score et="1046.0">Andre Retek(7) lap=7 point=2 t=87.676 et=1045.923</Score>
+<Score et="1046.8">Robson Radaell(10) lap=7 point=2 t=86.734 et=1046.651</Score>
+<Score et="1047.3">Augusto Zimmer(4) lap=7 point=2 t=86.845 et=1047.162</Score>
+<Score et="1047.7">Henrique Galleazzi(18) lap=7 point=2 t=-1.000 et=1047.588</Score>
+<Penalty et="1049.5">Augusto Zimmer received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="1050.0">Hernani Klehm(11) lap=7 point=2 t=86.881 et=1049.931</Score>
+<Score et="1051.0">Marcelo Eduardo(8) lap=7 point=2 t=87.832 et=1050.873</Score>
+<Score et="1051.3">Joao Junior(20) lap=7 point=2 t=87.247 et=1051.217</Score>
+<Score et="1056.6">Philipe Coutinho(6) lap=7 point=2 t=88.640 et=1056.485</Score>
+<Score et="1070.4">Bidu Fiel(1) lap=8 point=0 t=124.219 et=1070.326</Score>
+<Score et="1072.6">Marilson Muniz(13) lap=7 point=2 t=87.479 et=1072.503</Score>
+<Score et="1077.0">Emerson Bracisievicz(12) lap=7 point=1 t=43.582 et=1076.819</Score>
+<Score et="1077.1">Alexandre Reys(15) lap=7 point=2 t=88.640 et=1076.893</Score>
+<Score et="1083.9">Andre Retek(7) lap=8 point=0 t=125.533 et=1083.780</Score>
+<Score et="1085.0">Robson Radaell(10) lap=8 point=0 t=125.001 et=1084.918</Score>
+<Score et="1085.9">Augusto Zimmer(4) lap=8 point=0 t=-1.000 et=1085.751</Score>
+<Score et="1085.9">Henrique Galleazzi(18) lap=8 point=0 t=-1.000 et=1085.806</Score>
+<Score et="1088.1">Hernani Klehm(11) lap=8 point=0 t=124.907 et=1087.957</Score>
+<Score et="1089.3">Joao Junior(20) lap=8 point=0 t=125.190 et=1089.160</Score>
+<Score et="1089.3">Marcelo Eduardo(8) lap=8 point=0 t=126.165 et=1089.207</Score>
+<Score et="1095.2">Philipe Coutinho(6) lap=8 point=0 t=127.311 et=1095.156</Score>
+<Incident et="1099.7">Henrique Galleazzi(18) reported contact (0.29) with another vehicle Augusto Zimmer(4)</Incident>
+<Incident et="1099.8">Augusto Zimmer(4) reported contact (0.29) with another vehicle Henrique Galleazzi(18)</Incident>
+<Score et="1110.6">Marilson Muniz(13) lap=8 point=0 t=125.474 et=1110.499</Score>
+<Score et="1113.5">Bidu Fiel(1) lap=8 point=1 t=43.101 et=1113.428</Score>
+<Score et="1115.5">Alexandre Reys(15) lap=8 point=0 t=127.143 et=1115.396</Score>
+<Score et="1120.0">Emerson Bracisievicz(12) lap=7 point=2 t=86.672 et=1119.910</Score>
+<Score et="1127.0">Andre Retek(7) lap=8 point=1 t=43.067 et=1126.847</Score>
+<Score et="1128.1">Robson Radaell(10) lap=8 point=1 t=43.083 et=1128.001</Score>
+<Score et="1130.1">Augusto Zimmer(4) lap=8 point=1 t=44.288 et=1130.039</Score>
+<Score et="1130.8">Henrique Galleazzi(18) lap=8 point=1 t=44.851 et=1130.657</Score>
+<Score et="1132.0">Hernani Klehm(11) lap=8 point=1 t=43.943 et=1131.900</Score>
+<Score et="1133.2">Joao Junior(20) lap=8 point=1 t=43.875 et=1133.035</Score>
+<Score et="1133.5">Marcelo Eduardo(8) lap=8 point=1 t=44.138 et=1133.345</Score>
+<Score et="1138.8">Philipe Coutinho(6) lap=8 point=1 t=43.597 et=1138.753</Score>
+<Score et="1154.8">Marilson Muniz(13) lap=8 point=1 t=44.130 et=1154.629</Score>
+<Score et="1156.6">Bidu Fiel(1) lap=8 point=2 t=86.156 et=1156.482</Score>
+<Score et="1158.1">Emerson Bracisievicz(12) lap=8 point=0 t=124.723 et=1157.960</Score>
+<Score et="1159.4">Alexandre Reys(15) lap=8 point=1 t=43.872 et=1159.268</Score>
+<Score et="1170.6">Andre Retek(7) lap=8 point=2 t=86.702 et=1170.482</Score>
+<Score et="1171.1">Robson Radaell(10) lap=8 point=2 t=86.111 et=1171.029</Score>
+<Score et="1173.3">Augusto Zimmer(4) lap=8 point=2 t=87.413 et=1173.164</Score>
+<Score et="1173.9">Henrique Galleazzi(18) lap=8 point=2 t=87.984 et=1173.790</Score>
+<Score et="1175.2">Hernani Klehm(11) lap=8 point=2 t=87.178 et=1175.136</Score>
+<Score et="1176.7">Joao Junior(20) lap=8 point=2 t=87.438 et=1176.598</Score>
+<Score et="1176.9">Marcelo Eduardo(8) lap=8 point=2 t=87.560 et=1176.767</Score>
+<Score et="1182.5">Philipe Coutinho(6) lap=8 point=2 t=87.260 et=1182.415</Score>
+<Score et="1194.5">Bidu Fiel(1) lap=9 point=0 t=124.069 et=1194.395</Score>
+<Score et="1198.3">Marilson Muniz(13) lap=8 point=2 t=87.626 et=1198.125</Score>
+<Score et="1202.0">Emerson Bracisievicz(12) lap=8 point=1 t=43.914 et=1201.874</Score>
+<Score et="1205.3">Alexandre Reys(15) lap=8 point=2 t=89.732 et=1205.129</Score>
+<Score et="1208.7">Andre Retek(7) lap=9 point=0 t=124.817 et=1208.597</Score>
+<Score et="1208.8">Robson Radaell(10) lap=9 point=0 t=123.790 et=1208.708</Score>
+<Score et="1211.9">Henrique Galleazzi(18) lap=9 point=0 t=126.005 et=1211.811</Score>
+<Score et="1213.0">Hernani Klehm(11) lap=9 point=0 t=124.972 et=1212.930</Score>
+<Score et="1214.8">Joao Junior(20) lap=9 point=0 t=125.500 et=1214.660</Score>
+<Score et="1215.0">Marcelo Eduardo(8) lap=9 point=0 t=125.669 et=1214.876</Score>
+<Score et="1220.7">Philipe Coutinho(6) lap=9 point=0 t=125.498 et=1220.654</Score>
+<Penalty et="1222.9">Augusto Zimmer served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Penalty et="1222.9">Augusto Zimmer received Drive Thru penalty, 10s, 0laps. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Score et="1224.5">Augusto Zimmer(4) lap=9 point=0 t=138.660 et=1224.411</Score>
+<Incident et="1224.6">Robson Radaell(10) reported contact (0.10) with another vehicle Andre Retek(7)</Incident>
+<Incident et="1224.6">Andre Retek(7) reported contact (0.03) with another vehicle Robson Radaell(10)</Incident>
+<Score et="1236.5">Marilson Muniz(13) lap=9 point=0 t=125.844 et=1236.343</Score>
+<Score et="1237.8">Bidu Fiel(1) lap=9 point=1 t=43.281 et=1237.676</Score>
+<Score et="1244.8">Alexandre Reys(15) lap=9 point=0 t=129.304 et=1244.700</Score>
+<Score et="1245.5">Emerson Bracisievicz(12) lap=8 point=2 t=87.448 et=1245.409</Score>
+<Score et="1253.3">Andre Retek(7) lap=9 point=1 t=44.600 et=1253.197</Score>
+<Score et="1253.4">Robson Radaell(10) lap=9 point=1 t=44.609 et=1253.317</Score>
+<Score et="1255.6">Henrique Galleazzi(18) lap=9 point=1 t=43.664 et=1255.475</Score>
+<Score et="1256.5">Hernani Klehm(11) lap=9 point=1 t=43.484 et=1256.414</Score>
+<Score et="1258.3">Joao Junior(20) lap=9 point=1 t=43.500 et=1258.160</Score>
+<Score et="1258.6">Marcelo Eduardo(8) lap=9 point=1 t=43.541 et=1258.417</Score>
+<Score et="1264.2">Philipe Coutinho(6) lap=9 point=1 t=43.449 et=1264.103</Score>
+<Score et="1272.2">Augusto Zimmer(4) lap=9 point=1 t=47.717 et=1272.128</Score>
+<Score et="1280.7">Marilson Muniz(13) lap=9 point=1 t=44.198 et=1280.540</Score>
+<Score et="1280.9">Bidu Fiel(1) lap=9 point=2 t=86.356 et=1280.751</Score>
+<Score et="1283.6">Emerson Bracisievicz(12) lap=9 point=0 t=125.466 et=1283.427</Score>
+<Score et="1289.7">Alexandre Reys(15) lap=9 point=1 t=-1.000 et=1289.529</Score>
+<Score et="1297.4">Andre Retek(7) lap=9 point=2 t=88.739 et=1297.337</Score>
+<Score et="1297.7">Robson Radaell(10) lap=9 point=2 t=88.934 et=1297.642</Score>
+<Score et="1299.8">Hernani Klehm(11) lap=9 point=2 t=86.747 et=1299.676</Score>
+<Score et="1300.1">Henrique Galleazzi(18) lap=9 point=2 t=88.189 et=1300.000</Score>
+<Score et="1302.2">Joao Junior(20) lap=9 point=2 t=87.425 et=1302.085</Score>
+<Score et="1302.5">Marcelo Eduardo(8) lap=9 point=2 t=87.467 et=1302.343</Score>
+<Score et="1307.7">Philipe Coutinho(6) lap=9 point=2 t=87.009 et=1307.662</Score>
+<Score et="1315.8">Augusto Zimmer(4) lap=9 point=2 t=91.277 et=1315.688</Score>
+<Score et="1318.7">Bidu Fiel(1) lap=10 point=0 t=124.216 et=1318.611</Score>
+<Score et="1324.8">Marilson Muniz(13) lap=9 point=2 t=88.305 et=1324.647</Score>
+<Score et="1327.1">Emerson Bracisievicz(12) lap=9 point=1 t=43.568 et=1326.994</Score>
+<Score et="1334.9">Alexandre Reys(15) lap=9 point=2 t=-1.000 et=1334.832</Score>
+<Score et="1335.8">Andre Retek(7) lap=10 point=0 t=127.050 et=1335.647</Score>
+<Score et="1335.8">Robson Radaell(10) lap=10 point=0 t=126.999 et=1335.706</Score>
+<Score et="1337.7">Hernani Klehm(11) lap=10 point=0 t=124.630 et=1337.559</Score>
+<Score et="1338.0">Henrique Galleazzi(18) lap=10 point=0 t=126.032 et=1337.842</Score>
+<Score et="1340.3">Joao Junior(20) lap=10 point=0 t=125.506 et=1340.166</Score>
+<Score et="1340.4">Marcelo Eduardo(8) lap=10 point=0 t=125.435 et=1340.311</Score>
+<Score et="1345.9">Philipe Coutinho(6) lap=10 point=0 t=125.157 et=1345.810</Score>
+<Score et="1362.1">Bidu Fiel(1) lap=10 point=1 t=43.315 et=1361.926</Score>
+<Score et="1362.9">Marilson Muniz(13) lap=10 point=0 t=126.459 et=1362.801</Score>
+<Penalty et="1365.9">Augusto Zimmer served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,10s</Penalty>
+<Score et="1367.7">Augusto Zimmer(4) lap=10 point=0 t=143.165 et=1367.576</Score>
+<Score et="1370.5">Emerson Bracisievicz(12) lap=9 point=2 t=86.984 et=1370.411</Score>
+<Score et="1373.7">Alexandre Reys(15) lap=10 point=0 t=-1.000 et=1373.499</Score>
+<Score et="1379.7">Andre Retek(7) lap=10 point=1 t=43.929 et=1379.576</Score>
+<Score et="1380.0">Robson Radaell(10) lap=10 point=1 t=-1.000 et=1379.880</Score>
+<Score et="1381.5">Hernani Klehm(11) lap=10 point=1 t=43.816 et=1381.375</Score>
+<Score et="1383.9">Henrique Galleazzi(18) lap=10 point=1 t=45.913 et=1383.755</Score>
+<Score et="1384.2">Joao Junior(20) lap=10 point=1 t=43.955 et=1384.121</Score>
+<Score et="1384.7">Marcelo Eduardo(8) lap=10 point=1 t=44.231 et=1384.542</Score>
+<Score et="1389.4">Philipe Coutinho(6) lap=10 point=1 t=-1.000 et=1389.341</Score>
+<Score et="1405.2">Bidu Fiel(1) lap=10 point=2 t=86.440 et=1405.051</Score>
+<Score et="1407.1">Marilson Muniz(13) lap=10 point=1 t=44.166 et=1406.967</Score>
+<Score et="1408.5">Emerson Bracisievicz(12) lap=10 point=0 t=124.918 et=1408.344</Score>
+<Score et="1415.4">Augusto Zimmer(4) lap=10 point=1 t=47.700 et=1415.276</Score>
+<Score et="1417.8">Alexandre Reys(15) lap=10 point=1 t=44.072 et=1417.571</Score>
+<Score et="1424.1">Robson Radaell(10) lap=10 point=2 t=-1.000 et=1423.967</Score>
+<Score et="1424.2">Andre Retek(7) lap=10 point=2 t=88.500 et=1424.147</Score>
+<Score et="1425.0">Hernani Klehm(11) lap=10 point=2 t=87.293 et=1424.853</Score>
+<Score et="1427.7">Joao Junior(20) lap=10 point=2 t=87.469 et=1427.635</Score>
+<Score et="1428.1">Henrique Galleazzi(18) lap=10 point=2 t=90.114 et=1427.957</Score>
+<Score et="1428.3">Marcelo Eduardo(8) lap=10 point=2 t=87.906 et=1428.217</Score>
+<Score et="1433.6">Philipe Coutinho(6) lap=10 point=2 t=-1.000 et=1433.528</Score>
+<Score et="1443.0">Bidu Fiel(1) lap=11 point=0 t=124.271 et=1442.882</Score>
+<Score et="1451.3">Marilson Muniz(13) lap=10 point=2 t=88.315 et=1451.117</Score>
+<Score et="1452.2">Emerson Bracisievicz(12) lap=10 point=1 t=43.675 et=1452.019</Score>
+<Score et="1459.0">Augusto Zimmer(4) lap=10 point=2 t=91.301 et=1458.877</Score>
+<Score et="1462.2">Alexandre Reys(15) lap=10 point=2 t=88.575 et=1462.074</Score>
+<Score et="1462.3">Robson Radaell(10) lap=11 point=0 t=-1.000 et=1462.206</Score>
+<Score et="1462.5">Andre Retek(7) lap=11 point=0 t=126.737 et=1462.384</Score>
+<Score et="1462.5">Hernani Klehm(11) lap=11 point=0 t=124.883 et=1462.442</Score>
+<Score et="1465.7">Joao Junior(20) lap=11 point=0 t=125.449 et=1465.615</Score>
+<Score et="1466.0">Henrique Galleazzi(18) lap=11 point=0 t=128.000 et=1465.842</Score>
+<Score et="1466.3">Marcelo Eduardo(8) lap=11 point=0 t=125.910 et=1466.221</Score>
+<Score et="1472.1">Philipe Coutinho(6) lap=11 point=0 t=-1.000 et=1471.978</Score>
+<Score et="1486.3">Bidu Fiel(1) lap=11 point=1 t=43.329 et=1486.211</Score>
+<Score et="1489.4">Marilson Muniz(13) lap=11 point=0 t=126.414 et=1489.215</Score>
+<Score et="1495.5">Emerson Bracisievicz(12) lap=10 point=2 t=87.059 et=1495.404</Score>
+<Score et="1497.3">Augusto Zimmer(4) lap=11 point=0 t=129.613 et=1497.190</Score>
+<Score et="1500.8">Alexandre Reys(15) lap=11 point=0 t=127.120 et=1500.619</Score>
+<Incident et="1500.8">Marilson Muniz(13) reported contact (0.26) with Cone</Incident>
+<Incident et="1500.9">Marilson Muniz(13) reported contact (0.26) with Cone</Incident>
+<Incident et="1500.9">Marilson Muniz(13) reported contact (0.03) with Cone</Incident>
+<Incident et="1501.8">Marilson Muniz(13) reported contact (0.39) with Cone</Incident>
+<Incident et="1502.7">Marilson Muniz(13) reported contact (0.45) with Cone</Incident>
+<Incident et="1503.7">Marilson Muniz(13) reported contact (0.45) with Cone</Incident>
+<Score et="1505.9">Robson Radaell(10) lap=11 point=1 t=43.649 et=1505.855</Score>
+<Score et="1506.2">Andre Retek(7) lap=11 point=1 t=43.738 et=1506.122</Score>
+<Score et="1506.7">Hernani Klehm(11) lap=11 point=1 t=44.116 et=1506.559</Score>
+<Score et="1509.2">Joao Junior(20) lap=11 point=1 t=43.520 et=1509.135</Score>
+<Score et="1509.9">Marcelo Eduardo(8) lap=11 point=1 t=43.557 et=1509.779</Score>
+<Score et="1510.3">Henrique Galleazzi(18) lap=11 point=1 t=44.291 et=1510.134</Score>
+<Incident et="1511.7">Augusto Zimmer(4) reported contact (0.29) with Cone</Incident>
+<Incident et="1511.7">Augusto Zimmer(4) reported contact (0.06) with Cone</Incident>
+<Incident et="1512.1">Augusto Zimmer(4) reported contact (0.39) with Cone</Incident>
+<Incident et="1513.9">Augusto Zimmer(4) reported contact (0.42) with Cone</Incident>
+<Score et="1515.8">Philipe Coutinho(6) lap=11 point=1 t=43.708 et=1515.686</Score>
+<Penalty et="1516.3">Augusto Zimmer received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Sent et="1524.7">Augusto Zimmer has left the game but vehicle has been stored in the garage</Sent>
+<Score et="1529.7">Bidu Fiel(1) lap=11 point=2 t=86.678 et=1529.560</Score>
+<Score et="1532.2">Marilson Muniz(13) lap=11 point=1 t=-1.000 et=1532.049</Score>
+<Score et="1533.6">Emerson Bracisievicz(12) lap=11 point=0 t=125.158 et=1533.502</Score>
+<Score et="1545.2">Alexandre Reys(15) lap=11 point=1 t=44.449 et=1545.068</Score>
+<Score et="1549.6">Robson Radaell(10) lap=11 point=2 t=87.275 et=1549.481</Score>
+<Score et="1550.0">Andre Retek(7) lap=11 point=2 t=87.521 et=1549.905</Score>
+<Score et="1550.3">Hernani Klehm(11) lap=11 point=2 t=87.785 et=1550.227</Score>
+<Score et="1552.9">Joao Junior(20) lap=11 point=2 t=87.236 et=1552.851</Score>
+<Score et="1553.3">Marcelo Eduardo(8) lap=11 point=2 t=86.945 et=1553.167</Score>
+<Score et="1553.7">Henrique Galleazzi(18) lap=11 point=2 t=87.711 et=1553.553</Score>
+<Score et="1560.2">Philipe Coutinho(6) lap=11 point=2 t=88.153 et=1560.131</Score>
+<Score et="1567.7">Bidu Fiel(1) lap=12 point=0 t=124.698 et=1567.580</Score>
+<Score et="1575.9">Marilson Muniz(13) lap=11 point=2 t=-1.000 et=1575.765</Score>
+<Score et="1577.0">Emerson Bracisievicz(12) lap=11 point=1 t=-1.000 et=1576.869</Score>
+<Score et="1587.5">Robson Radaell(10) lap=12 point=0 t=125.199 et=1587.405</Score>
+<Score et="1588.0">Andre Retek(7) lap=12 point=0 t=125.529 et=1587.912</Score>
+<Score et="1588.0">Hernani Klehm(11) lap=12 point=0 t=125.491 et=1587.933</Score>
+<Score et="1590.1">Alexandre Reys(15) lap=11 point=2 t=89.379 et=1589.997</Score>
+<Score et="1591.0">Joao Junior(20) lap=12 point=0 t=125.280 et=1590.895</Score>
+<Score et="1591.0">Marcelo Eduardo(8) lap=12 point=0 t=124.695 et=1590.917</Score>
+<Score et="1591.4">Henrique Galleazzi(18) lap=12 point=0 t=125.415 et=1591.258</Score>
+<Score et="1598.9">Philipe Coutinho(6) lap=12 point=0 t=126.818 et=1598.795</Score>
+<Score et="1611.0">Bidu Fiel(1) lap=12 point=1 t=43.331 et=1610.911</Score>
+<Score et="1614.2">Marilson Muniz(13) lap=12 point=0 t=-1.000 et=1614.040</Score>
+<Score et="1620.8">Emerson Bracisievicz(12) lap=11 point=2 t=-1.000 et=1620.670</Score>
+<Score et="1628.7">Alexandre Reys(15) lap=12 point=0 t=127.949 et=1628.568</Score>
+<Score et="1630.9">Robson Radaell(10) lap=12 point=1 t=43.401 et=1630.806</Score>
+<Score et="1632.1">Hernani Klehm(11) lap=12 point=1 t=44.049 et=1631.983</Score>
+<Score et="1634.1">Andre Retek(7) lap=12 point=1 t=-1.000 et=1634.004</Score>
+<Incident et="1634.4">Henrique Galleazzi(18) reported contact (0.16) with another vehicle Marcelo Eduardo(8)</Incident>
+<Incident et="1634.4">Marcelo Eduardo(8) reported contact (0.03) with another vehicle Henrique Galleazzi(18)</Incident>
+<Score et="1634.6">Joao Junior(20) lap=12 point=1 t=43.565 et=1634.460</Score>
+<Score et="1635.7">Henrique Galleazzi(18) lap=12 point=1 t=-1.000 et=1635.558</Score>
+<Score et="1635.7">Marcelo Eduardo(8) lap=12 point=1 t=44.675 et=1635.592</Score>
+<Incident et="1635.8">Marcelo Eduardo(8) reported contact (1.00) with Immovable</Incident>
+<Incident et="1635.9">Marcelo Eduardo(8) reported contact (0.94) with Immovable</Incident>
+<Incident et="1636.0">Marcelo Eduardo(8) reported contact (0.03) with Immovable</Incident>
+<Score et="1643.6">Philipe Coutinho(6) lap=12 point=1 t=44.742 et=1643.537</Score>
+<Score et="1654.2">Bidu Fiel(1) lap=12 point=2 t=86.571 et=1654.151</Score>
+<Score et="1658.1">Marilson Muniz(13) lap=12 point=1 t=43.875 et=1657.915</Score>
+<Score et="1659.0">Emerson Bracisievicz(12) lap=12 point=0 t=-1.000 et=1658.894</Score>
+<Score et="1672.9">Alexandre Reys(15) lap=12 point=1 t=44.225 et=1672.793</Score>
+<Score et="1674.2">Robson Radaell(10) lap=12 point=2 t=86.643 et=1674.048</Score>
+<Score et="1675.4">Hernani Klehm(11) lap=12 point=2 t=87.378 et=1675.312</Score>
+<Score et="1678.0">Andre Retek(7) lap=12 point=2 t=-1.000 et=1677.884</Score>
+<Score et="1678.5">Joao Junior(20) lap=12 point=2 t=87.522 et=1678.417</Score>
+<Score et="1683.2">Henrique Galleazzi(18) lap=12 point=2 t=-1.000 et=1683.050</Score>
+<Score et="1684.0">Marcelo Eduardo(8) lap=12 point=2 t=-1.000 et=1683.905</Score>
+<Score et="1688.1">Philipe Coutinho(6) lap=12 point=2 t=89.242 et=1688.037</Score>
+<Score et="1692.1">Bidu Fiel(1) lap=13 point=0 t=124.385 et=1691.966</Score>
+<Vote et="1696.2">Diretor Principal: /addpenalty 10 henrique galleazzi</Vote>
+<Penalty et="1696.2">Henrique Galleazzi received Stop/Go penalty, 10s, 0laps. Result: penalties=1, 1st=Stop/Go,10s</Penalty>
+<Chat et="1696.2">Stop/Go penalty assigned by live steward to: Henrique Galleazzi</Chat>
+<Score et="1702.0">Marilson Muniz(13) lap=12 point=2 t=87.850 et=1701.890</Score>
+<Score et="1702.6">Emerson Bracisievicz(12) lap=12 point=1 t=43.550 et=1702.444</Score>
+<Score et="1713.5">Robson Radaell(10) lap=13 point=0 t=124.662 et=1712.067</Score>
+<Score et="1713.9">Hernani Klehm(11) lap=13 point=0 t=125.899 et=1713.832</Score>
+<Score et="1715.9">Andre Retek(7) lap=13 point=0 t=-1.000 et=1715.836</Score>
+<Score et="1717.0">Alexandre Reys(15) lap=12 point=2 t=88.254 et=1716.822</Score>
+<Score et="1717.1">Joao Junior(20) lap=13 point=0 t=126.090 et=1716.985</Score>
+<Score et="1721.7">Henrique Galleazzi(18) lap=13 point=0 t=-1.000 et=1721.619</Score>
+<Score et="1726.5">Philipe Coutinho(6) lap=13 point=0 t=127.608 et=1726.403</Score>
+<Score et="1735.2">Bidu Fiel(1) lap=13 point=1 t=43.111 et=1735.076</Score>
+<Score et="1740.5">Marilson Muniz(13) lap=13 point=0 t=126.369 et=1740.409</Score>
+<Score et="1746.3">Emerson Bracisievicz(12) lap=12 point=2 t=87.250 et=1746.144</Score>
+<Score et="1755.6">Robson Radaell(10) lap=13 point=1 t=43.375 et=1755.442</Score>
+<Score et="1755.7">Alexandre Reys(15) lap=13 point=0 t=126.984 et=1755.552</Score>
+<Score et="1757.2">Hernani Klehm(11) lap=13 point=1 t=43.275 et=1757.107</Score>
+<Score et="1757.4">Marcelo Eduardo(8) lap=13 point=0 t=-1.000 et=1757.276</Score>
+<Penalty et="1757.4">Andre Retek received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="1759.1">Andre Retek(7) lap=13 point=1 t=-1.000 et=1758.997</Score>
+<Score et="1760.3">Joao Junior(20) lap=13 point=1 t=43.250 et=1760.235</Score>
+<Penalty et="1766.6">Henrique Galleazzi received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Score et="1768.2">Henrique Galleazzi(18) lap=13 point=1 t=-1.000 et=1768.126</Score>
+<Score et="1770.2">Philipe Coutinho(6) lap=13 point=1 t=43.751 et=1770.154</Score>
+<Score et="1778.3">Bidu Fiel(1) lap=13 point=2 t=86.161 et=1778.126</Score>
+<Score et="1784.2">Marilson Muniz(13) lap=13 point=1 t=43.656 et=1784.065</Score>
+<Score et="1784.5">Emerson Bracisievicz(12) lap=13 point=0 t=125.436 et=1784.330</Score>
+<Score et="1798.9">Robson Radaell(10) lap=13 point=2 t=86.678 et=1798.745</Score>
+<Score et="1799.9">Alexandre Reys(15) lap=13 point=1 t=44.226 et=1799.778</Score>
+<Score et="1800.9">Hernani Klehm(11) lap=13 point=2 t=86.968 et=1800.800</Score>
+<Score et="1803.0">Andre Retek(7) lap=13 point=2 t=-1.000 et=1802.951</Score>
+<Score et="1804.2">Joao Junior(20) lap=13 point=2 t=87.110 et=1804.095</Score>
+<Score et="1807.4">Marcelo Eduardo(8) lap=13 point=1 t=50.025 et=1807.301</Score>
+<Score et="1812.8">Henrique Galleazzi(18) lap=13 point=2 t=-1.000 et=1812.666</Score>
+<Score et="1814.9">Philipe Coutinho(6) lap=13 point=2 t=88.427 et=1814.830</Score>
+<Score et="1816.0">Bidu Fiel(1) lap=14 point=0 t=123.953 et=1815.919</Score>
+<Score et="1827.6">Marilson Muniz(13) lap=13 point=2 t=87.081 et=1827.490</Score>
+<Score et="1828.6">Emerson Bracisievicz(12) lap=13 point=1 t=44.139 et=1828.469</Score>
+<Score et="1836.8">Robson Radaell(10) lap=14 point=0 t=124.661 et=1836.728</Score>
+<Score et="1839.0">Hernani Klehm(11) lap=14 point=0 t=125.018 et=1838.850</Score>
+<Score et="1841.1">Andre Retek(7) lap=14 point=0 t=-1.000 et=1841.062</Score>
+<Score et="1842.0">Joao Junior(20) lap=14 point=0 t=124.950 et=1841.935</Score>
+<Score et="1845.0">Alexandre Reys(15) lap=13 point=2 t=89.327 et=1844.879</Score>
+<Score et="1851.5">Marcelo Eduardo(8) lap=13 point=2 t=94.151 et=1851.428</Score>
+<Score et="1853.0">Philipe Coutinho(6) lap=14 point=0 t=126.570 et=1852.973</Score>
+<Score et="1859.2">Bidu Fiel(1) lap=14 point=1 t=43.108 et=1859.026</Score>
+<Score et="1865.9">Marilson Muniz(13) lap=14 point=0 t=125.308 et=1865.718</Score>
+<Score et="1871.8">Emerson Bracisievicz(12) lap=13 point=2 t=87.404 et=1871.734</Score>
+<Score et="1878.7">Henrique Galleazzi(18) lap=14 point=0 t=-1.000 et=1878.551</Score>
+<Score et="1879.9">Robson Radaell(10) lap=14 point=1 t=43.074 et=1879.802</Score>
+<Score et="1882.4">Hernani Klehm(11) lap=14 point=1 t=43.403 et=1882.253</Score>
+<Score et="1883.8">Alexandre Reys(15) lap=14 point=0 t=128.084 et=1883.636</Score>
+<Score et="1885.6">Joao Junior(20) lap=14 point=1 t=43.575 et=1885.510</Score>
+<Score et="1886.0">Andre Retek(7) lap=14 point=1 t=44.860 et=1885.922</Score>
+<Score et="1889.7">Marcelo Eduardo(8) lap=14 point=0 t=132.327 et=1889.603</Score>
+<Score et="1897.1">Philipe Coutinho(6) lap=14 point=1 t=44.080 et=1897.053</Score>
+<Score et="1902.2">Bidu Fiel(1) lap=14 point=2 t=86.212 et=1902.131</Score>
+<Score et="1909.5">Marilson Muniz(13) lap=14 point=1 t=43.648 et=1909.365</Score>
+<Score et="1910.0">Emerson Bracisievicz(12) lap=14 point=0 t=125.515 et=1909.845</Score>
+<Score et="1923.2">Robson Radaell(10) lap=14 point=2 t=86.314 et=1923.042</Score>
+<Score et="1925.9">Hernani Klehm(11) lap=14 point=2 t=86.950 et=1925.800</Score>
+<Score et="1927.7">Henrique Galleazzi(18) lap=14 point=1 t=49.049 et=1927.600</Score>
+<Score et="1928.7">Alexandre Reys(15) lap=14 point=1 t=44.911 et=1928.547</Score>
+<Score et="1929.2">Joao Junior(20) lap=14 point=2 t=87.156 et=1929.092</Score>
+<Penalty et="1929.9">Andre Retek received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Score et="1930.2">Andre Retek(7) lap=14 point=2 t=-1.000 et=1930.149</Score>
+<Score et="1933.7">Marcelo Eduardo(8) lap=14 point=1 t=43.994 et=1933.597</Score>
+<Score et="1940.3">Bidu Fiel(1) lap=15 point=0 t=124.289 et=1940.207</Score>
+<Score et="1941.5">Philipe Coutinho(6) lap=14 point=2 t=88.408 et=1941.380</Score>
+<Score et="1953.3">Marilson Muniz(13) lap=14 point=2 t=87.408 et=1953.126</Score>
+<Score et="1953.7">Emerson Bracisievicz(12) lap=14 point=1 t=43.724 et=1953.569</Score>
+<Score et="1960.9">Robson Radaell(10) lap=15 point=0 t=124.158 et=1960.886</Score>
+<Score et="1963.8">Hernani Klehm(11) lap=15 point=0 t=124.879 et=1963.729</Score>
+<Score et="1967.7">Joao Junior(20) lap=15 point=0 t=125.617 et=1967.553</Score>
+<Score et="1971.5">Henrique Galleazzi(18) lap=14 point=2 t=92.824 et=1971.375</Score>
+<Score et="1973.5">Alexandre Reys(15) lap=14 point=2 t=89.757 et=1973.393</Score>
+<Score et="1977.5">Marcelo Eduardo(8) lap=14 point=2 t=87.795 et=1977.398</Score>
+<Score et="1979.6">Philipe Coutinho(6) lap=15 point=0 t=126.555 et=1979.528</Score>
+<Penalty et="1980.0">Andre Retek served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,10s</Penalty>
+<Score et="1981.7">Andre Retek(7) lap=15 point=0 t=-1.000 et=1981.622</Score>
+<Score et="1983.7">Bidu Fiel(1) lap=15 point=1 t=43.400 et=1983.608</Score>
+<Score et="1991.5">Marilson Muniz(13) lap=15 point=0 t=125.687 et=1991.404</Score>
+<Score et="1997.4">Emerson Bracisievicz(12) lap=14 point=2 t=87.405 et=1997.250</Score>
+<Score et="2004.3">Robson Radaell(10) lap=15 point=1 t=43.281 et=2004.167</Score>
+<Score et="2007.3">Hernani Klehm(11) lap=15 point=1 t=43.446 et=2007.175</Score>
+<Score et="2011.1">Joao Junior(20) lap=15 point=1 t=43.458 et=2011.011</Score>
+<Score et="2012.1">Alexandre Reys(15) lap=15 point=0 t=128.366 et=2012.002</Score>
+<Score et="2015.6">Marcelo Eduardo(8) lap=15 point=0 t=125.900 et=2015.502</Score>
+<Penalty et="2021.2">Henrique Galleazzi served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,10s</Penalty>
+<Score et="2023.0">Henrique Galleazzi(18) lap=15 point=0 t=144.299 et=2022.850</Score>
+<Score et="2023.7">Philipe Coutinho(6) lap=15 point=1 t=44.100 et=2023.628</Score>
+<Score et="2026.9">Bidu Fiel(1) lap=15 point=2 t=86.580 et=2026.787</Score>
+<Score et="2028.9">Andre Retek(7) lap=15 point=1 t=47.204 et=2028.826</Score>
+<Score et="2035.5">Marilson Muniz(13) lap=15 point=1 t=43.986 et=2035.390</Score>
+<Score et="2035.6">Emerson Bracisievicz(12) lap=15 point=0 t=125.665 et=2035.510</Score>
+<Score et="2047.7">Robson Radaell(10) lap=15 point=2 t=86.694 et=2047.579</Score>
+<Score et="2050.7">Hernani Klehm(11) lap=15 point=2 t=86.835 et=2050.564</Score>
+<Score et="2055.3">Joao Junior(20) lap=15 point=2 t=87.641 et=2055.194</Score>
+<Score et="2056.7">Alexandre Reys(15) lap=15 point=1 t=44.529 et=2056.531</Score>
+<Score et="2059.9">Marcelo Eduardo(8) lap=15 point=1 t=44.241 et=2059.744</Score>
+<Score et="2065.1">Bidu Fiel(1) lap=16 point=0 t=124.751 et=2064.958</Score>
+<Score et="2068.6">Philipe Coutinho(6) lap=15 point=2 t=89.000 et=2068.528</Score>
+<Score et="2070.5">Henrique Galleazzi(18) lap=15 point=1 t=47.550 et=2070.400</Score>
+<Score et="2072.8">Andre Retek(7) lap=15 point=2 t=91.054 et=2072.677</Score>
+<Score et="2079.6">Marilson Muniz(13) lap=15 point=2 t=88.047 et=2079.452</Score>
+<Score et="2079.7">Emerson Bracisievicz(12) lap=15 point=1 t=44.059 et=2079.569</Score>
+<Score et="2085.6">Robson Radaell(10) lap=16 point=0 t=124.593 et=2085.478</Score>
+<Score et="2088.6">Hernani Klehm(11) lap=16 point=0 t=124.796 et=2088.525</Score>
+<Score et="2093.4">Joao Junior(20) lap=16 point=0 t=125.793 et=2093.346</Score>
+<Score et="2102.9">Alexandre Reys(15) lap=15 point=2 t=90.745 et=2102.747</Score>
+<Score et="2103.9">Marcelo Eduardo(8) lap=15 point=2 t=88.294 et=2103.797</Score>
+<Score et="2106.9">Philipe Coutinho(6) lap=16 point=0 t=127.266 et=2106.794</Score>
+<Score et="2108.3">Bidu Fiel(1) lap=16 point=1 t=43.168 et=2108.126</Score>
+<Score et="2110.7">Andre Retek(7) lap=16 point=0 t=129.055 et=2110.677</Score>
+<Score et="2114.6">Henrique Galleazzi(18) lap=15 point=2 t=91.630 et=2114.480</Score>
+<Score et="2117.8">Marilson Muniz(13) lap=16 point=0 t=126.249 et=2117.653</Score>
+<Score et="2123.4">Emerson Bracisievicz(12) lap=15 point=2 t=87.710 et=2123.220</Score>
+<Score et="2128.9">Robson Radaell(10) lap=16 point=1 t=43.263 et=2128.742</Score>
+<Score et="2132.0">Hernani Klehm(11) lap=16 point=1 t=43.362 et=2131.887</Score>
+<Score et="2136.9">Joao Junior(20) lap=16 point=1 t=43.428 et=2136.774</Score>
+<Score et="2141.5">Alexandre Reys(15) lap=16 point=0 t=129.353 et=2141.354</Score>
+<Score et="2142.1">Marcelo Eduardo(8) lap=16 point=0 t=126.500 et=2142.002</Score>
+<Score et="2150.5">Philipe Coutinho(6) lap=16 point=1 t=43.610 et=2150.404</Score>
+<Score et="2151.5">Bidu Fiel(1) lap=16 point=2 t=86.443 et=2151.401</Score>
+<Score et="2152.8">Henrique Galleazzi(18) lap=16 point=0 t=129.891 et=2152.741</Score>
+<Score et="2154.4">Andre Retek(7) lap=16 point=1 t=43.610 et=2154.287</Score>
+<Score et="2161.5">Emerson Bracisievicz(12) lap=16 point=0 t=125.893 et=2161.403</Score>
+<Score et="2161.8">Marilson Muniz(13) lap=16 point=1 t=43.988 et=2161.640</Score>
+<Score et="2172.2">Robson Radaell(10) lap=16 point=2 t=86.621 et=2172.099</Score>
+<Score et="2175.3">Hernani Klehm(11) lap=16 point=2 t=86.708 et=2175.233</Score>
+<Score et="2180.5">Joao Junior(20) lap=16 point=2 t=87.047 et=2180.392</Score>
+<Score et="2186.7">Alexandre Reys(15) lap=16 point=1 t=45.193 et=2186.547</Score>
+<Score et="2187.0">Marcelo Eduardo(8) lap=16 point=1 t=44.939 et=2186.942</Score>
+<Score et="2189.4">Bidu Fiel(1) lap=17 point=0 t=124.343 et=2189.301</Score>
+<Score et="2194.7">Philipe Coutinho(6) lap=16 point=2 t=87.859 et=2194.653</Score>
+<Score et="2196.2">Henrique Galleazzi(18) lap=16 point=1 t=43.359 et=2196.100</Score>
+<Score et="2198.6">Andre Retek(7) lap=16 point=2 t=87.821 et=2198.498</Score>
+<Score et="2205.4">Marilson Muniz(13) lap=16 point=2 t=87.590 et=2205.242</Score>
+<Score et="2205.5">Emerson Bracisievicz(12) lap=16 point=1 t=44.000 et=2205.403</Score>
+<Score et="2210.2">Robson Radaell(10) lap=17 point=0 t=124.601 et=2210.079</Score>
+<Score et="2213.2">Hernani Klehm(11) lap=17 point=0 t=124.525 et=2213.050</Score>
+<Score et="2218.6">Joao Junior(20) lap=17 point=0 t=125.119 et=2218.465</Score>
+<Score et="2230.6">Marcelo Eduardo(8) lap=16 point=2 t=88.464 et=2230.467</Score>
+<Score et="2232.5">Bidu Fiel(1) lap=17 point=1 t=43.132 et=2232.433</Score>
+<Score et="2232.9">Alexandre Reys(15) lap=16 point=2 t=91.342 et=2232.696</Score>
+<Score et="2232.9">Philipe Coutinho(6) lap=17 point=0 t=126.047 et=2232.841</Score>
+<Score et="2236.8">Andre Retek(7) lap=17 point=0 t=126.071 et=2236.747</Score>
+<Score et="2239.7">Henrique Galleazzi(18) lap=16 point=2 t=86.845 et=2239.586</Score>
+<Score et="2243.9">Marilson Muniz(13) lap=17 point=0 t=126.101 et=2243.754</Score>
+<Score et="2249.1">Emerson Bracisievicz(12) lap=16 point=2 t=87.591 et=2248.994</Score>
+<Score et="2253.5">Robson Radaell(10) lap=17 point=1 t=43.314 et=2253.393</Score>
+<Score et="2256.7">Hernani Klehm(11) lap=17 point=1 t=43.587 et=2256.637</Score>
+<Score et="2262.3">Joao Junior(20) lap=17 point=1 t=43.750 et=2262.215</Score>
+<Score et="2268.9">Marcelo Eduardo(8) lap=17 point=0 t=126.814 et=2268.817</Score>
+<Score et="2271.5">Alexandre Reys(15) lap=17 point=0 t=129.996 et=2271.350</Score>
+<Score et="2276.0">Bidu Fiel(1) lap=17 point=2 t=86.560 et=2275.861</Score>
+<Score et="2276.9">Philipe Coutinho(6) lap=17 point=1 t=43.997 et=2276.838</Score>
+<Score et="2277.8">Henrique Galleazzi(18) lap=17 point=0 t=124.992 et=2277.734</Score>
+<Score et="2280.2">Andre Retek(7) lap=17 point=1 t=43.375 et=2280.122</Score>
+<Score et="2287.7">Emerson Bracisievicz(12) lap=17 point=0 t=126.150 et=2287.553</Score>
+<Score et="2287.9">Marilson Muniz(13) lap=17 point=1 t=43.975 et=2287.729</Score>
+<Score et="2296.7">Robson Radaell(10) lap=17 point=2 t=86.577 et=2296.656</Score>
+<Score et="2300.0">Hernani Klehm(11) lap=17 point=2 t=86.875 et=2299.925</Score>
+<Score et="2306.3">Joao Junior(20) lap=17 point=2 t=-1.000 et=2306.167</Score>
+<Score et="2312.4">Marcelo Eduardo(8) lap=17 point=1 t=43.450 et=2312.267</Score>
+<Score et="2314.1">Bidu Fiel(1) lap=18 point=0 t=124.669 et=2313.971</Score>
+<Score et="2315.5">Alexandre Reys(15) lap=17 point=1 t=43.968 et=2315.318</Score>
+<Score et="2321.0">Philipe Coutinho(6) lap=17 point=2 t=88.118 et=2320.959</Score>
+<Score et="2321.4">Henrique Galleazzi(18) lap=17 point=1 t=43.524 et=2321.258</Score>
+<Score et="2324.4">Andre Retek(7) lap=17 point=2 t=87.538 et=2324.285</Score>
+<Score et="2331.9">Emerson Bracisievicz(12) lap=17 point=1 t=44.227 et=2331.780</Score>
+<Score et="2332.1">Marilson Muniz(13) lap=17 point=2 t=88.186 et=2331.940</Score>
+<Score et="2334.6">Robson Radaell(10) lap=18 point=0 t=124.452 et=2334.531</Score>
+<Score et="2337.8">Hernani Klehm(11) lap=18 point=0 t=124.685 et=2337.735</Score>
+<Score et="2344.8">Joao Junior(20) lap=18 point=0 t=-1.000 et=2344.674</Score>
+<Score et="2356.0">Marcelo Eduardo(8) lap=17 point=2 t=87.050 et=2355.867</Score>
+<Score et="2357.4">Bidu Fiel(1) lap=18 point=1 t=43.292 et=2357.263</Score>
+<Score et="2359.7">Philipe Coutinho(6) lap=18 point=0 t=126.757 et=2359.598</Score>
+<Score et="2361.0">Alexandre Reys(15) lap=17 point=2 t=89.493 et=2360.843</Score>
+<Score et="2362.7">Andre Retek(7) lap=18 point=0 t=125.834 et=2362.581</Score>
+<Score et="2365.2">Henrique Galleazzi(18) lap=17 point=2 t=87.399 et=2365.133</Score>
+<Score et="2370.0">Marilson Muniz(13) lap=18 point=0 t=126.136 et=2369.890</Score>
+<Score et="2376.6">Emerson Bracisievicz(12) lap=17 point=2 t=88.927 et=2376.481</Score>
+<Score et="2381.1">Hernani Klehm(11) lap=18 point=1 t=43.290 et=2381.025</Score>
+<Score et="2388.1">Joao Junior(20) lap=18 point=1 t=43.373 et=2388.047</Score>
+<Score et="2394.1">Marcelo Eduardo(8) lap=18 point=0 t=125.163 et=2393.979</Score>
+<Score et="2399.5">Alexandre Reys(15) lap=18 point=0 t=128.018 et=2399.368</Score>
+<Score et="2400.9">Bidu Fiel(1) lap=18 point=2 t=86.810 et=2400.781</Score>
+<Score et="2403.5">Henrique Galleazzi(18) lap=18 point=0 t=125.657 et=2403.391</Score>
+<Score et="2403.9">Philipe Coutinho(6) lap=18 point=1 t=44.267 et=2403.864</Score>
+<Score et="2406.0">Andre Retek(7) lap=18 point=1 t=43.302 et=2405.883</Score>
+<Score et="2414.1">Marilson Muniz(13) lap=18 point=1 t=44.055 et=2413.945</Score>
+<Score et="2414.7">Emerson Bracisievicz(12) lap=18 point=0 t=127.025 et=2414.579</Score>
+<Score et="2421.7">Robson Radaell(10) lap=18 point=2 t=87.036 et=2421.567</Score>
+<Score et="2424.5">Hernani Klehm(11) lap=18 point=2 t=86.640 et=2424.375</Score>
+<Score et="2431.9">Joao Junior(20) lap=18 point=2 t=87.110 et=2431.785</Score>
+<Score et="2438.6">Marcelo Eduardo(8) lap=18 point=1 t=44.462 et=2438.442</Score>
+<Score et="2438.9">Bidu Fiel(1) lap=19 point=0 t=124.788 et=2438.759</Score>
+<Score et="2443.8">Alexandre Reys(15) lap=18 point=1 t=44.251 et=2443.619</Score>
+<Score et="2447.0">Henrique Galleazzi(18) lap=18 point=1 t=43.484 et=2446.875</Score>
+<Score et="2448.6">Philipe Coutinho(6) lap=18 point=2 t=88.930 et=2448.528</Score>
+<Score et="2449.6">Andre Retek(7) lap=18 point=2 t=86.894 et=2449.475</Score>
+<Score et="2458.5">Emerson Bracisievicz(12) lap=18 point=1 t=43.805 et=2458.383</Score>
+<Score et="2459.9">Robson Radaell(10) lap=19 point=0 t=125.261 et=2459.792</Score>
+<Score et="2460.1">Marilson Muniz(13) lap=18 point=2 t=90.052 et=2459.942</Score>
+<Score et="2462.4">Hernani Klehm(11) lap=19 point=0 t=124.603 et=2462.338</Score>
+<Score et="2469.9">Joao Junior(20) lap=19 point=0 t=125.103 et=2469.777</Score>
+<Score et="2482.3">Bidu Fiel(1) lap=19 point=1 t=43.445 et=2482.203</Score>
+<Score et="2482.9">Marcelo Eduardo(8) lap=18 point=2 t=88.788 et=2482.767</Score>
+<Score et="2487.0">Philipe Coutinho(6) lap=19 point=0 t=127.280 et=2486.878</Score>
+<Score et="2487.7">Andre Retek(7) lap=19 point=0 t=124.991 et=2487.572</Score>
+<Score et="2488.4">Alexandre Reys(15) lap=18 point=2 t=88.850 et=2488.218</Score>
+<Score et="2490.7">Henrique Galleazzi(18) lap=18 point=2 t=87.216 et=2490.607</Score>
+<Score et="2498.4">Marilson Muniz(13) lap=19 point=0 t=128.392 et=2498.282</Score>
+<Score et="2502.4">Emerson Bracisievicz(12) lap=18 point=2 t=87.694 et=2502.272</Score>
+<Score et="2503.2">Robson Radaell(10) lap=19 point=1 t=43.331 et=2503.123</Score>
+<Score et="2505.7">Hernani Klehm(11) lap=19 point=1 t=43.262 et=2505.600</Score>
+<Score et="2513.3">Joao Junior(20) lap=19 point=1 t=43.466 et=2513.243</Score>
+<Score et="2521.3">Marcelo Eduardo(8) lap=19 point=0 t=127.200 et=2521.179</Score>
+<Score et="2526.0">Bidu Fiel(1) lap=19 point=2 t=87.118 et=2525.876</Score>
+<Score et="2527.0">Alexandre Reys(15) lap=19 point=0 t=127.443 et=2526.811</Score>
+<Score et="2528.9">Henrique Galleazzi(18) lap=19 point=0 t=125.445 et=2528.836</Score>
+<Score et="2531.0">Andre Retek(7) lap=19 point=1 t=43.312 et=2530.885</Score>
+<Score et="2531.8">Philipe Coutinho(6) lap=19 point=1 t=44.875 et=2531.753</Score>
+<Score et="2540.7">Emerson Bracisievicz(12) lap=19 point=0 t=125.966 et=2540.544</Score>
+<Score et="2543.5">Marilson Muniz(13) lap=19 point=1 t=45.062 et=2543.344</Score>
+<Score et="2546.8">Robson Radaell(10) lap=19 point=2 t=86.929 et=2546.721</Score>
+<Score et="2549.1">Hernani Klehm(11) lap=19 point=2 t=86.612 et=2548.950</Score>
+<Score et="2556.9">Joao Junior(20) lap=19 point=2 t=87.008 et=2556.785</Score>
+<Score et="2564.2">Bidu Fiel(1) lap=20 point=0 t=125.275 et=2564.033</Score>
+<Score et="2565.2">Marcelo Eduardo(8) lap=19 point=1 t=43.938 et=2565.117</Score>
+<Score et="2572.0">Alexandre Reys(15) lap=19 point=1 t=45.067 et=2571.878</Score>
+<Score et="2572.6">Henrique Galleazzi(18) lap=19 point=1 t=43.639 et=2572.475</Score>
+<Score et="2575.4">Andre Retek(7) lap=19 point=2 t=87.701 et=2575.273</Score>
+<Score et="2578.2">Philipe Coutinho(6) lap=19 point=2 t=91.214 et=2578.092</Score>
+<Score et="2584.7">Robson Radaell(10) lap=20 point=0 t=124.851 et=2584.643</Score>
+<Score et="2585.3">Emerson Bracisievicz(12) lap=19 point=1 t=44.600 et=2585.145</Score>
+<Score et="2586.8">Hernani Klehm(11) lap=20 point=0 t=124.391 et=2586.729</Score>
+<Score et="2587.7">Marilson Muniz(13) lap=19 point=2 t=89.343 et=2587.625</Score>
+<Score et="2595.0">Joao Junior(20) lap=20 point=0 t=125.109 et=2594.885</Score>
+<Score et="2607.4">Bidu Fiel(1) lap=20 point=1 t=43.293 et=2607.326</Score>
+<Score et="2609.2">Marcelo Eduardo(8) lap=19 point=2 t=87.869 et=2609.048</Score>
+<Score et="2613.5">Andre Retek(7) lap=20 point=0 t=125.883 et=2613.455</Score>
+<Score et="2616.3">Alexandre Reys(15) lap=19 point=2 t=89.332 et=2616.143</Score>
+<Score et="2616.5">Philipe Coutinho(6) lap=20 point=0 t=129.575 et=2616.453</Score>
+<Score et="2616.6">Henrique Galleazzi(18) lap=19 point=2 t=87.616 et=2616.452</Score>
+<Score et="2626.1">Marilson Muniz(13) lap=20 point=0 t=127.677 et=2625.958</Score>
+<Score et="2628.0">Robson Radaell(10) lap=20 point=1 t=43.274 et=2627.917</Score>
+<Score et="2629.4">Emerson Bracisievicz(12) lap=19 point=2 t=88.766 et=2629.311</Score>
+<Score et="2630.2">Hernani Klehm(11) lap=20 point=1 t=43.384 et=2630.113</Score>
+<Score et="2638.9">Joao Junior(20) lap=20 point=1 t=43.874 et=2638.760</Score>
+<Score et="2647.5">Marcelo Eduardo(8) lap=20 point=0 t=126.238 et=2647.417</Score>
+<Score et="2650.8">Bidu Fiel(1) lap=20 point=2 t=86.651 et=2650.684</Score>
+<Score et="2654.9">Henrique Galleazzi(18) lap=20 point=0 t=125.972 et=2654.808</Score>
+<Score et="2656.4">Alexandre Reys(15) lap=20 point=0 t=129.446 et=2656.257</Score>
+<Score et="2657.3">Andre Retek(7) lap=20 point=1 t=43.717 et=2657.172</Score>
+<Score et="2660.2">Philipe Coutinho(6) lap=20 point=1 t=43.600 et=2660.053</Score>
+<Score et="2668.1">Emerson Bracisievicz(12) lap=20 point=0 t=127.361 et=2667.906</Score>
+<Score et="2670.1">Marilson Muniz(13) lap=20 point=1 t=44.017 et=2669.976</Score>
+<Score et="2671.4">Robson Radaell(10) lap=20 point=2 t=86.681 et=2671.324</Score>
+<Score et="2674.1">Hernani Klehm(11) lap=20 point=2 t=87.221 et=2673.950</Score>
+<Score et="2682.4">Joao Junior(20) lap=20 point=2 t=87.399 et=2682.285</Score>
+<Score et="2688.8">Bidu Fiel(1) lap=21 point=0 t=124.634 et=2688.667</Score>
+<Score et="2691.3">Marcelo Eduardo(8) lap=20 point=1 t=43.806 et=2691.222</Score>
+<Score et="2698.8">Henrique Galleazzi(18) lap=20 point=1 t=43.867 et=2698.675</Score>
+<Score et="2701.5">Andre Retek(7) lap=20 point=2 t=87.972 et=2701.427</Score>
+<Score et="2701.9">Alexandre Reys(15) lap=20 point=1 t=45.474 et=2701.730</Score>
+<Score et="2704.4">Philipe Coutinho(6) lap=20 point=2 t=87.842 et=2704.295</Score>
+<Score et="2709.5">Robson Radaell(10) lap=21 point=0 t=124.699 et=2709.342</Score>
+<Score et="2712.2">Emerson Bracisievicz(12) lap=20 point=1 t=44.153 et=2712.059</Score>
+<Score et="2712.3">Hernani Klehm(11) lap=21 point=0 t=125.434 et=2712.163</Score>
+<Score et="2715.0">Marilson Muniz(13) lap=20 point=2 t=88.883 et=2714.842</Score>
+<Score et="2720.6">Joao Junior(20) lap=21 point=0 t=125.624 et=2720.510</Score>
+<Score et="2732.1">Bidu Fiel(1) lap=21 point=1 t=43.335 et=2732.001</Score>
+<Score et="2734.8">Marcelo Eduardo(8) lap=20 point=2 t=87.325 et=2734.742</Score>
+<Score et="2739.8">Andre Retek(7) lap=21 point=0 t=126.336 et=2739.792</Score>
+<Score et="2742.3">Henrique Galleazzi(18) lap=20 point=2 t=87.421 et=2742.229</Score>
+<Score et="2743.0">Philipe Coutinho(6) lap=21 point=0 t=126.513 et=2742.966</Score>
+<Score et="2746.7">Alexandre Reys(15) lap=20 point=2 t=90.286 et=2746.543</Score>
+<Score et="2752.8">Robson Radaell(10) lap=21 point=1 t=43.375 et=2752.717</Score>
+<Score et="2753.7">Marilson Muniz(13) lap=21 point=0 t=127.651 et=2753.609</Score>
+<Score et="2755.6">Hernani Klehm(11) lap=21 point=1 t=43.362 et=2755.525</Score>
+<Score et="2755.9">Emerson Bracisievicz(12) lap=20 point=2 t=87.839 et=2755.744</Score>
+<Score et="2764.7">Joao Junior(20) lap=21 point=1 t=44.051 et=2764.561</Score>
+<Score et="2772.9">Marcelo Eduardo(8) lap=21 point=0 t=125.331 et=2772.748</Score>
+<Score et="2775.6">Bidu Fiel(1) lap=21 point=2 t=86.821 et=2775.488</Score>
+<Score et="2780.5">Henrique Galleazzi(18) lap=21 point=0 t=125.567 et=2780.375</Score>
+<Score et="2783.6">Andre Retek(7) lap=21 point=1 t=43.680 et=2783.472</Score>
+<Score et="2785.3">Alexandre Reys(15) lap=21 point=0 t=128.955 et=2785.212</Score>
+<Score et="2786.9">Philipe Coutinho(6) lap=21 point=1 t=43.866 et=2786.833</Score>
+<Score et="2794.1">Emerson Bracisievicz(12) lap=21 point=0 t=126.023 et=2793.929</Score>
+<Score et="2796.6">Robson Radaell(10) lap=21 point=2 t=87.176 et=2796.518</Score>
+<Score et="2799.0">Marilson Muniz(13) lap=21 point=1 t=45.284 et=2798.893</Score>
+<Score et="2799.1">Hernani Klehm(11) lap=21 point=2 t=86.877 et=2799.040</Score>
+<Score et="2808.5">Joao Junior(20) lap=21 point=2 t=87.900 et=2808.410</Score>
+<Score et="2813.7">Bidu Fiel(1) lap=22 point=0 t=124.947 et=2813.614</Score>
+<Score et="2816.8">Marcelo Eduardo(8) lap=21 point=1 t=43.927 et=2816.675</Score>
+<Score et="2824.2">Henrique Galleazzi(18) lap=21 point=1 t=43.709 et=2824.084</Score>
+<Score et="2827.6">Andre Retek(7) lap=21 point=2 t=87.667 et=2827.459</Score>
+<Score et="2829.2">Alexandre Reys(15) lap=21 point=1 t=43.837 et=2829.049</Score>
+<Score et="2831.3">Philipe Coutinho(6) lap=21 point=2 t=88.213 et=2831.180</Score>
+<Score et="2834.6">Robson Radaell(10) lap=22 point=0 t=125.177 et=2834.518</Score>
+<Score et="2837.0">Hernani Klehm(11) lap=22 point=0 t=124.737 et=2836.900</Score>
+<Score et="2837.6">Emerson Bracisievicz(12) lap=21 point=1 t=43.497 et=2837.426</Score>
+<Score et="2843.9">Marilson Muniz(13) lap=21 point=2 t=90.123 et=2843.733</Score>
+<Score et="2846.8">Joao Junior(20) lap=22 point=0 t=126.200 et=2846.710</Score>
+<Score et="2857.1">Bidu Fiel(1) lap=22 point=1 t=43.362 et=2856.976</Score>
+<Score et="2860.7">Marcelo Eduardo(8) lap=21 point=2 t=87.805 et=2860.553</Score>
+<Score et="2865.6">Andre Retek(7) lap=22 point=0 t=125.731 et=2865.523</Score>
+<Score et="2867.9">Henrique Galleazzi(18) lap=21 point=2 t=87.425 et=2867.800</Score>
+<Score et="2869.7">Philipe Coutinho(6) lap=22 point=0 t=126.629 et=2869.595</Score>
+<Score et="2873.1">Alexandre Reys(15) lap=21 point=2 t=87.794 et=2873.006</Score>
+<Score et="2878.1">Robson Radaell(10) lap=22 point=1 t=43.448 et=2877.967</Score>
+<Score et="2880.6">Hernani Klehm(11) lap=22 point=1 t=43.575 et=2880.475</Score>
+<Score et="2881.2">Emerson Bracisievicz(12) lap=21 point=2 t=87.197 et=2881.125</Score>
+<Score et="2882.5">Marilson Muniz(13) lap=22 point=0 t=128.771 et=2882.381</Score>
+<Score et="2890.4">Joao Junior(20) lap=22 point=1 t=43.613 et=2890.322</Score>
+<Score et="2898.9">Marcelo Eduardo(8) lap=22 point=0 t=126.076 et=2898.824</Score>
+<Score et="2900.6">Bidu Fiel(1) lap=22 point=2 t=86.820 et=2900.434</Score>
+<Score et="2906.3">Henrique Galleazzi(18) lap=22 point=0 t=125.865 et=2906.240</Score>
+<Score et="2910.5">Andre Retek(7) lap=22 point=1 t=44.908 et=2910.431</Score>
+<Score et="2911.8">Alexandre Reys(15) lap=22 point=0 t=126.466 et=2911.678</Score>
+<Score et="2914.0">Philipe Coutinho(6) lap=22 point=1 t=44.283 et=2913.878</Score>
+<Score et="2920.1">Emerson Bracisievicz(12) lap=22 point=0 t=126.008 et=2919.937</Score>
+<Score et="2921.4">Robson Radaell(10) lap=22 point=2 t=86.749 et=2921.267</Score>
+<Score et="2923.9">Hernani Klehm(11) lap=22 point=2 t=86.941 et=2923.841</Score>
+<Score et="2927.6">Marilson Muniz(13) lap=22 point=1 t=45.087 et=2927.468</Score>
+<Score et="2934.3">Joao Junior(20) lap=22 point=2 t=87.468 et=2934.177</Score>
+<Score et="2938.5">Bidu Fiel(1) lap=23 point=0 t=124.766 et=2938.380</Score>
+<Score et="2942.8">Marcelo Eduardo(8) lap=22 point=1 t=43.848 et=2942.672</Score>
+<Score et="2949.7">Henrique Galleazzi(18) lap=22 point=1 t=43.315 et=2949.555</Score>
+<Score et="2955.3">Andre Retek(7) lap=22 point=2 t=89.684 et=2955.207</Score>
+<Score et="2956.2">Alexandre Reys(15) lap=22 point=1 t=44.401 et=2956.079</Score>
+<Score et="2958.6">Philipe Coutinho(6) lap=22 point=2 t=88.892 et=2958.487</Score>
+<Score et="2959.3">Robson Radaell(10) lap=23 point=0 t=124.714 et=2959.232</Score>
+<Score et="2961.8">Hernani Klehm(11) lap=23 point=0 t=124.844 et=2961.744</Score>
+<Score et="2963.9">Emerson Bracisievicz(12) lap=22 point=1 t=43.838 et=2963.774</Score>
+<Score et="2971.8">Marilson Muniz(13) lap=22 point=2 t=89.288 et=2971.669</Score>
+<Score et="2972.8">Joao Junior(20) lap=23 point=0 t=125.963 et=2972.673</Score>
+<Score et="2982.0">Bidu Fiel(1) lap=23 point=1 t=43.471 et=2981.851</Score>
+<Score et="2986.4">Marcelo Eduardo(8) lap=22 point=2 t=87.507 et=2986.331</Score>
+<Score et="2993.6">Henrique Galleazzi(18) lap=22 point=2 t=87.193 et=2993.433</Score>
+<Score et="2994.0">Andre Retek(7) lap=23 point=0 t=128.354 et=2993.877</Score>
+<Score et="2997.0">Philipe Coutinho(6) lap=23 point=0 t=127.299 et=2996.894</Score>
+<Score et="3002.7">Robson Radaell(10) lap=23 point=1 t=43.314 et=3002.547</Score>
+<Score et="3003.7">Alexandre Reys(15) lap=22 point=2 t=91.915 et=3003.593</Score>
+<Score et="3005.2">Hernani Klehm(11) lap=23 point=1 t=43.382 et=3005.126</Score>
+<Score et="3007.7">Emerson Bracisievicz(12) lap=22 point=2 t=87.636 et=3007.573</Score>
+<Score et="3010.1">Marilson Muniz(13) lap=23 point=0 t=127.623 et=3010.004</Score>
+<Score et="3016.7">Joao Junior(20) lap=23 point=1 t=43.900 et=3016.572</Score>
+<Score et="3024.6">Marcelo Eduardo(8) lap=23 point=0 t=125.704 et=3024.528</Score>
+<Score et="3025.4">Bidu Fiel(1) lap=23 point=2 t=86.871 et=3025.251</Score>
+<Score et="3031.9">Henrique Galleazzi(18) lap=23 point=0 t=125.520 et=3031.760</Score>
+<Score et="3039.1">Andre Retek(7) lap=23 point=1 t=45.098 et=3038.975</Score>
+<Score et="3042.3">Philipe Coutinho(6) lap=23 point=1 t=45.309 et=3042.203</Score>
+<Score et="3042.8">Alexandre Reys(15) lap=23 point=0 t=130.998 et=3042.676</Score>
+<Penalty et="3045.7">Robson Radaell received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="3046.0">Robson Radaell(10) lap=23 point=2 t=-1.000 et=3045.943</Score>
+<Penalty et="3046.1">Henrique Galleazzi received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="3046.1">Emerson Bracisievicz(12) lap=23 point=0 t=126.076 et=3046.012</Score>
+<Score et="3048.8">Hernani Klehm(11) lap=23 point=2 t=86.986 et=3048.730</Score>
+<Score et="3054.1">Marilson Muniz(13) lap=23 point=1 t=43.998 et=3054.002</Score>
+<Score et="3063.4">Joao Junior(20) lap=23 point=2 t=90.613 et=3063.285</Score>
+<Score et="3064.0">Bidu Fiel(1) lap=24 point=0 t=125.530 et=3063.911</Score>
+<Score et="3068.7">Marcelo Eduardo(8) lap=23 point=1 t=44.103 et=3068.630</Score>
+<Score et="3076.1">Henrique Galleazzi(18) lap=23 point=1 t=-1.000 et=3075.980</Score>
+<Score et="3084.5">Andre Retek(7) lap=23 point=2 t=90.525 et=3084.403</Score>
+<Score et="3086.9">Hernani Klehm(11) lap=24 point=0 t=125.037 et=3086.781</Score>
+<Score et="3087.6">Alexandre Reys(15) lap=23 point=1 t=44.804 et=3087.480</Score>
+<Score et="3089.8">Emerson Bracisievicz(12) lap=23 point=1 t=-1.000 et=3089.669</Score>
+<Score et="3089.9">Philipe Coutinho(6) lap=23 point=2 t=92.934 et=3089.828</Score>
+<Penalty et="3095.5">Robson Radaell served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Score et="3097.2">Robson Radaell(10) lap=24 point=0 t=-1.000 et=3097.121</Score>
+<Score et="3099.0">Marilson Muniz(13) lap=23 point=2 t=-1.000 et=3098.865</Score>
+<Score et="3102.1">Joao Junior(20) lap=24 point=0 t=129.277 et=3101.949</Score>
+<Score et="3108.5">Bidu Fiel(1) lap=24 point=1 t=44.466 et=3108.376</Score>
+<Score et="3112.8">Marcelo Eduardo(8) lap=23 point=2 t=88.180 et=3112.707</Score>
+<Score et="3120.8">Henrique Galleazzi(18) lap=23 point=2 t=-1.000 et=3120.658</Score>
+<Score et="3130.7">Hernani Klehm(11) lap=24 point=1 t=43.819 et=3130.600</Score>
+<Score et="3131.1">Philipe Coutinho(6) lap=24 point=0 t=134.176 et=3131.070</Score>
+<Score et="3131.9">Alexandre Reys(15) lap=23 point=2 t=89.134 et=3131.810</Score>
+<Score et="3134.2">Emerson Bracisievicz(12) lap=23 point=2 t=-1.000 et=3134.094</Score>
+<Score et="3139.1">Marilson Muniz(13) lap=24 point=0 t=-1.000 et=3138.998</Score>
+<Score et="3144.7">Robson Radaell(10) lap=24 point=1 t=47.486 et=3144.607</Score>
+<Score et="3145.6">Joao Junior(20) lap=24 point=1 t=43.563 et=3145.512</Score>
+<Score et="3150.9">Marcelo Eduardo(8) lap=24 point=0 t=126.275 et=3150.803</Score>
+<Score et="3152.3">Bidu Fiel(1) lap=24 point=2 t=88.306 et=3152.217</Score>
+<Score et="3159.5">Henrique Galleazzi(18) lap=24 point=0 t=-1.000 et=3159.337</Score>
+<Score et="3161.0">Andre Retek(7) lap=24 point=0 t=166.997 et=3160.874</Score>
+<Score et="3170.6">Alexandre Reys(15) lap=24 point=0 t=127.770 et=3170.446</Score>
+<Score et="3172.8">Emerson Bracisievicz(12) lap=24 point=0 t=-1.000 et=3172.633</Score>
+<Score et="3174.4">Hernani Klehm(11) lap=24 point=2 t=87.469 et=3174.250</Score>
+<Score et="3175.9">Philipe Coutinho(6) lap=24 point=1 t=44.738 et=3175.807</Score>
+<Score et="3183.5">Marilson Muniz(13) lap=24 point=1 t=44.392 et=3183.390</Score>
+<Score et="3188.5">Robson Radaell(10) lap=24 point=2 t=91.261 et=3188.382</Score>
+<Score et="3189.4">Joao Junior(20) lap=24 point=2 t=87.361 et=3189.310</Score>
+<Score et="3190.8">Bidu Fiel(1) lap=25 point=0 t=126.753 et=3190.663</Score>
+<Score et="3194.8">Marcelo Eduardo(8) lap=24 point=1 t=43.923 et=3194.726</Score>
+<Score et="3205.1">Henrique Galleazzi(18) lap=24 point=1 t=45.621 et=3204.958</Score>
+<Score et="3209.2">Andre Retek(7) lap=24 point=1 t=48.208 et=3209.082</Score>
+<Score et="3212.4">Hernani Klehm(11) lap=25 point=0 t=125.544 et=3212.325</Score>
+<Score et="3214.6">Alexandre Reys(15) lap=24 point=1 t=44.005 et=3214.451</Score>
+<Score et="3216.8">Emerson Bracisievicz(12) lap=24 point=1 t=44.040 et=3216.673</Score>
+<Score et="3221.4">Philipe Coutinho(6) lap=24 point=2 t=-1.000 et=3221.340</Score>
+<Score et="3226.5">Robson Radaell(10) lap=25 point=0 t=129.256 et=3226.377</Score>
+<Score et="3227.6">Marilson Muniz(13) lap=24 point=2 t=88.477 et=3227.475</Score>
+<Score et="3227.7">Joao Junior(20) lap=25 point=0 t=125.615 et=3227.564</Score>
+<Score et="3234.9">Bidu Fiel(1) lap=25 point=1 t=44.163 et=3234.826</Score>
+<Score et="3238.5">Marcelo Eduardo(8) lap=24 point=2 t=87.625 et=3238.428</Score>
+<Score et="3249.0">Henrique Galleazzi(18) lap=24 point=2 t=89.579 et=3248.916</Score>
+<Score et="3253.1">Andre Retek(7) lap=24 point=2 t=92.105 et=3252.979</Score>
+<Score et="3256.2">Hernani Klehm(11) lap=25 point=1 t=43.759 et=3256.083</Score>
+<Score et="3260.4">Philipe Coutinho(6) lap=25 point=0 t=-1.000 et=3260.303</Score>
+<Score et="3260.5">Alexandre Reys(15) lap=24 point=2 t=89.937 et=3260.383</Score>
+<Score et="3260.7">Emerson Bracisievicz(12) lap=24 point=2 t=87.887 et=3260.520</Score>
+<Score et="3265.9">Marilson Muniz(13) lap=25 point=0 t=126.810 et=3265.808</Score>
+<Score et="3270.2">Robson Radaell(10) lap=25 point=1 t=43.714 et=3270.092</Score>
+<Score et="3271.1">Joao Junior(20) lap=25 point=1 t=43.477 et=3271.041</Score>
+<Score et="3276.7">Marcelo Eduardo(8) lap=25 point=0 t=125.789 et=3276.592</Score>
+<Score et="3278.4">Bidu Fiel(1) lap=25 point=2 t=87.672 et=3278.336</Score>
+<Score et="3287.2">Henrique Galleazzi(18) lap=25 point=0 t=127.729 et=3287.065</Score>
+<Score et="3291.1">Andre Retek(7) lap=25 point=0 t=130.178 et=3291.052</Score>
+<Score et="3299.5">Alexandre Reys(15) lap=25 point=0 t=128.922 et=3299.368</Score>
+<Score et="3299.6">Hernani Klehm(11) lap=25 point=2 t=87.161 et=3299.486</Score>
+<Score et="3300.4">Emerson Bracisievicz(12) lap=25 point=0 t=127.612 et=3300.245</Score>
+<Score et="3305.2">Philipe Coutinho(6) lap=25 point=1 t=44.850 et=3305.153</Score>
+<Score et="3310.4">Marilson Muniz(13) lap=25 point=1 t=44.418 et=3310.226</Score>
+<Score et="3314.0">Robson Radaell(10) lap=25 point=2 t=87.480 et=3313.858</Score>
+<Score et="3314.9">Joao Junior(20) lap=25 point=2 t=87.221 et=3314.785</Score>
+<Score et="3317.8">Checkered for Bidu Fiel, laps=26/26, endET=3317.695313/3068.624756, crossedAfterTime=0</Score>
+<Score et="3317.8">Bidu Fiel(1) lap=26 point=0 t=127.032 et=3317.695</Score>
+<Score et="3321.4">Marcelo Eduardo(8) lap=25 point=1 t=44.725 et=3321.317</Score>
+<Score et="3331.2">Henrique Galleazzi(18) lap=25 point=1 t=44.048 et=3331.114</Score>
+<Penalty et="3334.9">Andre Retek received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,0s</Penalty>
+<Score et="3336.4">Andre Retek(7) lap=25 point=1 t=-1.000 et=3336.272</Score>
+<Score et="3338.1">Hernani Klehm(11) lap=26 point=0 t=125.706 et=3338.031</Score>
+<Score et="3344.5">Alexandre Reys(15) lap=25 point=1 t=45.025 et=3344.393</Score>
+<Score et="3345.2">Emerson Bracisievicz(12) lap=25 point=1 t=44.799 et=3345.044</Score>
+<Score et="3350.3">Philipe Coutinho(6) lap=25 point=2 t=89.900 et=3350.203</Score>
+<Score et="3352.4">Robson Radaell(10) lap=26 point=0 t=125.926 et=3352.303</Score>
+<Score et="3352.8">Joao Junior(20) lap=26 point=0 t=125.131 et=3352.695</Score>
+<Score et="3354.8">Marilson Muniz(13) lap=25 point=2 t=88.843 et=3354.651</Score>
+<Penalty et="3355.5">Andre Retek received Drive Thru penalty, 0s, 0laps. Result: penalties=1, 1st=Drive Thru,10s</Penalty>
+<Score et="3365.7">Marcelo Eduardo(8) lap=25 point=2 t=88.980 et=3365.571</Score>
+<Score et="3375.2">Henrique Galleazzi(18) lap=25 point=2 t=88.043 et=3375.109</Score>
+<Sent et="3377.5">Bidu Fiel has left the game but vehicle has been stored in the garage</Sent>
+<Score et="3380.5">Andre Retek(7) lap=25 point=2 t=-1.000 et=3380.365</Score>
+<Sent et="3381.8">Hernani Klehm has left the game but vehicle has been stored in the garage</Sent>
+<Score et="3388.9">Philipe Coutinho(6) lap=26 point=0 t=128.550 et=3388.853</Score>
+<Score et="3389.9">Emerson Bracisievicz(12) lap=25 point=2 t=89.549 et=3389.794</Score>
+<Score et="3391.2">Alexandre Reys(15) lap=25 point=2 t=91.700 et=3391.068</Score>
+<Score et="3393.4">Marilson Muniz(13) lap=26 point=0 t=127.490 et=3393.298</Score>
+<Sent et="3395.8">Robson Radaell has left the game but vehicle has been stored in the garage</Sent>
+<Sent et="3396.7">Joao Junior has left the game but vehicle has been stored in the garage</Sent>
+<Score et="3403.8">Marcelo Eduardo(8) lap=26 point=0 t=127.066 et=3403.657</Score>
+<Penalty et="3418.4">Andre Retek finished before serving penalty, added 35 seconds to totalET</Penalty>
+<Score et="3418.4">Andre Retek(7) lap=26 point=0 t=-1.000 et=3418.312</Score>
+<Penalty et="3425.5">Henrique Galleazzi served 1st Drive Thru penalty, result: penalties=0, 1st=Drive Thru,0s</Penalty>
+<Score et="3427.5">Henrique Galleazzi(18) lap=26 point=0 t=140.285 et=3427.350</Score>
+<Score et="3428.2">Emerson Bracisievicz(12) lap=26 point=0 t=127.805 et=3428.050</Score>
+<Score et="3430.7">Alexandre Reys(15) lap=26 point=0 t=131.243 et=3430.611</Score>
+<Sent et="3430.9">Marcelo Eduardo has left the game but vehicle has been stored in the garage</Sent>
+<Sent et="3439.7">Diretor Principal has left the game but vehicle has been stored in the garage</Sent>
+<Sent et="3440.6">Philipe Coutinho has left the game but vehicle has been stored in the garage</Sent>
+</Stream>
+<MostLapsCompleted>26</MostLapsCompleted>
+<Driver>
+<Name>Bidu Fiel</Name>
+<SteamID>76561198287826937</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_GRIP_01.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>3</GridPos>
+<Position>1</Position>
+<ClassGridPos>3</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>8</Points>
+<ClassPoints>8</ClassPoints>
+<LapRankIncludingDiscos>1</LapRankIncludingDiscos>
+<Lap num="1" p="1" et="68.6247" s1="51.9267" s2="43.3014" s3="37.8868" fuel="0.561">133.1149</Lap>
+<Lap num="2" p="1" et="201.7396" s1="42.8977" s2="43.2391" s3="37.9632" fuel="0.537">124.1000</Lap>
+<Lap num="3" p="1" et="325.8396" s1="43.0618" s2="42.9540" s3="37.6967" fuel="0.518">123.7125</Lap>
+<Lap num="4" p="1" et="449.5521" s1="43.2493" s2="43.2421" s3="37.7936" fuel="0.494">124.2849</Lap>
+<Lap num="5" p="1" et="573.8370" s1="43.1393" s2="43.1068" s3="37.7495" fuel="0.471">123.9957</Lap>
+<Lap num="6" p="1" et="697.8327" s1="43.2191" s2="42.9620" s3="37.8818" fuel="0.451">124.0630</Lap>
+<Lap num="7" p="1" et="821.8957" s1="43.1110" s2="43.2826" s3="37.8183" fuel="0.427">124.2119</Lap>
+<Lap num="8" p="1" et="946.1075" s1="43.2438" s2="43.2288" s3="37.7462" fuel="0.408">124.2189</Lap>
+<Lap num="9" p="1" et="1070.3264" s1="43.1013" s2="43.0544" s3="37.9131" fuel="0.384">124.0688</Lap>
+<Lap num="10" p="1" et="1194.3953" s1="43.2811" s2="43.0750" s3="37.8596" fuel="0.361">124.2157</Lap>
+<Lap num="11" p="1" et="1318.6110" s1="43.3154" s2="43.1250" s3="37.8307" fuel="0.341">124.2711</Lap>
+<Lap num="12" p="1" et="1442.8821" s1="43.3293" s2="43.3483" s3="38.0206" fuel="0.318">124.6982</Lap>
+<Lap num="13" p="1" et="1567.5803" s1="43.3312" s2="43.2399" s3="37.8143" fuel="0.298">124.3854</Lap>
+<Lap num="14" p="1" et="1691.9657" s1="43.1107" s2="43.0500" s3="37.7924" fuel="0.275">123.9531</Lap>
+<Lap num="15" p="1" et="1815.9188" s1="43.1075" s2="43.1049" s3="38.0762" fuel="0.255">124.2886</Lap>
+<Lap num="16" p="1" et="1940.2074" s1="43.4004" s2="43.1792" s3="38.1710" fuel="0.231">124.7506</Lap>
+<Lap num="17" p="1" et="2064.9580" s1="43.1685" s2="43.2749" s3="37.8999" fuel="0.212">124.3433</Lap>
+<Lap num="18" p="1" et="2189.3013" s1="43.1316" s2="43.4285" s3="38.1094" fuel="0.188">124.6694</Lap>
+<Lap num="19" p="1" et="2313.9707" s1="43.2922" s2="43.5181" s3="37.9775" fuel="0.165">124.7878</Lap>
+<Lap num="20" p="1" et="2438.7585" s1="43.4446" s2="43.6733" s3="38.1567" fuel="0.145">125.2747</Lap>
+<Lap num="21" p="1" et="2564.0332" s1="43.2932" s2="43.3574" s3="37.9829" fuel="0.122">124.6335</Lap>
+<Lap num="22" p="1" et="2688.6667" s1="43.3347" s2="43.4866" s3="38.1260" fuel="0.102">124.9473</Lap>
+<Lap num="23" p="1" et="2813.6140" s1="43.3623" s2="43.4578" s3="37.9463" fuel="0.078">124.7664</Lap>
+<Lap num="24" p="1" et="2938.3804" s1="43.4709" s2="43.4001" s3="38.6592" fuel="0.059">125.5303</Lap>
+<Lap num="25" p="1" et="3063.9106" s1="44.4658" s2="43.8406" s3="38.4463" fuel="0.039">126.7527</Lap>
+<Lap num="26" p="1" et="3190.6633" s1="44.1631" s2="43.5093" s3="39.3596" fuel="0.020">127.0320</Lap>
+<BestLapTime>123.7125</BestLapTime>
+<FinishTime>3249.0706</FinishTime>
+<Laps>26</Laps>
+<LapsLed>26</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="2" endLap="8">PlayerControl,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="9" endLap="9">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="10" endLap="26">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Robson Radaell</Name>
+<SteamID>76561198309297079</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_KSTM_02_HON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Kstm Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>05</CarNumber>
+<TeamName>KSTM E-Motorsports </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>4</GridPos>
+<Position>3</Position>
+<ClassGridPos>4</ClassGridPos>
+<ClassPosition>3</ClassPosition>
+<Points>3</Points>
+<ClassPoints>3</ClassPoints>
+<LapRankIncludingDiscos>2</LapRankIncludingDiscos>
+<Lap num="1" p="4" et="68.6247" fuel="0.561">--.----</Lap>
+<Lap num="2" p="4" et="204.7970" s1="43.3749" s2="43.8448" s3="37.6500" fuel="0.537">124.8697</Lap>
+<Lap num="3" p="5" et="329.6667" s1="44.1826" s2="44.2052" s3="38.2372" fuel="0.518">126.6250</Lap>
+<Lap num="4" p="5" et="456.2917" fuel="0.494">--.----</Lap>
+<Lap num="5" p="5" et="583.7615" s1="43.4302" s2="43.3000" s3="38.5093" fuel="0.471">125.2395</Lap>
+<Lap num="6" p="3" et="709.0010" s1="44.5512" s2="43.6780" s3="37.7708" fuel="0.447">126.0000</Lap>
+<Lap num="7" p="3" et="835.0010" s1="43.6157" s2="43.2827" s3="38.0174" fuel="0.427">124.9157</Lap>
+<Lap num="8" p="3" et="959.9167" fuel="0.404">125.0014</Lap>
+<Lap num="9" p="3" et="1084.9181" s1="43.0828" s2="43.0283" s3="37.6785" fuel="0.380">123.7896</Lap>
+<Lap num="10" p="3" et="1208.7076" s1="44.6090" s2="44.3253" s3="38.0645" fuel="0.357">126.9988</Lap>
+<Lap num="11" p="2" et="1335.7064" fuel="0.337">--.----</Lap>
+<Lap num="12" p="2" et="1462.2058" s1="43.6488" s2="43.6263" s3="37.9241" fuel="0.314">125.1992</Lap>
+<Lap num="13" p="2" et="1587.4050" s1="43.4005" s2="43.2428" s3="38.0183" fuel="0.290">124.6616</Lap>
+<Lap num="14" p="2" et="1712.0667" s1="43.3750" s2="43.3035" s3="37.9824" fuel="0.271">124.6609</Lap>
+<Lap num="15" p="2" et="1836.7275" s1="43.0741" s2="43.2400" s3="37.8441" fuel="0.247">124.1582</Lap>
+<Lap num="16" p="2" et="1960.8857" s1="43.2809" s2="43.4128" s3="37.8988" fuel="0.224">124.5925</Lap>
+<Lap num="17" p="2" et="2085.4783" s1="43.2634" s2="43.3572" s3="37.9802" fuel="0.204">124.6008</Lap>
+<Lap num="18" p="2" et="2210.0791" s1="43.3137" s2="43.2629" s3="37.8752" fuel="0.180">124.4519</Lap>
+<Lap num="19" p="2" et="2334.5310" fuel="0.157">125.2607</Lap>
+<Lap num="20" p="2" et="2459.7917" s1="43.3308" s2="43.5981" s3="37.9221" fuel="0.137">124.8511</Lap>
+<Lap num="21" p="2" et="2584.6428" s1="43.2739" s2="43.4075" s3="38.0173" fuel="0.114">124.6987</Lap>
+<Lap num="22" p="2" et="2709.3416" s1="43.3750" s2="43.8013" s3="38.0002" fuel="0.094">125.1765</Lap>
+<Lap num="23" p="2" et="2834.5181" s1="43.4485" s2="43.3000" s3="37.9656" fuel="0.071">124.7141</Lap>
+<Lap num="24" p="3" et="2959.2322" s1="43.3145" fuel="0.051" pit="1">--.----</Lap>
+<Lap num="25" p="3" et="3097.1211" s1="47.4856" s2="43.7751" s3="37.9956" fuel="0.027">129.2563</Lap>
+<Lap num="26" p="3" et="3226.3774" s1="43.7141" s2="43.7661" s3="38.4458" fuel="0.004">125.9260</Lap>
+<BestLapTime>123.7896</BestLapTime>
+<FinishTime>3283.6787</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="2">PlayerControl,TC=1,ABS=1</ControlAndAids>
+<ControlAndAids startLap="3" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Hernani Klehm</Name>
+<SteamID>76561198082323105</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_KSTM_01_HON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Kstm Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>KSTM E-Motorsports </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>20</GridPos>
+<Position>2</Position>
+<ClassGridPos>16</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>5</Points>
+<ClassPoints>5</ClassPoints>
+<LapRankIncludingDiscos>3</LapRankIncludingDiscos>
+<Lap num="1" p="9" et="68.6247" s1="57.5835" s2="43.6959" s3="37.7959" fuel="0.576">139.0753</Lap>
+<Lap num="2" p="9" et="207.7000" s1="43.8000" s2="44.9571" s3="38.2804" fuel="0.553">127.0376</Lap>
+<Lap num="3" p="9" et="334.7375" s1="43.4469" s2="43.4734" s3="37.7499" fuel="0.529">124.6702</Lap>
+<Lap num="4" p="6" et="459.4077" fuel="0.506">--.----</Lap>
+<Lap num="5" p="6" et="584.6500" s1="43.5309" s2="43.4510" s3="37.7015" fuel="0.482">124.6834</Lap>
+<Lap num="6" p="6" et="709.3334" fuel="0.463">--.----</Lap>
+<Lap num="7" p="7" et="835.7568" s1="45.7682" s2="44.0311" s3="37.4938" fuel="0.439">127.2932</Lap>
+<Lap num="8" p="6" et="963.0500" s1="43.4013" s2="43.4792" s3="38.0266" fuel="0.416">124.9072</Lap>
+<Lap num="9" p="5" et="1087.9572" s1="43.9429" s2="43.2356" s3="37.7939" fuel="0.396">124.9724</Lap>
+<Lap num="10" p="4" et="1212.9296" s1="43.4840" s2="43.2628" s3="37.8831" fuel="0.373">124.6299</Lap>
+<Lap num="11" p="4" et="1337.5594" s1="43.8156" s2="43.4778" s3="37.5896" fuel="0.349">124.8829</Lap>
+<Lap num="12" p="4" et="1462.4424" s1="44.1165" s2="43.6681" s3="37.7065" fuel="0.329">125.4911</Lap>
+<Lap num="13" p="3" et="1587.9335" s1="44.0494" s2="43.3287" s3="38.5206" fuel="0.306">125.8988</Lap>
+<Lap num="14" p="3" et="1713.8323" s1="43.2750" s2="43.6927" s3="38.0504" fuel="0.282">125.0182</Lap>
+<Lap num="15" p="3" et="1838.8505" s1="43.4028" s2="43.5468" s3="37.9291" fuel="0.259">124.8787</Lap>
+<Lap num="16" p="3" et="1963.7291" s1="43.4459" s2="43.3889" s3="37.9612" fuel="0.239">124.7960</Lap>
+<Lap num="17" p="3" et="2088.5251" s1="43.3616" s2="43.3462" s3="37.8171" fuel="0.216">124.5249</Lap>
+<Lap num="18" p="3" et="2213.0500" s1="43.5869" s2="43.2881" s3="37.8096" fuel="0.192">124.6846</Lap>
+<Lap num="19" p="3" et="2337.7346" s1="43.2903" s2="43.3501" s3="37.9629" fuel="0.169">124.6033</Lap>
+<Lap num="20" p="3" et="2462.3379" s1="43.2622" s2="43.3499" s3="37.7791" fuel="0.149">124.3911</Lap>
+<Lap num="21" p="3" et="2586.7290" s1="43.3843" s2="43.8367" s3="38.2129" fuel="0.125">125.4338</Lap>
+<Lap num="22" p="3" et="2712.1628" s1="43.3621" s2="43.5149" s3="37.8601" fuel="0.102">124.7371</Lap>
+<Lap num="23" p="3" et="2836.8999" s1="43.5752" s2="43.3657" s3="37.9033" fuel="0.078">124.8442</Lap>
+<Lap num="24" p="2" et="2961.7441" s1="43.3823" s2="43.6033" s3="38.0510" fuel="0.059">125.0366</Lap>
+<Lap num="25" p="2" et="3086.7808" s1="43.8193" s2="43.6499" s3="38.0750" fuel="0.035">125.5442</Lap>
+<Lap num="26" p="2" et="3212.3250" s1="43.7585" s2="43.4023" s3="38.5449" fuel="0.012">125.7058</Lap>
+<BestLapTime>124.3911</BestLapTime>
+<FinishTime>3269.4060</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1</ControlAndAids>
+<ControlAndAids startLap="2" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Henrique Galleazzi</Name>
+<SteamID>76561197985110650</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_ASR_02_CRUZE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: ASR Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>11</CarNumber>
+<TeamName>Alliance SimRacing </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>12</GridPos>
+<Position>8</Position>
+<ClassGridPos>11</ClassGridPos>
+<ClassPosition>8</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>4</LapRankIncludingDiscos>
+<Lap num="1" p="10" et="68.6247" s1="57.1753" s2="43.6892" s3="38.3108" fuel="0.576">139.1753</Lap>
+<Lap num="2" p="10" et="207.8000" fuel="0.557">--.----</Lap>
+<Lap num="3" p="10" et="334.9317" s1="43.5699" s2="43.5234" s3="38.0445" fuel="0.533">125.1378</Lap>
+<Lap num="4" p="8" et="460.0695" s1="43.7055" s2="43.6027" s3="37.6003" fuel="0.514">124.9085</Lap>
+<Lap num="5" p="7" et="584.9780" s1="43.7529" s2="43.1529" s3="37.6662" fuel="0.494">124.5720</Lap>
+<Lap num="6" p="4" et="709.5500" s1="44.3000" s2="43.8047" s3="37.6727" fuel="0.471">125.7775</Lap>
+<Lap num="7" p="4" et="835.3275" s1="43.6595" s2="43.3774" s3="37.7629" fuel="0.451">124.7999</Lap>
+<Lap num="8" p="5" et="960.1273" fuel="0.427">--.----</Lap>
+<Lap num="9" p="4" et="1085.8060" s1="44.8510" s2="43.1329" s3="38.0206" fuel="0.408">126.0045</Lap>
+<Lap num="10" p="5" et="1211.8105" s1="43.6644" s2="44.5250" s3="37.8424" fuel="0.388">126.0319</Lap>
+<Lap num="11" p="6" et="1337.8424" s1="45.9131" s2="44.2013" s3="37.8855" fuel="0.365">127.9999</Lap>
+<Lap num="12" p="7" et="1465.8423" s1="44.2913" s2="43.4196" s3="37.7046" fuel="0.345">125.4154</Lap>
+<Lap num="13" p="6" et="1591.2577" fuel="0.325">--.----</Lap>
+<Lap num="14" p="8" et="1721.6190" fuel="0.302" pit="1">--.----</Lap>
+<Lap num="15" p="10" et="1878.5511" s1="49.0488" s2="43.7750" s3="51.4752" fuel="0.282" pit="1">144.2991</Lap>
+<Lap num="16" p="10" et="2022.8502" s1="47.5497" s2="44.0806" s3="38.2610" fuel="0.259">129.8912</Lap>
+<Lap num="17" p="10" et="2152.7415" s1="43.3586" s2="43.4861" s3="38.1477" fuel="0.239">124.9924</Lap>
+<Lap num="18" p="10" et="2277.7339" s1="43.5239" s2="43.8748" s3="38.2588" fuel="0.216">125.6575</Lap>
+<Lap num="19" p="10" et="2403.3914" s1="43.4836" s2="43.7324" s3="38.2288" fuel="0.196">125.4448</Lap>
+<Lap num="20" p="9" et="2528.8362" s1="43.6389" s2="43.9771" s3="38.3557" fuel="0.176">125.9717</Lap>
+<Lap num="21" p="9" et="2654.8079" s1="43.8672" s2="43.5535" s3="38.1465" fuel="0.153">125.5671</Lap>
+<Lap num="22" p="9" et="2780.3750" s1="43.7087" s2="43.7163" s3="38.4402" fuel="0.133">125.8652</Lap>
+<Lap num="23" p="9" et="2906.2402" s1="43.3147" s2="43.8782" s3="38.3269" fuel="0.110">125.5198</Lap>
+<Lap num="24" p="8" et="3031.7600" fuel="0.090">--.----</Lap>
+<Lap num="25" p="8" et="3159.3367" s1="45.6208" s2="43.9580" s3="38.1499" fuel="0.071">127.7288</Lap>
+<Lap num="26" p="9" et="3287.0654" s1="44.0481" s2="43.9954" s3="52.2412" fuel="0.047" pit="1">140.2847</Lap>
+<BestLapTime>124.5720</BestLapTime>
+<FinishTime>3358.7253</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Augusto Zimmer</Name>
+<SteamID>76561198135376417</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_GRIP2_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip 2 Driver 3</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing 2 </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>1</GridPos>
+<Position>12</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>12</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>5</LapRankIncludingDiscos>
+<Lap num="1" p="3" et="68.6247" fuel="0.561">--.----</Lap>
+<Lap num="2" p="3" et="204.1440" s1="43.4908" s2="43.8916" s3="38.0186" fuel="0.541">125.4010</Lap>
+<Lap num="3" p="2" et="329.5450" fuel="0.518">125.9185</Lap>
+<Lap num="4" p="7" et="455.4635" s1="47.9629" fuel="0.498">--.----</Lap>
+<Lap num="5" p="8" et="584.7206" s1="43.7891" s2="43.8822" s3="38.0206" fuel="0.475">125.6919</Lap>
+<Lap num="6" p="5" et="710.4125" s1="43.7889" s2="43.7177" s3="37.7948" fuel="0.455">125.3014</Lap>
+<Lap num="7" p="5" et="835.7139" s1="43.4375" s2="43.4500" s3="37.7157" fuel="0.435">124.6032</Lap>
+<Lap num="8" p="4" et="960.3171" s1="43.6843" s2="43.1608" fuel="0.412">--.----</Lap>
+<Lap num="9" p="9" et="1085.7513" s1="44.2877" s2="43.1254" s3="51.2467" fuel="0.392" pit="1">138.6598</Lap>
+<Lap num="10" p="10" et="1224.4111" s1="47.7169" s2="43.5598" s3="51.8885" fuel="0.373" pit="1">143.1653</Lap>
+<Lap num="11" p="10" et="1367.5764" s1="47.7000" s2="43.6011" s3="38.3124" fuel="0.349">129.6134</Lap>
+<BestLapTime>124.6032</BestLapTime>
+<Laps>11</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="2" endLap="3">PlayerControl,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="4" endLap="4">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="5" endLap="8">PlayerControl,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="9" endLap="9">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="10" endLap="11">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Marcelo Eduardo</Name>
+<SteamID>76561198244430522</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_GRIP_02.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>8</GridPos>
+<Position>7</Position>
+<ClassGridPos>7</ClassGridPos>
+<ClassPosition>7</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>6</LapRankIncludingDiscos>
+<Lap num="1" p="8" et="68.6247" s1="55.4458" s2="44.5462" s3="37.7559" fuel="0.576">137.7479</Lap>
+<Lap num="2" p="8" et="206.3726" s1="44.0690" s2="43.7032" s3="38.1913" fuel="0.553">125.9636</Lap>
+<Lap num="3" p="8" et="332.3362" s1="43.5305" s2="43.2054" s3="37.8703" fuel="0.529">124.6062</Lap>
+<Lap num="4" p="4" et="456.9424" s1="44.8075" s2="43.4835" s3="37.7171" fuel="0.510">126.0081</Lap>
+<Lap num="5" p="4" et="582.9504" s1="43.6973" s2="43.6868" s3="38.4606" fuel="0.486">125.8447</Lap>
+<Lap num="6" p="7" et="708.7951" s1="44.5215" s2="45.2806" s3="37.4207" fuel="0.467">127.2229</Lap>
+<Lap num="7" p="6" et="836.0180" s1="45.9282" s2="43.2704" s3="37.8250" fuel="0.443">127.0237</Lap>
+<Lap num="8" p="8" et="963.0417" s1="44.0250" s2="43.8068" s3="38.3336" fuel="0.424">126.1653</Lap>
+<Lap num="9" p="7" et="1089.2070" s1="44.1378" s2="43.4219" s3="38.1091" fuel="0.400">125.6688</Lap>
+<Lap num="10" p="7" et="1214.8759" s1="43.5408" s2="43.9266" s3="37.9678" fuel="0.376">125.4352</Lap>
+<Lap num="11" p="7" et="1340.3110" s1="44.2306" s2="43.6750" s3="38.0046" fuel="0.357">125.9103</Lap>
+<Lap num="12" p="6" et="1466.2213" s1="43.5575" s2="43.3878" s3="37.7501" fuel="0.333">124.6954</Lap>
+<Lap num="13" p="10" et="1590.9167" s1="44.6749" fuel="0.314" pit="1">--.----</Lap>
+<Lap num="14" p="10" et="1757.2764" s1="50.0247" s2="44.1266" s3="38.1753" fuel="0.290">132.3265</Lap>
+<Lap num="15" p="9" et="1889.6029" s1="43.9939" s2="43.8011" s3="38.1045" fuel="0.267">125.8995</Lap>
+<Lap num="16" p="9" et="2015.5024" s1="44.2415" s2="44.0527" s3="38.2056" fuel="0.247">126.4998</Lap>
+<Lap num="17" p="8" et="2142.0022" s1="44.9395" s2="43.5249" s3="38.3501" fuel="0.224">126.8145</Lap>
+<Lap num="18" p="8" et="2268.8167" s1="43.4500" s2="43.6001" s3="38.1125" fuel="0.204">125.1626</Lap>
+<Lap num="19" p="8" et="2393.9792" s1="44.4624" s2="44.3252" s3="38.4124" fuel="0.180">127.2000</Lap>
+<Lap num="20" p="8" et="2521.1792" s1="43.9375" s2="43.9314" s3="38.3687" fuel="0.157">126.2375</Lap>
+<Lap num="21" p="8" et="2647.4167" s1="43.8057" s2="43.5193" s3="38.0063" fuel="0.137">125.3313</Lap>
+<Lap num="22" p="8" et="2772.7480" s1="43.9272" s2="43.8782" s3="38.2705" fuel="0.114">126.0759</Lap>
+<Lap num="23" p="8" et="2898.8240" s1="43.8477" s2="43.6589" s3="38.1970" fuel="0.094">125.7036</Lap>
+<Lap num="24" p="7" et="3024.5276" s1="44.1028" s2="44.0769" s3="38.0955" fuel="0.071">126.2751</Lap>
+<Lap num="25" p="7" et="3150.8027" s1="43.9229" s2="43.7024" s3="38.1636" fuel="0.051">125.7888</Lap>
+<Lap num="26" p="7" et="3276.5916" s1="44.7253" s2="44.2544" s3="38.0862" fuel="0.027">127.0659</Lap>
+<BestLapTime>124.6062</BestLapTime>
+<FinishTime>3335.0327</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="2" endLap="14">PlayerControl,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="15" endLap="15">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="16" endLap="26">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Andre Retek</Name>
+<SteamID>76561198242543380</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_TBR_02_FOC.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: TBR Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>93</CarNumber>
+<TeamName>Team Brasil Racing </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>7</GridPos>
+<Position>11</Position>
+<ClassGridPos>6</ClassGridPos>
+<ClassPosition>11</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>7</LapRankIncludingDiscos>
+<Lap num="1" p="5" et="68.6247" s1="53.7225" s2="44.9800" s3="37.8113" fuel="0.545">136.5139</Lap>
+<Lap num="2" p="6" et="205.1385" fuel="0.525">--.----</Lap>
+<Lap num="3" p="7" et="330.8751" s1="43.6854" s2="43.8670" s3="38.0947" fuel="0.502">125.6471</Lap>
+<Lap num="4" p="3" et="456.5222" s1="44.9000" s2="43.6250" s3="37.7255" fuel="0.478">126.2505</Lap>
+<Lap num="5" p="2" et="582.7728" s1="43.3006" s2="43.8083" s3="37.9054" fuel="0.455">125.0143</Lap>
+<Lap num="6" p="2" et="707.7870" s1="43.1874" s2="43.5887" s3="37.9360" fuel="0.435">124.7122</Lap>
+<Lap num="7" p="2" et="832.4993" s1="43.6795" s2="44.2101" s3="37.8583" fuel="0.412">125.7479</Lap>
+<Lap num="8" p="2" et="958.2472" s1="43.3500" s2="44.3257" s3="37.8572" fuel="0.388">125.5330</Lap>
+<Lap num="9" p="2" et="1083.7802" s1="43.0670" s2="43.6353" s3="38.1149" fuel="0.365">124.8171</Lap>
+<Lap num="10" p="2" et="1208.5973" s1="44.6000" s2="44.1393" s3="38.3107" fuel="0.341">127.0499</Lap>
+<Lap num="11" p="3" et="1335.6472" s1="43.9292" s2="44.5708" s3="38.2366" fuel="0.318">126.7366</Lap>
+<Lap num="12" p="3" et="1462.3838" s1="43.7384" s2="43.7831" s3="38.0071" fuel="0.298">125.5286</Lap>
+<Lap num="13" p="4" et="1587.9124" fuel="0.275">--.----</Lap>
+<Lap num="14" p="4" et="1715.8358" fuel="0.251">--.----</Lap>
+<Lap num="15" p="6" et="1841.0623" s1="44.8600" fuel="0.227" pit="1">--.----</Lap>
+<Lap num="16" p="6" et="1981.6222" s1="47.2041" s2="43.8502" s3="38.0002" fuel="0.204">129.0546</Lap>
+<Lap num="17" p="6" et="2110.6768" s1="43.6099" s2="44.2114" s3="38.2493" fuel="0.180">126.0706</Lap>
+<Lap num="18" p="6" et="2236.7473" s1="43.3750" s2="44.1628" s3="38.2961" fuel="0.157">125.8340</Lap>
+<Lap num="19" p="6" et="2362.5813" s1="43.3018" s2="43.5923" s3="38.0969" fuel="0.133">124.9910</Lap>
+<Lap num="20" p="5" et="2487.5723" s1="43.3123" s2="44.3887" s3="38.1821" fuel="0.114">125.8831</Lap>
+<Lap num="21" p="5" et="2613.4553" s1="43.7168" s2="44.2554" s3="38.3643" fuel="0.090">126.3364</Lap>
+<Lap num="22" p="5" et="2739.7917" s1="43.6804" s2="43.9866" s3="38.0642" fuel="0.067">125.7312</Lap>
+<Lap num="23" p="5" et="2865.5229" s1="44.9084" s2="44.7756" s3="38.6702" fuel="0.043">128.3542</Lap>
+<Lap num="24" p="9" et="2993.8772" s1="45.0977" s2="45.4277" s3="76.4712" fuel="0.031" pit="1">166.9966</Lap>
+<Lap num="25" p="9" et="3160.8738" s1="48.2083" s2="43.8967" s3="38.0730" fuel="0.086">130.1780</Lap>
+<Lap num="26" p="8" et="3291.0518" fuel="0.063">--.----</Lap>
+<BestLapTime>124.7122</BestLapTime>
+<FinishTime>3384.6875</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Emerson Bracisievicz</Name>
+<SteamID>76561197989168525</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_ASR_03_CRUZE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: ASR Driver 3</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>11</CarNumber>
+<TeamName>Alliance SimRacing </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>9</GridPos>
+<Position>9</Position>
+<ClassGridPos>8</ClassGridPos>
+<ClassPosition>9</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>8</LapRankIncludingDiscos>
+<Lap num="1" p="14" et="68.6247" s1="54.2015" s2="44.7818" s3="108.0365" fuel="0.576" pit="1">207.0197</Lap>
+<Lap num="2" p="14" et="275.6444" s1="48.9510" s2="43.5276" s3="38.1886" fuel="0.553">130.6673</Lap>
+<Lap num="3" p="14" et="406.3117" s1="43.8716" s2="43.6501" s3="38.2624" fuel="0.533">125.7841</Lap>
+<Lap num="4" p="13" et="532.0958" s1="44.1486" s2="43.6500" s3="38.1595" fuel="0.510">125.9582</Lap>
+<Lap num="5" p="12" et="658.0540" s1="44.0288" s2="43.4437" s3="38.0679" fuel="0.490">125.5404</Lap>
+<Lap num="6" p="12" et="783.5944" s1="44.1137" s2="43.7113" s3="38.0262" fuel="0.467">125.8512</Lap>
+<Lap num="7" p="12" et="909.4456" fuel="0.447">--.----</Lap>
+<Lap num="8" p="12" et="1033.2378" s1="43.5817" s2="43.0901" s3="38.0508" fuel="0.424">124.7225</Lap>
+<Lap num="9" p="12" et="1157.9603" s1="43.9137" s2="43.5345" s3="38.0181" fuel="0.400">125.4663</Lap>
+<Lap num="10" p="12" et="1283.4266" s1="43.5677" s2="43.4166" s3="37.9335" fuel="0.380">124.9178</Lap>
+<Lap num="11" p="12" et="1408.3445" s1="43.6749" s2="43.3843" s3="38.0986" fuel="0.357">125.1578</Lap>
+<Lap num="12" p="11" et="1533.5023" fuel="0.337">--.----</Lap>
+<Lap num="13" p="11" et="1658.8944" s1="43.5500" s2="43.7000" s3="38.1857" fuel="0.314">125.4357</Lap>
+<Lap num="14" p="11" et="1784.3301" s1="44.1394" s2="43.2644" s3="38.1113" fuel="0.294">125.5151</Lap>
+<Lap num="15" p="11" et="1909.8452" s1="43.7242" s2="43.6809" s3="38.2596" fuel="0.271">125.6648</Lap>
+<Lap num="16" p="11" et="2035.5100" s1="44.0593" s2="43.6511" s3="38.1826" fuel="0.251">125.8931</Lap>
+<Lap num="17" p="11" et="2161.4031" s1="43.9995" s2="43.5918" s3="38.5588" fuel="0.227">126.1501</Lap>
+<Lap num="18" p="11" et="2287.5532" s1="44.2268" s2="44.7007" s3="38.0979" fuel="0.208">127.0254</Lap>
+<Lap num="19" p="11" et="2414.5786" s1="43.8047" s2="43.8892" s3="38.2720" fuel="0.184">125.9658</Lap>
+<Lap num="20" p="11" et="2540.5444" s1="44.6001" s2="44.1663" s3="38.5950" fuel="0.165">127.3613</Lap>
+<Lap num="21" p="11" et="2667.9058" s1="44.1528" s2="43.6858" s3="38.1843" fuel="0.145">126.0229</Lap>
+<Lap num="22" p="11" et="2793.9287" s1="43.4973" s2="43.6992" s3="38.8113" fuel="0.122">126.0078</Lap>
+<Lap num="23" p="11" et="2919.9365" s1="43.8379" s2="43.7983" s3="38.4395" fuel="0.102">126.0757</Lap>
+<Lap num="24" p="11" et="3046.0122" fuel="0.078">--.----</Lap>
+<Lap num="25" p="11" et="3172.6328" s1="44.0400" s2="43.8474" s3="39.7249" fuel="0.059">127.6123</Lap>
+<Lap num="26" p="10" et="3300.2451" s1="44.7993" s2="44.7500" s3="38.2559" fuel="0.035">127.8052</Lap>
+<BestLapTime>124.7225</BestLapTime>
+<FinishTime>3359.4255</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Joao Junior</Name>
+<SteamID>76561197996909305</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>MP_TBR_01_FOC.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: TBR Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>63</CarNumber>
+<TeamName>Team Brasil Racing  </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>11</GridPos>
+<Position>4</Position>
+<ClassGridPos>10</ClassGridPos>
+<ClassPosition>4</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>9</LapRankIncludingDiscos>
+<Lap num="1" p="7" et="68.6247" s1="54.3912" s2="44.7494" s3="38.2797" fuel="0.537">137.4203</Lap>
+<Lap num="2" p="5" et="206.0450" s1="43.3996" s2="43.6730" s3="37.6696" fuel="0.514">124.7421</Lap>
+<Lap num="3" p="4" et="330.7870" s1="43.6227" s2="43.7895" s3="37.9610" fuel="0.494">125.3731</Lap>
+<Lap num="4" p="2" et="456.1602" s1="44.5143" s2="43.3886" s3="38.3716" fuel="0.471">126.2745</Lap>
+<Lap num="5" p="3" et="582.4347" s1="43.3750" s2="44.3633" s3="37.7007" fuel="0.451">125.4391</Lap>
+<Lap num="6" p="8" et="707.8738" s1="46.3109" s2="45.4867" s3="37.9133" fuel="0.431">129.7109</Lap>
+<Lap num="7" p="8" et="837.5847" s1="43.7803" s2="44.9044" s3="37.7003" fuel="0.408">126.3850</Lap>
+<Lap num="8" p="7" et="963.9697" s1="43.3150" s2="43.9319" s3="37.9430" fuel="0.388">125.1899</Lap>
+<Lap num="9" p="6" et="1089.1597" s1="43.8750" s2="43.5635" s3="38.0615" fuel="0.369">125.5000</Lap>
+<Lap num="10" p="6" et="1214.6597" s1="43.5000" s2="43.9250" s3="38.0814" fuel="0.345">125.5065</Lap>
+<Lap num="11" p="5" et="1340.1661" s1="43.9548" s2="43.5138" s3="37.9801" fuel="0.325">125.4487</Lap>
+<Lap num="12" p="5" et="1465.6149" s1="43.5199" s2="43.7166" s3="38.0432" fuel="0.302">125.2797</Lap>
+<Lap num="13" p="5" et="1590.8945" s1="43.5652" s2="43.9573" s3="38.5677" fuel="0.282">126.0902</Lap>
+<Lap num="14" p="5" et="1716.9847" s1="43.2500" s2="43.8600" s3="37.8405" fuel="0.263">124.9504</Lap>
+<Lap num="15" p="4" et="1841.9352" s1="43.5746" s2="43.5819" s3="38.4609" fuel="0.239">125.6174</Lap>
+<Lap num="16" p="4" et="1967.5526" s1="43.4580" s2="44.1835" s3="38.1516" fuel="0.220">125.7931</Lap>
+<Lap num="17" p="4" et="2093.3457" s1="43.4285" s2="43.6182" s3="38.0725" fuel="0.196">125.1191</Lap>
+<Lap num="18" p="4" et="2218.4648" s1="43.7498" fuel="0.176">--.----</Lap>
+<Lap num="19" p="4" et="2344.6743" s1="43.3726" s2="43.7378" s3="37.9922" fuel="0.153">125.1025</Lap>
+<Lap num="20" p="4" et="2469.7769" s1="43.4661" s2="43.5417" s3="38.1008" fuel="0.133">125.1086</Lap>
+<Lap num="21" p="4" et="2594.8855" s1="43.8743" s2="43.5249" s3="38.2251" fuel="0.114">125.6243</Lap>
+<Lap num="22" p="4" et="2720.5098" s1="44.0513" s2="43.8486" s3="38.3000" fuel="0.090">126.2000</Lap>
+<Lap num="23" p="4" et="2846.7097" s1="43.6125" s2="43.8550" s3="38.4954" fuel="0.071">125.9629</Lap>
+<Lap num="24" p="4" et="2972.6726" s1="43.8997" s2="46.7129" s3="38.6641" fuel="0.051">129.2766</Lap>
+<Lap num="25" p="4" et="3101.9492" s1="43.5627" s2="43.7979" s3="38.2539" fuel="0.027">125.6145</Lap>
+<Lap num="26" p="4" et="3227.5637" s1="43.4771" s2="43.7439" s3="37.9099" fuel="0.008">125.1309</Lap>
+<BestLapTime>124.7421</BestLapTime>
+<FinishTime>3284.0698</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1</ControlAndAids>
+<ControlAndAids startLap="2" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Matheus Saliba</Name>
+<SteamID>76561197971274123</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>MP_GRIP_03.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip Driver 3</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing  </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>6</GridPos>
+<Position>14</Position>
+<ClassGridPos>5</ClassGridPos>
+<ClassPosition>14</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>10</LapRankIncludingDiscos>
+<Lap num="1" p="6" et="68.6247" s1="54.8910" s2="44.6134" s3="37.7923" fuel="0.561">137.2968</Lap>
+<Lap num="2" p="7" et="205.9214" s1="43.9362" s2="43.6384" s3="37.4862" fuel="0.541">125.0608</Lap>
+<Lap num="3" p="6" et="330.9823" s1="44.1619" s2="43.5645" s3="37.7225" fuel="0.522">125.4488</Lap>
+<BestLapTime>125.0608</BestLapTime>
+<Laps>3</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="3">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Philipe Coutinho</Name>
+<SteamID>76561198963100737</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_TBR2_01_FOC.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: TBR 2 Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>85</CarNumber>
+<TeamName>Team Brasil Racing 2 </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>14</GridPos>
+<Position>5</Position>
+<ClassGridPos>13</ClassGridPos>
+<ClassPosition>5</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>11</LapRankIncludingDiscos>
+<Lap num="1" p="12" et="68.6247" s1="60.3031" s2="44.9536" s3="37.8964" fuel="0.545">143.1531</Lap>
+<Lap num="2" p="12" et="211.7778" s1="44.1009" s2="44.3105" s3="38.1995" fuel="0.525">126.6109</Lap>
+<Lap num="3" p="12" et="338.3887" s1="43.8017" s2="44.5422" s3="37.9292" fuel="0.502">126.2731</Lap>
+<Lap num="4" p="9" et="464.6618" s1="44.0171" s2="43.5739" s3="39.0836" fuel="0.482">126.6746</Lap>
+<Lap num="5" p="9" et="591.3364" s1="43.5021" s2="44.0144" s3="37.9176" fuel="0.459">125.4341</Lap>
+<Lap num="6" p="9" et="716.7704" s1="43.5573" s2="43.7614" s3="38.4476" fuel="0.439">125.7663</Lap>
+<Lap num="7" p="9" et="842.5367" s1="43.8209" s2="43.2972" s3="38.1899" fuel="0.416">125.3080</Lap>
+<Lap num="8" p="9" et="967.8448" s1="43.8830" s2="44.7574" s3="38.6704" fuel="0.392">127.3109</Lap>
+<Lap num="9" p="8" et="1095.1556" s1="43.5972" s2="43.6624" s3="38.2384" fuel="0.373">125.4979</Lap>
+<Lap num="10" p="8" et="1220.6536" s1="43.4492" s2="43.5593" s3="38.1483" fuel="0.349">125.1569</Lap>
+<Lap num="11" p="8" et="1345.8104" fuel="0.329">--.----</Lap>
+<Lap num="12" p="8" et="1471.9778" s1="43.7080" s2="44.4452" s3="38.6643" fuel="0.306">126.8175</Lap>
+<Lap num="13" p="7" et="1598.7953" s1="44.7419" s2="44.5000" s3="38.3656" fuel="0.282">127.6075</Lap>
+<Lap num="14" p="6" et="1726.4028" s1="43.7513" s2="44.6760" s3="38.1423" fuel="0.263">126.5697</Lap>
+<Lap num="15" p="5" et="1852.9725" s1="44.0802" s2="44.3278" s3="38.1473" fuel="0.239">126.5553</Lap>
+<Lap num="16" p="5" et="1979.5278" s1="44.1000" s2="44.9000" s3="38.2664" fuel="0.220">127.2664</Lap>
+<Lap num="17" p="5" et="2106.7942" s1="43.6101" s2="44.2485" s3="38.1882" fuel="0.196">126.0469</Lap>
+<Lap num="18" p="5" et="2232.8411" s1="43.9971" s2="44.1206" s3="38.6389" fuel="0.176">126.7566</Lap>
+<Lap num="19" p="5" et="2359.5977" s1="44.2666" s2="44.6636" s3="38.3499" fuel="0.153">127.2800</Lap>
+<Lap num="20" p="6" et="2486.8777" s1="44.8750" s2="46.3389" s3="38.3613" fuel="0.129">129.5752</Lap>
+<Lap num="21" p="6" et="2616.4529" s1="43.5999" s2="44.2422" s3="38.6714" fuel="0.110">126.5134</Lap>
+<Lap num="22" p="6" et="2742.9663" s1="43.8665" s2="44.3469" s3="38.4153" fuel="0.086">126.6287</Lap>
+<Lap num="23" p="6" et="2869.5950" s1="44.2827" s2="44.6091" s3="38.4070" fuel="0.067">127.2988</Lap>
+<Lap num="24" p="5" et="2996.8938" s1="45.3091" s2="47.6250" s3="41.2417" fuel="0.047">134.1758</Lap>
+<Lap num="25" p="5" et="3131.0696" s1="44.7378" fuel="0.027">--.----</Lap>
+<Lap num="26" p="5" et="3260.3027" s1="44.8501" s2="45.0500" s3="38.6499" fuel="0.008">128.5500</Lap>
+<BestLapTime>125.1569</BestLapTime>
+<FinishTime>3320.2280</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="26">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Marilson Muniz</Name>
+<SteamID>76561198077404792</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_KSTM2_03_HON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Kstm2 Driver 3</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>19</CarNumber>
+<TeamName>KSTM E-Motorsports 2 </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>13</GridPos>
+<Position>6</Position>
+<ClassGridPos>12</ClassGridPos>
+<ClassPosition>6</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>12</LapRankIncludingDiscos>
+<Lap num="1" p="11" et="68.6247" s1="58.3446" s2="44.6627" s3="38.2583" fuel="0.576">141.2656</Lap>
+<Lap num="2" p="11" et="209.8903" s1="44.6311" s2="43.5002" s3="38.3686" fuel="0.553">126.5000</Lap>
+<Lap num="3" p="11" et="336.3903" s1="44.0500" s2="44.5655" s3="38.1845" fuel="0.533">126.8000</Lap>
+<Lap num="4" p="12" et="463.1903" s1="43.7750" s2="43.7769" s3="51.6982" fuel="0.514" pit="1">139.2500</Lap>
+<Lap num="5" p="11" et="602.4403" s1="48.1069" s2="43.7681" s3="38.3073" fuel="0.490">130.1823</Lap>
+<Lap num="6" p="10" et="732.6226" s1="43.9506" s2="44.2087" s3="38.3912" fuel="0.467">126.5505</Lap>
+<Lap num="7" p="10" et="859.1730" s1="44.0496" s2="44.0085" s3="37.7936" fuel="0.447">125.8517</Lap>
+<Lap num="8" p="10" et="985.0248" s1="43.5656" s2="43.9130" s3="37.9957" fuel="0.424">125.4742</Lap>
+<Lap num="9" p="10" et="1110.4990" s1="44.1298" s2="43.4961" s3="38.2178" fuel="0.404">125.8436</Lap>
+<Lap num="10" p="9" et="1236.3427" s1="44.1976" s2="44.1069" s3="38.1541" fuel="0.384">126.4586</Lap>
+<Lap num="11" p="9" et="1362.8013" s1="44.1660" s2="44.1494" s3="38.0986" fuel="0.361">126.4141</Lap>
+<Lap num="12" p="9" et="1489.2153" fuel="0.341">--.----</Lap>
+<Lap num="13" p="8" et="1614.0403" s1="43.8750" s2="43.9750" s3="38.5189" fuel="0.318">126.3689</Lap>
+<Lap num="14" p="7" et="1740.4092" s1="43.6561" s2="43.4249" s3="38.2273" fuel="0.298">125.3083</Lap>
+<Lap num="15" p="7" et="1865.7175" s1="43.6477" s2="43.7607" s3="38.2782" fuel="0.275">125.6866</Lap>
+<Lap num="16" p="7" et="1991.4042" s1="43.9861" s2="44.0614" s3="38.2012" fuel="0.255">126.2487</Lap>
+<Lap num="17" p="7" et="2117.6528" s1="43.9875" s2="43.6021" s3="38.5115" fuel="0.235">126.1011</Lap>
+<Lap num="18" p="7" et="2243.7539" s1="43.9746" s2="44.2117" s3="37.9502" fuel="0.212">126.1365</Lap>
+<Lap num="19" p="7" et="2369.8904" s1="44.0549" s2="45.9971" s3="38.3396" fuel="0.192">128.3916</Lap>
+<Lap num="20" p="7" et="2498.2820" s1="45.0618" s2="44.2810" s3="38.3337" fuel="0.169">127.6765</Lap>
+<Lap num="21" p="7" et="2625.9585" s1="44.0173" s2="44.8660" s3="38.7676" fuel="0.149">127.6509</Lap>
+<Lap num="22" p="7" et="2753.6094" s1="45.2839" s2="44.8394" s3="38.6482" fuel="0.129">128.7715</Lap>
+<Lap num="23" p="7" et="2882.3809" s1="45.0872" s2="44.2009" s3="38.3352" fuel="0.106">127.6233</Lap>
+<Lap num="24" p="6" et="3010.0042" s1="43.9980" fuel="0.086">--.----</Lap>
+<Lap num="25" p="6" et="3138.9983" s1="44.3921" s2="44.0850" s3="38.3325" fuel="0.067">126.8096</Lap>
+<Lap num="26" p="6" et="3265.8079" s1="44.4182" s2="44.4248" s3="38.6475" fuel="0.043">127.4905</Lap>
+<BestLapTime>125.3083</BestLapTime>
+<FinishTime>3324.6736</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="1">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="2" endLap="8">PlayerControl,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="9" endLap="9">PlayerControl,TC=1,ABS=1,Clutch</ControlAndAids>
+<ControlAndAids startLap="10" endLap="26">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Raul Malaguty</Name>
+<SteamID>76561198449995285</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>MP_ASR3_01_CRUZE.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: ASR 3 Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>11</CarNumber>
+<TeamName>Alliance SimRacing 3  </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>2</GridPos>
+<Position>13</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>13</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>13</LapRankIncludingDiscos>
+<Lap num="1" p="2" et="68.6247" fuel="0.576">--.----</Lap>
+<Lap num="2" p="2" et="203.8231" s1="43.6630" s2="43.8000" s3="38.1799" fuel="0.553">125.6430</Lap>
+<Lap num="3" p="3" et="329.4660" s1="43.6236" s2="44.3823" s3="38.0284" fuel="0.533">126.0342</Lap>
+<Lap num="4" p="10" et="455.5003" s1="44.6108" s2="43.3874" s3="52.2918" fuel="0.510" pit="1">140.2900</Lap>
+<BestLapTime>125.6430</BestLapTime>
+<Laps>4</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+<ControlAndAids startLap="1" endLap="4">PlayerControl,ABS=1</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Alexandre Reys</Name>
+<SteamID>76561198414421987</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_GRIP2_02.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip 2 Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing 2 </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>15</GridPos>
+<Position>10</Position>
+<ClassGridPos>14</ClassGridPos>
+<ClassPosition>10</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>14</LapRankIncludingDiscos>
+<Lap num="1" p="13" et="68.6247" s1="58.8087" s2="45.7823" s3="39.0515" fuel="0.565">143.6424</Lap>
+<Lap num="2" p="13" et="212.2671" s1="45.4186" s2="44.7569" s3="39.9229" fuel="0.541">130.0984</Lap>
+<Lap num="3" p="13" et="342.3655" s1="44.3537" s2="44.4391" s3="38.8506" fuel="0.522">127.6434</Lap>
+<Lap num="4" p="11" et="470.0090" s1="44.3635" s2="44.4915" s3="38.8239" fuel="0.498">127.6789</Lap>
+<Lap num="5" p="10" et="597.6879" s1="44.3294" s2="44.5992" s3="38.6418" fuel="0.478">127.5705</Lap>
+<Lap num="6" p="11" et="725.2584" s1="44.8750" s2="45.8500" s3="44.5168" fuel="0.455">135.2418</Lap>
+<Lap num="7" p="11" et="860.5001" s1="44.6484" s2="44.2715" s3="38.8328" fuel="0.435">127.7527</Lap>
+<Lap num="8" p="11" et="988.2529" s1="44.0446" s2="44.5956" s3="38.5031" fuel="0.416">127.1432</Lap>
+<Lap num="9" p="11" et="1115.3961" s1="43.8719" s2="45.8605" s3="39.5713" fuel="0.392">129.3037</Lap>
+<Lap num="10" p="11" et="1244.6998" fuel="0.373">--.----</Lap>
+<Lap num="11" p="11" et="1373.4991" s1="44.0721" s2="44.5032" s3="38.5443" fuel="0.353">127.1196</Lap>
+<Lap num="12" p="10" et="1500.6188" s1="44.4493" s2="44.9292" s3="38.5708" fuel="0.329">127.9493</Lap>
+<Lap num="13" p="9" et="1628.5681" s1="44.2250" s2="44.0287" s3="38.7300" fuel="0.310">126.9836</Lap>
+<Lap num="14" p="9" et="1755.5518" s1="44.2260" s2="45.1010" s3="38.7570" fuel="0.290">128.0839</Lap>
+<Lap num="15" p="8" et="1883.6356" s1="44.9113" s2="44.8462" s3="38.6086" fuel="0.267">128.3661</Lap>
+<Lap num="16" p="8" et="2012.0017" s1="44.5288" s2="46.2166" s3="38.6072" fuel="0.247">129.3525</Lap>
+<Lap num="17" p="9" et="2141.3542" s1="45.1931" s2="46.1484" s3="38.6545" fuel="0.227">129.9961</Lap>
+<Lap num="18" p="9" et="2271.3503" s1="43.9678" s2="45.5249" s3="38.5251" fuel="0.204">128.0178</Lap>
+<Lap num="19" p="9" et="2399.3682" s1="44.2512" s2="44.5986" s3="38.5928" fuel="0.184">127.4426</Lap>
+<Lap num="20" p="10" et="2526.8108" s1="45.0671" s2="44.2651" s3="40.1138" fuel="0.165">129.4460</Lap>
+<Lap num="21" p="10" et="2656.2568" s1="45.4736" s2="44.8125" s3="38.6689" fuel="0.141">128.9551</Lap>
+<Lap num="22" p="10" et="2785.2119" s1="43.8369" s2="43.9575" s3="38.6716" fuel="0.122">126.4661</Lap>
+<Lap num="23" p="10" et="2911.6780" s1="44.4006" s2="47.5144" s3="39.0830" fuel="0.098">130.9980</Lap>
+<Lap num="24" p="10" et="3042.6760" s1="44.8040" s2="44.3303" s3="38.6355" fuel="0.078">127.7698</Lap>
+<Lap num="25" p="10" et="3170.4458" s1="44.0054" s2="45.9319" s3="38.9851" fuel="0.059">128.9224</Lap>
+<Lap num="26" p="11" et="3299.3682" s1="45.0249" s2="46.6750" s3="39.5427" fuel="0.035">131.2427</Lap>
+<BestLapTime>126.4661</BestLapTime>
+<FinishTime>3361.9861</FinishTime>
+<Laps>26</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>Finished Normally</FinishStatus>
+<ControlAndAids startLap="1" endLap="26">PlayerControl,ABS=1,Clutch</ControlAndAids>
+</Driver>
+<Driver>
+<Name>Pedro Sodre</Name>
+<SteamID>76561197990860307</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_KSTM2_02_HON.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Kstm2 Driver 2</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>44</CarNumber>
+<TeamName>KSTM E-Motorsports 2 </TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>16</GridPos>
+<Position>15</Position>
+<ClassGridPos>15</ClassGridPos>
+<ClassPosition>15</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>15</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+</Driver>
+<Driver>
+<Name>Fred Quintao</Name>
+<SteamID>76561198129727993</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_GRIP2_01.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Grip 2 Driver 1</VehName>
+<CarType>Equipes</CarType>
+<CarClass>Equipes</CarClass>
+<CarNumber>17</CarNumber>
+<TeamName>RTWP Grip Racing 2 </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>10</GridPos>
+<Position>16</Position>
+<ClassGridPos>9</ClassGridPos>
+<ClassPosition>16</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>16</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>Suspension</DNFReason>
+</Driver>
+<Driver>
+<Name>Diretor Principal</Name>
+<SteamID>76561198012881717</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>CRUZE_1.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Gabriel Conte #1</VehName>
+<CarType>Chevrolet</CarType>
+<CarClass>Chevrolet</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Chevrolet Cruze #1</TeamName>
+<isPlayer>0</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>18</GridPos>
+<Position>17</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>17</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>DNF</FinishStatus>
+<DNFReason>DNF</DNFReason>
+</Driver>
+<Driver>
+<Name>Gilson Junior</Name>
+<SteamID>76561198075383956</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>CRUZE_1.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: Gabriel Conte #1</VehName>
+<CarType>Chevrolet</CarType>
+<CarClass>Chevrolet</CarClass>
+<CarNumber>1</CarNumber>
+<TeamName>Chevrolet Cruze #1</TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>19</GridPos>
+<Position>18</Position>
+<ClassGridPos>2</ClassGridPos>
+<ClassPosition>2</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>18</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+</Driver>
+<Driver>
+<Name>Comentarista</Name>
+<SteamID>76561198248311234</SteamID>
+<RaceRank>0.00</RaceRank>
+<Connected>1</Connected>
+<VehFile>ML_EQUIPE1_01_CRU.VEH</VehFile>
+<UpgradeCode>00000000 00000000</UpgradeCode>
+<VehName>Marcas: ML Cruze 1 Driver 1</VehName>
+<CarType>Carros Bases</CarType>
+<CarClass>Carros Bases</CarClass>
+<CarNumber>00</CarNumber>
+<TeamName>ML Cruze Equipe 1     </TeamName>
+<isPlayer>1</isPlayer>
+<ServerScored>1</ServerScored>
+<GridPos>21</GridPos>
+<Position>19</Position>
+<ClassGridPos>1</ClassGridPos>
+<ClassPosition>1</ClassPosition>
+<Points>0</Points>
+<ClassPoints>0</ClassPoints>
+<LapRankIncludingDiscos>19</LapRankIncludingDiscos>
+<Laps>0</Laps>
+<LapsLed>0</LapsLed>
+<Pitstops>0</Pitstops>
+<FinishStatus>None</FinishStatus>
+</Driver>
+</Race>
+</RaceResults>
+</rFactorXML>

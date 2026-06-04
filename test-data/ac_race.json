@@ -1,0 +1,7648 @@
+{
+	"TrackName": "monza",
+	"TrackConfig": "monza_osrw",
+	"Type": "RACE",
+	"DurationSecs": 0,
+	"RaceLaps": 0,
+	"Cars": [
+		{
+			"CarId": 0,
+			"Driver": {
+				"Name": "Celso Pedri",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197999107997",
+				"GuidsList": [
+					"76561197999107997"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_Hattrick_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 1,
+			"Driver": {
+				"Name": "Marlus Brigola",
+				"Team": "Sim Force",
+				"Nation": "",
+				"Guid": "76561198081206585",
+				"GuidsList": [
+					"76561198081206585"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_SimForce_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 2,
+			"Driver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_SimForce_02",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 3,
+			"Driver": {
+				"Name": "Savio Assuncao",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198374245026",
+				"GuidsList": [
+					"76561198374245026"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_SubRacing_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 4,
+			"Driver": {
+				"Name": "Thales Luz",
+				"Team": "SUB Racing",
+				"Nation": "",
+				"Guid": "76561198016431521",
+				"GuidsList": [
+					"76561198016431521"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_SubRacing_02",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 5,
+			"Driver": {
+				"Name": "Jose Carlos Trabulo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198059748342",
+				"GuidsList": [
+					"76561198059748342"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_SubRacing_03",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 6,
+			"Driver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_TxRacing_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 7,
+			"Driver": {
+				"Name": "Diretor",
+				"Team": "",
+				"Nation": "AC",
+				"Guid": "76561198012881717",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "00_clubsport",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 8,
+			"Driver": {
+				"Name": "Eduardo Bomfim",
+				"Team": "",
+				"Nation": "",
+				"Guid": "76561198086196947",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "02_cup_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 9,
+			"Driver": {
+				"Name": "Ricardo Silva",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198011551938",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "03_cup_02",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 10,
+			"Driver": {
+				"Name": "Alex Albuquerque",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198118851662",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "04_cup_03",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "05_cup_05",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 12,
+			"Driver": {
+				"Name": "Doni P.",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198001900063",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "06_cup_06",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "07_cup_07",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 14,
+			"Driver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "08_cup_08",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "09_cup_09",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 16,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "10_cup_10",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 17,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "11_cup_11",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 18,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "12_cup_12",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 19,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "13_cup_13",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 20,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "14_cup_26",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 21,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "15_cup_33",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 22,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "16_cup_46",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 23,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "18_cup_62",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 24,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "19_cup_63",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 25,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "20_cup_64",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 26,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "17_cup_76",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 27,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "00_clubsport",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 28,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "02_cup_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 29,
+			"Driver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": [
+					""
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "03_cup_02",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "00_clubsport",
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"CarId": 31,
+			"Driver": {
+				"Name": "Randal Rodrigues",
+				"Team": "",
+				"Nation": "PLA",
+				"Guid": "76561198301377302",
+				"GuidsList": [
+					"76561198301377302"
+				]
+			},
+			"Model": "ks_porsche_cayman_gt4_clubsport",
+			"Skin": "F1BC_GVR_01",
+			"BallastKG": 0,
+			"Restrictor": 0
+		}
+	],
+	"Result": [
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 117734,
+			"TotalTime": 3074782,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118110,
+			"TotalTime": 3087033,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118294,
+			"TotalTime": 3093249,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118511,
+			"TotalTime": 3110787,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118401,
+			"TotalTime": 3112853,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118949,
+			"TotalTime": 3120705,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 119573,
+			"TotalTime": 3160099,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118330,
+			"TotalTime": 3171085,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118959,
+			"TotalTime": 3033391,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 119893,
+			"TotalTime": 3051010,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 118477,
+			"TotalTime": 2039503,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 120098,
+			"TotalTime": 1868364,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Doni P.",
+			"DriverGuid": "76561198001900063",
+			"CarId": 12,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 122506,
+			"TotalTime": 404851,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Savio Assuncao",
+			"DriverGuid": "76561198374245026",
+			"CarId": 3,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Diretor",
+			"DriverGuid": "76561198012881717",
+			"CarId": 7,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Eduardo Bomfim",
+			"DriverGuid": "76561198086196947",
+			"CarId": 8,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Thales Luz",
+			"DriverGuid": "76561198016431521",
+			"CarId": 4,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 17,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 18,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 19,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 20,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 21,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 22,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 23,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 24,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 25,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 26,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 27,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 28,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 29,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "",
+			"DriverGuid": "",
+			"CarId": 16,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Marlus Brigola",
+			"DriverGuid": "76561198081206585",
+			"CarId": 1,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"BestLap": 999999999,
+			"TotalTime": 0,
+			"BallastKG": 0,
+			"Restrictor": 0
+		}
+	],
+	"Laps": [
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1657407,
+			"LapTime": 120458,
+			"Sectors": [
+				44229,
+				38340,
+				37889
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1658566,
+			"LapTime": 121630,
+			"Sectors": [
+				44644,
+				38894,
+				38092
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1658967,
+			"LapTime": 122025,
+			"Sectors": [
+				45380,
+				38583,
+				38062
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1659978,
+			"LapTime": 123041,
+			"Sectors": [
+				46272,
+				39069,
+				37700
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1660522,
+			"LapTime": 123576,
+			"Sectors": [
+				46301,
+				39519,
+				37756
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1661882,
+			"LapTime": 124949,
+			"Sectors": [
+				47036,
+				39646,
+				38267
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1662403,
+			"LapTime": 125410,
+			"Sectors": [
+				47389,
+				39344,
+				38677
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1663826,
+			"LapTime": 126881,
+			"Sectors": [
+				48492,
+				39635,
+				38754
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1664340,
+			"LapTime": 127389,
+			"Sectors": [
+				49079,
+				39439,
+				38871
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1664740,
+			"LapTime": 127806,
+			"Sectors": [
+				49452,
+				40027,
+				38327
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1665368,
+			"LapTime": 128437,
+			"Sectors": [
+				49845,
+				40005,
+				38587
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1666623,
+			"LapTime": 129686,
+			"Sectors": [
+				50428,
+				40252,
+				39006
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Doni P.",
+			"DriverGuid": "76561198001900063",
+			"CarId": 12,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1668080,
+			"LapTime": 131120,
+			"Sectors": [
+				50719,
+				40235,
+				40166
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1775780,
+			"LapTime": 118375,
+			"Sectors": [
+				41861,
+				38543,
+				37971
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1777763,
+			"LapTime": 119197,
+			"Sectors": [
+				42134,
+				38930,
+				38133
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1777944,
+			"LapTime": 118988,
+			"Sectors": [
+				42016,
+				39029,
+				37943
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1778311,
+			"LapTime": 118330,
+			"Sectors": [
+				42014,
+				38732,
+				37584
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1780082,
+			"LapTime": 119569,
+			"Sectors": [
+				41989,
+				39361,
+				38219
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1781647,
+			"LapTime": 119766,
+			"Sectors": [
+				41897,
+				39092,
+				38777
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1783990,
+			"LapTime": 121600,
+			"Sectors": [
+				43795,
+				39506,
+				38299
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1784713,
+			"LapTime": 120882,
+			"Sectors": [
+				42716,
+				39713,
+				38453
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1785977,
+			"LapTime": 121644,
+			"Sectors": [
+				42772,
+				39393,
+				39479
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1786340,
+			"LapTime": 120975,
+			"Sectors": [
+				43034,
+				39254,
+				38687
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1788266,
+			"LapTime": 121655,
+			"Sectors": [
+				43000,
+				40032,
+				38623
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1789657,
+			"LapTime": 124937,
+			"Sectors": [
+				42983,
+				39038,
+				42916
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Doni P.",
+			"DriverGuid": "76561198001900063",
+			"CarId": 12,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1819300,
+			"LapTime": 151247,
+			"Sectors": [
+				43725,
+				47470,
+				60052
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1893931,
+			"LapTime": 118149,
+			"Sectors": [
+				41689,
+				38633,
+				37827
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1897633,
+			"LapTime": 119876,
+			"Sectors": [
+				43043,
+				39042,
+				37791
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1898245,
+			"LapTime": 120305,
+			"Sectors": [
+				43450,
+				38993,
+				37862
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1899494,
+			"LapTime": 119413,
+			"Sectors": [
+				42076,
+				38759,
+				38578
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1902568,
+			"LapTime": 118589,
+			"Sectors": [
+				41964,
+				38745,
+				37880
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1902756,
+			"LapTime": 121117,
+			"Sectors": [
+				42754,
+				40635,
+				37728
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1905157,
+			"LapTime": 120451,
+			"Sectors": [
+				42529,
+				39289,
+				38633
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1905832,
+			"LapTime": 119861,
+			"Sectors": [
+				42515,
+				38745,
+				38601
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1907401,
+			"LapTime": 121059,
+			"Sectors": [
+				42813,
+				39446,
+				38800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1909092,
+			"LapTime": 120828,
+			"Sectors": [
+				43086,
+				39329,
+				38413
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1909224,
+			"LapTime": 130915,
+			"Sectors": [
+				53762,
+				39182,
+				37971
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1924996,
+			"LapTime": 135340,
+			"Sectors": [
+				57494,
+				39322,
+				38524
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Doni P.",
+			"DriverGuid": "76561198001900063",
+			"CarId": 12,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 1941800,
+			"LapTime": 122506,
+			"Sectors": [
+				43356,
+				40140,
+				39010
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2012019,
+			"LapTime": 118098,
+			"Sectors": [
+				41827,
+				38529,
+				37742
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2015936,
+			"LapTime": 118303,
+			"Sectors": [
+				41852,
+				38691,
+				37760
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2017172,
+			"LapTime": 118937,
+			"Sectors": [
+				42393,
+				38744,
+				37800
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2018150,
+			"LapTime": 118666,
+			"Sectors": [
+				41738,
+				39007,
+				37921
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2023490,
+			"LapTime": 120736,
+			"Sectors": [
+				42859,
+				39650,
+				38227
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2023914,
+			"LapTime": 121363,
+			"Sectors": [
+				43257,
+				39559,
+				38547
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2026520,
+			"LapTime": 121362,
+			"Sectors": [
+				42733,
+				39604,
+				39025
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2026821,
+			"LapTime": 120989,
+			"Sectors": [
+				42671,
+				38997,
+				39321
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2027506,
+			"LapTime": 120109,
+			"Sectors": [
+				42331,
+				39218,
+				38560
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2030191,
+			"LapTime": 120970,
+			"Sectors": [
+				43619,
+				38867,
+				38484
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2031476,
+			"LapTime": 122399,
+			"Sectors": [
+				44378,
+				39538,
+				38483
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2044365,
+			"LapTime": 119386,
+			"Sectors": [
+				42130,
+				39083,
+				38173
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2130175,
+			"LapTime": 118160,
+			"Sectors": [
+				41809,
+				38304,
+				38047
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2134327,
+			"LapTime": 118396,
+			"Sectors": [
+				42000,
+				38672,
+				37724
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2136046,
+			"LapTime": 118875,
+			"Sectors": [
+				42050,
+				38979,
+				37846
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2137104,
+			"LapTime": 118958,
+			"Sectors": [
+				41739,
+				39131,
+				38088
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2143012,
+			"LapTime": 119530,
+			"Sectors": [
+				42216,
+				39190,
+				38124
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2143452,
+			"LapTime": 119553,
+			"Sectors": [
+				42310,
+				38831,
+				38412
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2147704,
+			"LapTime": 121185,
+			"Sectors": [
+				42682,
+				39677,
+				38826
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2148501,
+			"LapTime": 120997,
+			"Sectors": [
+				42810,
+				39374,
+				38813
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2148577,
+			"LapTime": 121763,
+			"Sectors": [
+				42820,
+				39357,
+				39586
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2150611,
+			"LapTime": 120421,
+			"Sectors": [
+				43169,
+				39002,
+				38250
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2152366,
+			"LapTime": 120895,
+			"Sectors": [
+				42689,
+				39713,
+				38493
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2164120,
+			"LapTime": 119768,
+			"Sectors": [
+				42206,
+				39358,
+				38204
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2248104,
+			"LapTime": 117934,
+			"Sectors": [
+				41762,
+				38363,
+				37809
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2253060,
+			"LapTime": 118734,
+			"Sectors": [
+				42062,
+				38583,
+				38089
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2254444,
+			"LapTime": 118408,
+			"Sectors": [
+				41854,
+				38781,
+				37773
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2255963,
+			"LapTime": 118865,
+			"Sectors": [
+				41862,
+				38924,
+				38079
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2261406,
+			"LapTime": 118401,
+			"Sectors": [
+				41883,
+				38789,
+				37729
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2262585,
+			"LapTime": 119150,
+			"Sectors": [
+				42291,
+				38978,
+				37881
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2269108,
+			"LapTime": 121405,
+			"Sectors": [
+				43182,
+				39649,
+				38574
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2269481,
+			"LapTime": 120983,
+			"Sectors": [
+				43440,
+				39257,
+				38286
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2269970,
+			"LapTime": 121395,
+			"Sectors": [
+				43716,
+				39221,
+				38458
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2271482,
+			"LapTime": 120871,
+			"Sectors": [
+				43017,
+				39564,
+				38290
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2272508,
+			"LapTime": 120146,
+			"Sectors": [
+				42377,
+				39394,
+				38375
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2283521,
+			"LapTime": 119410,
+			"Sectors": [
+				42293,
+				38930,
+				38187
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2366233,
+			"LapTime": 118135,
+			"Sectors": [
+				41855,
+				38358,
+				37922
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2371666,
+			"LapTime": 118606,
+			"Sectors": [
+				41930,
+				38934,
+				37742
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2372741,
+			"LapTime": 118302,
+			"Sectors": [
+				41829,
+				38677,
+				37796
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2374964,
+			"LapTime": 119009,
+			"Sectors": [
+				41970,
+				38960,
+				38079
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2380036,
+			"LapTime": 118633,
+			"Sectors": [
+				41805,
+				39032,
+				37796
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2381334,
+			"LapTime": 118762,
+			"Sectors": [
+				41844,
+				39086,
+				37832
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2389964,
+			"LapTime": 120857,
+			"Sectors": [
+				42801,
+				39195,
+				38861
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2390243,
+			"LapTime": 120275,
+			"Sectors": [
+				42740,
+				39493,
+				38042
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2390316,
+			"LapTime": 120837,
+			"Sectors": [
+				42789,
+				39415,
+				38633
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2391616,
+			"LapTime": 120137,
+			"Sectors": [
+				42989,
+				39061,
+				38087
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2393386,
+			"LapTime": 120890,
+			"Sectors": [
+				42721,
+				39343,
+				38826
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2403095,
+			"LapTime": 119580,
+			"Sectors": [
+				42296,
+				38853,
+				38431
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2484364,
+			"LapTime": 118130,
+			"Sectors": [
+				41739,
+				38614,
+				37777
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2489846,
+			"LapTime": 118184,
+			"Sectors": [
+				41819,
+				38552,
+				37813
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2491059,
+			"LapTime": 118331,
+			"Sectors": [
+				41881,
+				38705,
+				37745
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2493843,
+			"LapTime": 118883,
+			"Sectors": [
+				42069,
+				38825,
+				37989
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2499031,
+			"LapTime": 119003,
+			"Sectors": [
+				41729,
+				39353,
+				37921
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2499798,
+			"LapTime": 118477,
+			"Sectors": [
+				41950,
+				38574,
+				37953
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2510632,
+			"LapTime": 120391,
+			"Sectors": [
+				42501,
+				39483,
+				38407
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2512585,
+			"LapTime": 122273,
+			"Sectors": [
+				44027,
+				39636,
+				38610
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2514225,
+			"LapTime": 122609,
+			"Sectors": [
+				44175,
+				40279,
+				38155
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2515377,
+			"LapTime": 121993,
+			"Sectors": [
+				42663,
+				40490,
+				38840
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2515502,
+			"LapTime": 125543,
+			"Sectors": [
+				46694,
+				40374,
+				38475
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2523336,
+			"LapTime": 120257,
+			"Sectors": [
+				42277,
+				39555,
+				38425
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2602686,
+			"LapTime": 118330,
+			"Sectors": [
+				41925,
+				38483,
+				37922
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2608356,
+			"LapTime": 118514,
+			"Sectors": [
+				42050,
+				38431,
+				38033
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2610311,
+			"LapTime": 119253,
+			"Sectors": [
+				42032,
+				39461,
+				37760
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2612529,
+			"LapTime": 118686,
+			"Sectors": [
+				41862,
+				38835,
+				37989
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2618589,
+			"LapTime": 119559,
+			"Sectors": [
+				42204,
+				39131,
+				38224
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2618788,
+			"LapTime": 119003,
+			"Sectors": [
+				42009,
+				38807,
+				38187
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2629771,
+			"LapTime": 119143,
+			"Sectors": [
+				42225,
+				38857,
+				38061
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2632679,
+			"LapTime": 120098,
+			"Sectors": [
+				42338,
+				39078,
+				38682
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2634307,
+			"LapTime": 120081,
+			"Sectors": [
+				42784,
+				39042,
+				38255
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2635334,
+			"LapTime": 119833,
+			"Sectors": [
+				42438,
+				39244,
+				38151
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2636481,
+			"LapTime": 121110,
+			"Sectors": [
+				43125,
+				39564,
+				38421
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2643209,
+			"LapTime": 119883,
+			"Sectors": [
+				42437,
+				38952,
+				38494
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2720858,
+			"LapTime": 118176,
+			"Sectors": [
+				41757,
+				38582,
+				37837
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2726465,
+			"LapTime": 118110,
+			"Sectors": [
+				41866,
+				38583,
+				37661
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2729086,
+			"LapTime": 118777,
+			"Sectors": [
+				41715,
+				39217,
+				37845
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2731427,
+			"LapTime": 118907,
+			"Sectors": [
+				42223,
+				38893,
+				37791
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2738181,
+			"LapTime": 119600,
+			"Sectors": [
+				41917,
+				39640,
+				38043
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2738672,
+			"LapTime": 119901,
+			"Sectors": [
+				42266,
+				39277,
+				38358
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2748936,
+			"LapTime": 119170,
+			"Sectors": [
+				42134,
+				38772,
+				38264
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2753331,
+			"LapTime": 120652,
+			"Sectors": [
+				42816,
+				39159,
+				38677
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2754578,
+			"LapTime": 120275,
+			"Sectors": [
+				43254,
+				38852,
+				38169
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2755367,
+			"LapTime": 120034,
+			"Sectors": [
+				42674,
+				39051,
+				38309
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2756366,
+			"LapTime": 119893,
+			"Sectors": [
+				42237,
+				39433,
+				38223
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2762709,
+			"LapTime": 119510,
+			"Sectors": [
+				42164,
+				39214,
+				38132
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2839320,
+			"LapTime": 118467,
+			"Sectors": [
+				42030,
+				38646,
+				37791
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2844856,
+			"LapTime": 118390,
+			"Sectors": [
+				41867,
+				38503,
+				38020
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2848170,
+			"LapTime": 119093,
+			"Sectors": [
+				42521,
+				38620,
+				37952
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2850393,
+			"LapTime": 118973,
+			"Sectors": [
+				42015,
+				38943,
+				38015
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2857636,
+			"LapTime": 119460,
+			"Sectors": [
+				41893,
+				39501,
+				38066
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2857973,
+			"LapTime": 119312,
+			"Sectors": [
+				42317,
+				38980,
+				38015
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2867881,
+			"LapTime": 118949,
+			"Sectors": [
+				42098,
+				38777,
+				38074
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2873449,
+			"LapTime": 120124,
+			"Sectors": [
+				42625,
+				39010,
+				38489
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2874125,
+			"LapTime": 119549,
+			"Sectors": [
+				42680,
+				38917,
+				37952
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2875529,
+			"LapTime": 120156,
+			"Sectors": [
+				42665,
+				39295,
+				38196
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2876368,
+			"LapTime": 120003,
+			"Sectors": [
+				42368,
+				39151,
+				38484
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2881921,
+			"LapTime": 119221,
+			"Sectors": [
+				41960,
+				39038,
+				38223
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2957212,
+			"LapTime": 117895,
+			"Sectors": [
+				41706,
+				38294,
+				37895
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2963252,
+			"LapTime": 118400,
+			"Sectors": [
+				41932,
+				38615,
+				37853
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2966452,
+			"LapTime": 118294,
+			"Sectors": [
+				41902,
+				38511,
+				37881
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2969239,
+			"LapTime": 118848,
+			"Sectors": [
+				41780,
+				38719,
+				38349
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2977690,
+			"LapTime": 120055,
+			"Sectors": [
+				42120,
+				39761,
+				38174
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2978186,
+			"LapTime": 120225,
+			"Sectors": [
+				42149,
+				40033,
+				38043
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2987170,
+			"LapTime": 119293,
+			"Sectors": [
+				42204,
+				39019,
+				38070
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2993639,
+			"LapTime": 120191,
+			"Sectors": [
+				42413,
+				39259,
+				38519
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2993730,
+			"LapTime": 119604,
+			"Sectors": [
+				42635,
+				38970,
+				37999
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2995095,
+			"LapTime": 119573,
+			"Sectors": [
+				42146,
+				39142,
+				38285
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 2996508,
+			"LapTime": 120154,
+			"Sectors": [
+				42515,
+				39195,
+				38444
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3001300,
+			"LapTime": 119390,
+			"Sectors": [
+				42089,
+				39061,
+				38240
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3075081,
+			"LapTime": 117874,
+			"Sectors": [
+				41675,
+				38385,
+				37814
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3082113,
+			"LapTime": 118865,
+			"Sectors": [
+				42388,
+				38398,
+				38079
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3085202,
+			"LapTime": 118760,
+			"Sectors": [
+				41941,
+				38903,
+				37916
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3088239,
+			"LapTime": 119007,
+			"Sectors": [
+				41867,
+				39159,
+				37981
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3096861,
+			"LapTime": 119179,
+			"Sectors": [
+				41991,
+				39014,
+				38174
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3097327,
+			"LapTime": 119159,
+			"Sectors": [
+				42012,
+				38812,
+				38335
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3106332,
+			"LapTime": 119165,
+			"Sectors": [
+				42278,
+				38764,
+				38123
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3115792,
+			"LapTime": 122155,
+			"Sectors": [
+				43234,
+				39857,
+				39064
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3115980,
+			"LapTime": 122247,
+			"Sectors": [
+				42948,
+				39883,
+				39416
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3116114,
+			"LapTime": 121021,
+			"Sectors": [
+				42500,
+				39519,
+				39002
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3117486,
+			"LapTime": 120983,
+			"Sectors": [
+				42207,
+				40054,
+				38722
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3120273,
+			"LapTime": 118983,
+			"Sectors": [
+				41893,
+				38704,
+				38386
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3192811,
+			"LapTime": 117734,
+			"Sectors": [
+				41689,
+				38322,
+				37723
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3200354,
+			"LapTime": 118244,
+			"Sectors": [
+				41731,
+				38380,
+				38133
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3204551,
+			"LapTime": 119351,
+			"Sectors": [
+				41938,
+				39487,
+				37926
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3207310,
+			"LapTime": 119070,
+			"Sectors": [
+				41903,
+				38858,
+				38309
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3216024,
+			"LapTime": 119170,
+			"Sectors": [
+				42094,
+				38948,
+				38128
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3216197,
+			"LapTime": 118884,
+			"Sectors": [
+				42149,
+				38962,
+				37773
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3225432,
+			"LapTime": 119100,
+			"Sectors": [
+				42464,
+				38575,
+				38061
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3236296,
+			"LapTime": 120316,
+			"Sectors": [
+				42894,
+				39203,
+				38219
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3237063,
+			"LapTime": 120952,
+			"Sectors": [
+				43327,
+				39231,
+				38394
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3237954,
+			"LapTime": 120463,
+			"Sectors": [
+				42730,
+				39334,
+				38399
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3239939,
+			"LapTime": 119677,
+			"Sectors": [
+				42390,
+				38893,
+				38394
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3284258,
+			"LapTime": 168468,
+			"Sectors": [
+				87994,
+				40109,
+				40365
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3311166,
+			"LapTime": 118361,
+			"Sectors": [
+				41960,
+				38611,
+				37790
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3318896,
+			"LapTime": 118542,
+			"Sectors": [
+				42086,
+				38440,
+				38016
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3323189,
+			"LapTime": 118649,
+			"Sectors": [
+				41988,
+				38839,
+				37822
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3326591,
+			"LapTime": 119286,
+			"Sectors": [
+				41895,
+				38736,
+				38655
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3336808,
+			"LapTime": 120790,
+			"Sectors": [
+				42261,
+				39392,
+				39137
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3337947,
+			"LapTime": 121765,
+			"Sectors": [
+				42426,
+				39077,
+				40262
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3344462,
+			"LapTime": 119033,
+			"Sectors": [
+				42174,
+				38808,
+				38051
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3357598,
+			"LapTime": 121307,
+			"Sectors": [
+				42512,
+				40415,
+				38380
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3360655,
+			"LapTime": 120727,
+			"Sectors": [
+				41882,
+				39880,
+				38965
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3367347,
+			"LapTime": 130285,
+			"Sectors": [
+				41815,
+				49554,
+				38916
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3374095,
+			"LapTime": 136148,
+			"Sectors": [
+				42166,
+				41935,
+				52047
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Joao Junior",
+			"DriverGuid": "76561197996909305",
+			"CarId": 15,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3405309,
+			"LapTime": 121054,
+			"Sectors": [
+				43335,
+				39024,
+				38695
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3429333,
+			"LapTime": 118168,
+			"Sectors": [
+				41979,
+				38466,
+				37723
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3437139,
+			"LapTime": 118246,
+			"Sectors": [
+				41980,
+				38439,
+				37827
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3441911,
+			"LapTime": 118731,
+			"Sectors": [
+				42136,
+				38821,
+				37774
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3445767,
+			"LapTime": 119182,
+			"Sectors": [
+				42309,
+				38718,
+				38155
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3455777,
+			"LapTime": 118972,
+			"Sectors": [
+				41973,
+				39042,
+				37957
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3457350,
+			"LapTime": 119413,
+			"Sectors": [
+				42008,
+				39416,
+				37989
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3463633,
+			"LapTime": 119172,
+			"Sectors": [
+				42267,
+				38843,
+				38062
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3477816,
+			"LapTime": 120220,
+			"Sectors": [
+				42734,
+				39299,
+				38187
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3479605,
+			"LapTime": 118959,
+			"Sectors": [
+				41910,
+				38952,
+				38097
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3487805,
+			"LapTime": 120457,
+			"Sectors": [
+				42503,
+				39313,
+				38641
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3494441,
+			"LapTime": 120360,
+			"Sectors": [
+				42419,
+				39061,
+				38880
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3547355,
+			"LapTime": 118031,
+			"Sectors": [
+				41828,
+				38390,
+				37813
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3555813,
+			"LapTime": 118671,
+			"Sectors": [
+				41855,
+				38813,
+				38003
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3560613,
+			"LapTime": 118701,
+			"Sectors": [
+				41931,
+				38938,
+				37832
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3565827,
+			"LapTime": 120066,
+			"Sectors": [
+				41910,
+				39568,
+				38588
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3574567,
+			"LapTime": 118797,
+			"Sectors": [
+				42076,
+				38840,
+				37881
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jackson Douglas",
+			"DriverGuid": "76561198064362952",
+			"CarId": 11,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3576514,
+			"LapTime": 119183,
+			"Sectors": [
+				41747,
+				39250,
+				38186
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3582740,
+			"LapTime": 119114,
+			"Sectors": [
+				42335,
+				38620,
+				38159
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3599919,
+			"LapTime": 122104,
+			"Sectors": [
+				42553,
+				40986,
+				38565
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3599969,
+			"LapTime": 120374,
+			"Sectors": [
+				41701,
+				39758,
+				38915
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3608322,
+			"LapTime": 120520,
+			"Sectors": [
+				42648,
+				39293,
+				38579
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3615159,
+			"LapTime": 120726,
+			"Sectors": [
+				43038,
+				39208,
+				38480
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3665476,
+			"LapTime": 118114,
+			"Sectors": [
+				41659,
+				38345,
+				38110
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3674254,
+			"LapTime": 118444,
+			"Sectors": [
+				41669,
+				38475,
+				38300
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3679031,
+			"LapTime": 118422,
+			"Sectors": [
+				41814,
+				38785,
+				37823
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3684725,
+			"LapTime": 118898,
+			"Sectors": [
+				41719,
+				38966,
+				38213
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3693930,
+			"LapTime": 119366,
+			"Sectors": [
+				42227,
+				39110,
+				38029
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3702458,
+			"LapTime": 119721,
+			"Sectors": [
+				42433,
+				38930,
+				38358
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3721388,
+			"LapTime": 121431,
+			"Sectors": [
+				43553,
+				39403,
+				38475
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3721712,
+			"LapTime": 121793,
+			"Sectors": [
+				43988,
+				39267,
+				38538
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3728860,
+			"LapTime": 120538,
+			"Sectors": [
+				42701,
+				39353,
+				38484
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3735538,
+			"LapTime": 120375,
+			"Sectors": [
+				42961,
+				39091,
+				38323
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3783847,
+			"LapTime": 118383,
+			"Sectors": [
+				41712,
+				38844,
+				37827
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3792650,
+			"LapTime": 118400,
+			"Sectors": [
+				41806,
+				38484,
+				38110
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3797695,
+			"LapTime": 118669,
+			"Sectors": [
+				41967,
+				38956,
+				37746
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3803759,
+			"LapTime": 119037,
+			"Sectors": [
+				41933,
+				39065,
+				38039
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3813468,
+			"LapTime": 119545,
+			"Sectors": [
+				42051,
+				39068,
+				38426
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3821747,
+			"LapTime": 119290,
+			"Sectors": [
+				42245,
+				38853,
+				38192
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3840895,
+			"LapTime": 119515,
+			"Sectors": [
+				42245,
+				39042,
+				38228
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3841437,
+			"LapTime": 119725,
+			"Sectors": [
+				42172,
+				39429,
+				38124
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3849395,
+			"LapTime": 120538,
+			"Sectors": [
+				42792,
+				39091,
+				38655
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3856139,
+			"LapTime": 120617,
+			"Sectors": [
+				42597,
+				39172,
+				38848
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3902057,
+			"LapTime": 118215,
+			"Sectors": [
+				41773,
+				38619,
+				37823
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3911427,
+			"LapTime": 118780,
+			"Sectors": [
+				41803,
+				38556,
+				38421
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3916102,
+			"LapTime": 118423,
+			"Sectors": [
+				41923,
+				38561,
+				37939
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3922260,
+			"LapTime": 118511,
+			"Sectors": [
+				41962,
+				38619,
+				37930
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3932697,
+			"LapTime": 119229,
+			"Sectors": [
+				42071,
+				39335,
+				37823
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3940950,
+			"LapTime": 119206,
+			"Sectors": [
+				42306,
+				38816,
+				38084
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3960204,
+			"LapTime": 119319,
+			"Sectors": [
+				42009,
+				38961,
+				38349
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3968922,
+			"LapTime": 127486,
+			"Sectors": [
+				42494,
+				39034,
+				45958
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3969920,
+			"LapTime": 120524,
+			"Sectors": [
+				42360,
+				39442,
+				38722
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 3984029,
+			"LapTime": 127897,
+			"Sectors": [
+				42806,
+				46080,
+				39011
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4020425,
+			"LapTime": 118372,
+			"Sectors": [
+				41867,
+				38543,
+				37962
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4029986,
+			"LapTime": 118562,
+			"Sectors": [
+				41901,
+				38749,
+				37912
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4034993,
+			"LapTime": 118891,
+			"Sectors": [
+				41941,
+				39042,
+				37908
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4041127,
+			"LapTime": 118874,
+			"Sectors": [
+				41943,
+				38803,
+				38128
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4052459,
+			"LapTime": 119772,
+			"Sectors": [
+				42452,
+				39178,
+				38142
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4060526,
+			"LapTime": 119580,
+			"Sectors": [
+				42432,
+				38870,
+				38278
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4080687,
+			"LapTime": 120492,
+			"Sectors": [
+				42286,
+				39537,
+				38669
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4090577,
+			"LapTime": 120661,
+			"Sectors": [
+				42793,
+				39038,
+				38830
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4090860,
+			"LapTime": 121938,
+			"Sectors": [
+				43160,
+				39479,
+				39299
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4104563,
+			"LapTime": 120534,
+			"Sectors": [
+				42585,
+				39131,
+				38818
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4139190,
+			"LapTime": 118769,
+			"Sectors": [
+				41937,
+				38816,
+				38016
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4148540,
+			"LapTime": 118551,
+			"Sectors": [
+				41916,
+				38880,
+				37755
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4154012,
+			"LapTime": 119026,
+			"Sectors": [
+				41923,
+				39024,
+				38079
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4160500,
+			"LapTime": 119370,
+			"Sectors": [
+				41825,
+				39312,
+				38233
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4171508,
+			"LapTime": 119052,
+			"Sectors": [
+				42102,
+				38952,
+				37998
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4180307,
+			"LapTime": 119781,
+			"Sectors": [
+				42443,
+				38948,
+				38390
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4202135,
+			"LapTime": 121459,
+			"Sectors": [
+				42138,
+				39815,
+				39506
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4213704,
+			"LapTime": 123126,
+			"Sectors": [
+				45091,
+				39316,
+				38719
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4214669,
+			"LapTime": 123812,
+			"Sectors": [
+				45931,
+				39479,
+				38402
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4225424,
+			"LapTime": 120861,
+			"Sectors": [
+				42610,
+				39550,
+				38701
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4257129,
+			"LapTime": 117947,
+			"Sectors": [
+				41848,
+				38264,
+				37835
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4267894,
+			"LapTime": 119358,
+			"Sectors": [
+				42034,
+				38767,
+				38557
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4272752,
+			"LapTime": 118751,
+			"Sectors": [
+				41919,
+				38879,
+				37953
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4284294,
+			"LapTime": 123804,
+			"Sectors": [
+				41733,
+				43254,
+				38817
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4291434,
+			"LapTime": 119933,
+			"Sectors": [
+				42187,
+				39226,
+				38520
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4299375,
+			"LapTime": 119069,
+			"Sectors": [
+				42227,
+				38669,
+				38173
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4325675,
+			"LapTime": 123549,
+			"Sectors": [
+				43431,
+				40171,
+				39947
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4334551,
+			"LapTime": 120851,
+			"Sectors": [
+				42615,
+				39690,
+				38546
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4344635,
+			"LapTime": 129967,
+			"Sectors": [
+				42968,
+				48416,
+				38583
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4345721,
+			"LapTime": 120312,
+			"Sectors": [
+				42551,
+				39258,
+				38503
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4375280,
+			"LapTime": 118154,
+			"Sectors": [
+				41916,
+				38357,
+				37881
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4386164,
+			"LapTime": 118273,
+			"Sectors": [
+				41841,
+				38483,
+				37949
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4392183,
+			"LapTime": 119433,
+			"Sectors": [
+				42460,
+				39110,
+				37863
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4406811,
+			"LapTime": 122521,
+			"Sectors": [
+				42534,
+				40990,
+				38997
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4410777,
+			"LapTime": 119347,
+			"Sectors": [
+				42055,
+				39042,
+				38250
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4418686,
+			"LapTime": 119316,
+			"Sectors": [
+				42519,
+				38659,
+				38138
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4449268,
+			"LapTime": 123605,
+			"Sectors": [
+				43722,
+				40792,
+				39091
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4454641,
+			"LapTime": 120090,
+			"Sectors": [
+				42581,
+				38934,
+				38575
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4465740,
+			"LapTime": 121105,
+			"Sectors": [
+				43088,
+				39501,
+				38516
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4466756,
+			"LapTime": 121036,
+			"Sectors": [
+				42767,
+				39632,
+				38637
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4493273,
+			"LapTime": 118001,
+			"Sectors": [
+				41628,
+				38551,
+				37822
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4505540,
+			"LapTime": 119377,
+			"Sectors": [
+				41721,
+				39235,
+				38421
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4510927,
+			"LapTime": 118750,
+			"Sectors": [
+				42030,
+				38614,
+				38106
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4527373,
+			"LapTime": 120570,
+			"Sectors": [
+				42314,
+				39160,
+				39096
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4529939,
+			"LapTime": 119166,
+			"Sectors": [
+				42017,
+				39060,
+				38089
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4538185,
+			"LapTime": 119502,
+			"Sectors": [
+				42398,
+				38970,
+				38134
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Fabio Zittel",
+			"DriverGuid": "76561197991310312",
+			"CarId": 14,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4570333,
+			"LapTime": 121070,
+			"Sectors": [
+				42365,
+				40041,
+				38664
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4575133,
+			"LapTime": 120487,
+			"Sectors": [
+				42515,
+				39295,
+				38677
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4586752,
+			"LapTime": 121011,
+			"Sectors": [
+				43021,
+				39361,
+				38629
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Jose Carlos Trabulo",
+			"DriverGuid": "76561198059748342",
+			"CarId": 5,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4587950,
+			"LapTime": 121208,
+			"Sectors": [
+				42463,
+				39676,
+				39069
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Ricardo Silva",
+			"DriverGuid": "76561198011551938",
+			"CarId": 9,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4611741,
+			"LapTime": 118465,
+			"Sectors": [
+				41772,
+				38736,
+				37957
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Randal Rodrigues",
+			"DriverGuid": "76561198301377302",
+			"CarId": 31,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4623973,
+			"LapTime": 118436,
+			"Sectors": [
+				41730,
+				38596,
+				38110
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Tiago Emanuel",
+			"DriverGuid": "76561198167302523",
+			"CarId": 6,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4630190,
+			"LapTime": 119273,
+			"Sectors": [
+				41950,
+				39470,
+				37853
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Celso Pedri",
+			"DriverGuid": "76561197999107997",
+			"CarId": 0,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4647734,
+			"LapTime": 120365,
+			"Sectors": [
+				42147,
+				39393,
+				38825
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Cadu Souza",
+			"DriverGuid": "76561197989739874",
+			"CarId": 13,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4649792,
+			"LapTime": 119861,
+			"Sectors": [
+				42281,
+				39375,
+				38205
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Alex Albuquerque",
+			"DriverGuid": "76561198118851662",
+			"CarId": 10,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4657649,
+			"LapTime": 119466,
+			"Sectors": [
+				42353,
+				38880,
+				38233
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Bruno Peres",
+			"DriverGuid": "76561198067980183",
+			"CarId": 2,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4697048,
+			"LapTime": 121920,
+			"Sectors": [
+				42175,
+				40829,
+				38916
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		},
+		{
+			"DriverName": "Rico Araujo",
+			"DriverGuid": "76561198142409415",
+			"CarId": 30,
+			"CarModel": "ks_porsche_cayman_gt4_clubsport",
+			"Timestamp": 4708027,
+			"LapTime": 121275,
+			"Sectors": [
+				43438,
+				39443,
+				38394
+			],
+			"Cuts": 0,
+			"BallastKG": 0,
+			"Tyre": "H",
+			"Restrictor": 0
+		}
+	],
+	"Events": [
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 1.0355573,
+			"WorldPosition": {
+				"X": -162.15077,
+				"Y": -6.3006463,
+				"Z": -2.143261
+			},
+			"RelPosition": {
+				"X": -0.90691185,
+				"Y": -0.30051017,
+				"Z": 1.1531811
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 0,
+			"OtherDriver": {
+				"Name": "Celso Pedri",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197999107997",
+				"GuidsList": [
+					"76561197999107997"
+				]
+			},
+			"ImpactSpeed": 1.704073,
+			"WorldPosition": {
+				"X": -153.62286,
+				"Y": -5.7391686,
+				"Z": -118.80528
+			},
+			"RelPosition": {
+				"X": 0.905939,
+				"Y": -0.32951555,
+				"Z": 0.68203545
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 1.0632316,
+			"WorldPosition": {
+				"X": -162.20877,
+				"Y": -6.3044276,
+				"Z": -1.6163584
+			},
+			"RelPosition": {
+				"X": 0.9230766,
+				"Y": -0.32254183,
+				"Z": -0.8263587
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Celso Pedri",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197999107997",
+				"GuidsList": [
+					"76561197999107997"
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 1.4640732,
+			"WorldPosition": {
+				"X": -153.69373,
+				"Y": -5.065642,
+				"Z": -118.13987
+			},
+			"RelPosition": {
+				"X": -0.90902287,
+				"Y": 0.34580737,
+				"Z": 0.3825264
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 1.6199374,
+			"WorldPosition": {
+				"X": -102.85268,
+				"Y": -3.4455235,
+				"Z": -518.6521
+			},
+			"RelPosition": {
+				"X": 0.9079089,
+				"Y": -0.2849772,
+				"Z": 1.616437
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 11.918725,
+			"WorldPosition": {
+				"X": -103.94533,
+				"Y": -3.4518964,
+				"Z": -518.3711
+			},
+			"RelPosition": {
+				"X": -0.90495443,
+				"Y": -0.32835224,
+				"Z": 0.3688284
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 10.465874,
+			"WorldPosition": {
+				"X": -94.47244,
+				"Y": -3.3891149,
+				"Z": -520.32886
+			},
+			"RelPosition": {
+				"X": 0.6845584,
+				"Y": -0.2633977,
+				"Z": 2.1717467
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 12.741679,
+			"WorldPosition": {
+				"X": -94.80772,
+				"Y": -3.3925843,
+				"Z": -520.3299
+			},
+			"RelPosition": {
+				"X": -0.87752193,
+				"Y": -0.32038933,
+				"Z": -1.6284202
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 10.397727,
+			"WorldPosition": {
+				"X": -102.426895,
+				"Y": -2.5557806,
+				"Z": -645.1669
+			},
+			"RelPosition": {
+				"X": -0.90567017,
+				"Y": -0.329191,
+				"Z": 0.5946293
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 31,
+			"OtherDriver": {
+				"Name": "Randal Rodrigues",
+				"Team": "",
+				"Nation": "PLA",
+				"Guid": "76561198301377302",
+				"GuidsList": [
+					"76561198301377302"
+				]
+			},
+			"ImpactSpeed": 8.286012,
+			"WorldPosition": {
+				"X": -102.825485,
+				"Y": -2.3302355,
+				"Z": -670.6071
+			},
+			"RelPosition": {
+				"X": -0.90617895,
+				"Y": -0.17616239,
+				"Z": 1.6093436
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"ImpactSpeed": 8.154106,
+			"WorldPosition": {
+				"X": -102.51874,
+				"Y": -2.55305,
+				"Z": -645.80695
+			},
+			"RelPosition": {
+				"X": 0.8958682,
+				"Y": -0.30321702,
+				"Z": 1.6128428
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 31,
+			"Driver": {
+				"Name": "Randal Rodrigues",
+				"Team": "",
+				"Nation": "PLA",
+				"Guid": "76561198301377302",
+				"GuidsList": [
+					"76561198301377302"
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 10.014685,
+			"WorldPosition": {
+				"X": -102.71059,
+				"Y": -2.3411586,
+				"Z": -669.58813
+			},
+			"RelPosition": {
+				"X": 0.9151484,
+				"Y": -0.20965625,
+				"Z": -0.9641057
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 12.763862,
+			"WorldPosition": {
+				"X": -107.81117,
+				"Y": -1.5474482,
+				"Z": -707.9603
+			},
+			"RelPosition": {
+				"X": -0.91299987,
+				"Y": 0.28164086,
+				"Z": -0.15361273
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 6,
+			"Driver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"OtherCarId": 31,
+			"OtherDriver": {
+				"Name": "Randal Rodrigues",
+				"Team": "",
+				"Nation": "PLA",
+				"Guid": "76561198301377302",
+				"GuidsList": [
+					"76561198301377302"
+				]
+			},
+			"ImpactSpeed": 5.365073,
+			"WorldPosition": {
+				"X": -106.143616,
+				"Y": -2.0132315,
+				"Z": -736.96466
+			},
+			"RelPosition": {
+				"X": -0.905105,
+				"Y": -0.29748246,
+				"Z": 1.6160239
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 75.937744,
+			"WorldPosition": {
+				"X": -92.516624,
+				"Y": -1.8798064,
+				"Z": -760.695
+			},
+			"RelPosition": {
+				"X": -0.4292847,
+				"Y": -0.1604648,
+				"Z": 2.1731691
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 31,
+			"Driver": {
+				"Name": "Randal Rodrigues",
+				"Team": "",
+				"Nation": "PLA",
+				"Guid": "76561198301377302",
+				"GuidsList": [
+					"76561198301377302"
+				]
+			},
+			"OtherCarId": 6,
+			"OtherDriver": {
+				"Name": "Tiago Emanuel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198167302523",
+				"GuidsList": [
+					"76561198167302523"
+				]
+			},
+			"ImpactSpeed": 4.3040133,
+			"WorldPosition": {
+				"X": -106.135216,
+				"Y": -1.9645445,
+				"Z": -737.08923
+			},
+			"RelPosition": {
+				"X": 0.9137533,
+				"Y": -0.26748535,
+				"Z": -0.8929022
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 5.8143277,
+			"WorldPosition": {
+				"X": -91.274734,
+				"Y": -3.3834682,
+				"Z": -520.95416
+			},
+			"RelPosition": {
+				"X": -0.9078991,
+				"Y": -0.27574125,
+				"Z": 1.6158335
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 9.304736,
+			"WorldPosition": {
+				"X": -91.948875,
+				"Y": -3.3921409,
+				"Z": -520.85675
+			},
+			"RelPosition": {
+				"X": 0.90083283,
+				"Y": -0.3271107,
+				"Z": 0.020663723
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 0.6111416,
+			"WorldPosition": {
+				"X": 581.57715,
+				"Y": -4.677358,
+				"Z": -655.56866
+			},
+			"RelPosition": {
+				"X": -0.47669655,
+				"Y": -0.29684597,
+				"Z": -1.9998064
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 3.1775837,
+			"WorldPosition": {
+				"X": 232.4412,
+				"Y": -4.4848504,
+				"Z": -352.23096
+			},
+			"RelPosition": {
+				"X": -0.9053379,
+				"Y": -0.32878056,
+				"Z": 0.4838773
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 2.4792795,
+			"WorldPosition": {
+				"X": 233.68451,
+				"Y": -4.4803524,
+				"Z": -353.3153
+			},
+			"RelPosition": {
+				"X": 0.90595174,
+				"Y": -0.29467136,
+				"Z": 1.6170768
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Doni P.",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198001900063",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 74.040825,
+			"WorldPosition": {
+				"X": 939.4314,
+				"Y": -2.6228633,
+				"Z": -902.43463
+			},
+			"RelPosition": {
+				"X": -0.04894048,
+				"Y": 0.07262702,
+				"Z": 2.2909386
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 12,
+			"Driver": {
+				"Name": "Doni P.",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198001900063",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 12.438931,
+			"WorldPosition": {
+				"X": 925.11005,
+				"Y": -2.9272761,
+				"Z": -894.1043
+			},
+			"RelPosition": {
+				"X": 0.6866245,
+				"Y": -0.300272,
+				"Z": 2.1827314
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 2.9971585,
+			"WorldPosition": {
+				"X": 219.72632,
+				"Y": -4.434963,
+				"Z": -340.1336
+			},
+			"RelPosition": {
+				"X": -0.88910425,
+				"Y": -0.32093704,
+				"Z": -1.4241024
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 3.1130428,
+			"WorldPosition": {
+				"X": 220.28362,
+				"Y": -3.8763213,
+				"Z": -340.62662
+			},
+			"RelPosition": {
+				"X": 0.89788324,
+				"Y": 0.2951444,
+				"Z": 1.5788105
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"ImpactSpeed": 8.832758,
+			"WorldPosition": {
+				"X": -81.06277,
+				"Y": -2.8193898,
+				"Z": -525.60895
+			},
+			"RelPosition": {
+				"X": -0.8163607,
+				"Y": 0.23807198,
+				"Z": 1.7999476
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 14.015135,
+			"WorldPosition": {
+				"X": -80.94213,
+				"Y": -2.918587,
+				"Z": -525.7187
+			},
+			"RelPosition": {
+				"X": 0.9067686,
+				"Y": 0.027597442,
+				"Z": -1.197048
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 12.699913,
+			"WorldPosition": {
+				"X": 582.56726,
+				"Y": 1.2760525,
+				"Z": -1139.0094
+			},
+			"RelPosition": {
+				"X": 0.00048720837,
+				"Y": -0.18156222,
+				"Z": 2.3426979
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 21.736435,
+			"WorldPosition": {
+				"X": 582.2805,
+				"Y": 1.2846878,
+				"Z": -1138.975
+			},
+			"RelPosition": {
+				"X": -0.1306156,
+				"Y": -0.27752832,
+				"Z": -2.0388038
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 6.6736608,
+			"WorldPosition": {
+				"X": -89.871445,
+				"Y": -3.4052885,
+				"Z": -522.18866
+			},
+			"RelPosition": {
+				"X": -0.9184822,
+				"Y": -0.3234308,
+				"Z": -0.6725285
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 10.232366,
+			"WorldPosition": {
+				"X": -90.30271,
+				"Y": -3.4166615,
+				"Z": -522.15674
+			},
+			"RelPosition": {
+				"X": 0.90339345,
+				"Y": -0.31763464,
+				"Z": 1.6165364
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 13.920921,
+			"WorldPosition": {
+				"X": 9.523437,
+				"Y": -11.162162,
+				"Z": 855.9335
+			},
+			"RelPosition": {
+				"X": -0.90797126,
+				"Y": -0.33192125,
+				"Z": 1.3298433
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 6.1098595,
+			"WorldPosition": {
+				"X": 9.213641,
+				"Y": -11.16469,
+				"Z": 856.40576
+			},
+			"RelPosition": {
+				"X": 0.8992262,
+				"Y": -0.27525374,
+				"Z": 1.6125144
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 15,
+			"Driver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"ImpactSpeed": 1.9899746,
+			"WorldPosition": {
+				"X": -126.895645,
+				"Y": -3.3589013,
+				"Z": -449.13687
+			},
+			"RelPosition": {
+				"X": 0.91544956,
+				"Y": 0.3021678,
+				"Z": -0.84908235
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"OtherCarId": 15,
+			"OtherDriver": {
+				"Name": "Joao Junior",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197996909305",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 1.9208394,
+			"WorldPosition": {
+				"X": -126.89955,
+				"Y": -3.9836662,
+				"Z": -449.07166
+			},
+			"RelPosition": {
+				"X": -0.90565497,
+				"Y": -0.2889074,
+				"Z": 0.81472063
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 5.04119,
+			"WorldPosition": {
+				"X": -153.70248,
+				"Y": -6.035427,
+				"Z": -52.67947
+			},
+			"RelPosition": {
+				"X": -0.90647656,
+				"Y": -0.3301225,
+				"Z": 0.8454606
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 5.076067,
+			"WorldPosition": {
+				"X": -153.63484,
+				"Y": -6.029552,
+				"Z": -53.19612
+			},
+			"RelPosition": {
+				"X": 0.9074071,
+				"Y": -0.32012776,
+				"Z": 1.6182045
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"OtherCarId": 5,
+			"OtherDriver": {
+				"Name": "Jose Carlos Trabulo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198059748342",
+				"GuidsList": [
+					"76561198059748342"
+				]
+			},
+			"ImpactSpeed": 22.817167,
+			"WorldPosition": {
+				"X": 650.13385,
+				"Y": 0.7966853,
+				"Z": -1189.2947
+			},
+			"RelPosition": {
+				"X": 0.0681352,
+				"Y": -0.2740413,
+				"Z": -2.045801
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 5,
+			"Driver": {
+				"Name": "Jose Carlos Trabulo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198059748342",
+				"GuidsList": [
+					"76561198059748342"
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"ImpactSpeed": 21.016901,
+			"WorldPosition": {
+				"X": 650.1769,
+				"Y": 0.7957,
+				"Z": -1189.2601
+			},
+			"RelPosition": {
+				"X": 0.00011193752,
+				"Y": -0.20416147,
+				"Z": 2.345442
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 13,
+			"Driver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 11,
+			"OtherDriver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 3.1826098,
+			"WorldPosition": {
+				"X": 283.63266,
+				"Y": -4.198757,
+				"Z": -395.6076
+			},
+			"RelPosition": {
+				"X": -0.912179,
+				"Y": 0.33307338,
+				"Z": -0.21072918
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 13,
+			"OtherDriver": {
+				"Name": "Cadu Souza",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197989739874",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 3.6808808,
+			"WorldPosition": {
+				"X": 283.2214,
+				"Y": -4.886665,
+				"Z": -395.28323
+			},
+			"RelPosition": {
+				"X": 0.90728235,
+				"Y": -0.33109117,
+				"Z": 1.1063633
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 5,
+			"Driver": {
+				"Name": "Jose Carlos Trabulo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198059748342",
+				"GuidsList": [
+					"76561198059748342"
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 15.675928,
+			"WorldPosition": {
+				"X": 222.80101,
+				"Y": -4.6845894,
+				"Z": -309.9958
+			},
+			"RelPosition": {
+				"X": 0.68660754,
+				"Y": -0.30027106,
+				"Z": 2.182747
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 6.811876,
+			"WorldPosition": {
+				"X": -81.68596,
+				"Y": -3.2565866,
+				"Z": -524.5426
+			},
+			"RelPosition": {
+				"X": 0.5988844,
+				"Y": -0.30393687,
+				"Z": -1.9831836
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 4.3641872,
+			"WorldPosition": {
+				"X": -81.39178,
+				"Y": -3.2318878,
+				"Z": -524.2497
+			},
+			"RelPosition": {
+				"X": -0.6865489,
+				"Y": -0.18790394,
+				"Z": 2.1749296
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 23.204294,
+			"WorldPosition": {
+				"X": -76.13129,
+				"Y": -3.223544,
+				"Z": -535.07495
+			},
+			"RelPosition": {
+				"X": 0.9085448,
+				"Y": -0.3325467,
+				"Z": 1.4979159
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 12.633069,
+			"WorldPosition": {
+				"X": -76.12994,
+				"Y": -3.2216203,
+				"Z": -535.42596
+			},
+			"RelPosition": {
+				"X": -0.89623857,
+				"Y": -0.31270337,
+				"Z": 1.6135142
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 11,
+			"Driver": {
+				"Name": "Jackson Douglas",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198064362952",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 15.834998,
+			"WorldPosition": {
+				"X": 92.12816,
+				"Y": -6.324607,
+				"Z": -1.8058602
+			},
+			"RelPosition": {
+				"X": -0.6866154,
+				"Y": -0.30027136,
+				"Z": 2.1827426
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 14,
+			"OtherDriver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"ImpactSpeed": 12.180767,
+			"WorldPosition": {
+				"X": 27.787697,
+				"Y": -10.813131,
+				"Z": 810.4349
+			},
+			"RelPosition": {
+				"X": -0.90530264,
+				"Y": -0.30651966,
+				"Z": 1.6166536
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 14,
+			"Driver": {
+				"Name": "Fabio Zittel",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197991310312",
+				"GuidsList": [
+					""
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 11.268759,
+			"WorldPosition": {
+				"X": 27.67404,
+				"Y": -10.816652,
+				"Z": 811.1318
+			},
+			"RelPosition": {
+				"X": 0.9038968,
+				"Y": -0.32625532,
+				"Z": -0.18392666
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 71.30004,
+			"WorldPosition": {
+				"X": 100.85069,
+				"Y": -5.2671704,
+				"Z": -95.3577
+			},
+			"RelPosition": {
+				"X": -0.8866836,
+				"Y": -0.320845,
+				"Z": -1.448983
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": 2,
+			"OtherDriver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"ImpactSpeed": 13.479384,
+			"WorldPosition": {
+				"X": -114.68726,
+				"Y": -2.948527,
+				"Z": -512.1415
+			},
+			"RelPosition": {
+				"X": 0.8959582,
+				"Y": 0.33200538,
+				"Z": -0.36731583
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_CAR",
+			"CarId": 2,
+			"Driver": {
+				"Name": "Bruno Peres",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198067980183",
+				"GuidsList": [
+					"76561198067980183"
+				]
+			},
+			"OtherCarId": 30,
+			"OtherDriver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"ImpactSpeed": 20.896627,
+			"WorldPosition": {
+				"X": -114.80523,
+				"Y": -2.9508264,
+				"Z": -511.9285
+			},
+			"RelPosition": {
+				"X": -0.89686227,
+				"Y": 0.32072145,
+				"Z": 1.5771475
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 0,
+			"Driver": {
+				"Name": "Celso Pedri",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561197999107997",
+				"GuidsList": [
+					"76561197999107997"
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 28.67166,
+			"WorldPosition": {
+				"X": 988.5445,
+				"Y": -2.1443205,
+				"Z": -928.4811
+			},
+			"RelPosition": {
+				"X": -0.88547987,
+				"Y": 0.2853604,
+				"Z": -1.5678575
+			}
+		},
+		{
+			"Type": "COLLISION_WITH_ENV",
+			"CarId": 30,
+			"Driver": {
+				"Name": "Rico Araujo",
+				"Team": "",
+				"Nation": "BRA",
+				"Guid": "76561198142409415",
+				"GuidsList": [
+					"76561198142409415"
+				]
+			},
+			"OtherCarId": -1,
+			"OtherDriver": {
+				"Name": "",
+				"Team": "",
+				"Nation": "",
+				"Guid": "",
+				"GuidsList": null
+			},
+			"ImpactSpeed": 36.590603,
+			"WorldPosition": {
+				"X": 960.8315,
+				"Y": -2.1080413,
+				"Z": -883.7274
+			},
+			"RelPosition": {
+				"X": -0.6865905,
+				"Y": -0.30027267,
+				"Z": 2.1827576
+			}
+		}
+	]
+}
