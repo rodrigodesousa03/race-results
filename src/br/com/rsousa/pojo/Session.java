@@ -19,9 +19,18 @@ public class Session {
 	private final boolean isSelective;
 	
 	private List<Driver> drivers;
+	private final List<String> lapInvalidations = new ArrayList<>();
 
 	public List<Driver> drivers() {
 		return drivers;
+	}
+
+	public List<String> getLapInvalidations() {
+		return lapInvalidations;
+	}
+
+	public void addLapInvalidation(String entry) {
+		lapInvalidations.add(entry);
 	}
 
 	public boolean isSelective() {

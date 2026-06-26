@@ -39,6 +39,14 @@ public class SessionFormatter {
             }
         }
 
+        List<String> invalidations = session.getLapInvalidations();
+        if (!invalidations.isEmpty()) {
+            resultStr.append("\n\nVoltas de pilotos invalidadas:");
+            for (int i = 0; i < invalidations.size(); i++) {
+                resultStr.append("\n").append(i + 1).append(" ").append(invalidations.get(i));
+            }
+        }
+
         return resultStr.toString();
     }
 

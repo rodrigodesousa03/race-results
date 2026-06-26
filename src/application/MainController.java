@@ -1,5 +1,7 @@
 package application;
 
+import br.com.rsousa.iracing.IRacingCredentials;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -17,6 +19,7 @@ import br.com.rsousa.transformers.*;
 import br.com.rsousa.utils.SessionUtils;
 import javafx.application.Platform;
 import javafx.beans.property.SimpleObjectProperty;
+import javafx.concurrent.Task;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
@@ -93,6 +96,18 @@ public class MainController implements Initializable {
     @FXML
     private HBox resultsPanel;
 
+    @FXML
+    private VBox loadingOverlay;
+
+    @FXML
+    private Label loadingFileLabel;
+
+    @FXML
+    private Label loadingProgressLabel;
+
+    @FXML
+    private Label loadingDetailLabel;
+
     private List<Driver> driverTeams = new ArrayList<>();
 
     private Driver driverSelected;
@@ -137,15 +152,14 @@ public class MainController implements Initializable {
         fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV, JSON Files", fileTypes()));
 
         File file = fc.showOpenDialog(null);
+        if (file == null) return;
 
         if (file.getName().contains("Cadastros")) {
             driverTeams.clear();
             processDrivers(file);
         } else {
-            processLog(file);
+            processLogsAsync(List.of(file));
         }
-
-        showResults();
     }
 
     @FXML
@@ -235,10 +249,10 @@ public class MainController implements Initializable {
         fc.getExtensionFilters().add(new ExtensionFilter("XML, CSV, JSON Files", fileTypes()));
 
         File file = fc.showOpenDialog(null);
+        if (file == null) return;
 
-        processLog(file);
-
-        showResults();
+        this.event.clear(selectiveCheckBox.isSelected());
+        processLogsAsync(List.of(file));
     }
 
     @FXML
@@ -301,6 +315,62 @@ public class MainController implements Initializable {
     }
 
     @FXML
+    void openIRacingSettings(ActionEvent event) {
+        IRacingCredentials creds = IRacingCredentials.load();
+
+        javafx.scene.control.TextField emailField = new javafx.scene.control.TextField(creds.getEmail());
+        emailField.setPromptText("seu@email.com");
+
+        javafx.scene.control.PasswordField passwordField = new javafx.scene.control.PasswordField();
+        passwordField.setText(creds.getPassword());
+        passwordField.setPromptText("Senha iRacing");
+
+        javafx.scene.control.TextField clientIdField = new javafx.scene.control.TextField(creds.getClientId());
+        clientIdField.setPromptText("Ex: 67090-pwlimited");
+
+        javafx.scene.control.PasswordField clientSecretField = new javafx.scene.control.PasswordField();
+        clientSecretField.setText(creds.getClientSecret());
+        clientSecretField.setPromptText("Client Secret");
+
+        javafx.scene.layout.GridPane grid = new javafx.scene.layout.GridPane();
+        grid.setHgap(10);
+        grid.setVgap(10);
+        grid.setPadding(new javafx.geometry.Insets(20, 150, 10, 10));
+
+        grid.add(new javafx.scene.control.Label("Email iRacing:"),   0, 0);
+        grid.add(emailField,        1, 0);
+        grid.add(new javafx.scene.control.Label("Senha:"),            0, 1);
+        grid.add(passwordField,     1, 1);
+        grid.add(new javafx.scene.control.Label("Client ID:"),        0, 2);
+        grid.add(clientIdField,     1, 2);
+        grid.add(new javafx.scene.control.Label("Client Secret:"),    0, 3);
+        grid.add(clientSecretField, 1, 3);
+
+        Dialog<ButtonType> dialog = new Dialog<>();
+        dialog.setTitle("Configurações iRacing API");
+        dialog.setHeaderText("Credenciais para validação de voltas off-track na seletiva.\nSalvas em ~/.race-results/iracing.properties");
+        dialog.getDialogPane().setContent(grid);
+        dialog.getDialogPane().getButtonTypes().addAll(ButtonType.OK, ButtonType.CANCEL);
+
+        dialog.showAndWait().ifPresent(bt -> {
+            if (bt == ButtonType.OK) {
+                creds.setEmail(emailField.getText().trim());
+                creds.setPassword(passwordField.getText());
+                creds.setClientId(clientIdField.getText().trim());
+                creds.setClientSecret(clientSecretField.getText());
+                try {
+                    creds.save();
+                } catch (IOException ex) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Erro");
+                    alert.setContentText("Não foi possível salvar as credenciais: " + ex.getMessage());
+                    alert.showAndWait();
+                }
+            }
+        });
+    }
+
+    @FXML
     void resetRace(ActionEvent event) {
         this.event.resetRace();
 
@@ -346,105 +416,192 @@ public class MainController implements Initializable {
     void logFileDrop(DragEvent event) {
         this.event.clear(selectiveCheckBox.isSelected());
 
-        List<File> files = event.getDragboard().getFiles();
+        List<File> files = new ArrayList<>(event.getDragboard().getFiles());
 
         files.stream().filter(f -> f.getName().contains("Cadastros")).findFirst().ifPresent(f -> {
             driverTeams.clear();
             processDrivers(f);
-            files.remove(f);
         });
 
-        for (File file : files) {
-            processLog(file);
-        }
+        List<File> logFiles = files.stream()
+                .filter(f -> !f.getName().contains("Cadastros"))
+                .collect(java.util.stream.Collectors.toList());
 
-        showResults();
+        if (!logFiles.isEmpty()) {
+            processLogsAsync(logFiles);
+        }
     }
 
-    private void processLog(File file) {
-        SimulatorTransformer simulatorTransformer = switch (getFileExtension(file)) {
+    // -------------------------------------------------------------------------
+    // Processamento assíncrono com overlay de loading
+    // -------------------------------------------------------------------------
+
+    private void processLogsAsync(List<File> files) {
+        boolean isSelective = selectiveCheckBox.isSelected();
+        boolean hardDnf     = hardDnfCheckBox.isSelected();
+        List<Driver> teamsCopy = new ArrayList<>(driverTeams);
+
+        boolean hasIRacingSelective = isSelective &&
+                files.stream().anyMatch(MainController::isIRacingLog);
+
+        // Platform.runLater direto — evita o coalescing do updateMessage() do Task
+        java.util.function.Consumer<String> updateFile = msg -> {
+            System.out.println("[Arquivo] " + msg);
+            Platform.runLater(() -> loadingFileLabel.setText(msg));
+        };
+        java.util.function.Consumer<String> updateProgress = msg -> {
+            System.out.println("[API]     " + msg);
+            Platform.runLater(() -> loadingProgressLabel.setText(msg));
+        };
+        java.util.function.Consumer<String> updateDetail = msg -> {
+            System.out.println("[Detalhe] " + msg);
+            Platform.runLater(() -> loadingDetailLabel.setText(msg));
+        };
+
+        // Cria um único IRacingApiClient para todo o lote — evita re-autenticação por arquivo
+        br.com.rsousa.iracing.IRacingApiClient sharedApiClient;
+        if (hasIRacingSelective) {
+            br.com.rsousa.iracing.IRacingCredentials creds = br.com.rsousa.iracing.IRacingCredentials.load();
+            sharedApiClient = creds.isConfigured() ? new br.com.rsousa.iracing.IRacingApiClient(creds) : null;
+        } else {
+            sharedApiClient = null;
+        }
+
+        Task<Event> task = new Task<>() {
+            @Override
+            protected Event call() throws Exception {
+                Event working = new Event();
+                for (int i = 0; i < files.size(); i++) {
+                    File file = files.get(i);
+                    updateFile.accept("Arquivo " + (i + 1) + " de " + files.size()
+                            + " — " + file.getName());
+                    updateProgress.accept("");
+
+                    SimulatorTransformer tr = resolveTransformer(file);
+                    if (tr instanceof EmptyTransformer) continue;
+
+                    if (hasIRacingSelective && tr instanceof IRacingJsonTransformer irT) {
+                        irT.setProgressCallback(updateProgress);
+                        irT.setDetailCallback(updateDetail);
+                        if (sharedApiClient != null) irT.setApiClient(sharedApiClient);
+                    }
+
+                    try {
+                        if (tr.processEvent()) {
+                            Event fe = tr.processEvent(file, teamsCopy, hardDnf, isSelective);
+                            if (fe != null) {
+                                if (fe.getQualifySession() != null) {
+                                    if (working.getQualifySession() == null) {
+                                        working.setQualifySession(fe.getQualifySession());
+                                    } else {
+                                        // Concatenação direta — evita addDrivers/sortDriversByBestLap
+                                        working.getQualifySession().drivers()
+                                               .addAll(fe.getQualifySession().drivers());
+                                        working.getQualifySession().getLapInvalidations()
+                                               .addAll(fe.getQualifySession().getLapInvalidations());
+                                    }
+                                }
+                                if (fe.getRaceSessions() != null)
+                                    fe.getRaceSessions().forEach(s -> working.addSession(s, false));
+                            }
+                        } else {
+                            br.com.rsousa.pojo.Session s =
+                                    tr.processQualify(file, teamsCopy, hardDnf, isSelective);
+                            working.addSession(s, isSelective);
+                        }
+                    } catch (Exception e) {
+                        System.err.println("Erro ao processar " + file.getName() + ": " + e.getMessage());
+                        e.printStackTrace();
+                    }
+                }
+
+                // Deduplica por nome mantendo o melhor tempo, depois ordena e reatribui posições
+                if (working.getQualifySession() != null) {
+                    java.util.Map<String, br.com.rsousa.pojo.Driver> best = new java.util.LinkedHashMap<>();
+                    for (br.com.rsousa.pojo.Driver d : working.getQualifySession().drivers()) {
+                        if (d.getBestLapMilliseconds() == null || d.getBestLapMilliseconds() <= 0) continue;
+                        br.com.rsousa.pojo.Driver prev = best.get(d.getName());
+                        if (prev == null || d.getBestLapMilliseconds() < prev.getBestLapMilliseconds()) {
+                            best.put(d.getName(), d);
+                        }
+                    }
+                    List<br.com.rsousa.pojo.Driver> sorted = new ArrayList<>(best.values());
+                    sorted.sort(java.util.Comparator.comparingLong(br.com.rsousa.pojo.Driver::getBestLapMilliseconds));
+                    for (int j = 0; j < sorted.size(); j++) {
+                        sorted.get(j).setPosition(j + 1);
+                        sorted.get(j).setPolePosition(j == 0);
+                    }
+                    working.getQualifySession().drivers().clear();
+                    working.getQualifySession().drivers().addAll(sorted);
+                }
+
+                return working;
+            }
+        };
+
+        task.setOnSucceeded(e -> Platform.runLater(() -> {
+            event = task.getValue();
+            updateBatteryComboBox();
+            showResults();
+            if (event.getQualifySession() != null || !event.getRaceSessions().isEmpty()) {
+                showResultsPanel();
+            }
+            hideLoading();
+        }));
+
+        task.setOnFailed(e -> Platform.runLater(() -> {
+            hideLoading();
+            Throwable ex = task.getException();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro ao processar arquivo");
+            alert.setHeaderText("Falha durante o processamento");
+            alert.setContentText(ex != null ? ex.getMessage() : "Erro desconhecido");
+            alert.showAndWait();
+        }));
+
+        showLoading(hasIRacingSelective ? "Consultando API do iRacing…" : "Processando…");
+        Thread t = new Thread(task);
+        t.setDaemon(true);
+        t.start();
+    }
+
+    private SimulatorTransformer resolveTransformer(File file) {
+        return switch (getFileExtension(file)) {
             case "xml", "XML" -> new RFactorTransformer();
             case "csv", "CSV" -> new IRacingCsvTransformer();
             case "json", "JSON" -> {
-                // Verifica ACC primeiro para evitar confusão com Assetto Corsa normal
-                if (isAssettoCorsaCompetizioneLog(file)) {
-                    yield new AssettoCorsaCompetizioneTransformer();
-                } else if (isIRacingLog(file)) {
-                    yield new IRacingJsonTransformer();
-                } else if (isAssettoCorsaLog(file)) {
-                    yield new AssettoTransformer();
-                } else if (isAutomobilista2Log(file)) {
-                    yield new Automobilista2Transformer();
-                } else {
-                    // Se nenhum tipo foi detectado, retorna EmptyTransformer
-                    yield new EmptyTransformer();
-                }
+                if (isAssettoCorsaCompetizioneLog(file))  yield new AssettoCorsaCompetizioneTransformer();
+                else if (isIRacingLog(file))              yield new IRacingJsonTransformer();
+                else if (isAssettoCorsaLog(file))         yield new AssettoTransformer();
+                else if (isAutomobilista2Log(file))       yield new Automobilista2Transformer();
+                else                                      yield new EmptyTransformer();
             }
             default -> new EmptyTransformer();
         };
-
-        // Verifica se o formato foi reconhecido
-        if (simulatorTransformer instanceof EmptyTransformer) {
-            String fileName = file != null ? file.getName() : "arquivo desconhecido";
-            Platform.runLater(() -> {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setTitle("Formato não reconhecido");
-                alert.setHeaderText("Não foi possível identificar o formato do arquivo: " + fileName);
-                alert.setContentText("O arquivo não corresponde a nenhum formato conhecido:\n" +
-                        "- iRacing (JSON/CSV)\n" +
-                        "- Assetto Corsa (JSON)\n" +
-                        "- Automobilista 2 (JSON)\n" +
-                        "- Assetto Corsa Competizione (JSON)\n" +
-                        "- rFactor (XML)\n\n" +
-                        "Verifique se o arquivo é um log válido de corrida.");
-                alert.showAndWait();
-            });
-            return;
-        }
-
-        try {
-            boolean hardDnf = hardDnfCheckBox.isSelected();
-            boolean isSelective = selectiveCheckBox.isSelected();
-
-            if (simulatorTransformer.processEvent()) {
-                event = simulatorTransformer.processEvent(file, driverTeams, hardDnf, isSelective);
-            } else {
-                event.addSession(simulatorTransformer.processQualify(file, driverTeams, hardDnf, isSelective), isSelective);
-            }
-
-            batteryComboBox.getItems().clear();
-            for (int i = 1; i <= event.getRaceSessions().size(); i++) {
-                batteryComboBox.getItems().add(i);
-            }
-
-            batteryComboBox.getSelectionModel().selectFirst();
-
-            // Show results panel after loading data
-            showResultsPanel();
-        } catch (Exception e) {
-            String fileName = file != null ? file.getName() : "arquivo desconhecido";
-            Platform.runLater(() -> {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Erro ao importar o log");
-                alert.setHeaderText("Ocorreu um erro ao processar o arquivo: " + fileName);
-
-                String errorMessage = e.getMessage() != null ? e.getMessage() : "Erro desconhecido";
-                alert.setContentText(errorMessage);
-
-                // Adiciona detalhes expandíveis com o stack trace
-                TextArea textArea = new TextArea(getStackTraceAsString(e));
-                textArea.setEditable(false);
-                textArea.setWrapText(true);
-                textArea.setMaxWidth(Double.MAX_VALUE);
-                textArea.setMaxHeight(Double.MAX_VALUE);
-
-                alert.getDialogPane().setExpandableContent(textArea);
-                alert.showAndWait();
-            });
-
-            e.printStackTrace();
-        }
     }
+
+    private void updateBatteryComboBox() {
+        batteryComboBox.getItems().clear();
+        for (int i = 1; i <= event.getRaceSessions().size(); i++) {
+            batteryComboBox.getItems().add(i);
+        }
+        batteryComboBox.getSelectionModel().selectFirst();
+    }
+
+    private void showLoading(String message) {
+        loadingFileLabel.setText(message);
+        loadingProgressLabel.setText("");
+        loadingDetailLabel.setText("");
+        loadingOverlay.setVisible(true);
+        loadingOverlay.setManaged(true);
+    }
+
+    private void hideLoading() {
+        loadingOverlay.setVisible(false);
+        loadingOverlay.setManaged(false);
+    }
+
+
 
     private String getFileExtension(File file) {
         String fileName = file.getName();
@@ -453,21 +610,6 @@ public class MainController implements Initializable {
             return ""; // empty extension
         }
         return fileName.substring(lastIndexOfDot + 1);
-    }
-
-    private String getStackTraceAsString(Exception e) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(e.toString()).append("\n");
-        for (StackTraceElement element : e.getStackTrace()) {
-            sb.append("\tat ").append(element.toString()).append("\n");
-        }
-        if (e.getCause() != null) {
-            sb.append("\nCaused by: ").append(e.getCause().toString()).append("\n");
-            for (StackTraceElement element : e.getCause().getStackTrace()) {
-                sb.append("\tat ").append(element.toString()).append("\n");
-            }
-        }
-        return sb.toString();
     }
 
     private static boolean isIRacingLog(File file) {
@@ -564,12 +706,14 @@ public class MainController implements Initializable {
         }
 
         if (!event.getRaceSessions().isEmpty()) {
-            // Salva o índice do driver selecionado antes de limpar
+            Integer battery = batteryComboBox.getValue();
+            if (battery == null) return;
+
             int selectedIndex = raceTableView.getSelectionModel().getSelectedIndex();
 
             raceTableView.getItems().clear();
             event.getRaceSessions().forEach(Session::sortDrivers);
-            raceTableView.getItems().addAll(event.getRaceSessions().get(batteryComboBox.getValue()-1).drivers());
+            raceTableView.getItems().addAll(event.getRaceSessions().get(battery - 1).drivers());
 
             // Restaura a seleção se havia um driver selecionado
             if (driverSelected != null && selectedIndex >= 0 && selectedIndex < raceTableView.getItems().size()) {

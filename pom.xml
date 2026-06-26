@@ -83,11 +83,58 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/lib/controlsfx-8.40.14.jar</systemPath>
         </dependency>
+
+        <!-- Testes -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>5.11.0</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
         <sourceDirectory>src</sourceDirectory>
+        <testSourceDirectory>src/test/java</testSourceDirectory>
+        <resources>
+            <resource>
+                <directory>src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+        </resources>
         <plugins>
+            <!-- JUnit 5 runner -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+            </plugin>
+
+            <!-- Cobertura de testes -->
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.11</version>
+                <executions>
+                    <execution>
+                        <goals><goal>prepare-agent</goal></goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>test</phase>
+                        <goals><goal>report</goal></goals>
+                    </execution>
+                </executions>
+            </plugin>
+
             <!-- Compilador com JDK 17 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -98,6 +145,10 @@
                     <target>17</target>
                     <fork>true</fork>
                     <executable>C:/Users/rdsou/.jdks/azul-17.0.10/bin/javac.exe</executable>
+                    <!-- Exclui src/test/java da compilação principal -->
+                    <excludes>
+                        <exclude>test/**</exclude>
+                    </excludes>
                 </configuration>
             </plugin>
 

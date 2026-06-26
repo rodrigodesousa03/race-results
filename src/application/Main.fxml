@@ -54,6 +54,8 @@
             <Button onAction="#readCsvFileChooser" text="Pilotos..." styleClass="btn-minimal" prefWidth="75" />
             <Button onAction="#clearDrivers" text="Limpar" styleClass="btn-minimal" prefWidth="65" />
             <Button onAction="#clear" text="Resetar" styleClass="btn-minimal-warning" prefWidth="70" />
+            <Separator orientation="VERTICAL" />
+            <Button onAction="#openIRacingSettings" text="iRacing..." styleClass="btn-minimal" prefWidth="80" />
          </HBox>
       </VBox>
    </top>
@@ -167,13 +169,28 @@
             </TabPane>
          </VBox>
          </HBox>
+
+         <!-- Loading Overlay — renderizado por cima de tudo (último filho do StackPane) -->
+         <VBox fx:id="loadingOverlay" alignment="CENTER" spacing="14"
+               visible="false" managed="false"
+               maxWidth="Infinity" maxHeight="Infinity"
+               style="-fx-background-color: rgba(0,0,0,0.55);">
+            <ProgressIndicator fx:id="loadingIndicator" prefWidth="64" prefHeight="64" progress="-1"
+                               style="-fx-progress-color: #e74c3c;"/>
+            <Label fx:id="loadingFileLabel" text=""
+                   style="-fx-font-size: 13px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+            <Label fx:id="loadingProgressLabel" text=""
+                   style="-fx-font-size: 12px; -fx-text-fill: #cccccc;"/>
+            <Label fx:id="loadingDetailLabel" text=""
+                   style="-fx-font-size: 11px; -fx-text-fill: #ffaaaa;"/>
+         </VBox>
       </StackPane>
    </center>
 
    <!-- Bottom Footer -->
    <bottom>
       <HBox alignment="CENTER" spacing="20" styleClass="footer">
-         <Text fx:id="versaoLabel" text="v7.0" styleClass="version-text" />
+         <Text fx:id="versaoLabel" text="v8.0" styleClass="version-text" />
          <Region HBox.hgrow="ALWAYS" />
          <Text text="Made by Rodrigo de Sousa" styleClass="footer-text" />
       </HBox>
