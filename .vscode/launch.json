@@ -1,0 +1,57 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Testes — Todos (mvn test)",
+            "request": "launch",
+            "mainClass": "",
+            "projectName": "race-results",
+            "preLaunchTask": "mvn: test"
+        },
+        {
+            "type": "java",
+            "name": "Testes — Arquivo Atual",
+            "request": "launch",
+            "mainClass": "${fileBasenameNoExtension}",
+            "projectName": "race-results",
+            "classPaths": [
+                "${workspaceFolder}/target/test-classes",
+                "${workspaceFolder}/target/classes",
+                "${workspaceFolder}/lib/gson-2.8.6.jar",
+                "${workspaceFolder}/lib/jakarta.xml.bind-api-2.3.3.jar",
+                "${workspaceFolder}/lib/jaxb-runtime-2.3.3.jar",
+                "${workspaceFolder}/lib/istack-commons-runtime-3.0.11.jar",
+                "${workspaceFolder}/lib/activation-1.1.1.jar"
+            ],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "Race Results (Maven)",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "projectName": "race-results",
+            "vmArgs": "--module-path C:\\Desenvolvimento\\Java\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls,javafx.fxml",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "java",
+            "name": "Race Results (Local JavaFX SDK 11)",
+            "request": "launch",
+            "mainClass": "application.Main",
+            "projectName": "race-results",
+            "classPaths": [
+                "${workspaceFolder}/target/classes",
+                "${workspaceFolder}/lib/gson-2.8.6.jar",
+                "${workspaceFolder}/lib/jakarta.xml.bind-api-2.3.3.jar",
+                "${workspaceFolder}/lib/jaxb-runtime-2.3.3.jar",
+                "${workspaceFolder}/lib/istack-commons-runtime-3.0.11.jar",
+                "${workspaceFolder}/lib/activation-1.1.1.jar",
+                "${workspaceFolder}/lib/controlsfx-8.40.14.jar"
+            ],
+            "vmArgs": "--module-path C:\\Desenvolvimento\\Java\\javafx-sdk-11.0.2\\lib --add-modules javafx.controls,javafx.fxml",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
